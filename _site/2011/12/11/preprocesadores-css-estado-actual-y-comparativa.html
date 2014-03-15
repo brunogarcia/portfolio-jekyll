@@ -1,27 +1,79 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Preprocesadores CSS: estado actual y comparativa</title>
-        <meta name="viewport" content="width=device-width">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Preprocesadores CSS: estado actual y comparativa</title>
+  <meta name="viewport" content="width=device-width">
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/app.css">
+  <link rel="stylesheet" href="/css/blog.css">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
+  <!--Web Fonts-->
+  <link href='http://fonts.googleapis.com/css?family=Cabin|Lobster+Two' rel='stylesheet' type='text/css'>
 
-    </head>
-    <body>
+  <!--Favicon-->
+  <link rel="shortcut icon" href="favicon.ico" />
 
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">Bruno Garcia</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
+  <!--Modernizr-->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.0/modernizr.min.js"></script>
 
-          <h2>Preprocesadores CSS: estado actual y comparativa</h2>
+  <!--Google Analytics-->
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-18260985-4']);
+    _gaq.push(['_setDomainName', '.garciaechegaray.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>  
+
+</head>
+<body>
+ <!--Nav-->
+ <div class="fixed">
+  <nav class="top-bar" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="#top">Bruno Garcia Echegaray</a></h1>
+      </li>
+      <li class="toggle-topbar menu-icon">
+        <a href="">
+          <span>Menu</span>
+        </a>
+      </li>
+    </ul>
+
+    <section class="top-bar-section">
+      <ul class="right">
+        <li class="divider"></li>
+        <li><a class="nav-link-to" data-link-to="link-01" href="#web-developer">Web developer</a></li>
+        <li class="divider"></li>
+        <li><a class="nav-link-to" data-link-to="link-02" href="#experiencia">Experiencia</a></li>
+        <li class="divider"></li>
+        <li class="active"><a href="http://blog.garciaechegaray.com/" target="_blank">Blog</a></li>
+        <li class="divider"></li>
+        <li><a href="http://www.tuttifrescuni.com" title="Tutti Frescuni: ¿qué frutas y verduras se encuentran de temporada?" target="_blank">Pet Project</a></li>
+        <li class="divider"></li>
+        <li><a href="https://github.com/brunogarcia/Front-end-Wiki/wiki" title="Front-end Development Resources" target="_blank">Wiki</a></li>
+        <li class="divider"></li>         
+        <li><a class="nav-link-to" data-link-to="link-03" href="#contacto">Contacto</a></li>          
+      </ul>
+    </section>
+  </nav>  
+</div>
+
+
+<div class="main">
+  <div class="row">
+    <h2>Preprocesadores CSS: estado actual y comparativa</h2>
 <p class="meta">11 Dec 2011</p>
 
 <div class="post">
@@ -270,23 +322,12 @@ now.</a></p>
 
 </div>
 
+  </div>
+</div>
 
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name<br />
-                What You Are<br />
-                you@example.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
-            </div>
-          </div>
-        </div>
 
-    </body>
+</div>
+
+<script src="/js/production.min.js"></script>
+</body>
 </html>

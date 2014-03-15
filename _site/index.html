@@ -1,101 +1,220 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Bruno</title>
-        <meta name="viewport" content="width=device-width">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Bruno</title>
+  <meta name="viewport" content="width=device-width">
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/app.css">
+  <link rel="stylesheet" href="/css/blog.css">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
+  <!--Web Fonts-->
+  <link href='http://fonts.googleapis.com/css?family=Cabin|Lobster+Two' rel='stylesheet' type='text/css'>
 
-    </head>
-    <body>
+  <!--Favicon-->
+  <link rel="shortcut icon" href="favicon.ico" />
 
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">Bruno Garcia</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
+  <!--Modernizr-->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.0/modernizr.min.js"></script>
 
-          <div id="home">
-  <h1>Blog Posts</h1> 
-  <ul class="posts">
-    
-      <li><span>15 Feb 2014</span> &raquo; <a href="/2014/02/15/el-workflow-perfecto-yeoman-bower-grunt.html">El workflow perfecto: Yeoman + Bower + Grunt</a></li>
-    
-      <li><span>14 Feb 2014</span> &raquo; <a href="/2014/02/14/settimeout-vs-deferred.html">setTimeout() vs $.Deferred()</a></li>
-    
-      <li><span>14 Feb 2014</span> &raquo; <a href="/2014/02/14/enfold-fontello.html">Enfold & Fontello</a></li>
-    
-      <li><span>29 Nov 2013</span> &raquo; <a href="/2013/11/29/responsive-design-exercise.html">Responsive Design Exercise</a></li>
-    
-      <li><span>23 Sep 2013</span> &raquo; <a href="/2013/09/23/configurar-weinre-en-windows-7-con-node-y-npm.html">Configurar Weinre en Windows 7 con Node y npm</a></li>
-    
-      <li><span>31 Aug 2013</span> &raquo; <a href="/2013/08/31/you-just-keep-pushing-you-just-keep-pushing-i.html">You just keep pushing</a></li>
-    
-      <li><span>10 Jul 2013</span> &raquo; <a href="/2013/07/10/zorro-veloz.html">Zorro Veloz</a></li>
-    
-      <li><span>07 Jul 2013</span> &raquo; <a href="/2013/07/07/pet-project-la-mejor-forma-de-aprender.html">Pet Project, la mejor forma de aprender</a></li>
-    
-      <li><span>20 Apr 2013</span> &raquo; <a href="/2013/04/20/estan-los-portales-de-empleo-generalistas.html">¿Están los portales de empleo generalistas completamente anticuados?</a></li>
-    
-      <li><span>08 Apr 2013</span> &raquo; <a href="/2013/04/08/los-navegadores-web-explicado-para-muggles.html">Los navegadores web explicado para muggles</a></li>
-    
-      <li><span>05 Apr 2013</span> &raquo; <a href="/2013/04/05/try-to-learn-from-designers-and-be-more.html">Try to learn from designers...</a></li>
-    
-      <li><span>23 Mar 2013</span> &raquo; <a href="/2013/03/23/que-has-aprendido-en-los-ultimos-3-anos.html">¿Qué has aprendido en los últimos 3 años?</a></li>
-    
-      <li><span>20 Mar 2013</span> &raquo; <a href="/2013/03/20/good-programmers-like-patterns-good-designers.html">Good programmers like patterns</a></li>
-    
-      <li><span>16 Oct 2012</span> &raquo; <a href="/2012/10/16/once-you-decide-on-your-occupation-you-must.html">Once you decide on your occupation...</a></li>
-    
-      <li><span>05 Sep 2012</span> &raquo; <a href="/2012/09/05/i-will-continue-to-foster-both-hemispheres-of-my.html">I will continue to foster both hemispheres of my brain...</a></li>
-    
-      <li><span>04 Sep 2012</span> &raquo; <a href="/2012/09/04/perfiles-profesionales-del-sector-web-especializacion.html">Perfiles profesionales del sector web especialización y evolución para adaptarse a los nuevos tiempos</a></li>
-    
-      <li><span>21 Apr 2012</span> &raquo; <a href="/2012/04/21/bootstrap-si-pero-no.html">Bootstrap sí, pero no</a></li>
-    
-      <li><span>19 Mar 2012</span> &raquo; <a href="/2012/03/19/elementos-diferenciales-en-la-venta-de-libros.html">Elementos diferenciales en la venta de libros</a></li>
-    
-      <li><span>08 Feb 2012</span> &raquo; <a href="/2012/02/08/el-mundo-editorial-landing-pages.html">El mundo editorial y las landing pages</a></li>
-    
-      <li><span>08 Feb 2012</span> &raquo; <a href="/2012/02/08/abredatos-2012-todofp-boe.html">AbreDatos 2012: TodoFP.es + BOE</a></li>
-    
-      <li><span>18 Jan 2012</span> &raquo; <a href="/2012/01/18/zona-norte-grupos-profesionales-sobre-desarrollo-web.html">Zona Norte: grupos profesionales sobre desarrollo web</a></li>
-    
-      <li><span>11 Dec 2011</span> &raquo; <a href="/2011/12/11/preprocesadores-css-estado-actual-y-comparativa.html">Preprocesadores CSS: estado actual y comparativa</a></li>
-    
-      <li><span>09 Dec 2011</span> &raquo; <a href="/2011/12/09/colores-complementarios-y-analogos-con-less-y-lessphp.html">Colores complementarios y análogos con LESS y lessphp</a></li>
-    
-      <li><span>08 Dec 2011</span> &raquo; <a href="/2011/12/08/taller-de-maquetacion-web.html">Taller de Maquetación Web</a></li>
-    
-      <li><span>07 Dec 2011</span> &raquo; <a href="/2011/12/07/less-lessphp-minify.html">LESS, lessphp & minify</a></li>
-    
-      <li><span>01 Oct 2011</span> &raquo; <a href="/2011/10/01/front-end-development-mind-map.html">Front-end development - Mind Map</a></li>
-    
-  </ul>
+  <!--Google Analytics-->
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-18260985-4']);
+    _gaq.push(['_setDomainName', '.garciaechegaray.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>  
+
+</head>
+<body>
+ <!--Nav-->
+ <div class="fixed">
+  <nav class="top-bar" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="#top">Bruno Garcia Echegaray</a></h1>
+      </li>
+      <li class="toggle-topbar menu-icon">
+        <a href="">
+          <span>Menu</span>
+        </a>
+      </li>
+    </ul>
+
+    <section class="top-bar-section">
+      <ul class="right">
+        <li class="divider"></li>
+        <li><a class="nav-link-to" data-link-to="link-01" href="#web-developer">Web developer</a></li>
+        <li class="divider"></li>
+        <li><a class="nav-link-to" data-link-to="link-02" href="#experiencia">Experiencia</a></li>
+        <li class="divider"></li>
+        <li class="active"><a href="http://blog.garciaechegaray.com/" target="_blank">Blog</a></li>
+        <li class="divider"></li>
+        <li><a href="http://www.tuttifrescuni.com" title="Tutti Frescuni: ¿qué frutas y verduras se encuentran de temporada?" target="_blank">Pet Project</a></li>
+        <li class="divider"></li>
+        <li><a href="https://github.com/brunogarcia/Front-end-Wiki/wiki" title="Front-end Development Resources" target="_blank">Wiki</a></li>
+        <li class="divider"></li>         
+        <li><a class="nav-link-to" data-link-to="link-03" href="#contacto">Contacto</a></li>          
+      </ul>
+    </section>
+  </nav>  
 </div>
 
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name<br />
-                What You Are<br />
-                you@example.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
-            </div>
-          </div>
-        </div>
 
-    </body>
+<div class="main">
+  <div class="row">
+    <div id="home">
+  <h1>Blog</h1> 
+  <div class="posts">
+    
+    <div class="row">
+      <div class="post-date medium-12 columns"><small>15 Feb 2014 &raquo;</small></div>
+      <div class="post-title medium-12 columns"><a href="/2014/02/15/el-workflow-perfecto-yeoman-bower-grunt.html">El workflow perfecto: Yeoman + Bower + Grunt</a></div>
+  	</div>
+    
+    <div class="row">
+      <div class="post-date medium-12 columns"><small>14 Feb 2014 &raquo;</small></div>
+      <div class="post-title medium-12 columns"><a href="/2014/02/14/settimeout-vs-deferred.html">setTimeout() vs $.Deferred()</a></div>
+  	</div>
+    
+    <div class="row">
+      <div class="post-date medium-12 columns"><small>14 Feb 2014 &raquo;</small></div>
+      <div class="post-title medium-12 columns"><a href="/2014/02/14/enfold-fontello.html">Enfold & Fontello</a></div>
+  	</div>
+    
+    <div class="row">
+      <div class="post-date medium-12 columns"><small>29 Nov 2013 &raquo;</small></div>
+      <div class="post-title medium-12 columns"><a href="/2013/11/29/responsive-design-exercise.html">Responsive Design Exercise</a></div>
+  	</div>
+    
+    <div class="row">
+      <div class="post-date medium-12 columns"><small>23 Sep 2013 &raquo;</small></div>
+      <div class="post-title medium-12 columns"><a href="/2013/09/23/configurar-weinre-en-windows-7-con-node-y-npm.html">Configurar Weinre en Windows 7 con Node y npm</a></div>
+  	</div>
+    
+    <div class="row">
+      <div class="post-date medium-12 columns"><small>31 Aug 2013 &raquo;</small></div>
+      <div class="post-title medium-12 columns"><a href="/2013/08/31/you-just-keep-pushing-you-just-keep-pushing-i.html">You just keep pushing</a></div>
+  	</div>
+    
+    <div class="row">
+      <div class="post-date medium-12 columns"><small>10 Jul 2013 &raquo;</small></div>
+      <div class="post-title medium-12 columns"><a href="/2013/07/10/zorro-veloz.html">Zorro Veloz</a></div>
+  	</div>
+    
+    <div class="row">
+      <div class="post-date medium-12 columns"><small>07 Jul 2013 &raquo;</small></div>
+      <div class="post-title medium-12 columns"><a href="/2013/07/07/pet-project-la-mejor-forma-de-aprender.html">Pet Project, la mejor forma de aprender</a></div>
+  	</div>
+    
+    <div class="row">
+      <div class="post-date medium-12 columns"><small>20 Apr 2013 &raquo;</small></div>
+      <div class="post-title medium-12 columns"><a href="/2013/04/20/estan-los-portales-de-empleo-generalistas.html">¿Están los portales de empleo generalistas completamente anticuados?</a></div>
+  	</div>
+    
+    <div class="row">
+      <div class="post-date medium-12 columns"><small>08 Apr 2013 &raquo;</small></div>
+      <div class="post-title medium-12 columns"><a href="/2013/04/08/los-navegadores-web-explicado-para-muggles.html">Los navegadores web explicado para muggles</a></div>
+  	</div>
+    
+    <div class="row">
+      <div class="post-date medium-12 columns"><small>05 Apr 2013 &raquo;</small></div>
+      <div class="post-title medium-12 columns"><a href="/2013/04/05/try-to-learn-from-designers-and-be-more.html">Try to learn from designers...</a></div>
+  	</div>
+    
+    <div class="row">
+      <div class="post-date medium-12 columns"><small>23 Mar 2013 &raquo;</small></div>
+      <div class="post-title medium-12 columns"><a href="/2013/03/23/que-has-aprendido-en-los-ultimos-3-anos.html">¿Qué has aprendido en los últimos 3 años?</a></div>
+  	</div>
+    
+    <div class="row">
+      <div class="post-date medium-12 columns"><small>20 Mar 2013 &raquo;</small></div>
+      <div class="post-title medium-12 columns"><a href="/2013/03/20/good-programmers-like-patterns-good-designers.html">Good programmers like patterns</a></div>
+  	</div>
+    
+    <div class="row">
+      <div class="post-date medium-12 columns"><small>16 Oct 2012 &raquo;</small></div>
+      <div class="post-title medium-12 columns"><a href="/2012/10/16/once-you-decide-on-your-occupation-you-must.html">Once you decide on your occupation...</a></div>
+  	</div>
+    
+    <div class="row">
+      <div class="post-date medium-12 columns"><small>05 Sep 2012 &raquo;</small></div>
+      <div class="post-title medium-12 columns"><a href="/2012/09/05/i-will-continue-to-foster-both-hemispheres-of-my.html">I will continue to foster both hemispheres of my brain...</a></div>
+  	</div>
+    
+    <div class="row">
+      <div class="post-date medium-12 columns"><small>04 Sep 2012 &raquo;</small></div>
+      <div class="post-title medium-12 columns"><a href="/2012/09/04/perfiles-profesionales-del-sector-web-especializacion.html">Perfiles profesionales del sector web especialización y evolución para adaptarse a los nuevos tiempos</a></div>
+  	</div>
+    
+    <div class="row">
+      <div class="post-date medium-12 columns"><small>21 Apr 2012 &raquo;</small></div>
+      <div class="post-title medium-12 columns"><a href="/2012/04/21/bootstrap-si-pero-no.html">Bootstrap sí, pero no</a></div>
+  	</div>
+    
+    <div class="row">
+      <div class="post-date medium-12 columns"><small>19 Mar 2012 &raquo;</small></div>
+      <div class="post-title medium-12 columns"><a href="/2012/03/19/elementos-diferenciales-en-la-venta-de-libros.html">Elementos diferenciales en la venta de libros</a></div>
+  	</div>
+    
+    <div class="row">
+      <div class="post-date medium-12 columns"><small>08 Feb 2012 &raquo;</small></div>
+      <div class="post-title medium-12 columns"><a href="/2012/02/08/el-mundo-editorial-landing-pages.html">El mundo editorial y las landing pages</a></div>
+  	</div>
+    
+    <div class="row">
+      <div class="post-date medium-12 columns"><small>08 Feb 2012 &raquo;</small></div>
+      <div class="post-title medium-12 columns"><a href="/2012/02/08/abredatos-2012-todofp-boe.html">AbreDatos 2012: TodoFP.es + BOE</a></div>
+  	</div>
+    
+    <div class="row">
+      <div class="post-date medium-12 columns"><small>18 Jan 2012 &raquo;</small></div>
+      <div class="post-title medium-12 columns"><a href="/2012/01/18/zona-norte-grupos-profesionales-sobre-desarrollo-web.html">Zona Norte: grupos profesionales sobre desarrollo web</a></div>
+  	</div>
+    
+    <div class="row">
+      <div class="post-date medium-12 columns"><small>11 Dec 2011 &raquo;</small></div>
+      <div class="post-title medium-12 columns"><a href="/2011/12/11/preprocesadores-css-estado-actual-y-comparativa.html">Preprocesadores CSS: estado actual y comparativa</a></div>
+  	</div>
+    
+    <div class="row">
+      <div class="post-date medium-12 columns"><small>09 Dec 2011 &raquo;</small></div>
+      <div class="post-title medium-12 columns"><a href="/2011/12/09/colores-complementarios-y-analogos-con-less-y-lessphp.html">Colores complementarios y análogos con LESS y lessphp</a></div>
+  	</div>
+    
+    <div class="row">
+      <div class="post-date medium-12 columns"><small>08 Dec 2011 &raquo;</small></div>
+      <div class="post-title medium-12 columns"><a href="/2011/12/08/taller-de-maquetacion-web.html">Taller de Maquetación Web</a></div>
+  	</div>
+    
+    <div class="row">
+      <div class="post-date medium-12 columns"><small>07 Dec 2011 &raquo;</small></div>
+      <div class="post-title medium-12 columns"><a href="/2011/12/07/less-lessphp-minify.html">LESS, lessphp & minify</a></div>
+  	</div>
+    
+    <div class="row">
+      <div class="post-date medium-12 columns"><small>01 Oct 2011 &raquo;</small></div>
+      <div class="post-title medium-12 columns"><a href="/2011/10/01/front-end-development-mind-map.html">Front-end development - Mind Map</a></div>
+  	</div>
+    
+  </div>
+</div>
+  </div>
+</div>
+
+
+</div>
+
+<script src="/js/production.min.js"></script>
+</body>
 </html>
