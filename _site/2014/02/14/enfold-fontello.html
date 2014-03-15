@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Enfold & Fontello</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+
+        <div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">Bruno Garcia</a></h1>
+            <a class="extra" href="/">home</a>
+          </div>
+
+          <h2>Enfold & Fontello</h2>
+<p class="meta">14 Feb 2014</p>
+
+<div class="post">
+<p>Comenzamos con las
+presentaciones: <a href="http://themeforest.net/item/enfold-responsive-multipurpose-theme/4519990">Enfold</a>
+es un theme para Wordpress bastante completo (muchos <em>widgets</em> por
+defecto). <a href="http://fontello.com/">Fontello</a> es una herramienta que te
+permite utilizar <em>icon webfonts</em>en tus proyectos web/mobile.\</p>
+
+<p>El problema con
+<a href="http://themeforest.net/item/enfold-responsive-multipurpose-theme/4519990">Enfold</a> es
+carece de una documentación completa, y para realizar algunas tareas que
+no están ya implementadas por defecto es bastante engorroso encontrar la
+forma de hacerlo.</p>
+
+<p>Hace unos días he descubierto como añadir nuevos iconos en
+<a href="http://themeforest.net/item/enfold-responsive-multipurpose-theme/4519990">Enfold</a>,
+aprovechando la librería <a href="http://fontello.com/">Fontello</a> que ya viene
+pre-instalada.</p>
+
+<p>En la ruta ‘/enfold/functions.php’ existe un array  con todos los iconos
+por defecto. Por ejemplo el icono de búsqueda es algo así:</p>
+
+<blockquote>
+<p>&#39;search&#39; =&gt; array( &#39;font&#39; =&gt;&#39;entypo-fontello&#39;, &#39;icon&#39; =&gt; &#39;ue803&#39;)</p>
+</blockquote>
+
+<p>Si queremos añadir uno nuevo (por ejemplo ‘phone’) debemos ir al
+fichero:</p>
+
+<blockquote>
+<p>/enfold/config- templatebuilder/avia-template-
+builder/assets/fonts/entypo-fontello.svg</p>
+</blockquote>
+
+<p>y buscar la cadena ‘phone’ (o algo similar) dentro de cada propiedad glyph-name.</p>
+
+<p>Seguidamente copiamos el valor numérico adyacente de la propiedad ‘unicode’ (en este caso 854).</p>
+
+<p>Volvemos a ‘enfold/functions.php’ y añadimos la siguiente línea al array:</p>
+
+<blockquote>
+<p>&#39;phone&#39; =&gt; array( &#39;font&#39; =&gt;&#39;entypo-fontello&#39;, &#39;icon&#39; =&gt; &#39;ue854&#39;)</p>
+</blockquote>
+
+<p>Finalmente ya podemos usarlo en cualquier parte del theme:</p>
+
+<blockquote>
+<p>echo ‘&lt;span ‘.av_icon_string(‘phone’).’&gt;&lt;/ span&gt;’;</p>
+</blockquote>
+
+<p>Ayudaría mucho que existiera un documento con todos los iconos
+disponibles, pero por ahora esta es la única forma.</p>
+
+</div>
+
+
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Your Name<br />
+                What You Are<br />
+                you@example.com
+              </p>
+            </div>
+            <div class="contact">
+              <p>
+                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
+                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
+              </p>
+            </div>
+          </div>
+        </div>
+
+    </body>
+</html>

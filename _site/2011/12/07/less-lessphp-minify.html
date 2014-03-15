@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>LESS, lessphp & minify</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+
+        <div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">Bruno Garcia</a></h1>
+            <a class="extra" href="/">home</a>
+          </div>
+
+          <h2>LESS, lessphp & minify</h2>
+<p class="meta">07 Dec 2011</p>
+
+<div class="post">
+<p>A continuación os explicaré como ser un front-end más feliz, organizado
+y productivo con <a href="http://lesscss.org/">LESS</a>. Y si esto os parece poco:
+<strong>cómo reducir una tercera parte la carga de vuestras páginas</strong> con
+<a href="http://leafo.net/lessphp/">lessphp</a> y
+<a href="http://code.google.com/p/minify/">minify</a>.</p>
+
+<h3>LESS</h3>
+
+<p>Desde hace algunos meses estoy trabajando con
+<a href="http://lesscss.org/">LESS</a> para diferentes proyectos web. LESS es un
+pre-procesador para CSS basado en <a href="http://sass-lang.com/">SASS</a>.
+Sinceramente esto suena a chino, lo realmente importante es que añade
+una serie de mejoras propias, como por ejemplo poder utilizar variables,
+funciones, <a href="http://lesselements.com/">mixins</a> y anidar estilos. Si has
+trabajado con CSS entenderás lo revolucionario que es poder utilizar
+estas capacidades que antes sólo existían en programación servidor.</p>
+
+<p>Ahora bien, para que LESS pueda funcionar correctamente en cualquier
+browser  necesitas cargar un archivo javascript de 36 Kb. Dependiendo de
+tu proyecto, quizás puedas pensar que añadir “otra librería” no merezca
+la pena. Te equivocas, lo vale. Pero no te preocupes, porque aquí entra
+en escena <a href="http://leafo.net/lessphp/">lessphp.</a></p>
+
+<h3>lessphp</h3>
+
+<p><a href="http://leafo.net/lessphp/">lessphp</a> es una librería escrita en PHP que
+te permite compilar automágicamente cualquier archivo <em>less</em> y enviar al
+navegador del usuario un <em>css</em> que pueda entender correctamente.</p>
+
+<p>¿Ventajas?. Para empezar le ahorras al usuario cargar el compilador LESS
+(recordemos que son 36 Kb). Y lo mas importante: podrás trabajar y
+organizar tus archivos <em>less</em>como mejor te parezca.</p>
+
+<p>Por ejemplo, yo suelo trabajar con varios archivos en local:<em>grid.less,
+reset.less, typo.less, <a href="http://lesselements.com/">element.less</a>,
+hacks-ie.less, proyect-name.less</em>, etc. Por otra parte tengo
+un<em>proyect-name-master.less</em>con un <em>@import</em> para cada uno de los
+archivos mencionados.</p>
+
+<iframe width="100%" src="http://pastebin.com/embed_iframe.php?i=qPDpUCxw"></iframe>
+
+<p>Después le digo a <a href="http://leafo.net/lessphp/">lessphp</a> que haga su
+magia: convertirlo a CSS (por ejemplo: <em>proyect-name.css). </em></p>
+
+<iframe src="http://pastebin.com/embed_iframe.php?i=n5R38wbB"></iframe>
+
+<p>A tener en cuenta: lessphp interpreta la etiqueta <em>@import</em> como una
+copia directa del archivo enlazado. O sea, el CSS final será una mezcla
+(en orden de aparición) de todos los archivos enlazados en
+<em>proyect-name-master.less</em>Caramelito extra: ya te estás ahorrando unos
+cuantos KB en esta conversión.</p>
+
+<h3>minify</h3>
+
+<p>Pero se puede rizar aún más el rizo. Existe otra librería PHP llamada
+<a href="http://code.google.com/p/minify/">minify</a> la cual combina, minimiza y
+cachea archivos CSS y JS.</p>
+
+<p>Por ejemplo ¿qué pasa con todas aquellas librerías externas que sueles
+utilizar en tus proyectos?. Prácticamente todos los plugins jQuery
+vienen con sus propios estilos y javascripts. Lo bueno de
+<a href="http://code.google.com/p/minify/">minify</a> es que te permite juntar
+todos esos archivos (y tu <em>less/css</em> compilado) en un único documento.
+Sólo hace falta modificar ligeramente tus enlaces:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;link type=&#39;text/css&#39; rel=&#39;stylesheet&#39; href=&#39;/min/g=cssProyectName&#39;&gt;
+&lt;script type=&#39;text/javascript&#39; src=&#39;/min/g=jsProyectName&#39;&gt;&lt;/script&gt;
+</code></pre></div>
+<p>Y configurar correctamente <a href="http://code.google.com/p/minify/">minify</a>
+con todas aquellos archivos que quieras procesar:</p>
+
+<iframe src="http://pastebin.com/embed_iframe.php?i=UjCUjKzM"></iframe>
+
+<h3>Resumen</h3>
+
+<ul>
+<li>  <strong>La carga de la página se reduce una tercera parte</strong>, ya que
+obtienes un único documento CSS, minimizado, agrupado y cacheado en
+servidor.</li>
+<li>  Podrás <strong>trabajar en local con LESS sin ataduras</strong>, según tu propio
+modelo mental, organizando tus estilos según la estructura y
+peculiaridades de cada proyecto.</li>
+<li>  No tendrás que preocuparte del usuario final o de sobrecargar el
+servidor con <strong> peticiones HTTP innecesarias</strong>.</li>
+</ul>
+
+</div>
+
+
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Your Name<br />
+                What You Are<br />
+                you@example.com
+              </p>
+            </div>
+            <div class="contact">
+              <p>
+                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
+                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
+              </p>
+            </div>
+          </div>
+        </div>
+
+    </body>
+</html>

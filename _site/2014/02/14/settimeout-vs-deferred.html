@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>setTimeout() vs $.Deferred()</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+
+        <div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">Bruno Garcia</a></h1>
+            <a class="extra" href="/">home</a>
+          </div>
+
+          <h2>setTimeout() vs $.Deferred()</h2>
+<p class="meta">14 Feb 2014</p>
+
+<div class="post">
+<p>Este el típico problema en el cual utilizaba un setTimeout(). Estaba
+obligado a esperar que se ejecutara la linea superior para poder hacer
+uso del nodo DOM (en este caso “lightbox_content_user”).</p>
+
+<blockquote>
+<p>$(“#wrap_all”).prepend(&lt;?php echo json_encode(\$lightbox) ?&gt;));</p>
+
+<p>setTimeout(function(){</p>
+
+<p> $(“.lightbox_content_user”).css(‘width’, container_width - 80);
+},</p>
+
+<p>500);</p>
+</blockquote>
+
+<p>Ahora estoy comenzando a utilizar un objeto jQuery llamado
+<a href="https://api.jquery.com/category/deferred-object/">Deferred</a>.
+Básicamente hace lo mismo, pero de forma mas limpia. Y así evitamos la
+famosa <a href="http://www.reddit.com/r/javascript/comments/1atmht/how_we_killed_the_callback_pyramid_of_doom/">Callback Pyramid of
+Doom</a>.</p>
+
+<blockquote>
+<p>var dfd = \$.Deferred();</p>
+
+<p>dfd.done(\$(“#wrap_all”).prepend(&lt;?php echo
+json_encode(\$lightbox) ?&gt;);</p>
+
+<p>dfd.resolve(\$(“.lightbox_content_user”).css(‘width’,
+container_width - 80));</p>
+</blockquote>
+
+</div>
+
+
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Your Name<br />
+                What You Are<br />
+                you@example.com
+              </p>
+            </div>
+            <div class="contact">
+              <p>
+                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
+                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
+              </p>
+            </div>
+          </div>
+        </div>
+
+    </body>
+</html>

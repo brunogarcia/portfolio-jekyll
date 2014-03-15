@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Preprocesadores CSS: estado actual y comparativa</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+
+        <div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">Bruno Garcia</a></h1>
+            <a class="extra" href="/">home</a>
+          </div>
+
+          <h2>Preprocesadores CSS: estado actual y comparativa</h2>
+<p class="meta">11 Dec 2011</p>
+
+<div class="post">
+<p>De un tiempo a esta parte, han salido al mercado una serie de
+<a href="https://www.google.com/search?q=CSS+Preprocessor/">preprocesadores
+CSS</a>, algunos muy
+buenos, otros regulares y otros muchos (como siempre sucede con este
+tipo modas) mueren por el camino, ya sea por desidia de los propios
+desarrolladores o quizás por falta de una comunidad que les respalde y
+aliente constantemente.</p>
+
+<p>Si me tengo que quedar con tres, serían (en orden de preferencia):
+<a href="http://lesscss.org/">LESS</a>, <a href="http://sass-lang.com/">SASS</a> y
+<a href="http://learnboost.github.com/stylus/">Stylus</a></p>
+
+<p>Las dos primeras son desarrollos muy maduros y se pueden utilizar sin
+problemas en cualquier proyecto profesional. Además cuentan con
+comunidades muy activas que las van mejorando y puliendo poco a poco.</p>
+
+<h3>Pero… ¿es para mí?</h3>
+
+<p>No voy a listar aquí todas las virtudes de <a href="http://lesscss.org/">LESS</a> o
+<a href="http://sass-lang.com/">SASS</a>, ya existen muchos artículos con <a href="http://coding.smashingmagazine.com/2011/09/09/an-introduction-to-less-and-comparison-to-sass" title="An Introduction To LESS, And Comparison To Sass">buenos
+ejemplos y explicaciones
+detalladas</a>.
+Y la documentación de cada uno de ellos es bastante amplia.</p>
+
+<p>Si eres nuevo/a en el mundo de los preprocesadores CSS, deberías
+quedarte con dos ideas muy concretas:</p>
+
+<ul>
+<li>  <strong>Reducirás considerablemente el tiempo de desarrollo</strong>, ya que
+escribirás menos código y este será de más calidad. Échale un ojo a
+las <a href="http://lesscss.org/#-nested-rules">reglas anidadas</a> y a los
+<a href="http://lesscss.org/#-mixins">mixins</a>. Son las mas vistosas y
+fáciles de entender e implementar en cualquier desarrollo.</li>
+<li>  <strong>Tu flujo de trabajo cambiará a mejor</strong>, podrás trabajar en local
+con archivos <em>less</em> y le darás al usuario un <em>css</em> limpio y
+minizado. Si quieres ampliar este punto, te recomiendo leer <a href="http://brunogarciaechegaray.tumblr.com/2011/12/07/less-lessphp-minify.html">LESS,
+lessphp &amp;
+minify</a></li>
+</ul>
+
+<h3>Comparativa entre SASS y LESS</h3>
+
+<p>A continuación os muestro una comparativa a día de hoy (Diciembre 2011).</p>
+
+<p>Características</p>
+
+<p>SASS</p>
+
+<p>LESS</p>
+
+<p>Repositorio</p>
+
+<p><a href="https://github.com/nex3/sass">Github SASS</a></p>
+
+<p><a href="https://github.com/cloudhead/less.js">Github LESS</a></p>
+
+<p>Desarrolladores</p>
+
+<ul>
+<li>  <a href="http://www.twitter.com/hcatlin">Hampton Catlin</a></li>
+<li>  <a href="https://twitter.com/#!/nex3">Nathan Weizenbaum</a></li>
+<li><p><a href="https://twitter.com/#!/chriseppstein">Chris Eppstein</a></p></li>
+<li><p><a href="http://twitter.com/cloudhead">Alexis Sellier</a></p></li>
+</ul>
+
+<p>Github Antiguedad</p>
+
+<p>2006</p>
+
+<p>2010</p>
+
+<p>Github Versión</p>
+
+<p>3.1.11</p>
+
+<p>1.1.5</p>
+
+<p>Github Watchers</p>
+
+<p>680</p>
+
+<p>3251</p>
+
+<p>Github Forks</p>
+
+<p>81</p>
+
+<p>405</p>
+
+<p>Lenguajes soportados</p>
+
+<ul>
+<li><p>Ruby</p></li>
+<li><p><a href="http://leafo.net/lessphp/">PHP</a></p></li>
+<li><p><a href="https://github.com/asual/lesscss-servlet">Java</a></p></li>
+<li><p><a href="http://www.dotlesscss.org">.NET</a></p></li>
+<li><p><a href="http://search.cpan.org/%7Edrinchev/CSS-LESSp-0.86/lib/CSS/LESSp.pm">Perl</a></p></li>
+<li><p><a href="https://github.com/cloudhead/less.js">Javascript</a></p></li>
+</ul>
+
+<p>Librerías complementarias</p>
+
+<ul>
+<li>  <a href="http://haml-lang.com/">HAML</a></li>
+<li><p><a href="http://compass-style.org/">Compass</a></p></li>
+<li><p><a href="http://jade-lang.com/">Jade</a></p></li>
+<li><p><a href="http://lesselements.com/">LESS Elements</a></p></li>
+<li><p><a href="http://markdotto.com/bootstrap/">Preboot.less</a></p></li>
+</ul>
+
+<p>Me ha sorprendido la <strong>diferencia de watchers y forks</strong> entre ambos
+proyectos en Github, siendo claro ganador LESS. Todo esto a pesar de que
+SASS tiene más antigüedad y triplica el número de desarrolladores.</p>
+
+<p>Mi teoría es que en la comunidad <em>&quot;no-ruby&quot;</em> hemos estado esperando
+mucho tiempo algo similar a SASS, y ahora que por fin la tenemos hemos
+ido de cabeza a disfrutar de ella.</p>
+
+<p>Otro punto importante es que <strong>la filosofía SASS ha calado como algo
+evidente y necesario</strong> en la comunidad web. Si has trabajado muchos años
+con CSS, entenderás lo revolucionario que es poder utilizar variables,
+funciones y reglas anidadas. Antes simplemente no había manera de
+hacerlo.</p>
+
+<p>Otra circunstancia: los proyectos web son cada vez más complejos y
+amplios. La planificación y mantenimiento de CSS monstruosas es demasido
+compleja, algo de lo que muchos de nosotros nos habíamos quejado pero
+lamentablemente no sabíamos como atacar.</p>
+
+<p>Hemos tenido suerte y todo ha venido rodado, paralelamente han nacido
+nuevas metodologías y buenas prácticas en el mundo front-end. A destacar
+<a href="http://es.scribd.com/doc/60772875/OOCSS-Version-anotada-janogarcia">OOCSS</a>,
+<a href="http://www.alistapart.com/articles/responsive-web-design/">Responsive
+Design</a> y los
+todavía infravalorados <a href="http://speckyboy.com/2011/11/17/15-responsive-css-frameworks-worth-considering/">frameworks
+CSS</a>.</p>
+
+<p>Y digo que hemos tenido suerte, porque no le sacaríamos todo el
+potencial a OOCSS sin un buen preprocesador que actué como cimiento. A
+fin de cuentas un <a href="https://github.com/stubbornella/oocss/wiki">Objeto CSS reutilizable e
+independiente</a> es más
+sencillo de concebir y programar con una simple regla anidada. Por otra
+parte, destacados frameworks CSS (por ejemplo: <a href="http://twitter.github.com/bootstrap/">Bootstrap de
+Twitter</a>, <a href="http://goldengridsystem.com/">Golden Grid
+System</a>, <a href="http://stuffandnonsense.co.uk/projects/320andup/">320 and
+Up</a> o
+<a href="http://p.erkins.com/">Perkins</a>) ya vienen de fábrica con su propio
+archivo <em>less</em> o <em>scss</em>, dejando claro que es la forma más adecuada y
+eficiente de trabajar, independientemente de modas o buzz pasajeros.</p>
+
+<h3>PHP: CMS y Frameworks</h3>
+
+<p>Si alguna comunidad ha sabido sacarle partido a LESS a sido PHP. Puedes
+encontrar una implementación en prácticamente cualquiera de sus diversos
+CMS y frameworks de desarrollo. Para muestra un botón:</p>
+
+<ul>
+<li>  Compilador PHP:
+<a href="http://leafo.net/lessphp/"></a><a href="http://leafo.net/lessphp">http://leafo.net/lessphp</a></li>
+<li>  Drupal:
+<a href="http://drupal.org/project/less"></a><a href="http://drupal.org/project/less">http://drupal.org/project/less</a></li>
+<li>  Wordpress:
+<a href="http://wordpress.org/extend/plugins/wp-less"></a><a href="http://wordpress.org/extend/plugins/wp-less">http://wordpress.org/extend/plugins/wp-less</a></li>
+<li>  Codeigniter:
+<a href="http://codeigniter.com/forums/viewthread/164741"></a><a href="http://codeigniter.com/forums/viewthread/164741">http://codeigniter.com/forums/viewthread/164741</a></li>
+<li>  Symfony:
+<a href="http://www.symfony-project.org/plugins/sfLESSPlugin"></a><a href="http://www.symfony-project.org/plugins/sfLESSPlugin">http://www.symfony-project.org/plugins/sfLESSPlugin</a></li>
+<li>  Yii:
+<a href="http://www.yiiframework.com/extension/less"></a><a href="http://www.yiiframework.com/extension/less">http://www.yiiframework.com/extension/less</a></li>
+<li>  CakePHP:
+<a href="https://github.com/Phally/less"></a><a href="https://github.com/Phally/less">https://github.com/Phally/less</a></li>
+</ul>
+
+<p>Si tu lenguaje de programación favorito es PHP, tienes butaca preferente
+en el mundo de los preprocesadores CSS, ¿a qué estas esperando?.</p>
+
+<h3>IDE de desarrollo</h3>
+
+<p>Lamentablemente los programas para trabajar con LESS son aún escasos.</p>
+
+<p>En modo multiplataforma tenemos
+<a href="http://www.jetbrains.com/phpstorm/">PHPStorm</a> o
+<a href="http://www.jetbrains.com/webstorm/">WebStorm</a>, ambas de JetBrains,
+creadores del famoso IntelliJ. Destacar que también tienen soporte
+nativo para <a href="http://jashkenas.github.com/coffee-script">CoffeeScript</a>,
+SASS y una decena de nuevas tecnologías. Si a esto le sumas su bajo
+precio (87€ y 61€ respectivamente) entonces se convierten en la mejor
+opción a día de hoy.</p>
+
+<p>Si eres fan de Dreamweaver ni te molestes, actualmente no tienen soporte
+ni parece que lo vaya a tener a medio o largo plazo. Quizás es una buena
+excusa para actualizar tu entorno de desarrollo :)</p>
+
+<p>Y si eres un Apple Boy, tienes <a href="http://macrabbit.com/espresso">Espresso /
+CSSEdit</a>.</p>
+
+<h3>Compiladores</h3>
+
+<p>Una mala idea es utilizar el <a href="https://github.com/cloudhead/less.js">compilador
+javascript</a>, ya que sobrecargas tu
+página con (otra) librería de 36 Kb. Aunque si quieres jugar un poco y
+realizar pruebas rápidas te puede valer.</p>
+
+<p>Casi mejor si compilas desde local con una app, por ejemplo:
+<a href="http://wearekiss.com/simpless">SimpleLess</a> (multiplataforma) o
+<a href="http://incident57.com/less/">LESS.app</a> (Mac).</p>
+
+<p>Pero definitivamente la mejor opción es compilar directamente desde
+servidor:</p>
+
+<ul>
+<li>  <a href="http://leafo.net/lessphp/">LESS PHP</a></li>
+<li>  <a href="https://github.com/asual/lesscss-servlet">LESS Java</a></li>
+<li>  <a href="http://www.dotlesscss.org">LESS .NET</a></li>
+<li>  <a href="http://search.cpan.org/%7Edrinchev/CSS-LESSp-0.86/lib/CSS/LESSp.pm">LESS
+Perl</a></li>
+</ul>
+
+<h3>Resumen</h3>
+
+<p>Creo que los desarrolladores front-end hemos gastado ya demasiado tiempo
+con tonterías del tipo: hacks IE, maquetación al pixel, maquetación sin
+tablas y el sexo de los ángeles (HTML5 vs. Flash).</p>
+
+<p>Cuando lo realmente importante es aplicar conceptos del tipo
+<a href="http://www.slideshare.net/stubbornella/object-oriented-css">orientación a
+objetos</a>,
+<a href="http://coding.smashingmagazine.com/2011/11/07/the-future-of-css-embracing-the-machine/">DRY</a>
+y la <a href="http://37signals.com/svn/posts/3003-css-taking-control-of-the-cascade">escalabilidad
+real</a>
+de nuestras hojas de estilo. Y creo sinceramente que LESS es una pieza
+fundamental en este nuevo entorno.</p>
+
+<h3>¿Y sobre SASS?</h3>
+
+<p>Soy consciente que no he profundizado en SASS. Lamentablemente no es mi
+especialidad, ya que los proyectos en los que trabajo como
+<a href="http://bruno.garciaechegaray.com/">freelance</a> son casi 100% PHP.</p>
+
+<p>Si quieres ampliar información, la mejor presentación que he leído
+últimamente es: <a href="http://speakerdeck.com/u/imathis/p/sass-compass-the-future-of-stylesheets-now">Sass &amp; Compass: The future of stylesheets
+now.</a></p>
+
+</div>
+
+
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Your Name<br />
+                What You Are<br />
+                you@example.com
+              </p>
+            </div>
+            <div class="contact">
+              <p>
+                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
+                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
+              </p>
+            </div>
+          </div>
+        </div>
+
+    </body>
+</html>

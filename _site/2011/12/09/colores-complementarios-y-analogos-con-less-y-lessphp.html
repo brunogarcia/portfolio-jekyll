@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Colores complementarios y análogos con LESS y lessphp</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+
+        <div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">Bruno Garcia</a></h1>
+            <a class="extra" href="/">home</a>
+          </div>
+
+          <h2>Colores complementarios y análogos con LESS y lessphp</h2>
+<p class="meta">09 Dec 2011</p>
+
+<div class="post">
+<p>Disfruto mucho con cada <a href="http://themelee.org/">The Mêlée</a> que se
+organiza en Donostia. Las charlas y talleres son una auténtica
+maravilla, y además es la oportunidad perfecta para conocer a gente del
+sector web con nuevas ideas y ganas de hacer las cosas bien.</p>
+
+<p>Quizás lo mejor de todo es que a muchos de nosotros nos sirve como un
+pequeño brainstorming un tanto anárquico. En el 3º tiempo, entre caña y
+pintxo, puedes escuchar (y soltar) ideas y pets proyects en las cuales
+estas trabajando. Así pude conocer <a href="http://www.tendumi.com/">Tendumi</a> o
+<a href="http://gzaas.com/">Gzaas</a> cuando todavía estaba en fase <a href="http://www.ojoven.es/gzaas/gzaas-historia-de-un-desarrollo-i/"><em>tengo una
+idea muy
+loca</em></a>.</p>
+
+<p>En la última mêlée pude hablar con <a href="http://maxkuri">@maxkuri</a> y me contó
+una idea que me gusto mucho. Básicamente consistía en jugar con la
+función <a href="http://lesscss.org/#-color-functions">spin() de LESS</a> para
+obtener  (de manera dinámica) las armonías
+<a href="http://en.wikipedia.org/wiki/Complementary_colors">complementarias</a> y
+<a href="http://en.wikipedia.org/wiki/Analogous_colors">análogas</a> de un color
+previamente seleccionado.</p>
+
+<p>La idea inicial era crear un <a href="http://lesscss.org/#-mixins">mixins</a> para
+<a href="http://lesselements.com/">LESS Element</a>, pero una vez puestos nos dimos
+cuenta de que la solución era un poco más compleja de lo esperado.</p>
+
+<p>Para empezar necesitábamos enviarle a LESS una variable (en este caso un
+color en <a href="http://www.colorschemer.com/online.html">hexadecimal</a>) para
+que lo procesara y nos diera unos valores concretos (otros tres colores
+también en hexadecimal). Pero claro, LESS tiene muchas cosas buenas,
+pero no es capaz de trabajar conjuntamente con un JS externo, leerlo y
+escupir algo. Pensé en atacar directamente la librería JS de LESS, pero
+no me gustaba la idea de depender de ella.</p>
+
+<p>La solución salomónica: usar la función <a href="http://leafo.net/lessphp/docs/#setting_variables_from_php">parse() de
+lessphp</a> de
+la siguiente forma:</p>
+
+<p>Os explico un poco: la función
+<a href="http://lesscss.org/#-color-functions">spin()</a> nos permite mostrar un
+color según los grados que le digamos del <a href="http://en.wikipedia.org/wiki/Color_wheel">círculo
+cromático</a>. En este caso el
+punto de partida es <a href="http://www.color-hex.com/color/0081d1">#0081d1</a>,
+del cual buscamos los análogos: 45º y -45º, y el complementario: 180º.
+Nota:  también podemos pedir las
+<a href="http://www.beading-design-jewelry.com/triadic-color-scheme.html">tríadas</a>
+o <a href="http://palettebuilder.com/colorTheory/Tetradic.aspx">tétradas</a>, sólo
+es necesario crear otra variable y asignarles los grados necesarios.</p>
+
+<p>El código generado es un CSS normal y corriente que cualquier navegador
+puede entender:</p>
+
+<blockquote>
+<style media='all' type='text/css'>
+  .example { color:white; }
+  .example.base { background-color:#0081d1; }
+  .example.analogousLeft { background-color:#1c00d1; }
+  .example.analogousRight { background-color:#00d184; }
+  .example.complementary { background-color:#d10000; }
+</style>
+</blockquote>
+
+<p>Con esto ya podemos trabajar directamente, y con un poco de HTML mostrar
+esto:</p>
+
+<p><img src="http://bruno.garciaechegaray.com/img/experimentos/spin-colores.png" alt=""></p>
+
+<p>Claro, después ves cosas como <a href="http://colorschemedesigner.com/">Color Scheme
+Designer</a> y piensas: ¡menudo curro!.
+Pero nuestro experimento tampoco esta tan mal, si tienes en cuenta que
+nació entre un par de cañas un viernes por la noche y un lunes por la
+tarde ya estaba resuelto (con un <a href="http://coderetreat.com/">Code Retreat</a>
+de ocho horas el sábado).</p>
+
+<p>Estos pequeños ejercicios son muy divertidos, a ver que sorpresas nos
+trae la próxima mêlée.</p>
+
+</div>
+
+
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Your Name<br />
+                What You Are<br />
+                you@example.com
+              </p>
+            </div>
+            <div class="contact">
+              <p>
+                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
+                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
+              </p>
+            </div>
+          </div>
+        </div>
+
+    </body>
+</html>

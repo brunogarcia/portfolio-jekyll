@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Pet Project, la mejor forma de aprender</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+
+        <div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">Bruno Garcia</a></h1>
+            <a class="extra" href="/">home</a>
+          </div>
+
+          <h2>Pet Project, la mejor forma de aprender</h2>
+<p class="meta">07 Jul 2013</p>
+
+<div class="post">
+<p>Desde hace algunos meses estoy desarrollando <a href="http://www.tuttifrescuni.com/">Tutti
+Frescuni</a>.</p>
+
+<p>Es una aplicación que constantemente echaba en falta, y ya que no
+existía en el mercado me propuse crearla desde cero. Incluso diría que
+fué una de las razones por las cuales estudié un FP de Informática.
+Quería hacer cosas pero no sabía cómo, me faltaban las bases técnicas
+para afrontar el reto.</p>
+
+<p>Cuando leí <a href="http://gettingreal.37signals.com/">Getting Real</a>, allá por
+el 2010, recuerdo que me abrió los ojos con respecto a muchos aspectos
+de mi día a día como profesional del mundo web. Especialmente recuerdo
+el capítulo <a href="http://gettingreal.37signals.com/ch02_Whats_Your_Problem.php">What’s Your
+Problem?</a>.
+Y cito: “<em>A great way to build software is to start out by solving your
+own problems. You’ll be the target audience and you’ll know what’s
+important and what’s not. That gives you a great head start on
+delivering a breakout product.”</em></p>
+
+<h3>Tutti Frescuni</h3>
+
+<p>Con este mantra bien aprendido y repetido mil veces en mi cabeza, he
+comenzado a darle forma a una idea muy simple: <strong>¿cómo saber qué frutas
+y verduras están de temporada en una fecha en concreto?</strong>, o sea ¿cúal
+es su mejor momento de recolección y venta?.</p>
+
+<p>Si lo pensamos bien este dato influye en muchos aspectos del producto.
+Por ejemplo, si un melón se encuentra en su mejor temporada (de junio a
+septiembre según mi base de datos), este tendrá mejor sabor y su precio
+será más accesible. ¿Quién no ha cometido el tremendo error de comprar
+un melón fuera de temporada? (un <em>melón-pepino</em> como dice mi suegra). Mi
+idea es evitar este problema.</p>
+
+<p><a href="http://www.tuttifrescuni.com/"><img src="http://www.tuttifrescuni.com/assets/images/screenshots/screenshot_01.png" alt="image"></a></p>
+
+<p>El logotipo, el favicon y el fabuloso nombre han sido creados por la
+ilustradora <a href="http://evasantos.tumblr.com/">Eva Santos</a></p>
+
+<p>Quiero que la decisión de compra se vea influenciada positivamente
+gracias a <a href="http://www.tuttifrescuni.com/">Tutti Frescuni</a>. Y quiero que
+lo haga en el momento preciso en el lugar indicado. Por ejemplo, si el
+usuario se encuentra en un supermercado y desconoce si una fruta o
+verdura en concreto se encuentra en su mejor fecha de recolección,
+accediendo a Tutti Frescuni podrá conocerlo al instante.</p>
+
+<p>Una tarea muy simple, pero muchas veces hacer las cosas realmente
+simples es más complicado de lo que parece.</p>
+
+<h3>Tecnología</h3>
+
+<p>El reto técnico ha sido interesante. He investigado diferentes
+tecnologías para desarrollar este proyecto. Desde un primer momento he
+apostado por librerías Javascript de código abierto:
+<a href="http://backbonejs.org/">Backbone</a>,
+<a href="http://underscorejs.org/">Underscore</a>, <a href="http://jquery.com/">jQuery</a>,
+<a href="http://requirejs.org/">Require.js</a> (plugins:
+<a href="http://requirejs.org/docs/download.html#text">text</a> &amp;
+<a href="https://github.com/millermedeiros/requirejs-plugins">json</a>),
+<a href="http://www.slimframework.com/">Slim</a>,
+<a href="http://cubiq.org/iscroll-4">iScroll</a>,
+<a href="http://fgnass.github.io/spin.js/">Spin.js</a>,
+<a href="http://handlebarsjs.com/">Handlebars</a> (plugin:
+<a href="https://github.com/jfparadis/requirejs-handlebars">hbars</a>),
+<a href="http://lesscss.org/">LESS</a> y <a href="http://twitter.github.io/bootstrap/">Twitter
+Bootstrap</a></p>
+
+<p>Lo más curioso ha sido comprobar que todas estas librerías se pueden
+complementar a la perfección con poco esfuerzo. Y esto es un acierto por
+parte de la comunidad de desarrolladores, que por encima de egos y
+complejos apuesta por crear un entorno de trabajo (por ejemplo
+iniciativas del tipo <a href="http://wiki.commonjs.org/wiki/CommonJS">CommonsJS</a>
+o <a href="https://github.com/amdjs/amdjs-api/wiki/AMD">AMDJS</a>) que nada tiene
+que envidiar a mega frameworks corporativos.</p>
+
+<p>Si quieres conocer las tripas del proyecto, puedes ver el <a href="https://github.com/brunogarcia/TuttiFrescuni">código fuente
+en Github</a>.</p>
+
+<h3>Backbone</h3>
+
+<p>Para este <em>pet project</em> he leído decenas de artículos y libros
+sobre <a href="http://backbonejs.org/">Backbone</a>  Si tengo que recomendar alguno
+en especial sería <a href="http://addyosmani.github.io/backbone-fundamentals/">Developing Backbone.js
+Applications</a> de
+<a href="https://twitter.com/addyosmani">Addy Osmani</a>. Si todos los libros
+técnicos fueran de este estilo, seguro que más gente los leería en sus
+ratos libres.</p>
+
+<p>Para empezar todo el contenido está <a href="https://github.com/addyosmani/backbone-fundamentals">disponible en
+Github</a>. Los
+lectores pueden ir mejorándolo constantemente proponiendo cambios
+(actualmente 444 issues cerradas y 25 abiertas). Esto implica que
+existen más de <a href="https://github.com/addyosmani/backbone-fundamentals/graphs/contributors">140 contribuidores o mejor dicho
+cocreadores</a>.</p>
+
+<p>Con respecto al libro, comentar que viene cargado de código, con muchos
+ejemplos y casos de uso, abarcando prácticamente cualquier punto
+relacionado con Backbone: fundamentos básicos, extensiones, desarrollo
+modular, tests unitarios, etc. Obviamente no es un libro para leerlo del
+tirón, es mejor en pequeñas dosis a lo largo de varias semanas.</p>
+
+<p>Mención especial también a los videotutoriales de Nettuts+: <a href="https://tutsplus.com/course/connected-to-the-backbone/">Connected
+to the Backbone</a>
+y <a href="https://tutsplus.com/course/advanced-backbone-patterns-and-techniques/">Advanced Backbone Patterns and
+Techniques</a>.</p>
+
+<p>Y si aún estás muy perdido, en Stack Overflow seguro que encontrarás
+alguna respuesta a tus preguntas.</p>
+
+<h3>Fotografías</h3>
+
+<p>Otro dato interesante han sido las fotografías utilizadas en la
+aplicación: todas son <a href="http://en.wikipedia.org/wiki/Copyleft">copyleft</a>.
+Esto quiere decir que cerca de 90 personas han tomado la decisión de
+compartir su <strong>trabajo y esfuerzo de forma altruista</strong>.</p>
+
+<p>He utilizado Flickr para la gestión de las imágenes. Me creé una cuenta
+en dicho servicio y fuí añadiendo a
+<a href="http://www.flickr.com/photos/tuttifrescuni/favorites/">favoritos</a>
+aquellas imágenes que mejor pinta tenían. Después con la <a href="http://www.flickr.com/services/api/">API
+pública</a> y con el método
+<a href="http://www.flickr.com/services/api/flickr.favorites.getList.html">flickr.favorites.getList</a>
+obtuve un fichero JSON con toda la información necesaria.</p>
+
+<p>Punto importante: actualmente Flickr dispone de 9 tamaños distintos para
+todas las imágenes. Esto es muy bueno para que tu app sea responsive
+desde un primer momento.</p>
+
+<h3>Mejoras a futuro</h3>
+
+<p>Muchas.</p>
+
+<p>En primer lugar estoy pensando en cambiar completamente el layout.
+Actualmente estoy utilizando <a href="http://twitter.github.io/bootstrap/">Twitter
+Bootstrap</a>  y aunque puede ser 100%
+responsive, realmente tiene muchas carencias a nivel mobile.</p>
+
+<p>Incluso he creado una app Android con <a href="http://phonegap.com/">Phonegap</a>
+para testear el comportamiento y la verdad deja mucho que desear.
+Obviamente la interacción no se puede comparar con los
+<a href="http://www.mobile-patterns.com/lists">patterns</a>que actualmente se están
+utilizando en el desarrollo móvil. Sobre todo porque la idea principal
+de Tutti Frescuni es poder utilizarla en dispositivos móviles.</p>
+
+<p>Estoy evaluando <a href="http://jquerymobile.com/">jQuery Mobile</a> o
+<a href="http://www.appcelerator.com/platform/titanium-platform/">Titanium</a> como
+opciones. El caso de Titanium es realmente interesante. Acaban de
+liberar la versión 3 y la verdad tengo muchas ganas de hincarle el
+diente. </p>
+
+<p>Como entorno de desarrollo han ido mejorando paso a paso. Primero se
+liberaron del WebView, después crearon su propio IDE basado en Eclipse
+(<a href="http://www.appcelerator.com/platform/titanium-studio/">Titanium
+Studio</a>) que
+funciona de lujo. Y ahora tienen su propio framework MVC llamado
+<a href="http://docs.appcelerator.com/titanium/latest/#!/guide/Alloy_Framework">Alloy</a>
+el cual está basado en Backbone.</p>
+
+<p>La API se Titanium se encarga de crear los componentes nativos en tiempo
+de compilación. Esto te permite tener apps nativas para Android/iOS
+programando en Javascript. </p>
+
+<p>Y si quieres más, tiene la plataforma (de pago)
+<a href="http://www.appcelerator.com/platform/appcelerator-platform/">Appcelerator</a>
+con multiples servicios adicionales. </p>
+
+<p>Otro punto a mejorar es que Tutti Frescuni ofrece aún poca información.
+No deja de ser un simple listado de productos filtrado por fecha y
+temporada. La idea es ir añadiendo más información relacionada poco a
+poco (¿recetas?, ¿valor nutricional?). Pero siempre conservando la
+simplicidad del proyecto inicial.</p>
+
+</div>
+
+
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Your Name<br />
+                What You Are<br />
+                you@example.com
+              </p>
+            </div>
+            <div class="contact">
+              <p>
+                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
+                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
+              </p>
+            </div>
+          </div>
+        </div>
+
+    </body>
+</html>
