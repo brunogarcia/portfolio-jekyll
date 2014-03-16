@@ -1,3 +1,5 @@
 name: Bruno Garcia
 markdown: redcarpet
 pygments: true
+description: Artículos sobre desarrollo front-end y proyectos personales en marcha
+url: http://blog.garciaechegaray.com/

@@ -1,0 +1,923 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Bruno Garcia</title>
+		<description>Artículos sobre desarrollo front-end y proyectos personales en marcha</description>		
+		<link>http://blog.garciaechegaray.com/</link>
+		<atom:link href="http://blog.garciaechegaray.com//feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>El workflow perfecto: Yeoman + Bower + Grunt</title>
+				<description>&lt;p&gt;Últimamente estoy trasteando con los
+&lt;a href=&quot;http://yeoman.io/community-generators.html&quot;&gt;generadores&lt;/a&gt; de
+&lt;a href=&quot;http://yeoman.io&quot; title=&quot;Yeoman&quot;&gt;Yeoman&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://yeoman.io&quot; title=&quot;Yeoman&quot;&gt;Yeoman&lt;/a&gt; es una herramienta para automatizar
+tareas en proyectos front-end. Trabaja conjuntamente con
+&lt;a href=&quot;http://bower.io&quot;&gt;Bower&lt;/a&gt; y &lt;a href=&quot;http://gruntjs.com&quot;&gt;Grunt&lt;/a&gt;, otro par de
+proyectos &lt;em&gt;open source&lt;/em&gt; para (adivina…) automatizar tareas.&lt;/p&gt;
+
+&lt;h3&gt;Bower&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://bower.io&quot;&gt;Bower&lt;/a&gt; fue liberado por Twitter y sirve para gestionar
+todas las dependencias de tu proyecto front-end. La idea es similar a
+&lt;a href=&quot;https://getcomposer.org/&quot;&gt;Composer&lt;/a&gt; en PHP o
+&lt;a href=&quot;http://bundler.io/&quot;&gt;Bundler&lt;/a&gt; para Ruby.&lt;/p&gt;
+
+&lt;p&gt;El funcionamiento de Bower es bastante simple: creas la configuración en
+un archivo &lt;em&gt;bower.json&lt;/em&gt; y después basta con lanzar una línea en la
+terminal (&lt;em&gt;\$ bower&lt;/em&gt;) para tener todas las dependencias en local. Da
+igual si son 5 o 50, Bower las bajara por ti en pis pas.&lt;/p&gt;
+
+&lt;h3&gt;Grunt&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://gruntjs.com&quot;&gt;Grunt&lt;/a&gt; creado y mantenido por la gente de
+&lt;a href=&quot;http://bocoup.com/&quot;&gt;Bocoup&lt;/a&gt;, es una herramienta para automatizar tareas
+en tu entorno de desarrollo.&lt;/p&gt;
+
+&lt;p&gt;Por ejemplo concatenar &lt;em&gt;.js&lt;/em&gt; o &lt;em&gt;.css&lt;/em&gt;, minimizar HTML e incluso
+imágenes, compilar archivos &lt;em&gt;.less&lt;/em&gt; o &lt;em&gt;.sass&lt;/em&gt;, crear sprites sobre la
+marcha, etc. En fin, Grunt tiene un gran repositorio de
+&lt;a href=&quot;http://gruntjs.com/plugins&quot; title=&quot;Grunt plugins&quot;&gt;plugins&lt;/a&gt; para cualquier
+tarea que te puedas imaginar.&lt;/p&gt;
+
+&lt;p&gt;Para configurar Grunt son necesarios dos archivos: &lt;em&gt;package.json&lt;/em&gt; y
+&lt;em&gt;Gruntfile.js.&lt;/em&gt;En el primero debes listar todas las dependencias
+necesarias para correr las tareas. En el segundo creas la configuración
+de cada tarea o grupo de tareas. Si sientes curiosidad, te recomiendo
+leer este artículo: &lt;a href=&quot;http://24ways.org/2013/grunt-is-not-weird-and-hard/&quot; title=&quot;Grunt for People Who Think Things Like Grunt are Weird and Hard&quot;&gt;Grunt for People Who Think Things Like Grunt are
+Weird and
+Hard&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;Resumen&lt;/h3&gt;
+
+&lt;p&gt;Un generador Yeoman instala dependencias, crea carpetas, configura
+entornos (uno para producción y otro para desarrollo), arranca un
+servidor local, realiza tests, etc. Cualquier tarea por compleja que
+sea, basta con configurarlo correctamente para que Yeoman sea capaz de
+hacerlo el solo (siempre con la ayuda de Bower y Grunt).&lt;/p&gt;
+
+&lt;p&gt;La verdad es que existen cientos de
+&lt;a href=&quot;http://yeoman.io/community-generators.html&quot;&gt;generadores&lt;/a&gt; super útiles,
+para prácticamente cualquier tipo de proyecto. Y si no encuentras alguno
+que se adapte a tu requerimientos, siempre puedes &lt;a href=&quot;http://yeoman.io/generators.html#writing-your-first-generator&quot; title=&quot;Yeoman: writing your first generator&quot;&gt;crear un generador
+personalizado&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Lo que más me gusta es que se aprende mucho leyendo el código de cada
+generador. La gente intenta volcar todo su conocimiento técnico y forma
+de trabajar en cada generador. Y eso es oro puro.&lt;/p&gt;
+
+&lt;h3&gt;Manos a la obra&lt;/h3&gt;
+
+&lt;p&gt;Si os apetece trastear un poco, os dejo un par de ejemplos.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Importante&lt;/strong&gt;: previamente debéis tener instalados
+&lt;a href=&quot;http://nodejs.org/download/&quot;&gt;Node&lt;/a&gt;, &lt;a href=&quot;http://git-scm.com/&quot;&gt;Git&lt;/a&gt;,
+&lt;a href=&quot;http://yeoman.io/community-generators.html&quot; title=&quot;Yeoman: community generators&quot;&gt;Yeoman&lt;/a&gt;,
+&lt;a href=&quot;http://bower.io&quot;&gt;Bower&lt;/a&gt; y &lt;a href=&quot;http://gruntjs.com&quot;&gt;Grunt&lt;/a&gt; en vuestras
+máquinas.&lt;/p&gt;
+
+&lt;h3&gt;Crear un proyecto Bootstrap&lt;/h3&gt;
+
+&lt;p&gt;Vamos a utilizar
+el &lt;a href=&quot;https://github.com/Thomas-Lebeau/generator-bootstrap-less&quot; title=&quot;yeoman generator bootstrap&quot;&gt;generador&lt;/a&gt; creado
+por &lt;a href=&quot;https://github.com/Thomas-Lebeau&quot;&gt;Thomas Lebeau&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Este generador creará un proyecto con las siguientes dependencias:
+&lt;a href=&quot;http://getbootstrap.com&quot;&gt;Bootstrap 3&lt;/a&gt;,
+&lt;a href=&quot;http://modernizr.com/&quot;&gt;Modernizr&lt;/a&gt;, &lt;a href=&quot;http://jquery.com/&quot;&gt;jQuery&lt;/a&gt; y &lt;a href=&quot;http://fortawesome.github.io/Font-Awesome/&quot;&gt;Font
+Awesone&lt;/a&gt; (opcional).&lt;/p&gt;
+
+&lt;p&gt;La configuración de Bower la podéis encontrar en
+&lt;a href=&quot;https://github.com/Thomas-Lebeau/generator-bootstrap-less/blob/master/app/templates/_bower.json&quot;&gt;_bower.json&lt;/a&gt;. Las
+tareas de Grunt están listadas en
+&lt;a href=&quot;https://github.com/Thomas-Lebeau/generator-bootstrap-less/blob/master/app/templates/_package.json&quot;&gt;_package.json&lt;/a&gt;. Estos
+ficheros forman parte del template que necesita Yeoman para hacer su
+magia.&lt;/p&gt;
+
+&lt;p&gt;La configuración de Yeoman la podéis encontrar en el fichero
+&lt;a href=&quot;https://github.com/Thomas-Lebeau/generator-bootstrap-less/blob/master/app/index.js&quot;&gt;/app/index.js&lt;/a&gt;
+del generador.&lt;/p&gt;
+
+&lt;p&gt;Con la ayuda de npm, &lt;strong&gt;instalamos el generador del proyecto&lt;/strong&gt; en global.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;$ sudo npm install -g generator-bootstrap-less&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Si queréis ver los generadores instalados:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;$ yo —help&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Creamos un directorio&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;$ mkdir ~/learning-bootstrap &amp;amp;&amp;amp; cd $_&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Le decimos a Yeoman que cree el &lt;strong&gt;scaffolding del proyecto&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;$ yo bootstrap-less&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Instalamos las dependencias del proyecto&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Esto creará y descargará dichas dependencias en la
+ruta &lt;em&gt;app/bower_components&lt;/em&gt;del proyecto&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;$ bower install&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Construimos el proyecto&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;El siguiente comando lanzará el grupo de tareas &lt;em&gt;default&lt;/em&gt; descrita en
+la línea 289 del fichero&lt;strong&gt; *Gruntfile.js&lt;/strong&gt;.&lt;em&gt; En este caso: *jshint,
+test&lt;/em&gt; y &lt;em&gt;build&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Las dependencias necesarias para ejecutar las tareas se encuentran en la
+carpeta &lt;em&gt;node_modules&lt;/em&gt;en la raíz del proyecto.&lt;/p&gt;
+
+&lt;p&gt;Para ir más ligeros, vamos a saltarnos las comprobaciones
+de &lt;a href=&quot;http://www.jshint.com/install/&quot;&gt;JSHint&lt;/a&gt;\&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;$ grunt —force&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Arrancamos el servidor&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;$ grunt serve&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Si todo es correcto veréis en vuestra terminal la siguiente información:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Running “serve” task&lt;/p&gt;
+
+&lt;p&gt;Running “clean:server” (clean) task&lt;/p&gt;
+
+&lt;p&gt;Running “coffee:dist” (coffee) task&lt;/p&gt;
+
+&lt;p&gt;File app/scripts/hello.js created.&lt;/p&gt;
+
+&lt;p&gt;Running “less:dist” (less) task&lt;/p&gt;
+
+&lt;p&gt;File app/styles/main.css.map created.&lt;/p&gt;
+
+&lt;p&gt;File app/styles/main.css created.&lt;/p&gt;
+
+&lt;p&gt;Running “copy:server” (copy) task&lt;/p&gt;
+
+&lt;p&gt;Running “connect:livereload” (connect) task&lt;/p&gt;
+
+&lt;p&gt;Started connect web server on 127.0.0.1:9000.&lt;/p&gt;
+
+&lt;p&gt;Running “watch” task Waiting…&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Estas son todas las tareas y grupos de tareas que ha lanzado &lt;em&gt;\$ grunt
+serve&lt;/em&gt;. Si queréis ver la configuración de esta tarea, abrid el archivo
+&lt;em&gt;Gruntfile.js&lt;/em&gt;y buscad la línea 260.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Creamos el proyecto listo para subir a PRO&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Probad a lanzar la siguiente línea:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;$ grunt serve:dist&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Como veréis las tareas ejecutadas son completamente distintas. Esto es
+posible gracias a que &lt;strong&gt;con Grunt&lt;/strong&gt; &lt;strong&gt;podemos encadenar tareas con
+diferentes propósitos&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Una vez finalizada la tarea &lt;em&gt;\$ server:dist&lt;/em&gt; podéis ver que se ha creado
+una carpeta llamada &lt;em&gt;dist&lt;/em&gt;. Allí es donde podéis encontrar vuestro
+proyecto listo para subir a PRO. ¿Fascinante eh? :)&lt;/p&gt;
+
+&lt;p&gt;Con el siguiente comando podréis ver las tareas disponibles:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;$ grunt —help&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3&gt;Crear un proyecto Foundation&lt;/h3&gt;
+
+&lt;p&gt;Vamos a utilizar el
+&lt;a href=&quot;https://github.com/bauschan/generator-foundation-five&quot;&gt;generador&lt;/a&gt;
+creado por &lt;a href=&quot;https://github.com/bauschan&quot;&gt;Peter Foerger&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Este generador funciona básicamente como el anterior, con la única
+diferencia que el layout se gestiona con &lt;a href=&quot;http://foundation.zurb.com&quot;&gt;Foundation
+5&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;La configuración de Bower la podéis encontrar en
+&lt;a href=&quot;https://github.com/bauschan/generator-foundation-five/blob/master/app/templates/_bower.json&quot;&gt;_bower.json&lt;/a&gt;.
+Las tareas de Grunt están listadas en
+&lt;a href=&quot;https://github.com/bauschan/generator-foundation-five/blob/master/app/templates/_package.json&quot;&gt;_package.json&lt;/a&gt;.
+Estos ficheros forman parte del template que necesita Yeoman para hacer
+su magia.&lt;/p&gt;
+
+&lt;p&gt;La configuración de Yeoman la podéis encontrar en el fichero
+&lt;a href=&quot;https://github.com/bauschan/generator-foundation-five/blob/master/app/index.js&quot;&gt;/app/index.js&lt;/a&gt;
+del generador.&lt;/p&gt;
+
+&lt;p&gt;Con la ayuda de npm, &lt;strong&gt;instalamos el generador&lt;/strong&gt; en global&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;$ sudo npm install -g generator-foundation-five&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Creamos un directorio&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;$ mkdir ~/learning-foundation &amp;amp;&amp;amp; cd $_&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Le decimos a Yeoman que cree el &lt;strong&gt;scaffolding del proyecto&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;$ yo foundation-five&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Instalamos las dependencias del proyecto&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;$ bower install&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Instalamos las dependencias de Grunt&lt;/strong&gt;. Esto no debería ser necesario
+pero el generador tiene un bug.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;$ npm install&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Construimos el proyecto&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;$ grunt&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Arrancamos el servidor&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;$ grunt serve&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+				<pubDate>Sat, 15 Feb 2014 07:56:00 +0100</pubDate>
+				<link>http://blog.garciaechegaray.com//2014/02/15/el-workflow-perfecto-yeoman-bower-grunt.html</link>
+				<guid isPermaLink="true">http://blog.garciaechegaray.com//2014/02/15/el-workflow-perfecto-yeoman-bower-grunt.html</guid>
+			</item>
+		
+			<item>
+				<title>setTimeout() vs $.Deferred()</title>
+				<description>&lt;p&gt;Este el típico problema en el cual utilizaba un setTimeout(). Estaba
+obligado a esperar que se ejecutara la linea superior para poder hacer
+uso del nodo DOM (en este caso “lightbox_content_user”).&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;$(“#wrap_all”).prepend(&amp;lt;?php echo json_encode(\$lightbox) ?&amp;gt;));&lt;/p&gt;
+
+&lt;p&gt;setTimeout(function(){&lt;/p&gt;
+
+&lt;p&gt; $(“.lightbox_content_user”).css(‘width’, container_width - 80);
+},&lt;/p&gt;
+
+&lt;p&gt;500);&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Ahora estoy comenzando a utilizar un objeto jQuery llamado
+&lt;a href=&quot;https://api.jquery.com/category/deferred-object/&quot;&gt;Deferred&lt;/a&gt;.
+Básicamente hace lo mismo, pero de forma mas limpia. Y así evitamos la
+famosa &lt;a href=&quot;http://www.reddit.com/r/javascript/comments/1atmht/how_we_killed_the_callback_pyramid_of_doom/&quot;&gt;Callback Pyramid of
+Doom&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;var dfd = \$.Deferred();&lt;/p&gt;
+
+&lt;p&gt;dfd.done(\$(“#wrap_all”).prepend(&amp;lt;?php echo
+json_encode(\$lightbox) ?&amp;gt;);&lt;/p&gt;
+
+&lt;p&gt;dfd.resolve(\$(“.lightbox_content_user”).css(‘width’,
+container_width - 80));&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+				<pubDate>Fri, 14 Feb 2014 20:02:00 +0100</pubDate>
+				<link>http://blog.garciaechegaray.com//2014/02/14/settimeout-vs-deferred.html</link>
+				<guid isPermaLink="true">http://blog.garciaechegaray.com//2014/02/14/settimeout-vs-deferred.html</guid>
+			</item>
+		
+			<item>
+				<title>Enfold &amp; Fontello</title>
+				<description>&lt;p&gt;Comenzamos con las
+presentaciones: &lt;a href=&quot;http://themeforest.net/item/enfold-responsive-multipurpose-theme/4519990&quot;&gt;Enfold&lt;/a&gt;
+es un theme para Wordpress bastante completo (muchos &lt;em&gt;widgets&lt;/em&gt; por
+defecto). &lt;a href=&quot;http://fontello.com/&quot;&gt;Fontello&lt;/a&gt; es una herramienta que te
+permite utilizar &lt;em&gt;icon webfonts&lt;/em&gt;en tus proyectos web/mobile.\&lt;/p&gt;
+
+&lt;p&gt;El problema con
+&lt;a href=&quot;http://themeforest.net/item/enfold-responsive-multipurpose-theme/4519990&quot;&gt;Enfold&lt;/a&gt; es
+carece de una documentación completa, y para realizar algunas tareas que
+no están ya implementadas por defecto es bastante engorroso encontrar la
+forma de hacerlo.&lt;/p&gt;
+
+&lt;p&gt;Hace unos días he descubierto como añadir nuevos iconos en
+&lt;a href=&quot;http://themeforest.net/item/enfold-responsive-multipurpose-theme/4519990&quot;&gt;Enfold&lt;/a&gt;,
+aprovechando la librería &lt;a href=&quot;http://fontello.com/&quot;&gt;Fontello&lt;/a&gt; que ya viene
+pre-instalada.&lt;/p&gt;
+
+&lt;p&gt;En la ruta ‘/enfold/functions.php’ existe un array  con todos los iconos
+por defecto. Por ejemplo el icono de búsqueda es algo así:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;#39;search&amp;#39; =&amp;gt; array( &amp;#39;font&amp;#39; =&amp;gt;&amp;#39;entypo-fontello&amp;#39;, &amp;#39;icon&amp;#39; =&amp;gt; &amp;#39;ue803&amp;#39;)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Si queremos añadir uno nuevo (por ejemplo ‘phone’) debemos ir al
+fichero:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;/enfold/config- templatebuilder/avia-template-
+builder/assets/fonts/entypo-fontello.svg&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;y buscar la cadena ‘phone’ (o algo similar) dentro de cada propiedad glyph-name.&lt;/p&gt;
+
+&lt;p&gt;Seguidamente copiamos el valor numérico adyacente de la propiedad ‘unicode’ (en este caso 854).&lt;/p&gt;
+
+&lt;p&gt;Volvemos a ‘enfold/functions.php’ y añadimos la siguiente línea al array:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;#39;phone&amp;#39; =&amp;gt; array( &amp;#39;font&amp;#39; =&amp;gt;&amp;#39;entypo-fontello&amp;#39;, &amp;#39;icon&amp;#39; =&amp;gt; &amp;#39;ue854&amp;#39;)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Finalmente ya podemos usarlo en cualquier parte del theme:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;echo ‘&amp;lt;span ‘.av_icon_string(‘phone’).’&amp;gt;&amp;lt;/ span&amp;gt;’;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Ayudaría mucho que existiera un documento con todos los iconos
+disponibles, pero por ahora esta es la única forma.&lt;/p&gt;
+</description>
+				<pubDate>Fri, 14 Feb 2014 19:51:00 +0100</pubDate>
+				<link>http://blog.garciaechegaray.com//2014/02/14/enfold-fontello.html</link>
+				<guid isPermaLink="true">http://blog.garciaechegaray.com//2014/02/14/enfold-fontello.html</guid>
+			</item>
+		
+			<item>
+				<title>Responsive Design Exercise</title>
+				<description>&lt;p&gt;Some time ago, I did a exercise for apply a job. This was the exam I
+made.&lt;/p&gt;
+
+&lt;p&gt;I think is a good idea for practice your front-end skills. So, if you
+have some time and want a challenge for sunday morning, you can try on
+your own to complete the task.&lt;/p&gt;
+
+&lt;p&gt;The exercise seem to be very simple (it doesn’t): &lt;em&gt;create the markup of
+this design for mobiles, tablets and desktop&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://bruno.garciaechegaray.com/responsive-testing/responsive-layout-test.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://bruno.garciaechegaray.com/responsive-testing/tool_responsive.html&quot;&gt;Check out my
+version&lt;/a&gt;.
+Maybe I’ll improve it soon. I don’t know if the approach was the
+correct, but &lt;strong&gt;it works in three different devices!&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;I have &lt;a href=&quot;https://github.com/brunogarcia/responsive-testing&quot;&gt;a repo in Github with the
+code&lt;/a&gt;, check it out
+too.&lt;/p&gt;
+
+&lt;p&gt;I used a &lt;a href=&quot;https://github.com/mattkersley/Responsive-Design-Testing&quot;&gt;responsive
+tool&lt;/a&gt; created
+by &lt;a href=&quot;https://github.com/mattkersley/&quot;&gt;Matt Kersley&lt;/a&gt;, was very usefull.&lt;/p&gt;
+</description>
+				<pubDate>Fri, 29 Nov 2013 20:16:00 +0100</pubDate>
+				<link>http://blog.garciaechegaray.com//2013/11/29/responsive-design-exercise.html</link>
+				<guid isPermaLink="true">http://blog.garciaechegaray.com//2013/11/29/responsive-design-exercise.html</guid>
+			</item>
+		
+			<item>
+				<title>Configurar Weinre en Windows 7 con Node y npm</title>
+				<description>&lt;p&gt;Por cuestiones profesionales, en los últimos meses mi entorno de trabajo
+ha sido Windows 7. Necesitamos debugear y testear constantemente en
+entornos móviles y los drivers para estos dispositivos solo suelen tener
+versiones para Windows.&lt;/p&gt;
+
+&lt;p&gt;Dicho esto, uno de los problemas de trabajar con Windows es que muchos
+tutoriales para configurar cualquier herramienta open source están
+enfocado para usuarios de Linux/Mac. &lt;/p&gt;
+
+&lt;p&gt;No es la primer vez que me pasa (ni será la última), así que explico
+brevemente cómo configurar
+&lt;a href=&quot;http://people.apache.org/%7Epmuellr/weinre/&quot;&gt;Weinre&lt;/a&gt; en Windows 7 a
+través de Node.js y npm. &lt;/p&gt;
+
+&lt;p&gt;¿Pero narices es &lt;a href=&quot;http://people.apache.org/%7Epmuellr/weinre/&quot;&gt;Weinre&lt;/a&gt;?.
+Es una herramienta que nos permite debugear un servicio web desde
+cualquier dispositivo móvil.&lt;/p&gt;
+
+&lt;p&gt;Venga, manos a la obra:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1.-&lt;/strong&gt; Instalar &lt;a href=&quot;http://nodejs.org/&quot;&gt;Node&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2.-&lt;/strong&gt;
+Instalar &lt;a href=&quot;http://people.apache.org/%7Epmuellr/weinre/&quot;&gt;Weinre&lt;/a&gt; utilizando &lt;a href=&quot;https://npmjs.org/&quot;&gt;npm&lt;/a&gt; (package
+manager que se instala junto con Node). Abrir un cmd y escribir:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;npm -g install weinre &lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Nota: “-g” lo instalará globalmente en una carpeta
+oculta: &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;C&lt;/em&gt;&lt;em&gt;:\Users\Usuario\AppData\Roaming\npm&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;3.-&lt;/strong&gt; Arrancar el
+servicio &lt;a href=&quot;http://people.apache.org/%7Epmuellr/weinre/&quot;&gt;Weinre&lt;/a&gt; desde cmd:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;cd C:\Users\Usuario\AppData\Roaming\npm&lt;/em&gt;
+&lt;em&gt;weinre.cmd —boundHost 192.168.0.1 —httpPort 8081&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Notas: &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;  Debemos usar nuestra IP para que el dispositivo móvil pueda acceder.
+Obviamente no funciona si lo configuras como localhost.&lt;/li&gt;
+&lt;li&gt;  Si no conoces tu IP, abre un cmd y teclea &lt;em&gt;ipconfig.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;  Para evitar conflictos (con un servicio WAMP por ejemplo) utiliza un
+puerto alternativo, en este caso 8081.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;También os podéis crear un archivo batch para automatizar esta tarea:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;@echo off&lt;/em&gt;\
+&lt;em&gt;echo Starting Weinre Server&lt;/em&gt;\
+&lt;em&gt;cd C:\Users\Usuario\AppData\Roaming\npm&lt;/em&gt;\
+&lt;em&gt;weinre.cmd —boundHost 192.168.0.1 —httpPort 8081&lt;/em&gt;\
+&lt;em&gt;pause&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;4.-&lt;/strong&gt; Incluir el script de Weinre en nuestra app:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&amp;lt;script
+src=”http://192.168.0.1:8081/target/target-script-min.js#anonymous”&amp;gt;&amp;lt;/script&amp;gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;5.-&lt;/strong&gt; Acceder al servicio desde un browser:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://192.168.0.1:8081/client/#anonymous&quot;&gt;http://192.168.0.1:8081/client/#anonymous&lt;/a&gt;\&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Y con esto ya podéis testear el correcto funcionamiento de vuestra
+aplicación en cualquier dispositivo móvil.&lt;/p&gt;
+</description>
+				<pubDate>Mon, 23 Sep 2013 17:08:00 +0200</pubDate>
+				<link>http://blog.garciaechegaray.com//2013/09/23/configurar-weinre-en-windows-7-con-node-y-npm.html</link>
+				<guid isPermaLink="true">http://blog.garciaechegaray.com//2013/09/23/configurar-weinre-en-windows-7-con-node-y-npm.html</guid>
+			</item>
+		
+			<item>
+				<title>You just keep pushing</title>
+				<description>&lt;blockquote&gt;
+&lt;p&gt;You just keep pushing. You just keep pushing. I made every mistake
+that could be made. But I just kept pushing.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;—&lt;a href=&quot;https://www.khanacademy.org/math/trigonometry/graphs/graphing_coordinates/v/descartes-and-cartesian-coordinates&quot;&gt;Descartes&lt;/a&gt;&lt;/p&gt;
+</description>
+				<pubDate>Sat, 31 Aug 2013 10:27:30 +0200</pubDate>
+				<link>http://blog.garciaechegaray.com//2013/08/31/you-just-keep-pushing-you-just-keep-pushing-i.html</link>
+				<guid isPermaLink="true">http://blog.garciaechegaray.com//2013/08/31/you-just-keep-pushing-you-just-keep-pushing-i.html</guid>
+			</item>
+		
+			<item>
+				<title>Zorro Veloz</title>
+				<description>&lt;p&gt;Eva es psicóloga de profesión e ilustradora de cuentos infantiles. &lt;/p&gt;
+
+&lt;p&gt;Conozco su &lt;a href=&quot;http://evasantos.tumblr.com&quot;&gt;trabajo&lt;/a&gt; desde hace mucho, y
+siempre le he estado animando para lanzar un proyecto conjuntamente.&lt;/p&gt;
+
+&lt;p&gt;Ahora por fin después de varias semanas organizando todo hemos sacado
+una &lt;a href=&quot;http://evasantos.com/ilustraciones/zorro-veloz/&quot;&gt;tienda online&lt;/a&gt;
+para vender una de sus mejores ilustraciones.&lt;/p&gt;
+
+&lt;p&gt;Por sólo 30€ puedes conseguir una de las &lt;a href=&quot;http://evasantos.com/ilustraciones/zorro-veloz/&quot;&gt;50 impresiones de edición
+limitada, numerada y
+firmada&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Animarós y pillar una antes de que vuelen.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://evasantos.com/ilustraciones/zorro-veloz/&quot;&gt;&lt;img src=&quot;http://media.tumblr.com/44aa3fc1dabc29fcc8c7621ab782ee99/tumblr_inline_mpplc4yD4V1qz4rgp.jpg&quot; alt=&quot;image&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+				<pubDate>Wed, 10 Jul 2013 09:21:00 +0200</pubDate>
+				<link>http://blog.garciaechegaray.com//2013/07/10/zorro-veloz.html</link>
+				<guid isPermaLink="true">http://blog.garciaechegaray.com//2013/07/10/zorro-veloz.html</guid>
+			</item>
+		
+			<item>
+				<title>Pet Project, la mejor forma de aprender</title>
+				<description>&lt;p&gt;Desde hace algunos meses estoy desarrollando &lt;a href=&quot;http://www.tuttifrescuni.com/&quot;&gt;Tutti
+Frescuni&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Es una aplicación que constantemente echaba en falta, y ya que no
+existía en el mercado me propuse crearla desde cero. Incluso diría que
+fué una de las razones por las cuales estudié un FP de Informática.
+Quería hacer cosas pero no sabía cómo, me faltaban las bases técnicas
+para afrontar el reto.&lt;/p&gt;
+
+&lt;p&gt;Cuando leí &lt;a href=&quot;http://gettingreal.37signals.com/&quot;&gt;Getting Real&lt;/a&gt;, allá por
+el 2010, recuerdo que me abrió los ojos con respecto a muchos aspectos
+de mi día a día como profesional del mundo web. Especialmente recuerdo
+el capítulo &lt;a href=&quot;http://gettingreal.37signals.com/ch02_Whats_Your_Problem.php&quot;&gt;What’s Your
+Problem?&lt;/a&gt;.
+Y cito: “&lt;em&gt;A great way to build software is to start out by solving your
+own problems. You’ll be the target audience and you’ll know what’s
+important and what’s not. That gives you a great head start on
+delivering a breakout product.”&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3&gt;Tutti Frescuni&lt;/h3&gt;
+
+&lt;p&gt;Con este mantra bien aprendido y repetido mil veces en mi cabeza, he
+comenzado a darle forma a una idea muy simple: &lt;strong&gt;¿cómo saber qué frutas
+y verduras están de temporada en una fecha en concreto?&lt;/strong&gt;, o sea ¿cúal
+es su mejor momento de recolección y venta?.&lt;/p&gt;
+
+&lt;p&gt;Si lo pensamos bien este dato influye en muchos aspectos del producto.
+Por ejemplo, si un melón se encuentra en su mejor temporada (de junio a
+septiembre según mi base de datos), este tendrá mejor sabor y su precio
+será más accesible. ¿Quién no ha cometido el tremendo error de comprar
+un melón fuera de temporada? (un &lt;em&gt;melón-pepino&lt;/em&gt; como dice mi suegra). Mi
+idea es evitar este problema.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.tuttifrescuni.com/&quot;&gt;&lt;img src=&quot;http://www.tuttifrescuni.com/assets/images/screenshots/screenshot_01.png&quot; alt=&quot;image&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;El logotipo, el favicon y el fabuloso nombre han sido creados por la
+ilustradora &lt;a href=&quot;http://evasantos.tumblr.com/&quot;&gt;Eva Santos&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Quiero que la decisión de compra se vea influenciada positivamente
+gracias a &lt;a href=&quot;http://www.tuttifrescuni.com/&quot;&gt;Tutti Frescuni&lt;/a&gt;. Y quiero que
+lo haga en el momento preciso en el lugar indicado. Por ejemplo, si el
+usuario se encuentra en un supermercado y desconoce si una fruta o
+verdura en concreto se encuentra en su mejor fecha de recolección,
+accediendo a Tutti Frescuni podrá conocerlo al instante.&lt;/p&gt;
+
+&lt;p&gt;Una tarea muy simple, pero muchas veces hacer las cosas realmente
+simples es más complicado de lo que parece.&lt;/p&gt;
+
+&lt;h3&gt;Tecnología&lt;/h3&gt;
+
+&lt;p&gt;El reto técnico ha sido interesante. He investigado diferentes
+tecnologías para desarrollar este proyecto. Desde un primer momento he
+apostado por librerías Javascript de código abierto:
+&lt;a href=&quot;http://backbonejs.org/&quot;&gt;Backbone&lt;/a&gt;,
+&lt;a href=&quot;http://underscorejs.org/&quot;&gt;Underscore&lt;/a&gt;, &lt;a href=&quot;http://jquery.com/&quot;&gt;jQuery&lt;/a&gt;,
+&lt;a href=&quot;http://requirejs.org/&quot;&gt;Require.js&lt;/a&gt; (plugins:
+&lt;a href=&quot;http://requirejs.org/docs/download.html#text&quot;&gt;text&lt;/a&gt; &amp;amp;
+&lt;a href=&quot;https://github.com/millermedeiros/requirejs-plugins&quot;&gt;json&lt;/a&gt;),
+&lt;a href=&quot;http://www.slimframework.com/&quot;&gt;Slim&lt;/a&gt;,
+&lt;a href=&quot;http://cubiq.org/iscroll-4&quot;&gt;iScroll&lt;/a&gt;,
+&lt;a href=&quot;http://fgnass.github.io/spin.js/&quot;&gt;Spin.js&lt;/a&gt;,
+&lt;a href=&quot;http://handlebarsjs.com/&quot;&gt;Handlebars&lt;/a&gt; (plugin:
+&lt;a href=&quot;https://github.com/jfparadis/requirejs-handlebars&quot;&gt;hbars&lt;/a&gt;),
+&lt;a href=&quot;http://lesscss.org/&quot;&gt;LESS&lt;/a&gt; y &lt;a href=&quot;http://twitter.github.io/bootstrap/&quot;&gt;Twitter
+Bootstrap&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Lo más curioso ha sido comprobar que todas estas librerías se pueden
+complementar a la perfección con poco esfuerzo. Y esto es un acierto por
+parte de la comunidad de desarrolladores, que por encima de egos y
+complejos apuesta por crear un entorno de trabajo (por ejemplo
+iniciativas del tipo &lt;a href=&quot;http://wiki.commonjs.org/wiki/CommonJS&quot;&gt;CommonsJS&lt;/a&gt;
+o &lt;a href=&quot;https://github.com/amdjs/amdjs-api/wiki/AMD&quot;&gt;AMDJS&lt;/a&gt;) que nada tiene
+que envidiar a mega frameworks corporativos.&lt;/p&gt;
+
+&lt;p&gt;Si quieres conocer las tripas del proyecto, puedes ver el &lt;a href=&quot;https://github.com/brunogarcia/TuttiFrescuni&quot;&gt;código fuente
+en Github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3&gt;Backbone&lt;/h3&gt;
+
+&lt;p&gt;Para este &lt;em&gt;pet project&lt;/em&gt; he leído decenas de artículos y libros
+sobre &lt;a href=&quot;http://backbonejs.org/&quot;&gt;Backbone&lt;/a&gt;  Si tengo que recomendar alguno
+en especial sería &lt;a href=&quot;http://addyosmani.github.io/backbone-fundamentals/&quot;&gt;Developing Backbone.js
+Applications&lt;/a&gt; de
+&lt;a href=&quot;https://twitter.com/addyosmani&quot;&gt;Addy Osmani&lt;/a&gt;. Si todos los libros
+técnicos fueran de este estilo, seguro que más gente los leería en sus
+ratos libres.&lt;/p&gt;
+
+&lt;p&gt;Para empezar todo el contenido está &lt;a href=&quot;https://github.com/addyosmani/backbone-fundamentals&quot;&gt;disponible en
+Github&lt;/a&gt;. Los
+lectores pueden ir mejorándolo constantemente proponiendo cambios
+(actualmente 444 issues cerradas y 25 abiertas). Esto implica que
+existen más de &lt;a href=&quot;https://github.com/addyosmani/backbone-fundamentals/graphs/contributors&quot;&gt;140 contribuidores o mejor dicho
+cocreadores&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Con respecto al libro, comentar que viene cargado de código, con muchos
+ejemplos y casos de uso, abarcando prácticamente cualquier punto
+relacionado con Backbone: fundamentos básicos, extensiones, desarrollo
+modular, tests unitarios, etc. Obviamente no es un libro para leerlo del
+tirón, es mejor en pequeñas dosis a lo largo de varias semanas.&lt;/p&gt;
+
+&lt;p&gt;Mención especial también a los videotutoriales de Nettuts+: &lt;a href=&quot;https://tutsplus.com/course/connected-to-the-backbone/&quot;&gt;Connected
+to the Backbone&lt;/a&gt;
+y &lt;a href=&quot;https://tutsplus.com/course/advanced-backbone-patterns-and-techniques/&quot;&gt;Advanced Backbone Patterns and
+Techniques&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Y si aún estás muy perdido, en Stack Overflow seguro que encontrarás
+alguna respuesta a tus preguntas.&lt;/p&gt;
+
+&lt;h3&gt;Fotografías&lt;/h3&gt;
+
+&lt;p&gt;Otro dato interesante han sido las fotografías utilizadas en la
+aplicación: todas son &lt;a href=&quot;http://en.wikipedia.org/wiki/Copyleft&quot;&gt;copyleft&lt;/a&gt;.
+Esto quiere decir que cerca de 90 personas han tomado la decisión de
+compartir su &lt;strong&gt;trabajo y esfuerzo de forma altruista&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;He utilizado Flickr para la gestión de las imágenes. Me creé una cuenta
+en dicho servicio y fuí añadiendo a
+&lt;a href=&quot;http://www.flickr.com/photos/tuttifrescuni/favorites/&quot;&gt;favoritos&lt;/a&gt;
+aquellas imágenes que mejor pinta tenían. Después con la &lt;a href=&quot;http://www.flickr.com/services/api/&quot;&gt;API
+pública&lt;/a&gt; y con el método
+&lt;a href=&quot;http://www.flickr.com/services/api/flickr.favorites.getList.html&quot;&gt;flickr.favorites.getList&lt;/a&gt;
+obtuve un fichero JSON con toda la información necesaria.&lt;/p&gt;
+
+&lt;p&gt;Punto importante: actualmente Flickr dispone de 9 tamaños distintos para
+todas las imágenes. Esto es muy bueno para que tu app sea responsive
+desde un primer momento.&lt;/p&gt;
+
+&lt;h3&gt;Mejoras a futuro&lt;/h3&gt;
+
+&lt;p&gt;Muchas.&lt;/p&gt;
+
+&lt;p&gt;En primer lugar estoy pensando en cambiar completamente el layout.
+Actualmente estoy utilizando &lt;a href=&quot;http://twitter.github.io/bootstrap/&quot;&gt;Twitter
+Bootstrap&lt;/a&gt;  y aunque puede ser 100%
+responsive, realmente tiene muchas carencias a nivel mobile.&lt;/p&gt;
+
+&lt;p&gt;Incluso he creado una app Android con &lt;a href=&quot;http://phonegap.com/&quot;&gt;Phonegap&lt;/a&gt;
+para testear el comportamiento y la verdad deja mucho que desear.
+Obviamente la interacción no se puede comparar con los
+&lt;a href=&quot;http://www.mobile-patterns.com/lists&quot;&gt;patterns&lt;/a&gt;que actualmente se están
+utilizando en el desarrollo móvil. Sobre todo porque la idea principal
+de Tutti Frescuni es poder utilizarla en dispositivos móviles.&lt;/p&gt;
+
+&lt;p&gt;Estoy evaluando &lt;a href=&quot;http://jquerymobile.com/&quot;&gt;jQuery Mobile&lt;/a&gt; o
+&lt;a href=&quot;http://www.appcelerator.com/platform/titanium-platform/&quot;&gt;Titanium&lt;/a&gt; como
+opciones. El caso de Titanium es realmente interesante. Acaban de
+liberar la versión 3 y la verdad tengo muchas ganas de hincarle el
+diente. &lt;/p&gt;
+
+&lt;p&gt;Como entorno de desarrollo han ido mejorando paso a paso. Primero se
+liberaron del WebView, después crearon su propio IDE basado en Eclipse
+(&lt;a href=&quot;http://www.appcelerator.com/platform/titanium-studio/&quot;&gt;Titanium
+Studio&lt;/a&gt;) que
+funciona de lujo. Y ahora tienen su propio framework MVC llamado
+&lt;a href=&quot;http://docs.appcelerator.com/titanium/latest/#!/guide/Alloy_Framework&quot;&gt;Alloy&lt;/a&gt;
+el cual está basado en Backbone.&lt;/p&gt;
+
+&lt;p&gt;La API se Titanium se encarga de crear los componentes nativos en tiempo
+de compilación. Esto te permite tener apps nativas para Android/iOS
+programando en Javascript. &lt;/p&gt;
+
+&lt;p&gt;Y si quieres más, tiene la plataforma (de pago)
+&lt;a href=&quot;http://www.appcelerator.com/platform/appcelerator-platform/&quot;&gt;Appcelerator&lt;/a&gt;
+con multiples servicios adicionales. &lt;/p&gt;
+
+&lt;p&gt;Otro punto a mejorar es que Tutti Frescuni ofrece aún poca información.
+No deja de ser un simple listado de productos filtrado por fecha y
+temporada. La idea es ir añadiendo más información relacionada poco a
+poco (¿recetas?, ¿valor nutricional?). Pero siempre conservando la
+simplicidad del proyecto inicial.&lt;/p&gt;
+</description>
+				<pubDate>Sun, 07 Jul 2013 18:30:00 +0200</pubDate>
+				<link>http://blog.garciaechegaray.com//2013/07/07/pet-project-la-mejor-forma-de-aprender.html</link>
+				<guid isPermaLink="true">http://blog.garciaechegaray.com//2013/07/07/pet-project-la-mejor-forma-de-aprender.html</guid>
+			</item>
+		
+			<item>
+				<title>¿Están los portales de empleo generalistas completamente anticuados?</title>
+				<description>&lt;p&gt;Haré un repaso de mi experiencia personal buscando trabajo en estas
+últimas semanas. Me he encontrado con algunas sorpresas y me gustaría
+compartirlas, por ejemplo: todas las entrevistas se han realizado por
+teléfono, Skype, Hangout. Al menos en un primer contacto ya no
+hace falta una entrevista presencial. Pero comencemos por el principio.&lt;/p&gt;
+
+&lt;p&gt;Desde hace muchos años que no realizaba una búsqueda intensa por los
+portales de empleo. En la última ocasión el único referente era
+Infojobs. Todas las ofertas estaban allí, no existían competidores (al
+menos yo no los recuerdo). Tanto es así que mis dos últimos trabajos los
+encontré en este portal. Pero eso fue el 2001. Actualmente Infojobs (y
+todos sus clones) ha quedado completamente al margen.&lt;/p&gt;
+
+&lt;p&gt;Por suerte el panorama ha cambiado y es bastante más dinámico.
+Prácticamente sale un nuevo portal de empleo cada año, y otros sin
+intención de serlo, se terminan convirtiendo en referentes.&lt;/p&gt;
+
+&lt;h3&gt;Twitter y campañas ad-hoc&lt;/h3&gt;
+
+&lt;p&gt;Para mi, Twitter cumple muchas y distintas funciones en mi vida diaria.
+Es un repositorio de buenos enlaces y referencias técnicas (si te curras
+bien tu red de follwers/followings), y desde luego para echar unas risas
+con los &lt;em&gt;trending topics&lt;/em&gt; más bizarros. Pero lo más curioso es que me ha
+servido para encontrar proyectos freelance durante 3 años y ahora para
+ver ofertas de trabajo de empresas interesantes y punteras.&lt;/p&gt;
+
+&lt;p&gt;Lanzar una oferta de trabajo por Twitter requiere de un trabajo extra y
+mucha creatividad. No basta con soltar un twitt en plan spam durante
+semanas, como lamentablemente hacen muchas empresas de recursos humanos
+(hola @&lt;a href=&quot;https://twitter.com/TSP_ECommerce&quot;&gt;TSP_ECommerce&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;Si quieres atraer talento de verdad, tendrás que enfocarlo de otra
+forma. Os pongo un par de ejemplos: &lt;a href=&quot;http://notevayasaalemania.com&quot;&gt;No te vayas a
+Alemania&lt;/a&gt; (Wattio) y &lt;a href=&quot;http://kaleidos.net/blog/breaking-news-kaleidos-seeks-new-front-end-engineer-denies-kidnapping/&quot;&gt;Denies
+kidnapping&lt;/a&gt;
+(Kaleidos).&lt;/p&gt;
+
+&lt;p&gt;Puedo entender que no muchas empresas pueden permitirse el lujo de
+gastar tiempo y dinero en campañas de este tipo. Pero si no te tomas en
+serio tu selección de personal ¿cómo esperas atraer a los mejores
+perfiles?. Y si no quieres atraer a los mejores, entonces tu problema es
+otro.&lt;/p&gt;
+
+&lt;h3&gt;Portales de empleo especializados&lt;/h3&gt;
+
+&lt;p&gt;Otro camino pueden ser los portales de empleo especializados. En el
+mundo anglosajón ya son bastante comunes, y por suerte en la península
+ya tenemos muy buenas opciones dependiendo de tu perfil
+profesional: &lt;a href=&quot;http://betabeers.com&quot;&gt;Betabeers&lt;/a&gt; (desarrollo), &lt;a href=&quot;http://www.domestika.org/empleo/oferta&quot;&gt;Domestika&lt;/a&gt; (desarrollo
++ diseño) y &lt;a href=&quot;http://www.uxplora.com/&quot;&gt;Uxplora&lt;/a&gt; (UX/AI).&lt;/p&gt;
+
+&lt;p&gt;¿Y por qué es mejor un portal especializado de empleo?. Bueno, para
+empezar la saturación de ofertas es menor y esto implica que las ofertas
+están más segmentadas que en cualquier portal generalista.&lt;/p&gt;
+
+&lt;p&gt;Por ejemplo &lt;a href=&quot;http://betabeers.com&quot;&gt;Betabeers&lt;/a&gt; sólo tiene 5 categorías:
+Frontend, Backend, Apps, Sysadmin y Maquetador. ¿Puede existir algo más
+sencillo para buscar empleo?, lo dudo. En unos minutos puedes
+leer prácticamente todas las ofertas de las últimas semanas y realizar
+un filtrado rápido de aquellas que te interesan. Y si ya tienes una
+cuenta en Betabeers, con un sólo clic puedes enviar tus datos de
+contacto.&lt;/p&gt;
+
+&lt;h3&gt;Linkedin&lt;/h3&gt;
+
+&lt;p&gt;Esta red social siempre te sorprende cuando menos te lo
+esperas. Personalmente desconocía la existencia de un sección de empleo
+dentro de &lt;a href=&quot;http://www.linkedin.com&quot;&gt;Linkedin&lt;/a&gt;. Y la verdad es que
+funciona bastante bien.&lt;/p&gt;
+
+&lt;p&gt;Una gran funcionalidad que no tiene ningún otro competidor es que puedes
+ver el perfil de la empresa y de sus distintos empleados. O sea, de
+entrada puedes visualizar los perfiles profesionales de la gente con la
+cual puedes llegar a trabajar. &lt;/p&gt;
+
+&lt;p&gt;Otro punto fuerte es que Linkedin es capaz de vincular tu perfil
+profesional con aquellas ofertas que has seleccionado previamente,
+facilitando enormemente la inscripción en cualquier oferta. &lt;/p&gt;
+
+&lt;p&gt;En resumen, el panorama ha cambiado enormemente en los últimos años.  A
+día de hoy, tu perfil en Linkedin se ha convertido en tu marca personal,
+relegando completamente al curriculum vitae de toda la vida. &lt;/p&gt;
+</description>
+				<pubDate>Sat, 20 Apr 2013 22:55:00 +0200</pubDate>
+				<link>http://blog.garciaechegaray.com//2013/04/20/estan-los-portales-de-empleo-generalistas.html</link>
+				<guid isPermaLink="true">http://blog.garciaechegaray.com//2013/04/20/estan-los-portales-de-empleo-generalistas.html</guid>
+			</item>
+		
+			<item>
+				<title>Los navegadores web explicado para muggles</title>
+				<description>&lt;p&gt;Intentaré hacer una introducción muy básica sobre como funciona un
+navegador web. Me gustaría que sea capaz de entenderlo cualquier persona
+alejada del sector y sin conocimientos técnicos previos.&lt;/p&gt;
+
+&lt;p&gt;Está escrito muy rápidamente para contestar a un &lt;a href=&quot;https://twitter.com/mcestevan/status/321170764021776386&quot;&gt;twit lanzado
+por @mcesttevan&lt;/a&gt;,
+con respecto a la Bonilista “&lt;a href=&quot;http://us2.campaign-archive2.com/?u=374c664073e1a1fa3deca53b4&amp;amp;id=92e3e39bcd&quot;&gt;Evangelista Técnico por un
+día&lt;/a&gt;”.&lt;/p&gt;
+
+&lt;h3&gt;Conceptos básicos&lt;/h3&gt;
+
+&lt;p&gt;Un &lt;strong&gt;navegador web&lt;/strong&gt; es un software que nos permite visualizar e
+interactuar con páginas World Wide Web. Actualmente los más importantes
+son: Chrome (Google), Firefox (Mozilla) e Internet Explorer (Microsoft).&lt;/p&gt;
+
+&lt;p&gt;También existen Safari y Opera, pero con una cuota de mercado muy
+pequeña en &lt;em&gt;desktop&lt;/em&gt;. &lt;em&gt;Corrección: olvide mencionar que Safari es el
+navegador por defecto en iPhone/iPad, lo cual le otorga un puesto
+relevante en el mercado de los navegadores web.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Para realizar correctamente la tarea asignada (navegar por la web) esta
+aplicación necesita de varios &lt;strong&gt;componentes&lt;/strong&gt;. Los mas importantes:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt; &lt;a href=&quot;http://en.wikipedia.org/wiki/Layout_engine&quot;&gt;Motor de Renderizado&lt;/a&gt;,
+encargado de procesar y “pintar” los componentes de cada página
+(HTML, CSS, XML, imágenes) en la pantalla de tu navegador.
+Actualmente existen varios en el mercado: Webkit (Chrome, Safari,
+Opera), Gecko (Firefox) y Trident (Internet Explorer).&lt;/li&gt;
+&lt;li&gt; &lt;a href=&quot;http://en.wikipedia.org/wiki/JavaScript_engine&quot;&gt;Motor Javascript&lt;/a&gt;,
+encargado de procesar el código javascript de la página web. Los
+principales: V8 (Google), Rhino (Mozilla), Chakra (Microsoft).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Conociendo estas diferencias, pasemos el siguiente punto básico. Existe
+algo llamado &lt;strong&gt;estándares web&lt;/strong&gt;. Esos estándares se han ido creado poco
+a poco, a base de conseguir un consenso entre las distintas partes
+involucradas.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt; &lt;strong&gt;Organizaciones&lt;/strong&gt;: la encargada de crear la mayoría de
+los estándares que actualmente usamos en cualquier página web es la
+&lt;a href=&quot;http://www.w3.org/&quot;&gt;W3C&lt;/a&gt;. Fue fundada por Tim Bernes-Lee (el
+creador  de la WWW). Aunque también cabe destacar a
+&lt;a href=&quot;http://www.ecma-international.org/&quot;&gt;ECMA&lt;/a&gt; (Javascript)
+y &lt;a href=&quot;http://www.whatwg.org/&quot;&gt;WHATWG&lt;/a&gt; (HTML5).&lt;/li&gt;
+&lt;li&gt; &lt;strong&gt;Grandes empresas&lt;/strong&gt; con intereses económicos en el sector: Google,
+Adobe, Apple, Microsoft, Oracle, etc.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Como os podréis imaginar poner en orden a tantos actores es muy
+complicado y los conflictos de intereses son enormes. Por esta razón la
+W3C ha tardado muchos años en sacar adelante algunos estándares o
+versionar los ya existentes (recordemos el caso de HTML5 que da para
+toda una novela de intrigas). Por esta razón se ha ganado una fama de
+burocrática y lenta, a mi entender poco justificada. No todo es culpa de
+la W3C.&lt;/p&gt;
+
+&lt;h3&gt;Incompatibilidades entre distintos navegadores&lt;/h3&gt;
+
+&lt;p&gt;Resumiendo, por una parte tenemos una serie de estándares que deben
+cumplirse (para eso fueron creados) y por otra tenemos el software
+creado por las distintas empresas (Google, Microsoft) o fundaciones
+(Mozilla).&lt;/p&gt;
+
+&lt;p&gt;El problema está en que muchas veces estos estándares no se cumplen o se
+implementar erróneamente. Esto es un gran problema para todos, ya que
+tiene grandes repercusiones económicas.&lt;/p&gt;
+
+&lt;p&gt;Si Microsoft decide arbitrariamente no implementar cierta característica
+en su navegador (basándose en su cuota de mercado o en decisiones
+empresariales) entonces los desarrolladores tendrán que trabajar el
+doble o el triple para que dicha característica sea compatible y el
+cliente final no se vea perjudicado. Y cuando digo cliente final me
+refiero a mi padre comprando un libro o un colchón en un comercio
+online.&lt;/p&gt;
+
+&lt;p&gt; Si ya es complicado que un usuario compre por internet (seguridad,
+precios, marketing, usabilidad, etc.), imaginaros añadir un problema
+técnico. Si el &lt;strong&gt;botón de compra&lt;/strong&gt; no funciona correctamente por un
+problema de incompatibilidad no detectado, entonces todo el proceso se
+va al carajo. Y esto es una pérdida de dinero y sobre todo una gran
+pérdida de confianza en el sector como medio de compra. Vamos, un medio
+en el cual no vale la pena invertir dinero y tiempo. Y donde sólo viven
+hackers y gente chunga.&lt;/p&gt;
+
+&lt;h3&gt;WebKit &amp;amp; Blink: otra guerra de navegadores&lt;/h3&gt;
+
+&lt;p&gt;En la primera década del nuevo siglo (2000-2010) el sector ha estado
+luchando constantemente por resolver este problema de una vez por todas.&lt;/p&gt;
+
+&lt;p&gt;Yo realmente veía el asunto casi finalizado. Parecía que todos estaban
+de acuerdo en que &lt;a href=&quot;http://www.webkit.org/&quot;&gt;WebKit&lt;/a&gt; era la mejor opción.
+Es un proyecto de software libre que utilizan dos de los principales
+navegadores: Chrome y Safari. Además es por defecto el motor utilizado
+en las principales plataformas móviles: iPhone/iPad y Android. Y por
+supuesto cumple muy bien los estándares web (para los más curiosos:
+existe una herramienta llamada &lt;a href=&quot;http://acid3.acidtests.org/&quot;&gt;Acid Test&lt;/a&gt;
+que mide este grado de compatibilidad).&lt;/p&gt;
+
+&lt;p&gt;El problema es que ahora Google ha anunciado que hará un fork de WebKit,
+o sea una copia exacta del proyecto original.&lt;/p&gt;
+
+&lt;p&gt;Entonces,  ¿si es una copia exacta, por qué se ha armado tanto revuelo?.
+El problema está en que todos los cambios y mejoras aplicados a este
+fork (llamado &lt;a href=&quot;http://www.chromium.org/blink&quot;&gt;Blink&lt;/a&gt;) serán
+incompatibles con WebKit. O sea a la larga se irá convirtiendo en un
+nuevo motor de renderizado, con todo lo que ello conlleva:&lt;strong&gt;  otra vez
+perdida de consenso y nuevas y molestas&lt;/strong&gt;&lt;strong&gt;incompatibilidades entre
+navegadores.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Vamos, otra &lt;a href=&quot;http://en.wikipedia.org/wiki/Browser_wars&quot;&gt;guerra de
+navegadores&lt;/a&gt; que tantos
+problemas causo en el pasado. Y eso no beneficia a nadie.&lt;/p&gt;
+</description>
+				<pubDate>Mon, 08 Apr 2013 12:21:00 +0200</pubDate>
+				<link>http://blog.garciaechegaray.com//2013/04/08/los-navegadores-web-explicado-para-muggles.html</link>
+				<guid isPermaLink="true">http://blog.garciaechegaray.com//2013/04/08/los-navegadores-web-explicado-para-muggles.html</guid>
+			</item>
+		
+	</channel>
+</rss>

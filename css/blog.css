@@ -14,7 +14,8 @@
 }
 
 @media only screen and (max-width: 40em) { 
-	#home h1,
+	.blog-title h1,
+	.blog-title p,
 	.posts .row .post-date, 
 	.posts .row .post-title {
 		text-align: center;
