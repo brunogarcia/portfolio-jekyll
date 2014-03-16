@@ -47,68 +47,83 @@ quedarte con dos ideas muy concretas:
 
 A continuación os muestro una comparativa a día de hoy (Diciembre 2011).
 
-Características
-
-SASS
-
-LESS
-
-Repositorio
-
-[Github SASS](https://github.com/nex3/sass)
-
-[Github LESS](https://github.com/cloudhead/less.js)
-
-Desarrolladores
-
--   [Hampton Catlin](http://www.twitter.com/hcatlin)
--   [Nathan Weizenbaum](https://twitter.com/#!/nex3)
--   [Chris Eppstein](https://twitter.com/#!/chriseppstein)
-
--   [Alexis Sellier](http://twitter.com/cloudhead)
-
-Github Antiguedad
-
-2006
-
-2010
-
-Github Versión
-
-3.1.11
-
-1.1.5
-
-Github Watchers
-
-680
-
-3251
-
-Github Forks
-
-81
-
-405
-
-Lenguajes soportados
-
--   Ruby
-
--   [PHP](http://leafo.net/lessphp/)
--   [Java](https://github.com/asual/lesscss-servlet)
--   [.NET](http://www.dotlesscss.org)
--   [Perl](http://search.cpan.org/~drinchev/CSS-LESSp-0.86/lib/CSS/LESSp.pm)
--   [Javascript](https://github.com/cloudhead/less.js)
-
-Librerías complementarias
-
--   [HAML](http://haml-lang.com/)
--   [Compass](http://compass-style.org/)
-
--   [Jade](http://jade-lang.com/)
--   [LESS Elements](http://lesselements.com/)
--   [Preboot.less](http://markdotto.com/bootstrap/)
+<table>
+    <thead>
+        <tr>
+            <th>Características</th>
+            <th>SASS</th>
+            <th>LESS</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>Repositorio</th>
+            <td><a href="https://github.com/nex3/sass">Github SASS</a></td>
+            <td><a href="https://github.com/cloudhead/less.js)">Github LESS</a></td>
+        </tr>
+        <tr>        
+            <th>Desarrolladores</th>
+            <td>
+                <ul>
+                    <li><a href="http://www.twitter.com/hcatlin">Hampton Catlin</a></li>
+                    <li><a href="https://twitter.com/#!/nex3">Nathan Weizenbaum</a></li>
+                    <li><a href="https://twitter.com/#!/chriseppstein">Chris Eppstein</a></li>
+                </ul>
+            </td>
+            <td>
+                <a href="http://twitter.com/cloudhead">Alexis Sellier</a>
+            </td>
+        </tr>
+        <tr>
+            <th>Github antiguedad</th>
+            <td>2006</td>
+            <td>2010</td>
+        </tr>
+        <tr>
+            <th>Github versión</th>
+            <td>3.1.11</td>
+            <td>1.1.5</td>
+        </tr>
+        <tr>
+            <th>Github Watchers</th>
+            <td>680</td>
+            <td>3251</td>
+        </tr>
+        <tr>
+            <th>Github Forks</th>
+            <td>81</td>
+            <td>405</td>
+        </tr>
+        <tr>
+            <th>Lenguajes soportados</th>
+            <td>Ruby</td>
+            <td>
+                <ul>
+                    <li><a href="http://leafo.net/lessphp/">PHP</a></li>
+                    <li><a href="https://github.com/asual/lesscss-servlet">Java</a></li>
+                    <li><a href="http://www.dotlesscss.org">.NET</a></li>
+                    <li><a href="http://search.cpan.org/~drinchev/CSS-LESSp-0.86/lib/CSS/LESSp.pm">Perl</a></li>
+                    <li><a href="https://github.com/cloudhead/less.js">Javascript</a></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <th>Librerías complementarias</th>
+            <td>
+                <ul>
+                    <li><a href="http://haml-lang.com/">HAML</a></li>
+                    <lI><a href="http://compass-style.org/">Compass</a></lI>
+                </ul>
+            </td>
+            <td>
+            <ul>
+                <li><a href="http://jade-lang.com/">Jade</a></li>
+                <li><a href="http://lesselements.com/">LESS Elements</a></li>
+                <li><a href="http://markdotto.com/bootstrap/">Preboot.less</a></li>
+            </td>
+        </tr>
+   </tbody>
+</table>
 
 Me ha sorprendido la **diferencia de watchers y forks** entre ambos
 proyectos en Github, siendo claro ganador LESS. Todo esto a pesar de que
@@ -156,20 +171,13 @@ Si alguna comunidad ha sabido sacarle partido a LESS a sido PHP. Puedes
 encontrar una implementación en prácticamente cualquiera de sus diversos
 CMS y frameworks de desarrollo. Para muestra un botón:
 
--   Compilador PHP:
-    [](http://leafo.net/lessphp/)[http://leafo.net/lessphp](http://leafo.net/lessphp)
--   Drupal:
-    [](http://drupal.org/project/less)[http://drupal.org/project/less](http://drupal.org/project/less)
--   Wordpress:
-    [](http://wordpress.org/extend/plugins/wp-less)[http://wordpress.org/extend/plugins/wp-less](http://wordpress.org/extend/plugins/wp-less)
--   Codeigniter:
-    [](http://codeigniter.com/forums/viewthread/164741)[http://codeigniter.com/forums/viewthread/164741](http://codeigniter.com/forums/viewthread/164741)
--   Symfony:
-    [](http://www.symfony-project.org/plugins/sfLESSPlugin)[http://www.symfony-project.org/plugins/sfLESSPlugin](http://www.symfony-project.org/plugins/sfLESSPlugin)
--   Yii:
-    [](http://www.yiiframework.com/extension/less)[http://www.yiiframework.com/extension/less](http://www.yiiframework.com/extension/less)
--   CakePHP:
-    [](https://github.com/Phally/less)[https://github.com/Phally/less](https://github.com/Phally/less)
+-   [Compilador PHP](http://leafo.net/lessphp/)
+-   [Drupal](http://drupal.org/project/less)
+-   [Wordpress](http://wordpress.org/extend/plugins/wp-less)
+-   [Codeigniter](http://codeigniter.com/forums/viewthread/164741)
+-   [Symfony](http://www.symfony-project.org/plugins/sfLESSPlugin)
+-   [Yii](http://www.yiiframework.com/extension/less)
+-   [CakePHP](https://github.com/Phally/less)
 
 Si tu lenguaje de programación favorito es PHP, tienes butaca preferente
 en el mundo de los preprocesadores CSS, ¿a qué estas esperando?.

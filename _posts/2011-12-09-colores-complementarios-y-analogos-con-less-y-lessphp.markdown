@@ -42,6 +42,8 @@ La solución salomónica: usar la función [parse() de
 lessphp](http://leafo.net/lessphp/docs/#setting_variables_from_php) de
 la siguiente forma:
 
+<iframe width="100%" src="http://pastebin.com/embed_iframe.php?i=afGVBU1M"></iframe>
+
 Os explico un poco: la función
 [spin()](http://lesscss.org/#-color-functions) nos permite mostrar un
 color según los grados que le digamos del [círculo

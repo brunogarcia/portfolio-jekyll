@@ -49,7 +49,7 @@ archivos mencionados.
 Después le digo a [lessphp](http://leafo.net/lessphp/) que haga su
 magia: convertirlo a CSS (por ejemplo: *proyect-name.css). *
 
-<iframe src="http://pastebin.com/embed_iframe.php?i=n5R38wbB"></iframe>
+<iframe width="100%" src="http://pastebin.com/embed_iframe.php?i=n5R38wbB"></iframe>
 
 A tener en cuenta: lessphp interpreta la etiqueta *@import* como una
 copia directa del archivo enlazado. O sea, el CSS final será una mezcla
@@ -76,7 +76,7 @@ Sólo hace falta modificar ligeramente tus enlaces:
 Y configurar correctamente [minify](http://code.google.com/p/minify/)
 con todas aquellos archivos que quieras procesar:
 
-<iframe src="http://pastebin.com/embed_iframe.php?i=UjCUjKzM"></iframe>
+<iframe width="100%" src="http://pastebin.com/embed_iframe.php?i=UjCUjKzM"></iframe>
 
 ### Resumen
 

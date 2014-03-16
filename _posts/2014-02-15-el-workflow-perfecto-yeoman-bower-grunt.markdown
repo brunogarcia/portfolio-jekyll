@@ -99,26 +99,26 @@ del generador.
 
 Con la ayuda de npm, **instalamos el generador del proyecto** en global.
 
-> \$ sudo npm install -g generator-bootstrap-less
+> $ sudo npm install -g generator-bootstrap-less
 
 Si queréis ver los generadores instalados:
 
-> \$ yo —help
+> $ yo —help
 
 **Creamos un directorio**
 
-> \$ mkdir \~/learning-bootstrap && cd \$\_
+> $ mkdir \~/learning-bootstrap && cd $_
 
 Le decimos a Yeoman que cree el **scaffolding del proyecto**
 
-> \$ yo bootstrap-less
+> $ yo bootstrap-less
 
 **Instalamos las dependencias del proyecto**
 
 Esto creará y descargará dichas dependencias en la
 ruta *app/bower\_components*del proyecto
 
-> \$ bower install
+> $ bower install
 
 **Construimos el proyecto**
 
@@ -132,11 +132,11 @@ carpeta *node\_modules*en la raíz del proyecto.
 Para ir más ligeros, vamos a saltarnos las comprobaciones
 de [JSHint](http://www.jshint.com/install/)\
 
-> \$ grunt —force
+> $ grunt —force
 
 **Arrancamos el servidor**
 
-> \$ grunt serve
+> $ grunt serve
 
 Si todo es correcto veréis en vuestra terminal la siguiente información:
 
@@ -170,7 +170,7 @@ serve*. Si queréis ver la configuración de esta tarea, abrid el archivo
 
 Probad a lanzar la siguiente línea:
 
-> \$ grunt serve:dist
+> $ grunt serve:dist
 
 Como veréis las tareas ejecutadas son completamente distintas. Esto es
 posible gracias a que **con Grunt** **podemos encadenar tareas con
@@ -182,7 +182,7 @@ proyecto listo para subir a PRO. ¿Fascinante eh? :)
 
 Con el siguiente comando podréis ver las tareas disponibles:
 
-> \$ grunt —help
+> $ grunt —help
 
 ### Crear un proyecto Foundation
 
@@ -207,29 +207,29 @@ del generador.
 
 Con la ayuda de npm, **instalamos el generador** en global
 
-> \$ sudo npm install -g generator-foundation-five
+> $ sudo npm install -g generator-foundation-five
 
 **Creamos un directorio**
 
-> \$ mkdir \~/learning-foundation && cd \$\_
+> $ mkdir \~/learning-foundation && cd $_
 
 Le decimos a Yeoman que cree el **scaffolding del proyecto**
 
-> \$ yo foundation-five
+> $ yo foundation-five
 
 **Instalamos las dependencias del proyecto**
 
-> \$ bower install
+> $ bower install
 
 **Instalamos las dependencias de Grunt**. Esto no debería ser necesario
 pero el generador tiene un bug.
 
-> \$ npm install
+> $ npm install
 
 **Construimos el proyecto**
 
-> \$ grunt
+> $ grunt
 
 **Arrancamos el servidor**
 
-> \$ grunt serve
+> $ grunt serve
