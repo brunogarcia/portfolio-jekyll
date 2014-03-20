@@ -11,10 +11,6 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="/css/app.css">
-  <link rel="stylesheet" href="/css/blog.css">
-
-  <!--Web Fonts-->
-  <link href='http://fonts.googleapis.com/css?family=Cabin|Lobster+Two' rel='stylesheet' type='text/css'>
 
   <!--Favicon-->
   <link rel="shortcut icon" href="/favicon.ico" />
@@ -74,7 +70,7 @@
 
   <!--Main-->
   <div class="main">
-      <div class="row">
+      <div class="row post-main">
 	<h1>El workflow perfecto: Yeoman + Bower + Grunt</h1>
 	<p class="meta">15 Feb 2014</p>
 
@@ -97,7 +93,7 @@ todas las dependencias de tu proyecto front-end. La idea es similar a
 
 <p>El funcionamiento de Bower es bastante simple: creas la configuración en
 un archivo <em>bower.json</em> y después basta con lanzar una línea en la
-terminal (<em>\$ bower</em>) para tener todas las dependencias en local. Da
+terminal (<em>\$ bower install</em>) para tener todas las dependencias en local. Da
 igual si son 5 o 50, Bower las bajara por ti en pis pas.</p>
 
 <h3>Grunt</h3>
@@ -346,6 +342,6 @@ pero el generador tiene un bug.</p>
 
   </div>
 
-<script src="/js/production.min.js"></script>
+<script src="/js/build/production.min.js"></script>
 </body>
 </html>

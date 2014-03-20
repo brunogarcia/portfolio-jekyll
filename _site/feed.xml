@@ -26,7 +26,7 @@ todas las dependencias de tu proyecto front-end. La idea es similar a
 
 &lt;p&gt;El funcionamiento de Bower es bastante simple: creas la configuración en
 un archivo &lt;em&gt;bower.json&lt;/em&gt; y después basta con lanzar una línea en la
-terminal (&lt;em&gt;\$ bower&lt;/em&gt;) para tener todas las dependencias en local. Da
+terminal (&lt;em&gt;\$ bower install&lt;/em&gt;) para tener todas las dependencias en local. Da
 igual si son 5 o 50, Bower las bajara por ti en pis pas.&lt;/p&gt;
 
 &lt;h3&gt;Grunt&lt;/h3&gt;
@@ -280,34 +280,23 @@ pero el generador tiene un bug.&lt;/p&gt;
 				<description>&lt;p&gt;Este el típico problema en el cual utilizaba un setTimeout(). Estaba
 obligado a esperar que se ejecutara la linea superior para poder hacer
 uso del nodo DOM (en este caso “lightbox_content_user”).&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$(“#wrap_all”).prepend(&amp;lt;?php echo json_encode($lightbox) ?\&amp;gt;));
 
-&lt;blockquote&gt;
-&lt;p&gt;$(“#wrap_all”).prepend(&amp;lt;?php echo json_encode(\$lightbox) ?&amp;gt;));&lt;/p&gt;
-
-&lt;p&gt;setTimeout(function(){&lt;/p&gt;
-
-&lt;p&gt; $(“.lightbox_content_user”).css(‘width’, container_width - 80);
-},&lt;/p&gt;
-
-&lt;p&gt;500);&lt;/p&gt;
-&lt;/blockquote&gt;
-
+setTimeout(function(){
+    $(“.lightbox_content_user”).css(‘width’, container_width - 80);
+}, 500);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Ahora estoy comenzando a utilizar un objeto jQuery llamado
 &lt;a href=&quot;https://api.jquery.com/category/deferred-object/&quot;&gt;Deferred&lt;/a&gt;.
 Básicamente hace lo mismo, pero de forma mas limpia. Y así evitamos la
 famosa &lt;a href=&quot;http://www.reddit.com/r/javascript/comments/1atmht/how_we_killed_the_callback_pyramid_of_doom/&quot;&gt;Callback Pyramid of
 Doom&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;var dfd = $.Deferred();
 
-&lt;blockquote&gt;
-&lt;p&gt;var dfd = \$.Deferred();&lt;/p&gt;
+dfd.done($(“#wrap_all”).prepend(&amp;lt;?php echo json_encode($lightbox) ?\&amp;gt;);
 
-&lt;p&gt;dfd.done(\$(“#wrap_all”).prepend(&amp;lt;?php echo
-json_encode(\$lightbox) ?&amp;gt;);&lt;/p&gt;
-
-&lt;p&gt;dfd.resolve(\$(“.lightbox_content_user”).css(‘width’,
-container_width - 80));&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
+dfd.resolve($(“.lightbox_content_user”).css(‘width’, container_width - 80));
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 				<pubDate>Fri, 14 Feb 2014 20:02:00 +0100</pubDate>
 				<link>http://blog.garciaechegaray.com//2014/02/14/settimeout-vs-deferred.html</link>
 				<guid isPermaLink="true">http://blog.garciaechegaray.com//2014/02/14/settimeout-vs-deferred.html</guid>

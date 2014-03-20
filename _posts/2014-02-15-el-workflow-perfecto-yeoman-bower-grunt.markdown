@@ -24,7 +24,7 @@ todas las dependencias de tu proyecto front-end. La idea es similar a
 
 El funcionamiento de Bower es bastante simple: creas la configuración en
 un archivo *bower.json* y después basta con lanzar una línea en la
-terminal (*\$ bower*) para tener todas las dependencias en local. Da
+terminal (*\$ bower install*) para tener todas las dependencias en local. Da
 igual si son 5 o 50, Bower las bajara por ti en pis pas.
 
 ### Grunt

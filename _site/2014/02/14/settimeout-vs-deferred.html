@@ -11,10 +11,6 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="/css/app.css">
-  <link rel="stylesheet" href="/css/blog.css">
-
-  <!--Web Fonts-->
-  <link href='http://fonts.googleapis.com/css?family=Cabin|Lobster+Two' rel='stylesheet' type='text/css'>
 
   <!--Favicon-->
   <link rel="shortcut icon" href="/favicon.ico" />
@@ -74,7 +70,7 @@
 
   <!--Main-->
   <div class="main">
-      <div class="row">
+      <div class="row post-main">
 	<h1>setTimeout() vs $.Deferred()</h1>
 	<p class="meta">14 Feb 2014</p>
 
@@ -82,39 +78,28 @@
 	<p>Este el típico problema en el cual utilizaba un setTimeout(). Estaba
 obligado a esperar que se ejecutara la linea superior para poder hacer
 uso del nodo DOM (en este caso “lightbox_content_user”).</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">$(“#wrap_all”).prepend(&lt;?php echo json_encode($lightbox) ?\&gt;));
 
-<blockquote>
-<p>$(“#wrap_all”).prepend(&lt;?php echo json_encode(\$lightbox) ?&gt;));</p>
-
-<p>setTimeout(function(){</p>
-
-<p> $(“.lightbox_content_user”).css(‘width’, container_width - 80);
-},</p>
-
-<p>500);</p>
-</blockquote>
-
+setTimeout(function(){
+    $(“.lightbox_content_user”).css(‘width’, container_width - 80);
+}, 500);
+</code></pre></div>
 <p>Ahora estoy comenzando a utilizar un objeto jQuery llamado
 <a href="https://api.jquery.com/category/deferred-object/">Deferred</a>.
 Básicamente hace lo mismo, pero de forma mas limpia. Y así evitamos la
 famosa <a href="http://www.reddit.com/r/javascript/comments/1atmht/how_we_killed_the_callback_pyramid_of_doom/">Callback Pyramid of
 Doom</a>.</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">var dfd = $.Deferred();
 
-<blockquote>
-<p>var dfd = \$.Deferred();</p>
+dfd.done($(“#wrap_all”).prepend(&lt;?php echo json_encode($lightbox) ?\&gt;);
 
-<p>dfd.done(\$(“#wrap_all”).prepend(&lt;?php echo
-json_encode(\$lightbox) ?&gt;);</p>
-
-<p>dfd.resolve(\$(“.lightbox_content_user”).css(‘width’,
-container_width - 80));</p>
-</blockquote>
-
+dfd.resolve($(“.lightbox_content_user”).css(‘width’, container_width - 80));
+</code></pre></div>
 	</div>
 </div>
 
   </div>
 
-<script src="/js/production.min.js"></script>
+<script src="/js/build/production.min.js"></script>
 </body>
 </html>
