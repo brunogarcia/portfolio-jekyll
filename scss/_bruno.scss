@@ -44,8 +44,16 @@ h1 {
 	color: #fff;
 }
 
-.top-bar-section ul li.active > a {
-	background: $blue-light !important;
+.top-bar {
+    .title-area, 
+    .top-bar-section .right {
+        padding-left: 0;
+    }
+    .top-bar-section ul {
+        li.active > a {
+        background: $blue-light !important;
+    }
+    }
 }
 
 #proyectos ul {

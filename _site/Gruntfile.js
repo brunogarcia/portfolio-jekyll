@@ -22,7 +22,9 @@ module.exports = function(grunt) {
             dist: {
                 src: [
                     'bower_components/jquery/dist/jquery.js',
-                    'bower_components/foundation/js/foundation.js',
+                    'bower_components/foundation/js/vendor/fastclick.js',
+                    'bower_components/foundation/js/foundation/foundation.js',
+                    'bower_components/foundation/js/foundation/foundation.topbar.js',
                     'js/app.js'                    
                 ],
                 dest: 'js/build/production.js',
@@ -53,13 +55,13 @@ module.exports = function(grunt) {
 
     });
 
-    // 3. Where we tell Grunt we plan to use this plug-in.
+    // 2. Where we tell Grunt we plan to use this plug-in.
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
+    // 3. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask('build', ['sass', 'concat', 'uglify', 'watch']);
     grunt.registerTask('default', ['build']);
 
