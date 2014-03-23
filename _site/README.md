@@ -5,22 +5,19 @@ Artículos sobre desarrollo front-end y proyectos personales en marcha
 
  [blog.garciaechegaray.com](http://blog.garciaechegaray.com)
 
-Instalación
-=====================
-
 ## Proyecto desarrollado con:
 
-	* Jekyll: generador del blog
+* Jekyll: generador del blog
 
-	* Foundation 5: front-end framework
+* Foundation 5: front-end framework
 
-	* libsass: compilador sass
+* libsass: compilador sass
 
-	* Bourbon: mixins sass
+* Bourbon: mixins sass
 
-	* Bower: instalación de dependencias
+* Bower: instalación de dependencias
 
-	* Grunt: automatizador de tareas
+* Grunt: automatizador de tareas
 
 ## Instalar Jekyll
 	$ gem install jekyll

@@ -7,6 +7,158 @@
 		<atom:link href="http://blog.garciaechegaray.com//feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Migrando de Tumblr a Jekyll</title>
+				<description>&lt;p&gt;La semana pasada he migrado mi blog de Tumblr a &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;. 
+El cambio ha sido motivado por varias razones. El más importante la pésima interfaz de usuario de Tumblr al momento de editar y escribir un nuevo post. Básicamente es un modal mal implementado y ejecutado. Una lástima por parte de Tumblr que fallen en algo tan básico y evidente.
+En todo caso, si a Tumblr no le exiges demasiado, tener un blog en su plataforma es una de las mejores opciones. Al menos yo le pongo por delante de Wordpress o Blogger.&lt;/p&gt;
+
+&lt;p&gt;El flujo de trabajo que propone &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; es completamente diferente. Simplemente escribes un post en formato &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;markdown&lt;/a&gt; en tu editor de texto favorito (para mi &lt;a href=&quot;http://www.sublimetext.com/&quot;&gt;Sublime Text&lt;/a&gt; es la mejor opción) y cuando has finalizado, lanzas un &amp;quot;$ git push&amp;quot; y ya lo tienes online. Esto último gracias a &lt;a href=&quot;http://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt; que viene de fábrica completamente integrado con Jekyll.&lt;/p&gt;
+
+&lt;h2&gt;Jekyll&lt;/h2&gt;
+
+&lt;p&gt;Pero recapitulemos un poco. ¿Qué es exactamente Jekyll?. 
+Jekyll es un generador de sites estáticos. Está desarrollado en Ruby, y para el sistema de plantillas utiliza &lt;a href=&quot;http://docs.shopify.com/themes/liquid-basics&quot;&gt;Liquid&lt;/a&gt;. La característica más importante es que &lt;strong&gt;no utiliza ningún sistema de base de datos&lt;/strong&gt;. Sólo convierte ficheros .md a .html. Así de simple y sencillo. &lt;/p&gt;
+
+&lt;h2&gt;Instalación&lt;/h2&gt;
+
+&lt;p&gt;En principio la instalación es la parte más sencilla. Aunque puede que tengas problemas con la versión de Ruby adecuada. Tuve que instalar la 1.9.1, con la 2.0 no funciona.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;sudo apt-get install ruby1.9.1-dev 
+
+sudo gem install jekyll
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Migración&lt;/h2&gt;
+
+&lt;p&gt;Jekyll tiene una serie de &lt;a href=&quot;http://import.jekyllrb.com/docs/home/&quot;&gt;importers&lt;/a&gt; para prácticamente cualquier sistema de blog. En el caso de Tumblr la migración consiste en lanzar estas líneas de código. &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ ruby -rubygems -e &amp;#39;require &amp;quot;jekyll-import&amp;quot;;
+
+JekyllImport::Importers::Tumblr.run({
+    &amp;quot;url&amp;quot;            =&amp;gt; &amp;quot;http://myblog.tumblr.com&amp;quot;,
+    &amp;quot;format&amp;quot;         =&amp;gt; &amp;quot;html&amp;quot;,
+    &amp;quot;grab_images&amp;quot;    =&amp;gt; false, 
+    &amp;quot;add_highlights&amp;quot; =&amp;gt; false, 
+    &amp;quot;rewrite_urls&amp;quot;   =&amp;gt; false 
+})&amp;#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Y ya está. En una carpeta llamada &amp;quot;_posts&amp;quot; encontrarás todos tus posts listos para ejecutarse en Jekyll. En mi caso, la migración a ficheros .md no funcionaba correctamente, vamos me creaba los ficheros pero sin el texto formateado adecuadamente. No me quedo otra opción que exportalo a  &amp;quot;html&amp;quot; y con una herramienta llamada &lt;a href=&quot;http://johnmacfarlane.net/pandoc/&quot;&gt;Pandoc&lt;/a&gt; realizar la conversión a markdown.&lt;/p&gt;
+
+&lt;p&gt;Tuve algunos problemas con ciertas etiquetas html, por ejemplo no existe una etiqueta compatible con &amp;quot;iframe&amp;quot;. Y con las rutas de las imágenes tampoco va muy fina la cosa. En todo caso, nada que algo de tiempo y dedicación no solucionen.&lt;/p&gt;
+
+&lt;h2&gt;GitHub Pages&lt;/h2&gt;
+
+&lt;p&gt;Como he mencionado anteriormente, &lt;a href=&quot;http://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt; ya viene integrado con Jekyll. Si tienes una cuenta en GitHub, necesitas crear un repositorio del tipo &amp;quot;username.github.io&amp;quot;, donde &amp;quot;username&amp;quot; es tu nombre de usuario en GitHub. A continuación haces un clone de dicho repositorio y creas un nuevo proyecto con Jekyll. Esto traducido a código sería algo así:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ git clone https://github.com/username/username.github.io.git
+$ cd username.github.io
+$ jekyll new myblog
+$ git add -all
+$ git commit -m &amp;quot;My first version of Jekyll with GitHub Pages&amp;quot;
+$ git push
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;En 5 minutos ya puedes acceder a la ruta &amp;quot;http://username.github.io&amp;quot; y ver tu primera versión de Jekyll online. Fantabuloso :)&lt;/p&gt;
+
+&lt;h2&gt;Servidor en local&lt;/h2&gt;
+
+&lt;p&gt;Para arrancar un servidor Jekyll en tu maquina, basta con lanzar la siguiente línea en tu terminal:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ jekyll server -w
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;La opción &lt;em&gt;-w&lt;/em&gt; sirve para regenerar el site si realizas algún cambio.&lt;/p&gt;
+
+&lt;p&gt;Si todo es correcto, podrás acceder a &lt;a href=&quot;http://localhost:4000&quot;&gt;http://localhost:4000&lt;/a&gt; y ver Jekyll ejecutandose en local.&lt;/p&gt;
+
+&lt;h2&gt;Generadores&lt;/h2&gt;
+
+&lt;p&gt;En Yeoman podrás encontrar varios generadores que implementan Jekyll, por ejemplo &lt;a href=&quot;https://github.com/robwierzbowski/generator-jekyllrb&quot;&gt;generator-jekyllrb&lt;/a&gt; es bastante completo. Te configura el proyecto con &lt;a href=&quot;http://compass-style.org/&quot;&gt;Compass&lt;/a&gt; y &lt;a href=&quot;http://html5boilerplate.com/&quot;&gt;HTML5 Boilerplate&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Personalmente eche en falta un generador con la opción de Jekyll + &lt;a href=&quot;http://foundation.zurb.com/&quot;&gt;Foundation&lt;/a&gt;, o en su defecto con &lt;a href=&quot;http://getbootstrap.com&quot;&gt;Bootstrap&lt;/a&gt;. Pero no se puede tener todo en esta vida :)&lt;/p&gt;
+
+&lt;h2&gt;Look &amp;amp; feel&lt;/h2&gt;
+
+&lt;p&gt;Finalmente opte por crear un proyecto desde cero con Foundation y &lt;a href=&quot;bourbon.io&quot;&gt;Bourbon&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;El primero es el super framework front-end desarrollado por &lt;a href=&quot;http://zurb.com/&quot;&gt;Zurb&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;Bourbon es una librería de mixins para &lt;a href=&quot;http://sass-lang.com/&quot;&gt;Sass&lt;/a&gt; muy completa y útil. Los mixins vienen a ser lo que entenderíamos por funciones en el mundo de la programación. Aceptan parámetros y devuelven un resultado ad-hoc. Por ejemplo estas líneas en Sass y Bourbon:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;.button {
+    @include border-top-radius(5px);
+    @include border-bottom-radius(5px);
+    @include border-left-radius(5px);
+    @include border-right-radius(5px);
+    @include radial-gradient(#1e5799, #3dc3d1);
+}   
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;compiladas a CSS, serían:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;.button {
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+    border-top-left-radius:5px;
+    border-bottom-left-radius:5px;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+    background-color:#1e5799;
+    background-image:
+        -webkit-gradient(
+            radial, center center, 0, center center, 460, 
+            color-stop(0%, #1e5799), 
+            color-stop(100%, #3dc3d1)
+        );
+    background-image:
+        -webkit-radial-gradient(#1e5799, #3dc3d1);
+        background-image: radial-gradient(#1e5799, #3dc3d1);
+    }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Combinando con un poco criterio estético las opciones que proporciona Foundation a nivel de layout y Bourbon con sus mixins, podemos tener un look &amp;amp; feel más que aceptable en poco tiempo.&lt;/p&gt;
+
+&lt;h2&gt;Automatización&lt;/h2&gt;
+
+&lt;p&gt;Últimamente utilizo Bower y Grunt para prácticamente cualquier proyecto. Por una parte me permiten automatizar procesos y además compartir esa misma configuración con el resto del equipo de desarrollo.&lt;/p&gt;
+
+&lt;p&gt;Existen varias formas de crear un proyecto con Foundation, en este caso opte por utilizar la opción &amp;quot;Foundation + Grunt + Libsass&amp;quot;.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ foundation new myblog_with_foundation --libsass
+$ cd myblog_with_foundation
+$ grunt build
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;http://libsass.org/&quot;&gt;Libsass&lt;/a&gt; es un compilador de Sass escrito en C/C++. Según los test es bastante más rápido y eficiente que el compilador original escrito en Ruby. Y es la opción
+que utiliza &lt;a href=&quot;http://zurb.com/&quot;&gt;Zurb&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;La última línea (&lt;em&gt;$ grunt build&lt;/em&gt;) se encarga de compilar los ficheros .sass a .css&lt;/p&gt;
+
+&lt;p&gt;Ahora sólo queda combinar ambos proyectos. Tuve que añadir Bourbon como &lt;a href=&quot;https://github.com/brunogarcia/brunogarcia.github.io/blob/master/bower.json&quot;&gt;nueva dependecia a bower.json&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;&amp;quot;dependencies&amp;quot;: {
+    &amp;quot;foundation&amp;quot;: &amp;quot;zurb/bower-foundation&amp;quot;,
+    &amp;quot;bourbon&amp;quot;: &amp;quot;https://github.com/thoughtbot/bourbon.git&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Y actualizar la &lt;a href=&quot;https://github.com/brunogarcia/brunogarcia.github.io/blob/master/Gruntfile.js&quot;&gt;configuración de Grunt&lt;/a&gt; a mi gusto, añadiendo unicamente los módulos de Foundation que me interesan, en este caso fastclick.js y foundation.topbar.js:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;concat: {   
+    dist: {
+        src: [
+            &amp;#39;bower_components/jquery/dist/jquery.js&amp;#39;,
+            &amp;#39;bower_components/foundation/js/vendor/fastclick.js&amp;#39;,
+            &amp;#39;bower_components/foundation/js/foundation/foundation.js&amp;#39;,
+            &amp;#39;bower_components/foundation/js/foundation/foundation.topbar.js&amp;#39;,
+            &amp;#39;js/app.js&amp;#39;
+        ],
+    dest: &amp;#39;js/build/production.js&amp;#39;,
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Por otro lado en el fichero &lt;a href=&quot;https://github.com/brunogarcia/brunogarcia.github.io/blob/master/scss/app.scss&quot;&gt;app.scass&lt;/a&gt; sólo compilo los estilos que necesito:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;@import &amp;quot;foundation/components/grid&amp;quot;;
+@import &amp;quot;foundation/components/tables&amp;quot;;
+@import &amp;quot;foundation/components/top-bar&amp;quot;;
+@import &amp;quot;foundation/components/visibility&amp;quot;; 
+@import &amp;quot;../bower_components/bourbon/app/assets/stylesheets/bourbon&amp;quot;;
+@import &amp;quot;bruno&amp;quot;; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Si te interesa conocer más sobre cómo integrar Jekyll con Foundation, date una vuelta por mi &lt;a href=&quot;https://github.com/brunogarcia/brunogarcia.github.io&quot;&gt;repositorio en GitHub&lt;/a&gt; y seguro que encontrarás ideas interesantes.&lt;/p&gt;
+</description>
+				<pubDate>Sun, 23 Mar 2014 17:55:00 +0100</pubDate>
+				<link>http://blog.garciaechegaray.com//2014/03/23/migrando-tumblr-jekyll.html</link>
+				<guid isPermaLink="true">http://blog.garciaechegaray.com//2014/03/23/migrando-tumblr-jekyll.html</guid>
+			</item>
+		
+			<item>
 				<title>El workflow perfecto: Yeoman + Bower + Grunt</title>
 				<description>&lt;p&gt;Últimamente estoy trasteando con los
 &lt;a href=&quot;http://yeoman.io/community-generators.html&quot;&gt;generadores&lt;/a&gt; de
@@ -784,128 +936,6 @@ relegando completamente al curriculum vitae de toda la vida. &lt;/p&gt;
 				<pubDate>Sat, 20 Apr 2013 22:55:00 +0200</pubDate>
 				<link>http://blog.garciaechegaray.com//2013/04/20/estan-los-portales-de-empleo-generalistas.html</link>
 				<guid isPermaLink="true">http://blog.garciaechegaray.com//2013/04/20/estan-los-portales-de-empleo-generalistas.html</guid>
-			</item>
-		
-			<item>
-				<title>Los navegadores web explicado para muggles</title>
-				<description>&lt;p&gt;Intentaré hacer una introducción muy básica sobre como funciona un
-navegador web. Me gustaría que sea capaz de entenderlo cualquier persona
-alejada del sector y sin conocimientos técnicos previos.&lt;/p&gt;
-
-&lt;p&gt;Está escrito muy rápidamente para contestar a un &lt;a href=&quot;https://twitter.com/mcestevan/status/321170764021776386&quot;&gt;twit lanzado
-por @mcesttevan&lt;/a&gt;,
-con respecto a la Bonilista “&lt;a href=&quot;http://us2.campaign-archive2.com/?u=374c664073e1a1fa3deca53b4&amp;amp;id=92e3e39bcd&quot;&gt;Evangelista Técnico por un
-día&lt;/a&gt;”.&lt;/p&gt;
-
-&lt;h3&gt;Conceptos básicos&lt;/h3&gt;
-
-&lt;p&gt;Un &lt;strong&gt;navegador web&lt;/strong&gt; es un software que nos permite visualizar e
-interactuar con páginas World Wide Web. Actualmente los más importantes
-son: Chrome (Google), Firefox (Mozilla) e Internet Explorer (Microsoft).&lt;/p&gt;
-
-&lt;p&gt;También existen Safari y Opera, pero con una cuota de mercado muy
-pequeña en &lt;em&gt;desktop&lt;/em&gt;. &lt;em&gt;Corrección: olvide mencionar que Safari es el
-navegador por defecto en iPhone/iPad, lo cual le otorga un puesto
-relevante en el mercado de los navegadores web.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Para realizar correctamente la tarea asignada (navegar por la web) esta
-aplicación necesita de varios &lt;strong&gt;componentes&lt;/strong&gt;. Los mas importantes:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt; &lt;a href=&quot;http://en.wikipedia.org/wiki/Layout_engine&quot;&gt;Motor de Renderizado&lt;/a&gt;,
-encargado de procesar y “pintar” los componentes de cada página
-(HTML, CSS, XML, imágenes) en la pantalla de tu navegador.
-Actualmente existen varios en el mercado: Webkit (Chrome, Safari,
-Opera), Gecko (Firefox) y Trident (Internet Explorer).&lt;/li&gt;
-&lt;li&gt; &lt;a href=&quot;http://en.wikipedia.org/wiki/JavaScript_engine&quot;&gt;Motor Javascript&lt;/a&gt;,
-encargado de procesar el código javascript de la página web. Los
-principales: V8 (Google), Rhino (Mozilla), Chakra (Microsoft).&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Conociendo estas diferencias, pasemos el siguiente punto básico. Existe
-algo llamado &lt;strong&gt;estándares web&lt;/strong&gt;. Esos estándares se han ido creado poco
-a poco, a base de conseguir un consenso entre las distintas partes
-involucradas.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt; &lt;strong&gt;Organizaciones&lt;/strong&gt;: la encargada de crear la mayoría de
-los estándares que actualmente usamos en cualquier página web es la
-&lt;a href=&quot;http://www.w3.org/&quot;&gt;W3C&lt;/a&gt;. Fue fundada por Tim Bernes-Lee (el
-creador  de la WWW). Aunque también cabe destacar a
-&lt;a href=&quot;http://www.ecma-international.org/&quot;&gt;ECMA&lt;/a&gt; (Javascript)
-y &lt;a href=&quot;http://www.whatwg.org/&quot;&gt;WHATWG&lt;/a&gt; (HTML5).&lt;/li&gt;
-&lt;li&gt; &lt;strong&gt;Grandes empresas&lt;/strong&gt; con intereses económicos en el sector: Google,
-Adobe, Apple, Microsoft, Oracle, etc.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Como os podréis imaginar poner en orden a tantos actores es muy
-complicado y los conflictos de intereses son enormes. Por esta razón la
-W3C ha tardado muchos años en sacar adelante algunos estándares o
-versionar los ya existentes (recordemos el caso de HTML5 que da para
-toda una novela de intrigas). Por esta razón se ha ganado una fama de
-burocrática y lenta, a mi entender poco justificada. No todo es culpa de
-la W3C.&lt;/p&gt;
-
-&lt;h3&gt;Incompatibilidades entre distintos navegadores&lt;/h3&gt;
-
-&lt;p&gt;Resumiendo, por una parte tenemos una serie de estándares que deben
-cumplirse (para eso fueron creados) y por otra tenemos el software
-creado por las distintas empresas (Google, Microsoft) o fundaciones
-(Mozilla).&lt;/p&gt;
-
-&lt;p&gt;El problema está en que muchas veces estos estándares no se cumplen o se
-implementar erróneamente. Esto es un gran problema para todos, ya que
-tiene grandes repercusiones económicas.&lt;/p&gt;
-
-&lt;p&gt;Si Microsoft decide arbitrariamente no implementar cierta característica
-en su navegador (basándose en su cuota de mercado o en decisiones
-empresariales) entonces los desarrolladores tendrán que trabajar el
-doble o el triple para que dicha característica sea compatible y el
-cliente final no se vea perjudicado. Y cuando digo cliente final me
-refiero a mi padre comprando un libro o un colchón en un comercio
-online.&lt;/p&gt;
-
-&lt;p&gt; Si ya es complicado que un usuario compre por internet (seguridad,
-precios, marketing, usabilidad, etc.), imaginaros añadir un problema
-técnico. Si el &lt;strong&gt;botón de compra&lt;/strong&gt; no funciona correctamente por un
-problema de incompatibilidad no detectado, entonces todo el proceso se
-va al carajo. Y esto es una pérdida de dinero y sobre todo una gran
-pérdida de confianza en el sector como medio de compra. Vamos, un medio
-en el cual no vale la pena invertir dinero y tiempo. Y donde sólo viven
-hackers y gente chunga.&lt;/p&gt;
-
-&lt;h3&gt;WebKit &amp;amp; Blink: otra guerra de navegadores&lt;/h3&gt;
-
-&lt;p&gt;En la primera década del nuevo siglo (2000-2010) el sector ha estado
-luchando constantemente por resolver este problema de una vez por todas.&lt;/p&gt;
-
-&lt;p&gt;Yo realmente veía el asunto casi finalizado. Parecía que todos estaban
-de acuerdo en que &lt;a href=&quot;http://www.webkit.org/&quot;&gt;WebKit&lt;/a&gt; era la mejor opción.
-Es un proyecto de software libre que utilizan dos de los principales
-navegadores: Chrome y Safari. Además es por defecto el motor utilizado
-en las principales plataformas móviles: iPhone/iPad y Android. Y por
-supuesto cumple muy bien los estándares web (para los más curiosos:
-existe una herramienta llamada &lt;a href=&quot;http://acid3.acidtests.org/&quot;&gt;Acid Test&lt;/a&gt;
-que mide este grado de compatibilidad).&lt;/p&gt;
-
-&lt;p&gt;El problema es que ahora Google ha anunciado que hará un fork de WebKit,
-o sea una copia exacta del proyecto original.&lt;/p&gt;
-
-&lt;p&gt;Entonces,  ¿si es una copia exacta, por qué se ha armado tanto revuelo?.
-El problema está en que todos los cambios y mejoras aplicados a este
-fork (llamado &lt;a href=&quot;http://www.chromium.org/blink&quot;&gt;Blink&lt;/a&gt;) serán
-incompatibles con WebKit. O sea a la larga se irá convirtiendo en un
-nuevo motor de renderizado, con todo lo que ello conlleva:&lt;strong&gt;  otra vez
-perdida de consenso y nuevas y molestas&lt;/strong&gt;&lt;strong&gt;incompatibilidades entre
-navegadores.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Vamos, otra &lt;a href=&quot;http://en.wikipedia.org/wiki/Browser_wars&quot;&gt;guerra de
-navegadores&lt;/a&gt; que tantos
-problemas causo en el pasado. Y eso no beneficia a nadie.&lt;/p&gt;
-</description>
-				<pubDate>Mon, 08 Apr 2013 12:21:00 +0200</pubDate>
-				<link>http://blog.garciaechegaray.com//2013/04/08/los-navegadores-web-explicado-para-muggles.html</link>
-				<guid isPermaLink="true">http://blog.garciaechegaray.com//2013/04/08/los-navegadores-web-explicado-para-muggles.html</guid>
 			</item>
 		
 	</channel>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Migrando de Tumblr a Jekyll</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+
+  <!--RSS-->
+  <link rel="alternate" type="application/rss+xml" title="Bruno Garcia" href="http://blog.garciaechegaray.com/feed.xml">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/app.css">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="/favicon.ico" />
+
+  <!--Modernizr-->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.0/modernizr.min.js"></script>
+
+  <!--Google Analytics-->
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-18260985-4']);
+    _gaq.push(['_setDomainName', '.garciaechegaray.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>  
+
+</head>
+<body>
+
+  <!--Nav-->
+  <div class="fixed">
+    <nav class="top-bar" data-topbar>
+
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="#top">Bruno Garcia Echegaray</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon">
+          <a href="">
+            <span>Menu</span>
+          </a>
+        </li>
+      </ul>
+
+      <section class="top-bar-section">
+        <ul class="right">
+          <li class="divider"></li>
+          <li><a href="http://bruno.garciaechegaray.com">Sobre mi</a></li>
+          <li class="divider"></li>
+          <li class="active"><a href="http://blog.garciaechegaray.com/">Blog</a></li>
+          <li class="divider"></li>
+          <li><a href="http://www.tuttifrescuni.com" title="Tutti Frescuni: ¿qué frutas y verduras se encuentran de temporada?" target="_blank">Pet Project</a></li>
+          <li class="divider"></li>
+          <li><a href="https://github.com/brunogarcia/Front-end-Wiki/wiki" title="Front-end Development Resources" target="_blank">Wiki</a></li>    
+        </ul>
+      </section>
+
+    </nav>  
+  </div>
+
+  <!--Main-->
+  <div class="main">
+      <div class="row post-main">
+	<h1>Migrando de Tumblr a Jekyll</h1>
+	<p class="meta">23 Mar 2014</p>
+
+	<div class="post">
+	<p>La semana pasada he migrado mi blog de Tumblr a <a href="http://jekyllrb.com/">Jekyll</a>. 
+El cambio ha sido motivado por varias razones. El más importante la pésima interfaz de usuario de Tumblr al momento de editar y escribir un nuevo post. Básicamente es un modal mal implementado y ejecutado. Una lástima por parte de Tumblr que fallen en algo tan básico y evidente.
+En todo caso, si a Tumblr no le exiges demasiado, tener un blog en su plataforma es una de las mejores opciones. Al menos yo le pongo por delante de Wordpress o Blogger.</p>
+
+<p>El flujo de trabajo que propone <a href="http://jekyllrb.com/">Jekyll</a> es completamente diferente. Simplemente escribes un post en formato <a href="http://daringfireball.net/projects/markdown/">markdown</a> en tu editor de texto favorito (para mi <a href="http://www.sublimetext.com/">Sublime Text</a> es la mejor opción) y cuando has finalizado, lanzas un &quot;$ git push&quot; y ya lo tienes online. Esto último gracias a <a href="http://pages.github.com/">GitHub Pages</a> que viene de fábrica completamente integrado con Jekyll.</p>
+
+<h2>Jekyll</h2>
+
+<p>Pero recapitulemos un poco. ¿Qué es exactamente Jekyll?. 
+Jekyll es un generador de sites estáticos. Está desarrollado en Ruby, y para el sistema de plantillas utiliza <a href="http://docs.shopify.com/themes/liquid-basics">Liquid</a>. La característica más importante es que <strong>no utiliza ningún sistema de base de datos</strong>. Sólo convierte ficheros .md a .html. Así de simple y sencillo. </p>
+
+<h2>Instalación</h2>
+
+<p>En principio la instalación es la parte más sencilla. Aunque puede que tengas problemas con la versión de Ruby adecuada. Tuve que instalar la 1.9.1, con la 2.0 no funciona.</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">sudo apt-get install ruby1.9.1-dev 
+
+sudo gem install jekyll
+</code></pre></div>
+<h2>Migración</h2>
+
+<p>Jekyll tiene una serie de <a href="http://import.jekyllrb.com/docs/home/">importers</a> para prácticamente cualquier sistema de blog. En el caso de Tumblr la migración consiste en lanzar estas líneas de código. </p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">$ ruby -rubygems -e &#39;require &quot;jekyll-import&quot;;
+
+JekyllImport::Importers::Tumblr.run({
+    &quot;url&quot;            =&gt; &quot;http://myblog.tumblr.com&quot;,
+    &quot;format&quot;         =&gt; &quot;html&quot;,
+    &quot;grab_images&quot;    =&gt; false, 
+    &quot;add_highlights&quot; =&gt; false, 
+    &quot;rewrite_urls&quot;   =&gt; false 
+})&#39;
+</code></pre></div>
+<p>Y ya está. En una carpeta llamada &quot;_posts&quot; encontrarás todos tus posts listos para ejecutarse en Jekyll. En mi caso, la migración a ficheros .md no funcionaba correctamente, vamos me creaba los ficheros pero sin el texto formateado adecuadamente. No me quedo otra opción que exportalo a  &quot;html&quot; y con una herramienta llamada <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a> realizar la conversión a markdown.</p>
+
+<p>Tuve algunos problemas con ciertas etiquetas html, por ejemplo no existe una etiqueta compatible con &quot;iframe&quot;. Y con las rutas de las imágenes tampoco va muy fina la cosa. En todo caso, nada que algo de tiempo y dedicación no solucionen.</p>
+
+<h2>GitHub Pages</h2>
+
+<p>Como he mencionado anteriormente, <a href="http://pages.github.com/">GitHub Pages</a> ya viene integrado con Jekyll. Si tienes una cuenta en GitHub, necesitas crear un repositorio del tipo &quot;username.github.io&quot;, donde &quot;username&quot; es tu nombre de usuario en GitHub. A continuación haces un clone de dicho repositorio y creas un nuevo proyecto con Jekyll. Esto traducido a código sería algo así:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">$ git clone https://github.com/username/username.github.io.git
+$ cd username.github.io
+$ jekyll new myblog
+$ git add -all
+$ git commit -m &quot;My first version of Jekyll with GitHub Pages&quot;
+$ git push
+</code></pre></div>
+<p>En 5 minutos ya puedes acceder a la ruta &quot;http://username.github.io&quot; y ver tu primera versión de Jekyll online. Fantabuloso :)</p>
+
+<h2>Servidor en local</h2>
+
+<p>Para arrancar un servidor Jekyll en tu maquina, basta con lanzar la siguiente línea en tu terminal:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">$ jekyll server -w
+</code></pre></div>
+<p>La opción <em>-w</em> sirve para regenerar el site si realizas algún cambio.</p>
+
+<p>Si todo es correcto, podrás acceder a <a href="http://localhost:4000">http://localhost:4000</a> y ver Jekyll ejecutandose en local.</p>
+
+<h2>Generadores</h2>
+
+<p>En Yeoman podrás encontrar varios generadores que implementan Jekyll, por ejemplo <a href="https://github.com/robwierzbowski/generator-jekyllrb">generator-jekyllrb</a> es bastante completo. Te configura el proyecto con <a href="http://compass-style.org/">Compass</a> y <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>.</p>
+
+<p>Personalmente eche en falta un generador con la opción de Jekyll + <a href="http://foundation.zurb.com/">Foundation</a>, o en su defecto con <a href="http://getbootstrap.com">Bootstrap</a>. Pero no se puede tener todo en esta vida :)</p>
+
+<h2>Look &amp; feel</h2>
+
+<p>Finalmente opte por crear un proyecto desde cero con Foundation y <a href="bourbon.io">Bourbon</a>. </p>
+
+<p>El primero es el super framework front-end desarrollado por <a href="http://zurb.com/">Zurb</a>. </p>
+
+<p>Bourbon es una librería de mixins para <a href="http://sass-lang.com/">Sass</a> muy completa y útil. Los mixins vienen a ser lo que entenderíamos por funciones en el mundo de la programación. Aceptan parámetros y devuelven un resultado ad-hoc. Por ejemplo estas líneas en Sass y Bourbon:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">.button {
+    @include border-top-radius(5px);
+    @include border-bottom-radius(5px);
+    @include border-left-radius(5px);
+    @include border-right-radius(5px);
+    @include radial-gradient(#1e5799, #3dc3d1);
+}   
+</code></pre></div>
+<p>compiladas a CSS, serían:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">.button {
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+    border-top-left-radius:5px;
+    border-bottom-left-radius:5px;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+    background-color:#1e5799;
+    background-image:
+        -webkit-gradient(
+            radial, center center, 0, center center, 460, 
+            color-stop(0%, #1e5799), 
+            color-stop(100%, #3dc3d1)
+        );
+    background-image:
+        -webkit-radial-gradient(#1e5799, #3dc3d1);
+        background-image: radial-gradient(#1e5799, #3dc3d1);
+    }
+</code></pre></div>
+<p>Combinando con un poco criterio estético las opciones que proporciona Foundation a nivel de layout y Bourbon con sus mixins, podemos tener un look &amp; feel más que aceptable en poco tiempo.</p>
+
+<h2>Automatización</h2>
+
+<p>Últimamente utilizo Bower y Grunt para prácticamente cualquier proyecto. Por una parte me permiten automatizar procesos y además compartir esa misma configuración con el resto del equipo de desarrollo.</p>
+
+<p>Existen varias formas de crear un proyecto con Foundation, en este caso opte por utilizar la opción &quot;Foundation + Grunt + Libsass&quot;.</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">$ foundation new myblog_with_foundation --libsass
+$ cd myblog_with_foundation
+$ grunt build
+</code></pre></div>
+<p><a href="http://libsass.org/">Libsass</a> es un compilador de Sass escrito en C/C++. Según los test es bastante más rápido y eficiente que el compilador original escrito en Ruby. Y es la opción
+que utiliza <a href="http://zurb.com/">Zurb</a>.</p>
+
+<p>La última línea (<em>$ grunt build</em>) se encarga de compilar los ficheros .sass a .css</p>
+
+<p>Ahora sólo queda combinar ambos proyectos. Tuve que añadir Bourbon como <a href="https://github.com/brunogarcia/brunogarcia.github.io/blob/master/bower.json">nueva dependecia a bower.json</a>:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">&quot;dependencies&quot;: {
+    &quot;foundation&quot;: &quot;zurb/bower-foundation&quot;,
+    &quot;bourbon&quot;: &quot;https://github.com/thoughtbot/bourbon.git&quot;
+}
+</code></pre></div>
+<p>Y actualizar la <a href="https://github.com/brunogarcia/brunogarcia.github.io/blob/master/Gruntfile.js">configuración de Grunt</a> a mi gusto, añadiendo unicamente los módulos de Foundation que me interesan, en este caso fastclick.js y foundation.topbar.js:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">concat: {   
+    dist: {
+        src: [
+            &#39;bower_components/jquery/dist/jquery.js&#39;,
+            &#39;bower_components/foundation/js/vendor/fastclick.js&#39;,
+            &#39;bower_components/foundation/js/foundation/foundation.js&#39;,
+            &#39;bower_components/foundation/js/foundation/foundation.topbar.js&#39;,
+            &#39;js/app.js&#39;
+        ],
+    dest: &#39;js/build/production.js&#39;,
+    }
+}
+</code></pre></div>
+<p>Por otro lado en el fichero <a href="https://github.com/brunogarcia/brunogarcia.github.io/blob/master/scss/app.scss">app.scass</a> sólo compilo los estilos que necesito:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">@import &quot;foundation/components/grid&quot;;
+@import &quot;foundation/components/tables&quot;;
+@import &quot;foundation/components/top-bar&quot;;
+@import &quot;foundation/components/visibility&quot;; 
+@import &quot;../bower_components/bourbon/app/assets/stylesheets/bourbon&quot;;
+@import &quot;bruno&quot;; 
+</code></pre></div>
+<p>Si te interesa conocer más sobre cómo integrar Jekyll con Foundation, date una vuelta por mi <a href="https://github.com/brunogarcia/brunogarcia.github.io">repositorio en GitHub</a> y seguro que encontrarás ideas interesantes.</p>
+
+	</div>
+</div>
+
+  </div>
+
+<script src="/js/build/production.min.js"></script>
+</body>
+</html>
