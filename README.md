@@ -4,7 +4,6 @@ Artículos sobre desarrollo front-end y proyectos personales en marcha
 
  [blog.garciaechegaray.com](http://blog.garciaechegaray.com)
 
-* * *
 
 ## Herramientas
 
@@ -20,7 +19,6 @@ Artículos sobre desarrollo front-end y proyectos personales en marcha
 
 * [Grunt](http://gruntjs.com/): The javaScript task runner.
 
-* * *
 
 ## Instalar proyecto
 
