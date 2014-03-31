@@ -269,3 +269,19 @@ h1 {
         }
     }
 }
+
+.highlight {
+    border: dotted 2px #CCC;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-size: 11px;
+    background: #EEE;
+    @include border-top-radius (12px);
+    @include border-bottom-radius (12px);
+    @include border-left-radius (12px);
+    @include border-right-radius (12px);    
+    code {
+        font-weight: normal !important;
+        color: #333 !important;
+    }
+}
