@@ -4,7 +4,8 @@ title: ! 'Migrando de Tumblr a Jekyll'
 date: '2014-03-23T17:55:00+01:00' 
 ---
 
-La semana pasada he migrado mi blog de Tumblr a [Jekyll](http://jekyllrb.com/). 
+<big>La semana pasada he migrado mi blog de Tumblr a [Jekyll](http://jekyllrb.com/). </big>
+
 El cambio ha sido motivado por varias razones. El más importante la pésima interfaz de usuario de Tumblr al momento de editar y escribir un nuevo post. Básicamente es un modal mal implementado y ejecutado. Una lástima por parte de Tumblr que fallen en algo tan básico y evidente.
 En todo caso, si a Tumblr no le exiges demasiado, tener un blog en su plataforma es una de las mejores opciones. Al menos yo le pongo por delante de Wordpress o Blogger.
 

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Probando Highcharts 4 y Highmaps</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+
+  <!--RSS-->
+  <link rel="alternate" type="application/rss+xml" title="Bruno Garcia" href="http://blog.garciaechegaray.com/feed.xml">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/app.css">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="/favicon.ico" />
+
+  <!--Modernizr-->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.0/modernizr.min.js"></script>
+
+  <!--Google Analytics-->
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-18260985-4']);
+    _gaq.push(['_setDomainName', '.garciaechegaray.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>  
+
+</head>
+<body>
+
+  <!--Nav-->
+  <div class="fixed">
+    <nav class="top-bar" data-topbar>
+
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="#top">Bruno Garcia Echegaray</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon">
+          <a href="">
+            <span>Menu</span>
+          </a>
+        </li>
+      </ul>
+
+      <section class="top-bar-section">
+        <ul class="right">
+          <li class="divider"></li>
+          <li><a href="http://bruno.garciaechegaray.com">Sobre mi</a></li>
+          <li class="divider"></li>
+          <li class="active"><a href="http://blog.garciaechegaray.com/">Blog</a></li>
+          <li class="divider"></li>
+          <li><a href="http://www.tuttifrescuni.com" title="Tutti Frescuni: ¿qué frutas y verduras se encuentran de temporada?" target="_blank">Pet Project</a></li>
+          <li class="divider"></li>
+          <li><a href="https://github.com/brunogarcia/Front-end-Wiki/wiki" title="Front-end Development Resources" target="_blank">Wiki</a></li>    
+        </ul>
+      </section>
+
+    </nav>  
+  </div>
+
+  <!--Main-->
+  <div class="main">
+      <div class="row post-main">
+	<h1>Probando Highcharts 4 y Highmaps</h1>
+	<p class="meta">02 Jul 2014</p>
+
+	<div class="post">
+	<p><big>Highcharts es una librería desarrollada en Javascript que permite crear fácil y rápidamente gráficos interactivos. </big></p>
+
+<p>Trae de serie un nutrido pack de gráficos: área, columnas, barras, pasteles (o quesitos), etc. Simplemente necesitas añadir un set de datos (acepta JSON, CSV, XML) y ya puedes incorporarlo en cualquier proyecto web. Además puedes configurar prácticamente toda la interfaz de usuario con la imagen corporativa que desees (colores, fuentes, tamaños, idiomas, etc.).</p>
+
+<p>Librerías como Highcharts existen muchas, algunas mucho más potentes como D3 o más básicas como Flot, Fusion Charts o incluso Google Charts. Pero a mi entender Highcharts es actualmente la librería de facto para crear gráficos &quot;precocinados&quot;. Quizás si necesitas crear un nuevo tipo de gráfico muy específico y personalizado, D3 sea la mejor (y única) opción.</p>
+
+<h2>Highcharts 4</h2>
+
+<p>Hace unas pocas semanas Highcharts ha lanzado una nueva versión (v4) con un muchas novedades. Por ejemplo han añadido nuevos tipos de gráficos: heat charts, 3D charts, bubble charts, funnel/piramid chart, waterfall. También tienen un <a href="http://www.highcharts.com/download">download builder</a> bastante útil que te permite personalizar la librería con los componentes que vayas a necesitar en cada proyecto, ahorrandole muchos kb al usuario final.</p>
+
+<h2>Highmaps</h2>
+
+<p>Pero de todas las novedades, me ha gustado mucho <a href="http://www.highcharts.com/products/highmaps">Highmaps</a>. Esta es una librería específica para crear (como su nombre indica) mapas. Siempre con la filosofía que  ha seguido Highcharts: una librería sencilla y fácil de usar. Aqui tambíen existen otras opciones mucho más completas y potentes como <a href="http://leafletjs.com/">Leaflet</a> o <a href="http://cartodb.com">CartoDB</a>.</p>
+
+<p>Cosas a destacar: acepta GeoJSON y SVG. Puedes encontrar un listado de recursos gratuitos para ambos formatos en <a href="http://code.highcharts.com/mapdata/">Highcharts Code: Map Data</a>. También tienes acceso gratuito a la <a href="http://api.highcharts.com/highmaps">API</a> y ejemplos de implementación en la <a href="http://www.highcharts.com/maps/demo">demo</a>.</p>
+
+<iframe width="100%" height="650" src="http://jsfiddle.net/brunogarcia/6ccrt/embedded/result,js,html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+	</div>
+</div>
+
+  </div>
+
+<script src="/js/build/production.min.js"></script>
+</body>
+</html>

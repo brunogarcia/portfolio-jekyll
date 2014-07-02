@@ -5,8 +5,10 @@ date: '2013-04-20T22:55:00+02:00'
 tumblr\_url: http://blog.garciaechegaray.com/post/48466395230/estan-los-portales-de-empleo-generalistas
 ---
 
-Haré un repaso de mi experiencia personal buscando trabajo en estas
-últimas semanas. Me he encontrado con algunas sorpresas y me gustaría
+<big>Haré un repaso de mi experiencia personal buscando trabajo en estas
+últimas semanas. </big>
+
+Me he encontrado con algunas sorpresas y me gustaría
 compartirlas, por ejemplo: todas las entrevistas se han realizado por
 teléfono, Skype, Hangout. Al menos en un primer contacto ya no
 hace falta una entrevista presencial. Pero comencemos por el principio.

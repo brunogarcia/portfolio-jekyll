@@ -6,9 +6,9 @@ tags:
 tumblr\_url: http://blog.garciaechegaray.com/post/76709316302/el-workflow-perfecto-yeoman-bower-grunt
 ---
 
-Últimamente estoy trasteando con los
+<big>Últimamente estoy trasteando con los
 [generadores](http://yeoman.io/community-generators.html) de
-[Yeoman](http://yeoman.io "Yeoman").
+[Yeoman](http://yeoman.io "Yeoman").</big>
 
 [Yeoman](http://yeoman.io "Yeoman") es una herramienta para automatizar
 tareas en proyectos front-end. Trabaja conjuntamente con

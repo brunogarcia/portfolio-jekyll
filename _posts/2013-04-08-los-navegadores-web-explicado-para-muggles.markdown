@@ -5,9 +5,9 @@ date: '2013-04-08T12:21:00+02:00'
 tumblr\_url: http://blog.garciaechegaray.com/post/47447879446/los-navegadores-web-explicado-para-muggles
 ---
 
-Intentaré hacer una introducción muy básica sobre como funciona un
+<big>Intentaré hacer una introducción muy básica sobre como funciona un
 navegador web. Me gustaría que sea capaz de entenderlo cualquier persona
-alejada del sector y sin conocimientos técnicos previos.
+alejada del sector y sin conocimientos técnicos previos.</big>
 
 Está escrito muy rápidamente para contestar a un [twit lanzado
 por @mcesttevan](https://twitter.com/mcestevan/status/321170764021776386),

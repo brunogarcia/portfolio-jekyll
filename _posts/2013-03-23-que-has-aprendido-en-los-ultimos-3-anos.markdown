@@ -5,9 +5,11 @@ date: '2013-03-23T08:31:00+01:00'
 tumblr\_url: http://blog.garciaechegaray.com/post/46057415902/que-has-aprendido-en-los-ultimos-3-anos
 ---
 
-Cuando hace 3 años decidí dejar mi trabajo como maquetador web para
+<big>Cuando hace 3 años decidí dejar mi trabajo como maquetador web para
 comenzar a estudiar un FP, me encontré con diversas reacciones por parte
-de mis colegas de profesión. Me sorprendió que mucha gente deseaba dar
+de mis colegas de profesión. </big>
+
+Me sorprendió que mucha gente deseaba dar
 el mismo paso pero no se atrevía. Por otro lado también me sorprendió
 que mucha gente no considerara los estudios (oficiales) como una
 prioridad para su desarrollo profesional.
@@ -35,7 +37,7 @@ Social, como con tus futuros clientes (si logras tenerlos y
 mantenerlos). Incluso adquieres un compromiso con tu familia, la cual
 espera que continúes manteniendo un nivel salarial similar.
 
-No diré que fui super previsor o que tenía todo atado cuando tomé la
+No diré que fui previsor o que tenía todo atado cuando tomé la
 decisión. En el camino he aprendido mucho y desaprendido otro tanto,
 ¿esa es la parte divertida, no?. No puedes esperar tener todo
 planificado al milímetro, siempre tendrás que dar un paso atrás y
@@ -43,8 +45,7 @@ situarte para ver si vas recto o torcido.
 
 Dejémonos de metáforas. Entonces ¿qué has aprendido en los últimos 3
 años? He aprendido mucho. **Y en gran medida ese aprendizaje ha venido
-de conocer a gente nueva.** \
- Hace unos días leí un twitt que describe muy bien mi situación de
+de conocer a gente nueva.** Hace unos días leí un twitt que describe muy bien mi situación de
 entonces: “[Si te crees MUY listo es que conoces a POCA
 gente](https://twitter.com/david_bonilla/status/306403461111627776)”.
 
@@ -52,8 +53,7 @@ gente](https://twitter.com/david_bonilla/status/306403461111627776)”.
 
 Darme de alta como autónomo me permitió trabajar codo a codo en diversos
 proyectos con startups y agencias del sector que de otra manera hubiera
-sido imposible conocer.\
- Después de pasarme casi 9 años en la misma empresa, fue muy estimulante
+sido imposible conocer. Después de pasarme casi 9 años en la misma empresa, fue muy estimulante
 trabajar con personas, metodologías y tecnologías nuevas.
 
 Por otro lado, fui capaz de asumir tareas que nunca antes había pensado
@@ -75,8 +75,7 @@ todavía estoy en ello.
 
 El tema de ser freelance da para un post completo, así que no me
 extenderé más al respecto. Sólo comentar que**ser bueno técnicamente es
-importante, pero no suficiente.**\
- Ya puedes ser el mejor en tu profesión (o al menos alguien medianamente
+importante, pero no suficiente.** Ya puedes ser el mejor en tu profesión (o al menos alguien medianamente
 competente) que como falles en otros aspectos igual de importantes lo
 pasarás muy mal.
 

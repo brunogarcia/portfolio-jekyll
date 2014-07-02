@@ -4,6 +4,8 @@ title: Configurar Weinre en Windows 7 con Node y npm
 date: '2013-09-23T17:08:00+02:00'
 tumblr\_url: http://blog.garciaechegaray.com/post/62063898003/configurar-weinre-en-windows-7-con-node-y-npm
 ---
+<big>[Weinre](http://people.apache.org/~pmuellr/weinre/) es una herramienta que nos permite debugear un servicio web desde
+cualquier dispositivo móvil.</big>
 
 Por cuestiones profesionales, en los últimos meses mi entorno de trabajo
 ha sido Windows 7. Necesitamos debugear y testear constantemente en
@@ -19,9 +21,6 @@ brevemente cómo configurar
 [Weinre](http://people.apache.org/~pmuellr/weinre/) en Windows 7 a
 través de Node.js y npm. 
 
-¿Pero narices es [Weinre](http://people.apache.org/~pmuellr/weinre/)?.
-Es una herramienta que nos permite debugear un servicio web desde
-cualquier dispositivo móvil.
 
 Venga, manos a la obra:
 

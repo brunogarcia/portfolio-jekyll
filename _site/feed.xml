@@ -7,9 +7,35 @@
 		<atom:link href="http://blog.garciaechegaray.com//feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Probando Highcharts 4 y Highmaps</title>
+				<description>&lt;p&gt;&lt;big&gt;Highcharts es una librería desarrollada en Javascript que permite crear fácil y rápidamente gráficos interactivos. &lt;/big&gt;&lt;/p&gt;
+
+&lt;p&gt;Trae de serie un nutrido pack de gráficos: área, columnas, barras, pasteles (o quesitos), etc. Simplemente necesitas añadir un set de datos (acepta JSON, CSV, XML) y ya puedes incorporarlo en cualquier proyecto web. Además puedes configurar prácticamente toda la interfaz de usuario con la imagen corporativa que desees (colores, fuentes, tamaños, idiomas, etc.).&lt;/p&gt;
+
+&lt;p&gt;Librerías como Highcharts existen muchas, algunas mucho más potentes como D3 o más básicas como Flot, Fusion Charts o incluso Google Charts. Pero a mi entender Highcharts es actualmente la librería de facto para crear gráficos &amp;quot;precocinados&amp;quot;. Quizás si necesitas crear un nuevo tipo de gráfico muy específico y personalizado, D3 sea la mejor (y única) opción.&lt;/p&gt;
+
+&lt;h2&gt;Highcharts 4&lt;/h2&gt;
+
+&lt;p&gt;Hace unas pocas semanas Highcharts ha lanzado una nueva versión (v4) con un muchas novedades. Por ejemplo han añadido nuevos tipos de gráficos: heat charts, 3D charts, bubble charts, funnel/piramid chart, waterfall. También tienen un &lt;a href=&quot;http://www.highcharts.com/download&quot;&gt;download builder&lt;/a&gt; bastante útil que te permite personalizar la librería con los componentes que vayas a necesitar en cada proyecto, ahorrandole muchos kb al usuario final.&lt;/p&gt;
+
+&lt;h2&gt;Highmaps&lt;/h2&gt;
+
+&lt;p&gt;Pero de todas las novedades, me ha gustado mucho &lt;a href=&quot;http://www.highcharts.com/products/highmaps&quot;&gt;Highmaps&lt;/a&gt;. Esta es una librería específica para crear (como su nombre indica) mapas. Siempre con la filosofía que  ha seguido Highcharts: una librería sencilla y fácil de usar. Aqui tambíen existen otras opciones mucho más completas y potentes como &lt;a href=&quot;http://leafletjs.com/&quot;&gt;Leaflet&lt;/a&gt; o &lt;a href=&quot;http://cartodb.com&quot;&gt;CartoDB&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Cosas a destacar: acepta GeoJSON y SVG. Puedes encontrar un listado de recursos gratuitos para ambos formatos en &lt;a href=&quot;http://code.highcharts.com/mapdata/&quot;&gt;Highcharts Code: Map Data&lt;/a&gt;. También tienes acceso gratuito a la &lt;a href=&quot;http://api.highcharts.com/highmaps&quot;&gt;API&lt;/a&gt; y ejemplos de implementación en la &lt;a href=&quot;http://www.highcharts.com/maps/demo&quot;&gt;demo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;650&quot; src=&quot;http://jsfiddle.net/brunogarcia/6ccrt/embedded/result,js,html&quot; allowfullscreen=&quot;allowfullscreen&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+</description>
+				<pubDate>Wed, 02 Jul 2014 18:55:00 +0200</pubDate>
+				<link>http://blog.garciaechegaray.com//2014/07/02/probando-highcharts-4-highmaps.html</link>
+				<guid isPermaLink="true">http://blog.garciaechegaray.com//2014/07/02/probando-highcharts-4-highmaps.html</guid>
+			</item>
+		
+			<item>
 				<title>Migrando de Tumblr a Jekyll</title>
-				<description>&lt;p&gt;La semana pasada he migrado mi blog de Tumblr a &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;. 
-El cambio ha sido motivado por varias razones. El más importante la pésima interfaz de usuario de Tumblr al momento de editar y escribir un nuevo post. Básicamente es un modal mal implementado y ejecutado. Una lástima por parte de Tumblr que fallen en algo tan básico y evidente.
+				<description>&lt;p&gt;&lt;big&gt;La semana pasada he migrado mi blog de Tumblr a &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;. &lt;/big&gt;&lt;/p&gt;
+
+&lt;p&gt;El cambio ha sido motivado por varias razones. El más importante la pésima interfaz de usuario de Tumblr al momento de editar y escribir un nuevo post. Básicamente es un modal mal implementado y ejecutado. Una lástima por parte de Tumblr que fallen en algo tan básico y evidente.
 En todo caso, si a Tumblr no le exiges demasiado, tener un blog en su plataforma es una de las mejores opciones. Al menos yo le pongo por delante de Wordpress o Blogger.&lt;/p&gt;
 
 &lt;p&gt;El flujo de trabajo que propone &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; es completamente diferente. Simplemente escribes un post en formato &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;markdown&lt;/a&gt; en tu editor de texto favorito (para mi &lt;a href=&quot;http://www.sublimetext.com/&quot;&gt;Sublime Text&lt;/a&gt; es la mejor opción) y cuando has finalizado, lanzas un &lt;em&gt;$ git push&lt;/em&gt; y ya lo tienes online. Esto último gracias a &lt;a href=&quot;http://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt; que viene de fábrica completamente integrado con Jekyll.&lt;/p&gt;
@@ -160,9 +186,9 @@ que utiliza &lt;a href=&quot;http://zurb.com/&quot;&gt;Zurb&lt;/a&gt;.&lt;/p&gt;
 		
 			<item>
 				<title>El workflow perfecto: Yeoman + Bower + Grunt</title>
-				<description>&lt;p&gt;Últimamente estoy trasteando con los
+				<description>&lt;p&gt;&lt;big&gt;Últimamente estoy trasteando con los
 &lt;a href=&quot;http://yeoman.io/community-generators.html&quot;&gt;generadores&lt;/a&gt; de
-&lt;a href=&quot;http://yeoman.io&quot; title=&quot;Yeoman&quot;&gt;Yeoman&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&quot;http://yeoman.io&quot; title=&quot;Yeoman&quot;&gt;Yeoman&lt;/a&gt;.&lt;/big&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://yeoman.io&quot; title=&quot;Yeoman&quot;&gt;Yeoman&lt;/a&gt; es una herramienta para automatizar
 tareas en proyectos front-end. Trabaja conjuntamente con
@@ -546,7 +572,10 @@ by &lt;a href=&quot;https://github.com/mattkersley/&quot;&gt;Matt Kersley&lt;/a&
 		
 			<item>
 				<title>Configurar Weinre en Windows 7 con Node y npm</title>
-				<description>&lt;p&gt;Por cuestiones profesionales, en los últimos meses mi entorno de trabajo
+				<description>&lt;p&gt;&lt;big&gt;&lt;a href=&quot;http://people.apache.org/%7Epmuellr/weinre/&quot;&gt;Weinre&lt;/a&gt; es una herramienta que nos permite debugear un servicio web desde
+cualquier dispositivo móvil.&lt;/big&gt;&lt;/p&gt;
+
+&lt;p&gt;Por cuestiones profesionales, en los últimos meses mi entorno de trabajo
 ha sido Windows 7. Necesitamos debugear y testear constantemente en
 entornos móviles y los drivers para estos dispositivos solo suelen tener
 versiones para Windows.&lt;/p&gt;
@@ -559,10 +588,6 @@ enfocado para usuarios de Linux/Mac. &lt;/p&gt;
 brevemente cómo configurar
 &lt;a href=&quot;http://people.apache.org/%7Epmuellr/weinre/&quot;&gt;Weinre&lt;/a&gt; en Windows 7 a
 través de Node.js y npm. &lt;/p&gt;
-
-&lt;p&gt;¿Pero narices es &lt;a href=&quot;http://people.apache.org/%7Epmuellr/weinre/&quot;&gt;Weinre&lt;/a&gt;?.
-Es una herramienta que nos permite debugear un servicio web desde
-cualquier dispositivo móvil.&lt;/p&gt;
 
 &lt;p&gt;Venga, manos a la obra:&lt;/p&gt;
 
@@ -672,8 +697,8 @@ firmada&lt;/a&gt;.&lt;/p&gt;
 		
 			<item>
 				<title>Pet Project, la mejor forma de aprender</title>
-				<description>&lt;p&gt;Desde hace algunos meses estoy desarrollando &lt;a href=&quot;http://www.tuttifrescuni.com/&quot;&gt;Tutti
-Frescuni&lt;/a&gt;.&lt;/p&gt;
+				<description>&lt;p&gt;&lt;big&gt;Desde hace algunos meses estoy desarrollando &lt;a href=&quot;http://www.tuttifrescuni.com/&quot;&gt;Tutti
+Frescuni&lt;/a&gt;.&lt;/big&gt;&lt;/p&gt;
 
 &lt;p&gt;Es una aplicación que constantemente echaba en falta, y ya que no
 existía en el mercado me propuse crearla desde cero. Incluso diría que
@@ -846,96 +871,6 @@ simplicidad del proyecto inicial.&lt;/p&gt;
 				<pubDate>Sun, 07 Jul 2013 18:30:00 +0200</pubDate>
 				<link>http://blog.garciaechegaray.com//2013/07/07/pet-project-la-mejor-forma-de-aprender.html</link>
 				<guid isPermaLink="true">http://blog.garciaechegaray.com//2013/07/07/pet-project-la-mejor-forma-de-aprender.html</guid>
-			</item>
-		
-			<item>
-				<title>¿Están los portales de empleo generalistas completamente anticuados?</title>
-				<description>&lt;p&gt;Haré un repaso de mi experiencia personal buscando trabajo en estas
-últimas semanas. Me he encontrado con algunas sorpresas y me gustaría
-compartirlas, por ejemplo: todas las entrevistas se han realizado por
-teléfono, Skype, Hangout. Al menos en un primer contacto ya no
-hace falta una entrevista presencial. Pero comencemos por el principio.&lt;/p&gt;
-
-&lt;p&gt;Desde hace muchos años que no realizaba una búsqueda intensa por los
-portales de empleo. En la última ocasión el único referente era
-Infojobs. Todas las ofertas estaban allí, no existían competidores (al
-menos yo no los recuerdo). Tanto es así que mis dos últimos trabajos los
-encontré en este portal. Pero eso fue el 2001. Actualmente Infojobs (y
-todos sus clones) ha quedado completamente al margen.&lt;/p&gt;
-
-&lt;p&gt;Por suerte el panorama ha cambiado y es bastante más dinámico.
-Prácticamente sale un nuevo portal de empleo cada año, y otros sin
-intención de serlo, se terminan convirtiendo en referentes.&lt;/p&gt;
-
-&lt;h3&gt;Twitter y campañas ad-hoc&lt;/h3&gt;
-
-&lt;p&gt;Para mi, Twitter cumple muchas y distintas funciones en mi vida diaria.
-Es un repositorio de buenos enlaces y referencias técnicas (si te curras
-bien tu red de follwers/followings), y desde luego para echar unas risas
-con los &lt;em&gt;trending topics&lt;/em&gt; más bizarros. Pero lo más curioso es que me ha
-servido para encontrar proyectos freelance durante 3 años y ahora para
-ver ofertas de trabajo de empresas interesantes y punteras.&lt;/p&gt;
-
-&lt;p&gt;Lanzar una oferta de trabajo por Twitter requiere de un trabajo extra y
-mucha creatividad. No basta con soltar un twitt en plan spam durante
-semanas, como lamentablemente hacen muchas empresas de recursos humanos
-(hola @&lt;a href=&quot;https://twitter.com/TSP_ECommerce&quot;&gt;TSP_ECommerce&lt;/a&gt;).&lt;/p&gt;
-
-&lt;p&gt;Si quieres atraer talento de verdad, tendrás que enfocarlo de otra
-forma. Os pongo un par de ejemplos: &lt;a href=&quot;http://notevayasaalemania.com&quot;&gt;No te vayas a
-Alemania&lt;/a&gt; (Wattio) y &lt;a href=&quot;http://kaleidos.net/blog/breaking-news-kaleidos-seeks-new-front-end-engineer-denies-kidnapping/&quot;&gt;Denies
-kidnapping&lt;/a&gt;
-(Kaleidos).&lt;/p&gt;
-
-&lt;p&gt;Puedo entender que no muchas empresas pueden permitirse el lujo de
-gastar tiempo y dinero en campañas de este tipo. Pero si no te tomas en
-serio tu selección de personal ¿cómo esperas atraer a los mejores
-perfiles?. Y si no quieres atraer a los mejores, entonces tu problema es
-otro.&lt;/p&gt;
-
-&lt;h3&gt;Portales de empleo especializados&lt;/h3&gt;
-
-&lt;p&gt;Otro camino pueden ser los portales de empleo especializados. En el
-mundo anglosajón ya son bastante comunes, y por suerte en la península
-ya tenemos muy buenas opciones dependiendo de tu perfil
-profesional: &lt;a href=&quot;http://betabeers.com&quot;&gt;Betabeers&lt;/a&gt; (desarrollo), &lt;a href=&quot;http://www.domestika.org/empleo/oferta&quot;&gt;Domestika&lt;/a&gt; (desarrollo
-+ diseño) y &lt;a href=&quot;http://www.uxplora.com/&quot;&gt;Uxplora&lt;/a&gt; (UX/AI).&lt;/p&gt;
-
-&lt;p&gt;¿Y por qué es mejor un portal especializado de empleo?. Bueno, para
-empezar la saturación de ofertas es menor y esto implica que las ofertas
-están más segmentadas que en cualquier portal generalista.&lt;/p&gt;
-
-&lt;p&gt;Por ejemplo &lt;a href=&quot;http://betabeers.com&quot;&gt;Betabeers&lt;/a&gt; sólo tiene 5 categorías:
-Frontend, Backend, Apps, Sysadmin y Maquetador. ¿Puede existir algo más
-sencillo para buscar empleo?, lo dudo. En unos minutos puedes
-leer prácticamente todas las ofertas de las últimas semanas y realizar
-un filtrado rápido de aquellas que te interesan. Y si ya tienes una
-cuenta en Betabeers, con un sólo clic puedes enviar tus datos de
-contacto.&lt;/p&gt;
-
-&lt;h3&gt;Linkedin&lt;/h3&gt;
-
-&lt;p&gt;Esta red social siempre te sorprende cuando menos te lo
-esperas. Personalmente desconocía la existencia de un sección de empleo
-dentro de &lt;a href=&quot;http://www.linkedin.com&quot;&gt;Linkedin&lt;/a&gt;. Y la verdad es que
-funciona bastante bien.&lt;/p&gt;
-
-&lt;p&gt;Una gran funcionalidad que no tiene ningún otro competidor es que puedes
-ver el perfil de la empresa y de sus distintos empleados. O sea, de
-entrada puedes visualizar los perfiles profesionales de la gente con la
-cual puedes llegar a trabajar. &lt;/p&gt;
-
-&lt;p&gt;Otro punto fuerte es que Linkedin es capaz de vincular tu perfil
-profesional con aquellas ofertas que has seleccionado previamente,
-facilitando enormemente la inscripción en cualquier oferta. &lt;/p&gt;
-
-&lt;p&gt;En resumen, el panorama ha cambiado enormemente en los últimos años.  A
-día de hoy, tu perfil en Linkedin se ha convertido en tu marca personal,
-relegando completamente al curriculum vitae de toda la vida. &lt;/p&gt;
-</description>
-				<pubDate>Sat, 20 Apr 2013 22:55:00 +0200</pubDate>
-				<link>http://blog.garciaechegaray.com//2013/04/20/estan-los-portales-de-empleo-generalistas.html</link>
-				<guid isPermaLink="true">http://blog.garciaechegaray.com//2013/04/20/estan-los-portales-de-empleo-generalistas.html</guid>
 			</item>
 		
 	</channel>

@@ -5,8 +5,8 @@ date: '2013-07-07T18:30:00+02:00'
 tumblr\_url: http://blog.garciaechegaray.com/post/54837485049/pet-project-la-mejor-forma-de-aprender
 ---
 
-Desde hace algunos meses estoy desarrollando [Tutti
-Frescuni](http://www.tuttifrescuni.com/).
+<big>Desde hace algunos meses estoy desarrollando [Tutti
+Frescuni](http://www.tuttifrescuni.com/).</big>
 
 Es una aplicación que constantemente echaba en falta, y ya que no
 existía en el mercado me propuse crearla desde cero. Incluso diría que
