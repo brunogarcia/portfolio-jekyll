@@ -70,7 +70,7 @@
 
   <!--Main-->
   <div class="main">
-      <div class="row post-main">
+    <div class="row post-main">
 	<h1>Probando Highcharts 4 y Highmaps</h1>
 	<p class="meta">02 Jul 2014</p>
 
@@ -79,25 +79,48 @@
 
 <p>Trae de serie un nutrido pack de gráficos: área, columnas, barras, pasteles (o quesitos), etc. Simplemente necesitas añadir un set de datos (acepta JSON, CSV, XML) y ya puedes incorporarlo en cualquier proyecto web. Además puedes configurar prácticamente toda la interfaz de usuario con la imagen corporativa que desees (colores, fuentes, tamaños, idiomas, etc.).</p>
 
-<p>Librerías como Highcharts existen muchas, algunas mucho más potentes como D3 o más básicas como Flot, Fusion Charts o incluso Google Charts. Pero a mi entender Highcharts es actualmente la librería de facto para crear gráficos &quot;precocinados&quot;. Quizás si necesitas crear un nuevo tipo de gráfico muy específico y personalizado, D3 sea la mejor (y única) opción.</p>
+<p>Librerías como Highcharts existen muchas, algunas mucho más potentes como <a href="http://d3js.org/">D3</a> o más básicas como <a href="http://www.flotcharts.org/">Flot</a>, <a href="http://www.fusioncharts.com/">Fusion Charts</a> o incluso <a href="https://developers.google.com/chart/">Google Charts</a>. Pero a mi entender Highcharts es actualmente la librería de facto para crear gráficos &quot;precocinados&quot;. Quizás si necesitas crear un nuevo tipo de gráfico muy específico y personalizado, D3 sea la mejor (y única) opción.</p>
 
 <h2>Highcharts 4</h2>
 
-<p>Hace unas pocas semanas Highcharts ha lanzado una nueva versión (v4) con un muchas novedades. Por ejemplo han añadido nuevos tipos de gráficos: heat charts, 3D charts, bubble charts, funnel/piramid chart, waterfall. También tienen un <a href="http://www.highcharts.com/download">download builder</a> bastante útil que te permite personalizar la librería con los componentes que vayas a necesitar en cada proyecto, ahorrandole muchos kb al usuario final.</p>
+<p>Hace unas pocas semanas Highcharts ha lanzado una nueva versión (v4) con un muchas novedades. Por ejemplo han añadido nuevos tipos de gráficos: <a href="http://www.highcharts.com/demo/heatmap">heat charts</a>, <a href="http://www.highcharts.com/demo/3d-column-interactive">3D charts</a>, <a href="http://www.highcharts.com/demo/scatter">scatter plot</a>, <a href="http://www.highcharts.com/demo/funnel">funnel chart</a>, <a href="http://www.highcharts.com/demo/waterfall">waterfall</a>. También tienen un <a href="http://www.highcharts.com/download">download builder</a> bastante útil que te permite personalizar la librería con los componentes que vayas a necesitar en cada proyecto, ahorrandole muchos kb al usuario final.</p>
 
 <h2>Highmaps</h2>
 
-<p>Pero de todas las novedades, me ha gustado mucho <a href="http://www.highcharts.com/products/highmaps">Highmaps</a>. Esta es una librería específica para crear (como su nombre indica) mapas. Siempre con la filosofía que  ha seguido Highcharts: una librería sencilla y fácil de usar. Aqui tambíen existen otras opciones mucho más completas y potentes como <a href="http://leafletjs.com/">Leaflet</a> o <a href="http://cartodb.com">CartoDB</a>.</p>
+<p>Pero de todas las novedades, me ha gustado mucho <a href="http://www.highcharts.com/products/highmaps">Highmaps</a>. Es un componente pensado para la creación de mapas. Siempre con la filosofía que  ha seguido Highcharts: sencillo y fácil de usar. Aqui tambíen existen otras opciones mucho más completas y potentes como <a href="http://leafletjs.com/">Leaflet</a> o <a href="http://cartodb.com">CartoDB</a>.</p>
 
-<p>Cosas a destacar: acepta GeoJSON y SVG. Puedes encontrar un listado de recursos gratuitos para ambos formatos en <a href="http://code.highcharts.com/mapdata/">Highcharts Code: Map Data</a>. También tienes acceso gratuito a la <a href="http://api.highcharts.com/highmaps">API</a> y ejemplos de implementación en la <a href="http://www.highcharts.com/maps/demo">demo</a>.</p>
+<p>A destacar: acepta <a href="http://en.wikipedia.org/wiki/GeoJSON">GeoJSON</a> y <a href="http://en.wikipedia.org/wiki/Svg">SVG</a>. Puedes encontrar un listado de recursos gratuitos para ambos formatos en <a href="http://code.highcharts.com/mapdata/">Highcharts Code</a>. También tienes acceso gratuito a la <a href="http://api.highcharts.com/highmaps">API</a> y ejemplos de implementación en la <a href="http://www.highcharts.com/maps/demo">demo</a>.</p>
 
-<iframe width="100%" height="650" src="http://jsfiddle.net/brunogarcia/6ccrt/embedded/result,js,html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<h2>Manos a la obra</h2>
+
+<p>Para esta prueba, he usado el <a href="http://code.highcharts.com/mapdata/countries/es/es-all.geo.json">GeoJSON para España</a>. Se encuentra mínimizado y tiene un peso de 64 kb. Por lo tanto si queréis echarle un ojo tendréis que pasar el código por una herramienta tipo <a href="http://jsbeautifier.org/">JS Beautifier</a>. </p>
+
+<p>Leyendo el código vi algo que me resulto extraño: no sé por qué razón utilizan una nomenclatura tan rara para los ID (<em>&quot;hc-key&quot;</em>) de ciudades. Por ejemplo a Ciudad Real le corresponde el código <em>&quot;es-393&quot;</em>, a Palencia el <em>&quot;es-7254</em>, y Salamanca tiene el <em>&quot;es-7251&quot;</em>. Y así con varias ciudades más. Esto huele raro. Estuve revisando la Wikipedia y encontre que existe una ISO que resuelve este problema. En concreto la <a href="http://es.wikipedia.org/wiki/ISO_3166-2:ES">ISO_3166-2:ES</a>. En ella Palencia es <em>&quot;es-p&quot;</em>, Ciudad Real <em>&quot;es-cr&quot;</em> y Salamanca <em>&quot;es-sa&quot;</em>, vamos una nomenclatura mucho más eficiente para trabajar. En resumen, he enviado un <a href="http://forum.highcharts.com/highmaps-usage-f14/geojson-spain-iso-3166-2-es-t30083/">post</a> al foro oficial de Highcharts, a ver si me explican por qué narices no utilizan el ISO correspondiente.</p>
+
+<p>Dicho esto, si le echaís un ojo la pestaña Javascript de JSFiddle, veréis que la configuración no tiene mucho misterio.
+Primero cambio los colores y tipos de fuentes por defecto. Seguidamente preparo los datos a mostrar, asignandole al &quot;hc-key&quot; de cada ciudad un valor aleatorio de 0 a 99. Y despúes instancio el mapa en el nodo correspondiente (en este caso &quot;#container&quot;). Y poco más, con estos pequeños pasos ya tienes un mapa interactivo de España para mostrar datos.</p>
+
+<iframe width="100%" height="650" src="http://jsfiddle.net/brunogarcia/6ccrt/embedded/result,js,html,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 	</div>
 </div>
 
   </div>
 
-<script src="/js/build/production.min.js"></script>
+  <!--Footer-->
+  <div class="row">
+    <hr>
+    <footer>
+      <div class="small-12 medium-6 columns">  
+        <p><small>Blog desarrollado con <a href="http://jekyllrb.com">Jekyll</a> y <a href="http://foundation.zurb.com">Foundation</a> | Alojado en <a href="https://github.com/brunogarcia/brunogarcia.github.io">GitHub Pages</a></small></p>
+      </div>
+      <div class="small-12 medium-6 columns">  
+        <p class="text-right"><small><a href="https://twitter.com/garciaechegaray">@garciaechegaray</a></small></p>
+      </div>
+
+    </footer>
+  </div>
+
+  <script src="/js/build/production.min.js"></script>
 </body>
 </html>
