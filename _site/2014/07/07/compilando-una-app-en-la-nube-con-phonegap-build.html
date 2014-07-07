@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Compilando una App en la nube con Phonegap Build</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+
+  <!--RSS-->
+  <link rel="alternate" type="application/rss+xml" title="Bruno Garcia" href="http://blog.garciaechegaray.com/feed.xml">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/app.css">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="/favicon.ico" />
+
+  <!--Modernizr-->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.0/modernizr.min.js"></script>
+
+  <!--Google Analytics-->
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-18260985-4']);
+    _gaq.push(['_setDomainName', '.garciaechegaray.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>  
+
+</head>
+<body>
+
+  <!--Nav-->
+  <div class="fixed">
+    <nav class="top-bar" data-topbar>
+
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="#top">Bruno Garcia Echegaray</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon">
+          <a href="">
+            <span>Menu</span>
+          </a>
+        </li>
+      </ul>
+
+      <section class="top-bar-section">
+        <ul class="right">
+          <li class="divider"></li>
+          <li><a href="http://bruno.garciaechegaray.com">Sobre mi</a></li>
+          <li class="divider"></li>
+          <li class="active"><a href="http://blog.garciaechegaray.com/">Blog</a></li>
+          <li class="divider"></li>
+          <li><a href="http://www.tuttifrescuni.com" title="Tutti Frescuni: ¿qué frutas y verduras se encuentran de temporada?" target="_blank">Pet Project</a></li>
+          <li class="divider"></li>
+          <li><a href="https://github.com/brunogarcia/Front-end-Wiki/wiki" title="Front-end Development Resources" target="_blank">Wiki</a></li>    
+        </ul>
+      </section>
+
+    </nav>  
+  </div>
+
+  <!--Main-->
+  <div class="main">
+    <div class="row post-main">
+	<h1>Compilando una App en la nube con Phonegap Build</h1>
+	<p class="meta">07 Jul 2014</p>
+
+	<div class="post">
+	<p><big>Phonegap Build es un servicio freemium que te permite compilar una APK/IPA directamente en la nube</big></p>
+
+<p>Estos días he estado probando <a href="https://build.phonegap.com/">Phonegap Build</a> para un cliente y la verdad me ha gustado bastante lo sencillo que es compilar una app sin necesidad de bajar y configurar los entornos de desarrollo que requieren cada tecnología mobile. </p>
+
+<p>Montar todo el entorno de Android para que funcione correctamente con Phonegap no es trivial. Al menos en Ubuntu es un proceso que toma un buen rato. Ya no solo consiste en bajar y actualizar la <a href="http://developer.android.com/sdk/index.html">SDK</a> si no también <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html?ssSourceSiteId=otnjp">JDK</a>, <a href="http://ant.apache.org/">ANT</a> y actualizar los <a href="http://stackoverflow.com/questions/20323787/cordova-platform-add-android-not-working-while-listing-android-targets/21142421#21142421">PATH</a> correspondientes. En el caso de Apple es todavía más complejo, si no tienes una maquina corriendo iOS es imposible.</p>
+
+<p>Por suerte Phonegap ofrece este servicio (gratis para una sola app) junto con una <a href="http://docs.build.phonegap.com/en_US/">amplia documentación</a>.
+Personalmente me preocupaba bastante el tema de personalizar los iconos, splash screen y plugins. Pero creando un archivo <em>config.xml</em> dentro de tu proyecto todo funciona como la seda.</p>
+
+<p>Por ejemplo para decirle con que iconos debe trabajar la app:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;--Android icons--&gt;
+&lt;icon gap:density=&quot;ldpi&quot; gap:platform=&quot;android&quot; src=&quot;res/screen/android/icon-ldpi.png&quot; /&gt;
+&lt;icon gap:density=&quot;mdpi&quot; gap:platform=&quot;android&quot; src=&quot;res/screen/android/icon-mdpi.png&quot; /&gt;
+&lt;icon gap:density=&quot;hdpi&quot; gap:platform=&quot;android&quot; src=&quot;res/screen/android/icon-hdpi.png&quot; /&gt;
+&lt;icon gap:density=&quot;xhdpi&quot; gap:platform=&quot;android&quot; src=&quot;res/screen/android/icon-xhdpi.png&quot; /&gt;
+
+&lt;--iOS icons--&gt;
+&lt;icon gap:platform=&quot;ios&quot; height=&quot;60&quot; src=&quot;res/screen/ios/icon-60.png&quot; width=&quot;60&quot; /&gt;
+&lt;icon gap:platform=&quot;ios&quot; height=&quot;120&quot; src=&quot;res/screen/ios/icon-60@2x.png&quot; width=&quot;120&quot; /&gt;
+&lt;icon gap:platform=&quot;ios&quot; height=&quot;76&quot; src=&quot;res/screen/ios/icon-76.png&quot; width=&quot;76&quot; /&gt;
+&lt;icon gap:platform=&quot;ios&quot; height=&quot;152&quot; src=&quot;res/screen/ios/icon-76@2x.png&quot; width=&quot;152&quot; /&gt;
+</code></pre></div>
+<p>Y lo mismo para las splash screen:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;--Android splash--&gt;
+&lt;gap:splash gap:density=&quot;ldpi&quot; gap:platform=&quot;android&quot; src=&quot;res/screen/android/screen-ldpi-portrait.png&quot; /&gt;
+&lt;gap:splash gap:density=&quot;mdpi&quot; gap:platform=&quot;android&quot; src=&quot;res/screen/android/screen-mdpi-portrait.png&quot; /&gt;
+&lt;gap:splash gap:density=&quot;hdpi&quot; gap:platform=&quot;android&quot; src=&quot;res/screen/android/screen-hdpi-portrait.png&quot; /&gt;
+&lt;gap:splash gap:density=&quot;xhdpi&quot; gap:platform=&quot;android&quot; src=&quot;res/screen/android/screen-xhdpi-portrait.png&quot; /&gt;
+
+&lt;--iOS splash--&gt;
+&lt;gap:splash gap:platform=&quot;ios&quot; height=&quot;480&quot; src=&quot;res/screen/ios/screen-iphone-portrait.png&quot; width=&quot;320&quot; /&gt;
+&lt;gap:splash gap:platform=&quot;ios&quot; height=&quot;960&quot; src=&quot;res/screen/ios/screen-iphone-portrait-2x.png&quot; width=&quot;640&quot; /&gt;
+&lt;gap:splash gap:platform=&quot;ios&quot; height=&quot;1024&quot; src=&quot;res/screen/ios/screen-ipad-portrait.png&quot; width=&quot;768&quot; /&gt;
+&lt;gap:splash gap:platform=&quot;ios&quot; height=&quot;768&quot; src=&quot;res/screen/ios/screen-ipad-landscape.png&quot; width=&quot;1024&quot; /&gt;    
+</code></pre></div>
+<p>Puedes incluso decidir en que tecnologías deseas realizar la compilación:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;gap:platform name=&quot;ios&quot; /&gt;
+&lt;gap:platform name=&quot;android&quot; /&gt;
+</code></pre></div>
+<p><a href="https://build.phonegap.com/">Phonegap Build</a> tambien permite añadir plugins en la configuración. Por ejemplo si necesitamos el <a href="https://github.com/apache/cordova-plugin-geolocation">plugin de geolocalización</a> tenemos que añadir la siguiente línea:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;gap:plugin name=&quot;org.apache.cordova.geolocation&quot; version=&quot;0.3.7&quot; /&gt;    
+</code></pre></div>
+<p>Os dejo el gist completo con toda la configuración necesaria:</p>
+
+<script src="https://gist.github.com/brunogarcia/e2d7844dd2af6ff1e459.js"></script>
+
+	</div>
+</div>
+
+  </div>
+
+  <!--Footer-->
+  <div class="row">
+    <hr>
+    <footer>
+      <div class="small-12 medium-6 columns">  
+        <p><small>Blog desarrollado con <a href="http://jekyllrb.com">Jekyll</a> y <a href="http://foundation.zurb.com">Foundation</a> | Alojado en <a href="https://github.com/brunogarcia/brunogarcia.github.io">GitHub Pages</a></small></p>
+      </div>
+      <div class="small-12 medium-6 columns">  
+        <p class="text-right"><small><a href="https://twitter.com/garciaechegaray">@garciaechegaray</a></small></p>
+      </div>
+
+    </footer>
+  </div>
+
+  <script src="/js/build/production.min.js"></script>
+</body>
+</html>
