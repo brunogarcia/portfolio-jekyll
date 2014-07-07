@@ -50,6 +50,6 @@ Puedes incluso decidir en que tecnologías deseas realizar la compilación:
 
 	<gap:plugin name="org.apache.cordova.geolocation" version="0.3.7" />    
 
-Os dejo el gist completo con toda la configuración necesaria:
+Os dejo un _gist_ con toda la configuración necesaria:
 
 <script src="https://gist.github.com/brunogarcia/e2d7844dd2af6ff1e459.js"></script>

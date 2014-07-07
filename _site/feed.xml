@@ -50,7 +50,7 @@ Personalmente me preocupaba bastante el tema de personalizar los iconos, splash 
 &lt;p&gt;&lt;a href=&quot;https://build.phonegap.com/&quot;&gt;Phonegap Build&lt;/a&gt; tambien permite añadir plugins en la configuración. Por ejemplo si necesitamos el &lt;a href=&quot;https://github.com/apache/cordova-plugin-geolocation&quot;&gt;plugin de geolocalización&lt;/a&gt; tenemos que añadir la siguiente línea:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;gap:plugin name=&amp;quot;org.apache.cordova.geolocation&amp;quot; version=&amp;quot;0.3.7&amp;quot; /&amp;gt;    
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Os dejo el gist completo con toda la configuración necesaria:&lt;/p&gt;
+&lt;p&gt;Os dejo un &lt;em&gt;gist&lt;/em&gt; con toda la configuración necesaria:&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/brunogarcia/e2d7844dd2af6ff1e459.js&quot;&gt;&lt;/script&gt;
 </description>
