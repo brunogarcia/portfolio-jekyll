@@ -8,7 +8,8 @@ date: '2014-07-02T17:55:00+01:00'
 
 Trae de serie un nutrido pack de gráficos: área, columnas, barras, pasteles (o quesitos), etc. Simplemente necesitas añadir un set de datos (acepta JSON, CSV, XML) y ya puedes incorporarlo en cualquier proyecto web. Además puedes configurar prácticamente toda la interfaz de usuario con la imagen corporativa que desees (colores, fuentes, tamaños, idiomas, etc.).
 
-Librerías como Highcharts existen muchas, algunas mucho más potentes como [D3](http://d3js.org/) o más básicas como [Flot](http://www.flotcharts.org/), [Fusion Charts](http://www.fusioncharts.com/) o incluso [Google Charts](https://developers.google.com/chart/). Pero a mi entender Highcharts es actualmente la librería de facto para crear gráficos "precocinados". Quizás si necesitas crear un nuevo tipo de gráfico muy específico y personalizado, D3 sea la mejor (y única) opción.
+Librerías como Highcharts existen muchas, algunas mucho más potentes como [D3](http://d3js.org/) o más básicas como [Flot](http://www.flotcharts.org/), [Fusion Charts](http://www.fusioncharts.com/) o incluso [Google Charts](https://developers.google.com/chart/). Pero a mi entender Highcharts es actualmente la librería de facto para crear gráficos "precocinados". 
+Quizás si necesitas crear un nuevo tipo de gráfico muy específico y personalizado, [D3](http://d3js.org/) sea la mejor y única opción por el momento, siempre teniendo en cuenta que existen librerías como [NVD3](http://nvd3.org/) o [Rickshaw](http://code.shutterstock.com/rickshaw/) que te pueden ahorrar tiempo de desarrollo. [NVD3](http://nvd3.org/) todavía se encuentra en beta, pero a nivel de [performance]( http://jsperf.com/charts-lib-comparasion/8) por lo visto gana de lejos. 
 
 ## Highcharts 4
 
