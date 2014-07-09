@@ -256,7 +256,7 @@ que utiliza &lt;a href=&quot;http://zurb.com/&quot;&gt;Zurb&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://yeoman.io&quot; title=&quot;Yeoman&quot;&gt;Yeoman&lt;/a&gt; es una herramienta para automatizar
 tareas en proyectos front-end. Trabaja conjuntamente con
 &lt;a href=&quot;http://bower.io&quot;&gt;Bower&lt;/a&gt; y &lt;a href=&quot;http://gruntjs.com&quot;&gt;Grunt&lt;/a&gt;, otro par de
-proyectos &lt;em&gt;open source&lt;/em&gt; para (adivina…) automatizar tareas.&lt;/p&gt;
+proyectos &lt;em&gt;open source&lt;/em&gt; para (adivina...) automatizar tareas.&lt;/p&gt;
 
 &lt;h3&gt;Bower&lt;/h3&gt;
 
@@ -267,7 +267,7 @@ todas las dependencias de tu proyecto front-end. La idea es similar a
 
 &lt;p&gt;El funcionamiento de Bower es bastante simple: creas la configuración en
 un archivo &lt;em&gt;bower.json&lt;/em&gt; y después basta con lanzar una línea en la
-terminal (&lt;em&gt;\$ bower install&lt;/em&gt;) para tener todas las dependencias en local. Da
+terminal (&lt;em&gt;$ bower install&lt;/em&gt;) para tener todas las dependencias en local. Da
 igual si son 5 o 50, Bower las bajara por ti en pis pas.&lt;/p&gt;
 
 &lt;h3&gt;Grunt&lt;/h3&gt;
@@ -367,7 +367,7 @@ del generador.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Instalamos las dependencias del proyecto&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Esto creará y descargará dichas dependencias en la
-ruta &lt;em&gt;app/bower_components&lt;/em&gt;del proyecto&lt;/p&gt;
+ruta &lt;em&gt;app/bower_components&lt;/em&gt; del proyecto&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;$ bower install&lt;/p&gt;
@@ -376,14 +376,12 @@ ruta &lt;em&gt;app/bower_components&lt;/em&gt;del proyecto&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Construimos el proyecto&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;El siguiente comando lanzará el grupo de tareas &lt;em&gt;default&lt;/em&gt; descrita en
-la línea 289 del fichero&lt;strong&gt; *Gruntfile.js&lt;/strong&gt;.&lt;em&gt; En este caso: *jshint,
-test&lt;/em&gt; y &lt;em&gt;build&lt;/em&gt;.&lt;/p&gt;
+la línea 289 del fichero &lt;em&gt;Gruntfile.js&lt;/em&gt;. En este caso: &lt;em&gt;jshint, test y build&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;Las dependencias necesarias para ejecutar las tareas se encuentran en la
-carpeta &lt;em&gt;node_modules&lt;/em&gt;en la raíz del proyecto.&lt;/p&gt;
+carpeta &lt;em&gt;node_modules&lt;/em&gt; en la raíz del proyecto.&lt;/p&gt;
 
-&lt;p&gt;Para ir más ligeros, vamos a saltarnos las comprobaciones
-de &lt;a href=&quot;http://www.jshint.com/install/&quot;&gt;JSHint&lt;/a&gt;\&lt;/p&gt;
+&lt;p&gt;Para ir más ligeros, vamos a saltarnos las comprobaciones de &lt;a href=&quot;http://www.jshint.com/install/&quot;&gt;JSHint&lt;/a&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;$ grunt —force&lt;/p&gt;
@@ -418,12 +416,12 @@ de &lt;a href=&quot;http://www.jshint.com/install/&quot;&gt;JSHint&lt;/a&gt;\&l
 
 &lt;p&gt;Started connect web server on 127.0.0.1:9000.&lt;/p&gt;
 
-&lt;p&gt;Running “watch” task Waiting…&lt;/p&gt;
+&lt;p&gt;Running “watch” task Waiting...&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Estas son todas las tareas y grupos de tareas que ha lanzado &lt;em&gt;\$ grunt
+&lt;p&gt;Estas son todas las tareas y grupos de tareas que ha lanzado &lt;em&gt;$ grunt
 serve&lt;/em&gt;. Si queréis ver la configuración de esta tarea, abrid el archivo
-&lt;em&gt;Gruntfile.js&lt;/em&gt;y buscad la línea 260.&lt;/p&gt;
+&lt;em&gt;Gruntfile.js&lt;/em&gt; y buscad la línea 260.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Creamos el proyecto listo para subir a PRO&lt;/strong&gt;&lt;/p&gt;
 
@@ -434,10 +432,10 @@ serve&lt;/em&gt;. Si queréis ver la configuración de esta tarea, abrid el arch
 &lt;/blockquote&gt;
 
 &lt;p&gt;Como veréis las tareas ejecutadas son completamente distintas. Esto es
-posible gracias a que &lt;strong&gt;con Grunt&lt;/strong&gt; &lt;strong&gt;podemos encadenar tareas con
-diferentes propósitos&lt;/strong&gt;.&lt;/p&gt;
+posible gracias a que con Grunt podemos encadenar tareas con
+diferentes propósitos.&lt;/p&gt;
 
-&lt;p&gt;Una vez finalizada la tarea &lt;em&gt;\$ server:dist&lt;/em&gt; podéis ver que se ha creado
+&lt;p&gt;Una vez finalizada la tarea &lt;em&gt;$ server:dist&lt;/em&gt; podéis ver que se ha creado
 una carpeta llamada &lt;em&gt;dist&lt;/em&gt;. Allí es donde podéis encontrar vuestro
 proyecto listo para subir a PRO. ¿Fascinante eh? :)&lt;/p&gt;
 
@@ -457,15 +455,11 @@ creado por &lt;a href=&quot;https://github.com/bauschan&quot;&gt;Peter Foerger&
 diferencia que el layout se gestiona con &lt;a href=&quot;http://foundation.zurb.com&quot;&gt;Foundation
 5&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;La configuración de Bower la podéis encontrar en
-&lt;a href=&quot;https://github.com/bauschan/generator-foundation-five/blob/master/app/templates/_bower.json&quot;&gt;_bower.json&lt;/a&gt;.
-Las tareas de Grunt están listadas en
-&lt;a href=&quot;https://github.com/bauschan/generator-foundation-five/blob/master/app/templates/_package.json&quot;&gt;_package.json&lt;/a&gt;.
-Estos ficheros forman parte del template que necesita Yeoman para hacer
-su magia.&lt;/p&gt;
+&lt;p&gt;La configuración de Bower la podéis encontrar en &lt;a href=&quot;https://github.com/bauschan/generator-foundation-five/blob/master/app/templates/_bower.json&quot;&gt;_bower.json&lt;/a&gt;.
+Las tareas de Grunt están listadas en &lt;a href=&quot;https://github.com/bauschan/generator-foundation-five/blob/master/app/templates/_package.json&quot;&gt;_package.json&lt;/a&gt;.
+Estos ficheros forman parte del template que necesita Yeoman para hacer su magia.&lt;/p&gt;
 
-&lt;p&gt;La configuración de Yeoman la podéis encontrar en el fichero
-&lt;a href=&quot;https://github.com/bauschan/generator-foundation-five/blob/master/app/index.js&quot;&gt;/app/index.js&lt;/a&gt;
+&lt;p&gt;La configuración de Yeoman la podéis encontrar en el fichero &lt;a href=&quot;https://github.com/bauschan/generator-foundation-five/blob/master/app/index.js&quot;&gt;/app/index.js&lt;/a&gt;
 del generador.&lt;/p&gt;
 
 &lt;p&gt;Con la ayuda de npm, &lt;strong&gt;instalamos el generador&lt;/strong&gt; en global&lt;/p&gt;
@@ -492,8 +486,7 @@ del generador.&lt;/p&gt;
 &lt;p&gt;$ bower install&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;strong&gt;Instalamos las dependencias de Grunt&lt;/strong&gt;. Esto no debería ser necesario
-pero el generador tiene un bug.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Instalamos las dependencias de Grunt&lt;/strong&gt;. Esto no debería ser necesario pero el generador tiene un bug.&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;$ npm install&lt;/p&gt;

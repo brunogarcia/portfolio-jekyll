@@ -82,7 +82,7 @@
 <p><a href="http://yeoman.io" title="Yeoman">Yeoman</a> es una herramienta para automatizar
 tareas en proyectos front-end. Trabaja conjuntamente con
 <a href="http://bower.io">Bower</a> y <a href="http://gruntjs.com">Grunt</a>, otro par de
-proyectos <em>open source</em> para (adivina…) automatizar tareas.</p>
+proyectos <em>open source</em> para (adivina...) automatizar tareas.</p>
 
 <h3>Bower</h3>
 
@@ -93,7 +93,7 @@ todas las dependencias de tu proyecto front-end. La idea es similar a
 
 <p>El funcionamiento de Bower es bastante simple: creas la configuración en
 un archivo <em>bower.json</em> y después basta con lanzar una línea en la
-terminal (<em>\$ bower install</em>) para tener todas las dependencias en local. Da
+terminal (<em>$ bower install</em>) para tener todas las dependencias en local. Da
 igual si son 5 o 50, Bower las bajara por ti en pis pas.</p>
 
 <h3>Grunt</h3>
@@ -193,7 +193,7 @@ del generador.</p>
 <p><strong>Instalamos las dependencias del proyecto</strong></p>
 
 <p>Esto creará y descargará dichas dependencias en la
-ruta <em>app/bower_components</em>del proyecto</p>
+ruta <em>app/bower_components</em> del proyecto</p>
 
 <blockquote>
 <p>$ bower install</p>
@@ -202,14 +202,12 @@ ruta <em>app/bower_components</em>del proyecto</p>
 <p><strong>Construimos el proyecto</strong></p>
 
 <p>El siguiente comando lanzará el grupo de tareas <em>default</em> descrita en
-la línea 289 del fichero<strong> *Gruntfile.js</strong>.<em> En este caso: *jshint,
-test</em> y <em>build</em>.</p>
+la línea 289 del fichero <em>Gruntfile.js</em>. En este caso: <em>jshint, test y build</em>.</p>
 
 <p>Las dependencias necesarias para ejecutar las tareas se encuentran en la
-carpeta <em>node_modules</em>en la raíz del proyecto.</p>
+carpeta <em>node_modules</em> en la raíz del proyecto.</p>
 
-<p>Para ir más ligeros, vamos a saltarnos las comprobaciones
-de <a href="http://www.jshint.com/install/">JSHint</a>\</p>
+<p>Para ir más ligeros, vamos a saltarnos las comprobaciones de <a href="http://www.jshint.com/install/">JSHint</a></p>
 
 <blockquote>
 <p>$ grunt —force</p>
@@ -244,12 +242,12 @@ de <a href="http://www.jshint.com/install/">JSHint</a>\</p>
 
 <p>Started connect web server on 127.0.0.1:9000.</p>
 
-<p>Running “watch” task Waiting…</p>
+<p>Running “watch” task Waiting...</p>
 </blockquote>
 
-<p>Estas son todas las tareas y grupos de tareas que ha lanzado <em>\$ grunt
+<p>Estas son todas las tareas y grupos de tareas que ha lanzado <em>$ grunt
 serve</em>. Si queréis ver la configuración de esta tarea, abrid el archivo
-<em>Gruntfile.js</em>y buscad la línea 260.</p>
+<em>Gruntfile.js</em> y buscad la línea 260.</p>
 
 <p><strong>Creamos el proyecto listo para subir a PRO</strong></p>
 
@@ -260,10 +258,10 @@ serve</em>. Si queréis ver la configuración de esta tarea, abrid el archivo
 </blockquote>
 
 <p>Como veréis las tareas ejecutadas son completamente distintas. Esto es
-posible gracias a que <strong>con Grunt</strong> <strong>podemos encadenar tareas con
-diferentes propósitos</strong>.</p>
+posible gracias a que con Grunt podemos encadenar tareas con
+diferentes propósitos.</p>
 
-<p>Una vez finalizada la tarea <em>\$ server:dist</em> podéis ver que se ha creado
+<p>Una vez finalizada la tarea <em>$ server:dist</em> podéis ver que se ha creado
 una carpeta llamada <em>dist</em>. Allí es donde podéis encontrar vuestro
 proyecto listo para subir a PRO. ¿Fascinante eh? :)</p>
 
@@ -283,15 +281,11 @@ creado por <a href="https://github.com/bauschan">Peter Foerger</a>.</p>
 diferencia que el layout se gestiona con <a href="http://foundation.zurb.com">Foundation
 5</a>.</p>
 
-<p>La configuración de Bower la podéis encontrar en
-<a href="https://github.com/bauschan/generator-foundation-five/blob/master/app/templates/_bower.json">_bower.json</a>.
-Las tareas de Grunt están listadas en
-<a href="https://github.com/bauschan/generator-foundation-five/blob/master/app/templates/_package.json">_package.json</a>.
-Estos ficheros forman parte del template que necesita Yeoman para hacer
-su magia.</p>
+<p>La configuración de Bower la podéis encontrar en <a href="https://github.com/bauschan/generator-foundation-five/blob/master/app/templates/_bower.json">_bower.json</a>.
+Las tareas de Grunt están listadas en <a href="https://github.com/bauschan/generator-foundation-five/blob/master/app/templates/_package.json">_package.json</a>.
+Estos ficheros forman parte del template que necesita Yeoman para hacer su magia.</p>
 
-<p>La configuración de Yeoman la podéis encontrar en el fichero
-<a href="https://github.com/bauschan/generator-foundation-five/blob/master/app/index.js">/app/index.js</a>
+<p>La configuración de Yeoman la podéis encontrar en el fichero <a href="https://github.com/bauschan/generator-foundation-five/blob/master/app/index.js">/app/index.js</a>
 del generador.</p>
 
 <p>Con la ayuda de npm, <strong>instalamos el generador</strong> en global</p>
@@ -318,8 +312,7 @@ del generador.</p>
 <p>$ bower install</p>
 </blockquote>
 
-<p><strong>Instalamos las dependencias de Grunt</strong>. Esto no debería ser necesario
-pero el generador tiene un bug.</p>
+<p><strong>Instalamos las dependencias de Grunt</strong>. Esto no debería ser necesario pero el generador tiene un bug.</p>
 
 <blockquote>
 <p>$ npm install</p>
