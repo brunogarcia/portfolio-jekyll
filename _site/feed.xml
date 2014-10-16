@@ -7,6 +7,100 @@
 		<atom:link href="http://blog.garciaechegaray.com//feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Flatty, un theme Bootstrap desarrollado con Compass &amp; Sass</title>
+				<description>&lt;p&gt;&lt;big&gt;Flatty es un theme para Bootstrap desarrollado con Compass &amp;amp; Sass. Añade decenas de nuevos modulos 
+HTML/CSS y pre selecciona un buen número de plugins jQuery para abordar cualquier proyecto front-end.&lt;/big&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://d85wutc1n854v.cloudfront.net/live/products/600x375/WB0P6NR1N.png?v=2.2&quot; alt=&quot;Flatty&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Estoy trabajando en un proyecto a medida, donde gran parte del desarrollo consiste en crear varios back office para los diferentes roles que tiene la aplicación. Y aunque Bootstrap viene de serie con un bueno número de módulos para crear diferentes layouts, en este caso se nos quedaba corto a nivel de funcionalidades predefinidas.&lt;/p&gt;
+
+&lt;p&gt;Investigando las posibilidades que existian en el mercado, dimos con &lt;a href=&quot;https://wrapbootstrap.com&quot;&gt;Wrap Bootstrap&lt;/a&gt; un servicio similar a &lt;a href=&quot;http://themeforest.net/&quot;&gt;Theme Forest&lt;/a&gt; si lo tuyo con los themes para Wordpress o Prestashop. &lt;/p&gt;
+
+&lt;p&gt;Wrap Bootstrap es un market con cientos de themes y templates, organizado por varias categorías, una de ellas
+&lt;a href=&quot;https://wrapbootstrap.com/themes/admin&quot;&gt;Admin &amp;amp; Dashboards&lt;/a&gt;. ¡Bingo!.&lt;/p&gt;
+
+&lt;p&gt;Y aqui me permito hace un pequeño inciso querido lector. Te estarás preguntando por qué carallo nos hemos gastado dinero en comprar un theme si lo podemos hacer nosotros mismos, ¿para eso nos pagan, no?.&lt;/p&gt;
+
+&lt;p&gt;Lo primero, Flatty cuesta sólo 18$, que al cambio son unos 13€. Vamos, un precio ridículo para un proyecto web a medida de varios miles de euros. 
+Segundo, nos ahorra mucho tiempo de desarrollo. Y en este caso tiempo es igual a dinero. Mucho dinero si calculamos el coste por hora que facturamos. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Al cliente, no le interesa con qué herramientas hagamos nuestro trabajo&lt;/strong&gt; (escribe aquí tu framework, librería o IDE favorito). Lo único que le interesa es el time-to-market y que las características desarrolladas funcionen correctamente y cumplan su objetivo. Si uso Sass, Bootstrap o CakePHP es por que me permite trabajar más rápido y ser el doble de eficiente. Punto. El resto son pajas mentales que nos montamos nosotros mismos.&lt;/p&gt;
+
+&lt;h2&gt;¿Qué más me puedes contar sobre Flatty?&lt;/h2&gt;
+
+&lt;p&gt;Flatty como herramienta tiene cosas buenas y malas. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Primero las malas&lt;/strong&gt;. No es de código abierto, por lo tanto la comunidad no puede evolucionar y mejorar la herramienta. Esto influye en el número de actualizaciones y resolución de bugs (la última actualización es de agosto del 2013). También crea una capa de diseño por encima de Bootstrap que puede no encajar con la imagen de marca de tu proyecto.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Ahora las buenas&lt;/strong&gt;. Implementa la última versión de Bootstrap, en concreto la &lt;a href=&quot;https://github.com/twbs/bootstrap-sass&quot;&gt;v3 con Sass&lt;/a&gt;. Utiliza toda la potencia de &lt;a href=&quot;http://compass-style.org/&quot;&gt;Compass&lt;/a&gt; para gestionar el theme. Y añade varias decenas nuevos modulos HTML/CSS. &lt;/p&gt;
+
+&lt;p&gt;Por ejemplo &lt;a href=&quot;http://www.bublinastudio.com/flattybs3/email_templates.html&quot;&gt;email templates&lt;/a&gt;, &lt;a href=&quot;http://www.bublinastudio.com/flattybs3/calendar.html&quot;&gt;calendario&lt;/a&gt;, &lt;a href=&quot;http://www.bublinastudio.com/flattybs3/buttons_and_icons.html&quot;&gt;pack de iconos vía Font Awesome&lt;/a&gt;, &lt;a href=&quot;http://www.bublinastudio.com/flattybs3/wysiwyg.html&quot;&gt;plugin de wysiwyg&lt;/a&gt;, &lt;a href=&quot;http://www.bublinastudio.com/flattybs3/chats.html&quot;&gt;chat&lt;/a&gt;, etc. La &lt;a href=&quot;https://wrapbootstrap.com/theme/flatty-flat-administration-template-WB0P6NR1N&quot;&gt;lista completa de features&lt;/a&gt; la puedes consultar en Wrap Bootstrap.&lt;/p&gt;
+
+&lt;p&gt;Otra punto fuerte de es que puedes personalizar el framework a tu gusto ya que tienes acceso a todos los ficheros &lt;a href=&quot;http://sass-lang.com/&quot;&gt;scss&lt;/a&gt; del proyecto. Por lo tanto si no necesitas un módulo en concreto, simplemente lo eliminas del fichero principal (en nuestro caso &amp;#39;admin.scss&amp;#39;). La estructura de este fichero es la siguiente:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;@import &amp;quot;compass&amp;quot;;
+@import &amp;quot;theme/variables&amp;quot;;
+@import &amp;quot;theme/utilities&amp;quot;;
+@import &amp;quot;theme/main&amp;quot;
+@import &amp;quot;theme/font-awesome&amp;quot;;
+@import &amp;quot;theme/type&amp;quot;;
+@import &amp;quot;theme/header&amp;quot;;
+@import &amp;quot;theme/navigation&amp;quot;;
+@import &amp;quot;theme/content&amp;quot;;
+@import &amp;quot;theme/boxes&amp;quot;;
+@import &amp;quot;theme/boxes-quick-links&amp;quot;;
+@import &amp;quot;theme/boxes-statistics&amp;quot;;
+@import &amp;quot;theme/tables&amp;quot;;
+@import &amp;quot;theme/todo-list&amp;quot;;
+@import &amp;quot;theme/recent-activity&amp;quot;;
+@import &amp;quot;theme/calendar&amp;quot;;
+@import &amp;quot;theme/chat&amp;quot;;
+@import &amp;quot;theme/tasks&amp;quot;;
+@import &amp;quot;theme/nestable-list&amp;quot;;
+@import &amp;quot;theme/accordions&amp;quot;;
+@import &amp;quot;theme/tabs&amp;quot;;
+@import &amp;quot;theme/wizard&amp;quot;;
+@import &amp;quot;theme/forms&amp;quot;;
+@import &amp;quot;theme/pages/gallery&amp;quot;;
+@import &amp;quot;theme/pages/timeline&amp;quot;;
+@import &amp;quot;theme/pages/invoice&amp;quot;;
+@import &amp;quot;theme/pages/pricing_tables&amp;quot;;
+@import &amp;quot;theme/pages/orders&amp;quot;;
+@import &amp;quot;theme/pages/faq&amp;quot;;
+@import &amp;quot;theme/pages/errors&amp;quot;;
+@import &amp;quot;theme/pages/login&amp;quot;;
+@import &amp;quot;theme/overrides-bootstrap&amp;quot;;
+@import &amp;quot;theme/overrides-plugins&amp;quot;;
+@import &amp;quot;theme/common&amp;quot;;
+@import &amp;quot;theme/pull&amp;quot;; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Configurar Compass&lt;/h2&gt;
+
+&lt;p&gt;Algo muy útil es saber como &lt;a href=&quot;https://gist.github.com/nathansmith/1179395&quot;&gt;configurar correctamente un proyecto Compass&lt;/a&gt;.
+En este ejemplo podemos ver como establecer una serie de configuraciones para el proyecto modificando el fichero &lt;em&gt;config.rb&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;preferred_syntax = :sass
+
+http_path = &amp;#39;/&amp;#39;
+relative_assets = true
+sass_dir = &amp;#39;flatty&amp;#39; 
+
+images_dir = &amp;#39;assets/img&amp;#39;
+fonts_dir = &amp;#39;assets/fonts&amp;#39;
+css_dir = &amp;#39;assets/stylesheets&amp;#39;
+javascripts_dir = &amp;#39;assets/js&amp;#39;
+
+# Dev
+line_comments = true
+
+# Production
+# output_style = :compressed
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+				<pubDate>Thu, 16 Oct 2014 23:00:00 +0200</pubDate>
+				<link>http://blog.garciaechegaray.com//2014/10/16/bootstrap-theme-flatty-compass-sass.html</link>
+				<guid isPermaLink="true">http://blog.garciaechegaray.com//2014/10/16/bootstrap-theme-flatty-compass-sass.html</guid>
+			</item>
+		
+			<item>
 				<title>Compilando una App en la nube con Phonegap Build</title>
 				<description>&lt;p&gt;&lt;big&gt;Phonegap Build es un servicio freemium que te permite compilar una APK/IPA directamente en la nube&lt;/big&gt;&lt;/p&gt;
 
@@ -725,30 +819,6 @@ that could be made. But I just kept pushing.&lt;/p&gt;
 				<pubDate>Sat, 31 Aug 2013 10:27:30 +0200</pubDate>
 				<link>http://blog.garciaechegaray.com//2013/08/31/you-just-keep-pushing-you-just-keep-pushing-i.html</link>
 				<guid isPermaLink="true">http://blog.garciaechegaray.com//2013/08/31/you-just-keep-pushing-you-just-keep-pushing-i.html</guid>
-			</item>
-		
-			<item>
-				<title>Zorro Veloz</title>
-				<description>&lt;p&gt;Eva es psicóloga de profesión e ilustradora de cuentos infantiles. &lt;/p&gt;
-
-&lt;p&gt;Conozco su &lt;a href=&quot;http://evasantos.tumblr.com&quot;&gt;trabajo&lt;/a&gt; desde hace mucho, y
-siempre le he estado animando para lanzar un proyecto conjuntamente.&lt;/p&gt;
-
-&lt;p&gt;Ahora por fin después de varias semanas organizando todo hemos sacado
-una &lt;a href=&quot;http://evasantos.com/ilustraciones/zorro-veloz/&quot;&gt;tienda online&lt;/a&gt;
-para vender una de sus mejores ilustraciones.&lt;/p&gt;
-
-&lt;p&gt;Por sólo 30€ puedes conseguir una de las &lt;a href=&quot;http://evasantos.com/ilustraciones/zorro-veloz/&quot;&gt;50 impresiones de edición
-limitada, numerada y
-firmada&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Animarós y pillar una antes de que vuelen.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://evasantos.com/ilustraciones/zorro-veloz/&quot;&gt;&lt;img src=&quot;http://media.tumblr.com/44aa3fc1dabc29fcc8c7621ab782ee99/tumblr_inline_mpplc4yD4V1qz4rgp.jpg&quot; alt=&quot;image&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
-				<pubDate>Wed, 10 Jul 2013 09:21:00 +0200</pubDate>
-				<link>http://blog.garciaechegaray.com//2013/07/10/zorro-veloz.html</link>
-				<guid isPermaLink="true">http://blog.garciaechegaray.com//2013/07/10/zorro-veloz.html</guid>
 			</item>
 		
 	</channel>
