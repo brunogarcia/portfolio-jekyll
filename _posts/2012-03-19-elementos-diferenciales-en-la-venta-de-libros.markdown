@@ -7,7 +7,7 @@ tumblr\_url: http://blog.garciaechegaray.com/post/19587684063/elementos-diferenc
 
 Hace unas semanas escribí un post sobre [el mundo editorial y las
 landing
-pages](http://brunogarciaechegaray.tumblr.com/2012/02/08/el-mundo-editorial-landing-pages.html),
+pages](http://blog.garciaechegaray.com/2012/02/08/el-mundo-editorial-landing-pages.html),
 donde realicé una comparativa (un tanto mordaz debo admitir) entre el
 mercado anglosajón y español, y de cómo afrontaban cada una de ellas la
 venta online de sus respectivos productos.

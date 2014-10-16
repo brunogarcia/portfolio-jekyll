@@ -40,8 +40,7 @@ quedarte con dos ideas muy concretas:
 -   **Tu flujo de trabajo cambiará a mejor**, podrás trabajar en local
     con archivos *less* y le darás al usuario un *css* limpio y
     minizado. Si quieres ampliar este punto, te recomiendo leer [LESS,
-    lessphp &
-    minify](http://brunogarciaechegaray.tumblr.com/2011/12/07/less-lessphp-minify.html)
+    lessphp & minify](http://blog.garciaechegaray.com/2011/12/07/less-lessphp-minify.html)
 
 ### Comparativa entre SASS y LESS
 
