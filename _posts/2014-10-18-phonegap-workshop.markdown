@@ -10,6 +10,8 @@ Se ha hablado mucho de la calidad de rendimiento de una app mobile desarrollada 
 
 En todo caso, me gustaría comenzar este artículo con la siguiente viñeta, que la verdad dice mucho del estado actual del desarrollo móvil: no es un camino de rosas. Elegir entre una u otra tecnología puede depender de otros factores, como por ejemplo el económico. Si el presupuesto no te permite un equipo de desarrollo dual (uno para Android y otro para iOS) entonces Phonegap es la mejor opción. En un primer momento puedes prototipar un mínimo producto viable en poco tiempo y continuar el desarrollo hacia una app nativa en el futuro. Pienso que la tecnología debe servir a un propósito y no al revés.
 
+Otro punto importante a recordar es que Phonegap no tiene una UI para móviles, para esto te tienes que apoyar en librerías como jQuery Mobile, Bootstrap o Foundation. Ni tampoco es un framework MVC, para eso ya existe Backbone, Angular o incluso Ionic. Phonegap sólo te proporciona un _puente_ entre el dispositivo móvil y tu aplicación web.
+
 ![The dilemna of mobile apps development](https://pbs.twimg.com/media/BvWeD2yCAAArJXb.jpg:large)
 
 <small>Viñeta original en [Commit Strip](http://www.commitstrip.com/en/2014/08/18/the-dilemna-of-mobile-apps-development/)</small>
