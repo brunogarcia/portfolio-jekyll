@@ -8,7 +8,7 @@
 		
 			<item>
 				<title>Phonegap Workshop</title>
-				<description>&lt;p&gt;&lt;big&gt;Desde hace unos meses es costumbre en &lt;a href=&quot;http://www.pounstudio.com&quot;&gt;Poun Studio&lt;/a&gt; dar talleres internos con la idea de transmitir conocimiento al resto del equipo. Este es mi segundo taller, y he hablado sobre &lt;a href=&quot;http://www.phonegap.com&quot;&gt;Phonegap&lt;/a&gt;.&lt;/big&gt;&lt;/p&gt;
+				<description>&lt;p&gt;&lt;big&gt;Desde hace unos meses es costumbre en &lt;a href=&quot;http://www.pounstudio.com&quot;&gt;Poun Studio&lt;/a&gt; realizar talleres internos con la idea de transmitir conocimiento al resto del equipo. Este es mi segundo taller, y he hablado sobre &lt;a href=&quot;http://www.phonegap.com&quot;&gt;Phonegap&lt;/a&gt;.&lt;/big&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://pbs.twimg.com/media/BvWeD2yCAAArJXb.jpg:large&quot; alt=&quot;The dilemna of mobile apps development&quot;&gt;&lt;/p&gt;
 
@@ -16,29 +16,29 @@
 
 &lt;h2&gt;Un poco de historia&lt;/h2&gt;
 
-&lt;p&gt;Cuando comence a investigar y realizar mis primeras pruebas con &lt;a href=&quot;http://www.phonegap.com&quot;&gt;Phonegap&lt;/a&gt;, no tenia muy clara la relación con &lt;a href=&quot;http://cordova.apache.org&quot;&gt;Apache Cordova&lt;/a&gt;. La verdad la historia es muy poco enrevesada, sobre todo por que en la propia documentación oficial se utiliza los dos nombres sin ningún tipo de distinción. Esto es algo que ellos mismos han admitido y esperan ir solucionando en el futuro. &lt;/p&gt;
+&lt;p&gt;Cuando comencé a investigar y realizar mis primeras pruebas con &lt;a href=&quot;http://www.phonegap.com&quot;&gt;Phonegap&lt;/a&gt;, no tenía muy clara la relación con &lt;a href=&quot;http://cordova.apache.org&quot;&gt;Apache Cordova&lt;/a&gt;. La verdad la historia es muy poco enrevesada, sobre todo porque en la propia documentación oficial se utilizan los dos nombres sin ningún tipo de distinción. Esto es algo que ellos mismos han admitido y esperan ir solucionando en el futuro. &lt;/p&gt;
 
 &lt;p&gt;La empresa canadience Nitobi Software fue la creadora original de Phonegap. En el 2009 ganó el &lt;a href=&quot;http://readwrite.com/2009/04/02/phone_gap_todays_peoples_choice_winner_at_launch_p&quot;&gt;People&amp;#39;s Choice Award&lt;/a&gt; en la conferencia &lt;a href=&quot;http://www.web2expo.com/webexsf2009&quot;&gt;Web 2.0 Expo&lt;/a&gt;. Desde entonces se hizo muy popular en la comunidad web y se comenzó a utilizar rapidamente. &lt;/p&gt;
 
-&lt;p&gt;Recuerdo que &lt;a href=&quot;https://twitter.com/ojoven&quot;&gt;Mikel&lt;/a&gt; me lo comentó con mucho estusiasmo (él siempre se excita con cositas como esta) allá por el 2010, pensando que sería una buena opción para la aplicación móvil de &lt;a href=&quot;http://gzaas.com&quot;&gt;Gzaas&lt;/a&gt;. Eramos el target perfecto, aunque teníamos mucha experiencia en el desarrollo web, pero ninguno de los dos conocía nada de Android o iOS. Phonegap era un regalo del cielo. Podriamos crear una app con tecnología web que ya conociamos: HTML, CSS y Javascript. Además ¿quién carallo quiere aprender &lt;a href=&quot;http://en.wikipedia.org/wiki/Objective-C&quot;&gt;Objective-C&lt;/a&gt;?.&lt;/p&gt;
+&lt;p&gt;Recuerdo que &lt;a href=&quot;https://twitter.com/ojoven&quot;&gt;Mikel&lt;/a&gt; me lo comentó con mucho estusiasmo (él siempre se excita con cositas como esta) allá por el 2010, pensando que sería una buena opción para la aplicación móvil de &lt;a href=&quot;http://gzaas.com&quot;&gt;Gzaas&lt;/a&gt;. Eramos el target perfecto, aunque teníamos mucha experiencia en el desarrollo web, pero ninguno de los dos conocía nada de Android o iOS. Phonegap era un regalo del cielo. Podriamos crear una app mobile con tecnología que ya conociamos: HTML, CSS y Javascript. Además ¿quién carallo quiere aprender &lt;a href=&quot;http://en.wikipedia.org/wiki/Objective-C&quot;&gt;Objective-C&lt;/a&gt;?.&lt;/p&gt;
 
-&lt;p&gt;Y parece que no eramos los unicos que vieron el gran potencial de esta herramienta. &lt;a href=&quot;http://www.adobe.com/aboutadobe/pressroom/pressreleases/201110/AdobeAcquiresNitobi.html&quot;&gt;Adobe compró Nitobi&lt;/a&gt;  en enero del 2011. Fue una buena jugada, ya que por entonces Adobe estaba en horas bajas despues de que &lt;a href=&quot;http://en.wikipedia.org/wiki/Apple_and_Adobe_Flash_controversy&quot;&gt;Apple &lt;em&gt;baneara&lt;/em&gt; Flash&lt;/a&gt; del iPhone/iPad. Me imagino a la plana mayor de Adobe corriendo como pollos sin cabeza, gritando &lt;em&gt;&amp;quot;¡Nos vamos a quedar fuera del negocio de internet como Microsoft!. ¡Flash ha muerto!. ¡Además ya nadie usa la mierda esa de Dreamweaver!&amp;quot;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Y parece que no éramos los únicos que vieron el gran potencial de esta herramienta. &lt;a href=&quot;http://www.adobe.com/aboutadobe/pressroom/pressreleases/201110/AdobeAcquiresNitobi.html&quot;&gt;Adobe compró Nitobi&lt;/a&gt;  en enero del 2011. Fue una buena jugada, por entonces Adobe estaba en horas bajas después de que &lt;a href=&quot;http://en.wikipedia.org/wiki/Apple_and_Adobe_Flash_controversy&quot;&gt;Apple &lt;em&gt;baneara&lt;/em&gt; Flash&lt;/a&gt; del iPhone/iPad. Me imagino a la plana mayor de Adobe corriendo como pollos sin cabeza, gritando &lt;em&gt;&amp;quot;¡Nos vamos a quedar fuera del negocio de internet como Microsoft!. ¡Flash ha muerto!. ¡Además ya nadie usa la mierda esa de Dreamweaver!&amp;quot;&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;Pero un momento, el dinero no lo puede comprar todo. Phonegap se creó como una herramienta de código abierto. Además de Nitobi, la comunidad web y otras empresas del sector (IBM, Oracle, etc.) habian colaborado en el desarrollo. Para no tener problemas legales Adobe cedio el código a &lt;a href=&quot;http://www.apache.org/&quot;&gt;Apache Software Foundation&lt;/a&gt;. Y de allí el nombre Apache Cordova.&lt;/p&gt;
+&lt;p&gt;Pero cuidado, el dinero no lo compra todo. En sus inicios Phonegap se creó como una herramienta de código abierto. Además de Nitobi, la comunidad web y otras empresas del sector (IBM, Oracle, etc.) habian colaborado en el desarrollo. Para no tener problemas legales Adobe cedio el código a &lt;a href=&quot;http://www.apache.org/&quot;&gt;Apache Software Foundation&lt;/a&gt;. Y de allí el nombre Apache Cordova.&lt;/p&gt;
 
 &lt;p&gt;Resumen: &lt;a href=&quot;http://cordova.apache.org&quot;&gt;Apache Cordova&lt;/a&gt; es un proyecto de software libre que sirve de core a Phonegap. Esto convierte a Phonegap es una distribución con servicios adicionales dentro del ecosistema Adobe, algo que obviamente Cordova por defecto no tiene ni tendrá.&lt;/p&gt;
 
-&lt;p&gt;Puedes encontrar más información al respecto en &lt;a href=&quot;http://phonegap.com/2012/03/19/phonegap-cordova-and-what%E2%80%99s-in-a-name/&quot;&gt;PhoneGap, Cordova, and what’s in a name?&lt;/a&gt;. Y también ver el código fuente en &lt;a href=&quot;https://github.com/phonegap&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Puedes encontrar más información al respecto en &lt;a href=&quot;http://phonegap.com/2012/03/19/phonegap-cordova-and-what%E2%80%99s-in-a-name/&quot;&gt;PhoneGap, Cordova, and what’s in a name?&lt;/a&gt;. Y si sientes curiosidad, puedes ver el código fuente en &lt;a href=&quot;https://github.com/phonegap&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2&gt;¿Cómo funciona?&lt;/h2&gt;
 
-&lt;p&gt;Phonegap permite conectar un dispositivo móvil con nuestra aplicación web mediante dos componentes principales: Webview y Plugins. Además Phonegap dispone de una serie de &lt;a href=&quot;http://docs.phonegap.com/en/3.5.0/cordova_events_events.md.html#Events&quot;&gt;eventos&lt;/a&gt; para facilitar la comunicación entre ambas partes.&lt;/p&gt;
+&lt;p&gt;Phonegap permite conectar un dispositivo móvil con nuestra aplicación web mediante dos componentes principales: &lt;strong&gt;Webview&lt;/strong&gt; y &lt;strong&gt;Plugins&lt;/strong&gt;. Además Phonegap dispone de una serie de &lt;a href=&quot;http://docs.phonegap.com/en/3.5.0/cordova_events_events.md.html#Events&quot;&gt;eventos&lt;/a&gt; para facilitar la comunicación entre ambas partes.&lt;/p&gt;
 
 &lt;h3&gt;Webview&lt;/h3&gt;
 
-&lt;p&gt;Un webview es básicamente una instancia del navegador nativo del dispositivo móvil. &lt;/p&gt;
+&lt;p&gt;Un webview es básicamente una instancia del navegador del dispositivo móvil. &lt;/p&gt;
 
-&lt;p&gt;Con la particularidad de no tener interfaz de usuario. O sea, sin acceso a los favoritos, barra de navegación y demás características de cualquier navegador. Sólo nos quedamos con el motor de renderizado y el motor Javascript. Al ser un componente nativo, tendremos acceso directo al dispositivo, y por lo tanto a la cámara, GPS, bateria, etc.&lt;/p&gt;
+&lt;p&gt;Con la particularidad de no tener interfaz de usuario. O sea, sin acceso a los favoritos, barra de navegación y demás características de cualquier navegador. Sólo nos quedamos con los motores de renderizado y Javascript. Al ser un componente 100% nativo, tendremos acceso directo al dispositivo, y por lo tanto a la cámara, GPS, bateria, etc.&lt;/p&gt;
 
 &lt;p&gt;Si revisamos la documentación de Android, veremos que existe una clase llamada &lt;a href=&quot;http://developer.android.com/reference/android/webkit/WebView.html&quot;&gt;Webview&lt;/a&gt;, cuya descripción es &lt;em&gt;&amp;quot;A View that displays web pages. This class is the basis upon which you can roll your own web browser or simply display some online content within your Activity. It uses the WebKit rendering engine to display web pages and includes methods to navigate forward and backward through a history, zoom in and out, perform text searches and more.&amp;quot;&lt;/em&gt;&lt;/p&gt;
 
@@ -46,17 +46,17 @@
 
 &lt;h3&gt;Plugins&lt;/h3&gt;
 
-&lt;p&gt;Un plugin de Phonegap es el puente entre nuestra aplicación web (cuyo contexto de ejecución es un WebView) y la plataforma nativa. Se compone de dos partes: la implementación nativa (ya sea en Android, iOS, etc.) y la implementación Javascript.&lt;/p&gt;
+&lt;p&gt;Un plugin de Phonegap es el puente entre nuestra aplicación web (cuyo contexto de ejecución es un WebView) y el dispositivo móvil. Se compone de dos partes: la &lt;strong&gt;implementación nativa&lt;/strong&gt; (ya sea en Android, iOS, etc.) y la &lt;strong&gt;implementación Javascript&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;Phonegap tiene alrededor de &lt;a href=&quot;http://docs.phonegap.com/en/3.5.0/cordova_plugins_pluginapis.md.html#Plugin%20APIs&quot;&gt;20 plugins oficiales&lt;/a&gt;. Entre los que se encuentran los más básicos: bateria, cámara, lista de contactos, acceso al sistema de archivos, geolocalización, vibración.&lt;/p&gt;
 
-&lt;p&gt;Además la comunidad web ha desarrollado alrededor de 1400 plugins para cualquier necesidad. &lt;a href=&quot;http://plugreg.com/&quot;&gt;PlugReg&lt;/a&gt; tiene una buena lista de plugins organizado por plataformas. Aqui podemos encontrar plugins como &lt;a href=&quot;http://plugreg.com/plugin/wildabeast/BarcodeScanner&quot;&gt;barcode scanner&lt;/a&gt;, &lt;a href=&quot;http://plugreg.com/plugin/phonegap-build/PushPlugin&quot;&gt;push notifications&lt;/a&gt; o &lt;a href=&quot;http://plugreg.com/plugin/EddyVerbruggen/SocialSharing-PhoneGap-Plugin&quot;&gt;social sharing&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Además la comunidad web ha ido desarrollando hasta el momento alrededor de 1400 plugins para prácticamente cualquier necesidad. &lt;a href=&quot;http://plugreg.com/&quot;&gt;PlugReg&lt;/a&gt; tiene una buena lista de plugins organizado por plataformas. Aqui podemos encontrar plugins como &lt;a href=&quot;http://plugreg.com/plugin/wildabeast/BarcodeScanner&quot;&gt;barcode scanner&lt;/a&gt;, &lt;a href=&quot;http://plugreg.com/plugin/phonegap-build/PushPlugin&quot;&gt;push notifications&lt;/a&gt; o &lt;a href=&quot;http://plugreg.com/plugin/EddyVerbruggen/SocialSharing-PhoneGap-Plugin&quot;&gt;social sharing&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Si le echamos un oj ojal código fuente de un plugin, por ejemplo &lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen&quot;&gt;Splash Screen&lt;/a&gt;, veremos que la estructura es la siguiente:&lt;/p&gt;
+&lt;p&gt;Si le echamos un ojo al código fuente de un plugin, por ejemplo &lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen&quot;&gt;Splash Screen&lt;/a&gt;, veremos la siguiente estructura:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;doc&lt;/strong&gt;: Documentación i18n.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;src&lt;/strong&gt;: Implementación nativa. Encontraremos tantas carpetas como soporte tenga el plugin para un sistema en concreto. En el caso de Splash Screen tiene soporte para Android, Blackberry 10, iOS, Tizen, Ubuntu Touch y Window Phone. Si abrimos la clase &lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/blob/master/src/android/SplashScreen.java&quot;&gt;SplashScreen.java&lt;/a&gt;, veremos un único método llamado &lt;em&gt;execute&lt;/em&gt; que se encargara de realizar la tarea asignada, en este caso mostrar u ocultar el splash screen.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;src&lt;/strong&gt;: Implementación nativa. Encontraremos tantas carpetas como soporte tenga el plugin para un sistema operativo en concreto. En el caso de Splash Screen tiene soporte para Android, Blackberry 10, iOS, Tizen, Ubuntu Touch y Window Phone. Si abrimos la clase &lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/blob/master/src/android/SplashScreen.java&quot;&gt;SplashScreen.java&lt;/a&gt;, veremos un único método llamado &lt;em&gt;execute&lt;/em&gt; que se encargará de realizar la tarea asignada, en este caso mostrar u ocultar el splash screen.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;tests&lt;/strong&gt;: Tests unitarios para confirmar que todo funciona como debe funcionar.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;www&lt;/strong&gt;: Implementación Javascript. Estas funciones son las que usará nuestra aplicación web para comunicarse con el dispositivo móvil. Si abrimos &lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/blob/master/www/splashscreen.js&quot;&gt;splashscreen.js&lt;/a&gt; veremos las funciones show() y hide().&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -65,30 +65,62 @@
 
 &lt;h2&gt;Instalar Phonegap y crear una demo&lt;/h2&gt;
 
-&lt;p&gt;Para poder instalar Phonegap, es necesario tener instalado &lt;a href=&quot;http://nodejs.org/download/&quot;&gt;Node&lt;/a&gt; en tu equipo. Una vez echo esto, basta con lanzar la siguiente línea en tu terminal.&lt;/p&gt;
+&lt;p&gt;Antes de ponernos a trabajar con Phonegap, es necesario tener instalado &lt;a href=&quot;http://nodejs.org/download/&quot;&gt;Node&lt;/a&gt;. Una vez echo esto, basta con lanzar la siguiente línea en tu terminal.&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ sudo npm install -g phonegap
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;NPM (Node Package Manager), tal como su nombre indica es el gestor de paquetes de Node. La opción &lt;em&gt;&amp;quot;-g&amp;quot;&lt;/em&gt; instalará Phonegap de forma global.&lt;/p&gt;
+&lt;p&gt;Node Package Manager o &lt;em&gt;npm&lt;/em&gt;, tal como su nombre indica es el gestor de paquetes de Node. La opción &lt;em&gt;&amp;quot;-g&amp;quot;&lt;/em&gt; instalará Phonegap de forma global.&lt;/p&gt;
 
-&lt;p&gt;Finalizado este segundo paso, ya podremos crear nuestra primera app móvil con Phonegap.&lt;/p&gt;
+&lt;p&gt;Finalizado este segundo paso, ya podremos crear nuestra primera app mobile con Phonegap.&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ phonegap create my_app_folder com.my_domain.app MyAppName
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Si accedemos a &amp;quot;&lt;em&gt;my app folder&lt;/em&gt;&amp;quot; veremos una carpeta llamada &amp;quot;&lt;em&gt;www&lt;/em&gt;&amp;quot;. Es allí donde tendremos que copiar nuestra aplicación web. Recordando de cargar las librerias &lt;em&gt;cordova.js&lt;/em&gt; e &lt;em&gt;index.js&lt;/em&gt;. &lt;/p&gt;
-
-&lt;p&gt;En esta última se encuentran los &lt;em&gt;bind event listeners&lt;/em&gt;. Por defecto viene &amp;quot;bindiado&amp;quot; &lt;a href=&quot;http://docs.phonegap.com/en/3.5.0/cordova_events_events.md.html#deviceready&quot;&gt;deviceready&lt;/a&gt;, cuya función es informarnos de la correcta carga de la API de Cordova en el dispositivo móvil.&lt;/p&gt;
+&lt;p&gt;Si accedemos a &amp;quot;&lt;em&gt;my app folder&lt;/em&gt;&amp;quot; veremos una carpeta llamada &amp;quot;&lt;em&gt;www&lt;/em&gt;&amp;quot;. Es allí donde residirá nuestra aplicación web. Recuerda realizar las llamadas correspondientes a &lt;em&gt;cordova.js&lt;/em&gt; e &lt;em&gt;index.js&lt;/em&gt;. En esta última se encuentran los &lt;em&gt;bind event listeners&lt;/em&gt;. Por defecto viene &amp;quot;&lt;em&gt;bindiado&lt;/em&gt;&amp;quot; &lt;a href=&quot;http://docs.phonegap.com/en/3.5.0/cordova_events_events.md.html#deviceready&quot;&gt;deviceready&lt;/a&gt;.&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;document.addEventListener(&amp;#39;deviceready&amp;#39;, this.onDeviceReady, false);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Esto es así por que necesitamos que Cordova este debidamente cargado para que nuestra aplicación web pueda realizar las llamadas necesarias. &lt;/p&gt;
+&lt;p&gt;El objetivo de este evento es informarnos de la correcta carga de la API de Cordova en el dispositivo móvil. Esto es así porque necesitamos que Cordova este debidamente cargado para que nuestra aplicación web pueda realizar las llamadas necesarias. &lt;/p&gt;
+
+&lt;p&gt;Si has llegado hasta aqui, supongo que te estarás preguntando &amp;quot;bueno, ¿y cómo hago para visualizar esta demo en mi movíl?&amp;quot;. La respuesta corta es (aún) no puedes. Tienes dos caminos: utilizar una herramienta de compilación en la nube o instalar y configurar el entorno de &lt;a href=&quot;http://developer.android.com/sdk/installing/index.html?pkg=adt&quot;&gt;Android&lt;/a&gt;. Vamos por la primera.&lt;/p&gt;
 
 &lt;h2&gt;Herramientas&lt;/h2&gt;
 
+&lt;p&gt;Tal como comentaba unas líneas más arriba, Phonegap dispone de una serie de herramientas para facilitarnos el trabajo a los desarrolladores. He seleccionado tres de ellas, dos oficiales (Build &amp;amp;Developer App) y otra de código abierto (Weinre).&lt;/p&gt;
+
 &lt;h3&gt;Build&lt;/h3&gt;
 
-&lt;h3&gt;App&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://build.phonegap.com/&quot;&gt;Phonegap Build&lt;/a&gt; es un servicio freemium que te permite &lt;strong&gt;compilar una APK/IPA directamente en la nube&lt;/strong&gt;. La opción más básica te permite un máximo de una app mobile, y por 10$ al mes puedes compilar hasta 25 aplicaciones.&lt;/p&gt;
+
+&lt;p&gt;En &lt;a href=&quot;http://www.pounstudio.com&quot;&gt;Poun Studio&lt;/a&gt; tenemos una cuenta de pago y estamos bastante contentos con el servicio. Es verdad que aún le falta pulir algunos aspectos de la interfaz de usuario, pero hace lo que tiene que hacer eficiente y rápidamente. Por ejemplo compilar una app mobile Android e iOS tarda una media de 30 segundos. Y sobre todo te ahorras el problema de instalar y configurar cada SDK.&lt;/p&gt;
+
+&lt;p&gt;Puedes encontrar más información en (Compilando una App en la nube con Phonegap Build)[http://blog.garciaechegaray.com/2014/07/07/compilando-una-app-en-la-nube-con-phonegap-build.html]&lt;/p&gt;
+
+&lt;h3&gt;Developer App&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://app.phonegap.com/&quot;&gt;Phonegap Developer App&lt;/a&gt; es otra herramienta oficial de Phonegap que te permite &lt;strong&gt;arrancar un servidor local&lt;/strong&gt; con tu aplicación web y poder acceder a dicho servidor desde cualquier dispositivo móvil. &lt;/p&gt;
+
+&lt;p&gt;La opción más útil es que cualquier cambio en local se podrá visualizar &lt;strong&gt;instantáneamente&lt;/strong&gt; en tu móvil. Esto mejora el flujo de trabajo ya que permite realizar pruebas sin la necesidad de compilar la aplicación.&lt;/p&gt;
+
+&lt;p&gt;Para arrancar el servidor local, es necesario lanzar este comando desde la ubicación actual de tu aplicación Phonegap:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ phonegap serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Seguidamente deberás instalar la app móvil creada expresamente para conectarse a este tipo de servicio. En el caso de un dispositivo Android, sería &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.adobe.phonegap.app&quot;&gt;Google Play - Phonegap Developer&lt;/a&gt;. Ya solo basta con escribir la IP de tu maquina, seguida del puerto asignado y darle al botón de conectar.&lt;/p&gt;
+
+&lt;p&gt;Uno de los defectos de esta herramienta es no poder acceder a la consola de desarrollo. Esto es un problema porque muchas veces no sabrás por donde vienen los tiros y el tiempo de debugear se alarga. Felizmente existe otra herramienta que soluciona este problema.&lt;/p&gt;
 
 &lt;h3&gt;Weinre&lt;/h3&gt;
 
-&lt;h2&gt;Instalar Android SDK&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://people.apache.org/%7Epmuellr/weinre-docs/latest/&quot;&gt;Weinre&lt;/a&gt; son la siglas de Web Inspector Remote. Básicamente es un &lt;strong&gt;debugger remoto&lt;/strong&gt;, especialmente diseñado para trabajar con dispositivos móviles. Si no os ha quedado claro, aqui tenéis un &lt;a href=&quot;https://www.youtube.com/watch?v=4nL6xey13fE&quot;&gt;video de 5 minutos&lt;/a&gt; explicando el proceso paso a paso.&lt;/p&gt;
+
+&lt;p&gt;Para instalar Weinre es necesario lanzar el siguiente comando:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ sudo npm -g install weinre
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Para arrancar el servicio:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ weinre --boundHost your_IP --httpPort 8082
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Dos cosas importantes: debemos usar nuestra IP para que el dispositivo móvil pueda acceder. Obviamente el dispositivo móvil no podrá acceder si lo configuras como &lt;em&gt;localhost&lt;/em&gt;. Para evitar conflictos (con un servicio WAMP por ejemplo) utiliza un puerto alternativo, por ejemplo 8082.&lt;/p&gt;
+
+&lt;p&gt;Y el último paso consiste en añadir un enlace al script de Weiner en tu aplicación web:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;script src=”http://your_IP:8082/target/target-script-min.js#anonymous”&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Si todo ha salido bien, podrás acceder a la consola de desarrollo para visualizar los posibles errores Javascript o incluso echarle un ojo al código fuente de tu aplicación web.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 18 Oct 2014 22:00:00 +0200</pubDate>
 				<link>http://blog.garciaechegaray.com//2014/10/18/2014-10-18-phonegap-workshop.html</link>
