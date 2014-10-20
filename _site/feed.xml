@@ -18,13 +18,13 @@
 
 &lt;p&gt;Cuando comencé a investigar y realizar mis primeras pruebas con &lt;a href=&quot;http://www.phonegap.com&quot;&gt;Phonegap&lt;/a&gt;, no tenía muy clara la relación con &lt;a href=&quot;http://cordova.apache.org&quot;&gt;Apache Cordova&lt;/a&gt;. La verdad la historia es muy poco enrevesada, sobre todo porque en la propia documentación oficial se utilizan los dos nombres sin ningún tipo de distinción. Esto es algo que ellos mismos han admitido y esperan ir solucionando en el futuro. &lt;/p&gt;
 
-&lt;p&gt;La empresa canadience Nitobi Software fue la creadora original de Phonegap. En el 2009 ganó el &lt;a href=&quot;http://readwrite.com/2009/04/02/phone_gap_todays_peoples_choice_winner_at_launch_p&quot;&gt;People&amp;#39;s Choice Award&lt;/a&gt; en la conferencia &lt;a href=&quot;http://www.web2expo.com/webexsf2009&quot;&gt;Web 2.0 Expo&lt;/a&gt;. Desde entonces se hizo muy popular en la comunidad web y se comenzó a utilizar rapidamente. &lt;/p&gt;
+&lt;p&gt;La empresa canadiense Nitobi Software fue la creadora original de Phonegap. En el 2009 ganó el &lt;a href=&quot;http://readwrite.com/2009/04/02/phone_gap_todays_peoples_choice_winner_at_launch_p&quot;&gt;People&amp;#39;s Choice Award&lt;/a&gt; en la conferencia &lt;a href=&quot;http://www.web2expo.com/webexsf2009&quot;&gt;Web 2.0 Expo&lt;/a&gt;. Desde entonces se hizo muy popular en la comunidad web y se comenzó a utilizar rápidamente. &lt;/p&gt;
 
-&lt;p&gt;Recuerdo que &lt;a href=&quot;https://twitter.com/ojoven&quot;&gt;Mikel&lt;/a&gt; me lo comentó con mucho estusiasmo (él siempre se excita con cositas como esta) allá por el 2010, pensando que sería una buena opción para la aplicación móvil de &lt;a href=&quot;http://gzaas.com&quot;&gt;Gzaas&lt;/a&gt;. Eramos el target perfecto, aunque teníamos mucha experiencia en el desarrollo web, pero ninguno de los dos conocía nada de Android o iOS. Phonegap era un regalo del cielo. Podriamos crear una app mobile con tecnología que ya conociamos: HTML, CSS y Javascript. Además ¿quién carallo quiere aprender &lt;a href=&quot;http://en.wikipedia.org/wiki/Objective-C&quot;&gt;Objective-C&lt;/a&gt;?.&lt;/p&gt;
+&lt;p&gt;Recuerdo que &lt;a href=&quot;https://twitter.com/ojoven&quot;&gt;Mikel&lt;/a&gt; me lo comentó con mucho entusiasmo (él siempre se excita con cositas como esta) allá por el 2010, pensando que sería una buena opción para la app mobile de &lt;a href=&quot;http://gzaas.com&quot;&gt;Gzaas&lt;/a&gt;. Eramos el target perfecto, aunque teníamos mucha experiencia en el desarrollo web, pero ninguno de los dos conocía nada de Android o iOS. Phonegap era un regalo del cielo. Podriamos crear una app mobile con tecnología que ya conocíamos: HTML, CSS y Javascript. Además ¿quién carallo quiere aprender &lt;a href=&quot;http://en.wikipedia.org/wiki/Objective-C&quot;&gt;Objective-C&lt;/a&gt;? (eso lo pensaba entonces y me reafirmo. Hola &lt;a href=&quot;https://developer.apple.com/swift/&quot;&gt;Swift&lt;/a&gt;).&lt;/p&gt;
 
 &lt;p&gt;Y parece que no éramos los únicos que vieron el gran potencial de esta herramienta. &lt;a href=&quot;http://www.adobe.com/aboutadobe/pressroom/pressreleases/201110/AdobeAcquiresNitobi.html&quot;&gt;Adobe compró Nitobi&lt;/a&gt;  en enero del 2011. Fue una buena jugada, por entonces Adobe estaba en horas bajas después de que &lt;a href=&quot;http://en.wikipedia.org/wiki/Apple_and_Adobe_Flash_controversy&quot;&gt;Apple &lt;em&gt;baneara&lt;/em&gt; Flash&lt;/a&gt; del iPhone/iPad. Me imagino a la plana mayor de Adobe corriendo como pollos sin cabeza, gritando &lt;em&gt;&amp;quot;¡Nos vamos a quedar fuera del negocio de internet como Microsoft!. ¡Flash ha muerto!. ¡Además ya nadie usa la mierda esa de Dreamweaver!&amp;quot;&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;Pero cuidado, el dinero no lo compra todo. En sus inicios Phonegap se creó como una herramienta de código abierto. Además de Nitobi, la comunidad web y otras empresas del sector (IBM, Oracle, etc.) habian colaborado en el desarrollo. Para no tener problemas legales Adobe cedio el código a &lt;a href=&quot;http://www.apache.org/&quot;&gt;Apache Software Foundation&lt;/a&gt;. Y de allí el nombre Apache Cordova.&lt;/p&gt;
+&lt;p&gt;Pero cuidado, el dinero no lo compra todo. En sus inicios Phonegap se creó como una herramienta de código abierto. Además de Nitobi, la comunidad web y otras empresas del sector (IBM, Oracle, etc.) habían colaborado en el desarrollo. Para no tener problemas legales Adobe cedió el código a la &lt;a href=&quot;http://www.apache.org/&quot;&gt;Fundación Apache&lt;/a&gt;. Y de allí el nombre Apache Cordova.&lt;/p&gt;
 
 &lt;p&gt;Resumen: &lt;a href=&quot;http://cordova.apache.org&quot;&gt;Apache Cordova&lt;/a&gt; es un proyecto de software libre que sirve de core a Phonegap. Esto convierte a Phonegap es una distribución con servicios adicionales dentro del ecosistema Adobe, algo que obviamente Cordova por defecto no tiene ni tendrá.&lt;/p&gt;
 
@@ -38,7 +38,7 @@
 
 &lt;p&gt;Un webview es básicamente una instancia del navegador del dispositivo móvil. &lt;/p&gt;
 
-&lt;p&gt;Con la particularidad de no tener interfaz de usuario. O sea, sin acceso a los favoritos, barra de navegación y demás características de cualquier navegador. Sólo nos quedamos con los motores de renderizado y Javascript. Al ser un componente 100% nativo, tendremos acceso directo al dispositivo, y por lo tanto a la cámara, GPS, bateria, etc.&lt;/p&gt;
+&lt;p&gt;Con la particularidad de no tener interfaz de usuario. O sea, sin acceso a los favoritos, barra de navegación y demás características de cualquier navegador. Sólo nos quedamos con los motores de renderizado y Javascript. Al ser un componente 100% nativo, tendremos acceso directo al dispositivo, y por lo tanto a la cámara, GPS, batería, etc.&lt;/p&gt;
 
 &lt;p&gt;Si revisamos la documentación de Android, veremos que existe una clase llamada &lt;a href=&quot;http://developer.android.com/reference/android/webkit/WebView.html&quot;&gt;Webview&lt;/a&gt;, cuya descripción es &lt;em&gt;&amp;quot;A View that displays web pages. This class is the basis upon which you can roll your own web browser or simply display some online content within your Activity. It uses the WebKit rendering engine to display web pages and includes methods to navigate forward and backward through a history, zoom in and out, perform text searches and more.&amp;quot;&lt;/em&gt;&lt;/p&gt;
 
@@ -65,7 +65,7 @@
 
 &lt;h2&gt;Instalar Phonegap y crear una demo&lt;/h2&gt;
 
-&lt;p&gt;Antes de ponernos a trabajar con Phonegap, es necesario tener instalado &lt;a href=&quot;http://nodejs.org/download/&quot;&gt;Node&lt;/a&gt;. Una vez echo esto, basta con lanzar la siguiente línea en tu terminal.&lt;/p&gt;
+&lt;p&gt;Antes de ponernos a trabajar con Phonegap, es necesario tener instalado &lt;a href=&quot;http://nodejs.org/download/&quot;&gt;Node&lt;/a&gt;. Seguidamente basta con lanzar la siguiente línea en tu terminal:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ sudo npm install -g phonegap
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Node Package Manager o &lt;em&gt;npm&lt;/em&gt;, tal como su nombre indica es el gestor de paquetes de Node. La opción &lt;em&gt;&amp;quot;-g&amp;quot;&lt;/em&gt; instalará Phonegap de forma global.&lt;/p&gt;
@@ -78,7 +78,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;El objetivo de este evento es informarnos de la correcta carga de la API de Cordova en el dispositivo móvil. Esto es así porque necesitamos que Cordova este debidamente cargado para que nuestra aplicación web pueda realizar las llamadas necesarias. &lt;/p&gt;
 
-&lt;p&gt;Si has llegado hasta aqui, supongo que te estarás preguntando &amp;quot;bueno, ¿y cómo hago para visualizar esta demo en mi movíl?&amp;quot;. La respuesta corta es (aún) no puedes. Tienes dos caminos: utilizar una herramienta de compilación en la nube o instalar y configurar el entorno de &lt;a href=&quot;http://developer.android.com/sdk/installing/index.html?pkg=adt&quot;&gt;Android&lt;/a&gt;. Vamos por la primera.&lt;/p&gt;
+&lt;p&gt;Si has llegado hasta aquí, supongo que te estarás preguntando &amp;quot;bueno, ¿y cómo hago para visualizar esta demo en mi movil?&amp;quot;. La respuesta es (aún) no puedes. Pero tienes dos caminos: utilizar una herramienta de compilación en la nube o instalar y configurar el entorno de &lt;a href=&quot;http://developer.android.com/sdk/installing/index.html?pkg=adt&quot;&gt;Android&lt;/a&gt;. Vamos por la primera.&lt;/p&gt;
 
 &lt;h2&gt;Herramientas&lt;/h2&gt;
 
@@ -86,11 +86,11 @@
 
 &lt;h3&gt;Build&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://build.phonegap.com/&quot;&gt;Phonegap Build&lt;/a&gt; es un servicio freemium que te permite &lt;strong&gt;compilar una APK/IPA directamente en la nube&lt;/strong&gt;. La opción más básica te permite un máximo de una app mobile, y por 10$ al mes puedes compilar hasta 25 aplicaciones.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://build.phonegap.com/&quot;&gt;Phonegap Build&lt;/a&gt; es un servicio freemium que te permite &lt;strong&gt;compilar una APK/IPA directamente en la nube&lt;/strong&gt;. La opción más básica te permite compilar un máximo de una app mobile, y por 10$ al mes podrás compilar hasta 25 aplicaciones.&lt;/p&gt;
 
 &lt;p&gt;En &lt;a href=&quot;http://www.pounstudio.com&quot;&gt;Poun Studio&lt;/a&gt; tenemos una cuenta de pago y estamos bastante contentos con el servicio. Es verdad que aún le falta pulir algunos aspectos de la interfaz de usuario, pero hace lo que tiene que hacer eficiente y rápidamente. Por ejemplo compilar una app mobile Android e iOS tarda una media de 30 segundos. Y sobre todo te ahorras el problema de instalar y configurar cada SDK.&lt;/p&gt;
 
-&lt;p&gt;Puedes encontrar más información en (Compilando una App en la nube con Phonegap Build)[http://blog.garciaechegaray.com/2014/07/07/compilando-una-app-en-la-nube-con-phonegap-build.html]&lt;/p&gt;
+&lt;p&gt;Puedes encontrar más información en &lt;a href=&quot;http://blog.garciaechegaray.com/2014/07/07/compilando-una-app-en-la-nube-con-phonegap-build.html&quot;&gt;Compilando una App en la nube con Phonegap Build&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3&gt;Developer App&lt;/h3&gt;
 
@@ -107,7 +107,7 @@
 
 &lt;h3&gt;Weinre&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://people.apache.org/%7Epmuellr/weinre-docs/latest/&quot;&gt;Weinre&lt;/a&gt; son la siglas de Web Inspector Remote. Básicamente es un &lt;strong&gt;debugger remoto&lt;/strong&gt;, especialmente diseñado para trabajar con dispositivos móviles. Si no os ha quedado claro, aqui tenéis un &lt;a href=&quot;https://www.youtube.com/watch?v=4nL6xey13fE&quot;&gt;video de 5 minutos&lt;/a&gt; explicando el proceso paso a paso.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://people.apache.org/%7Epmuellr/weinre-docs/latest/&quot;&gt;Weinre&lt;/a&gt; son la siglas de Web Inspector Remote. Básicamente es un &lt;strong&gt;debugger remoto&lt;/strong&gt;, especialmente diseñado para trabajar con dispositivos móviles. Si aún no lo tenéis claro, aquí podéis ver un &lt;a href=&quot;https://www.youtube.com/watch?v=4nL6xey13fE&quot;&gt;video de 5 minutos&lt;/a&gt; explicando el funcionamiento paso a paso.&lt;/p&gt;
 
 &lt;p&gt;Para instalar Weinre es necesario lanzar el siguiente comando:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ sudo npm -g install weinre
