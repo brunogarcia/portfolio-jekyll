@@ -16,7 +16,7 @@ Cuando comencé a investigar y realizar mis primeras pruebas con [Phonegap](http
 
 La empresa canadiense Nitobi Software fue la creadora original de Phonegap. En el 2009 ganó el [People's Choice Award](http://readwrite.com/2009/04/02/phone_gap_todays_peoples_choice_winner_at_launch_p) en la conferencia [Web 2.0 Expo](http://www.web2expo.com/webexsf2009). Desde entonces se hizo muy popular en la comunidad web y se comenzó a utilizar rápidamente. 
 
-Recuerdo que [Mikel](https://twitter.com/ojoven) me lo comentó con mucho entusiasmo (él siempre se excita con cositas como esta) allá por el 2010, pensando que sería una buena opción para la app mobile de [Gzaas](http://gzaas.com). Eramos el target perfecto, aunque teníamos mucha experiencia en el desarrollo web, pero ninguno de los dos conocía nada de Android o iOS. Phonegap era un regalo del cielo. Podriamos crear una app mobile con tecnología que ya conocíamos: HTML, CSS y Javascript. Además ¿quién carallo quiere aprender [Objective-C](http://en.wikipedia.org/wiki/Objective-C)? (eso lo pensaba entonces y me reafirmo. Hola [Swift](https://developer.apple.com/swift/)).
+Recuerdo que [Mikel](https://twitter.com/ojoven) me lo comentó con mucho entusiasmo (él siempre se excita con cositas como esta) allá por el 2010, pensando que sería una buena opción para la app mobile de [Gzaas](http://gzaas.com). Eramos el target perfecto, aunque teníamos mucha experiencia en el desarrollo web, ninguno de los dos conocía nada de Android o iOS. Phonegap era un regalo del cielo. Podriamos crear una app mobile con tecnología que ya conocíamos: HTML, CSS y Javascript. Además ¿quién carallo quiere aprender [Objective-C](http://en.wikipedia.org/wiki/Objective-C)? (eso lo pensaba entonces y me reafirmo. Hola [Swift](https://developer.apple.com/swift/)).
 
 Y parece que no éramos los únicos que vieron el gran potencial de esta herramienta. [Adobe compró Nitobi](http://www.adobe.com/aboutadobe/pressroom/pressreleases/201110/AdobeAcquiresNitobi.html)  en enero del 2011. Fue una buena jugada, por entonces Adobe estaba en horas bajas después de que [Apple _baneara_ Flash](http://en.wikipedia.org/wiki/Apple_and_Adobe_Flash_controversy) del iPhone/iPad. Me imagino a la plana mayor de Adobe corriendo como pollos sin cabeza, gritando _"¡Nos vamos a quedar fuera del negocio de internet como Microsoft!. ¡Flash ha muerto!. ¡Además ya nadie usa la mierda esa de Dreamweaver!"_.
 
@@ -82,7 +82,7 @@ Si has llegado hasta aquí, supongo que te estarás preguntando "bueno, ¿y cóm
 
 ## Herramientas
 
-Tal como comentaba unas líneas más arriba, Phonegap dispone de una serie de herramientas para facilitarnos el trabajo a los desarrolladores. He seleccionado tres de ellas, dos oficiales (Build &Developer App) y otra de código abierto (Weinre).
+Tal como comentaba unas líneas más arriba, Phonegap dispone de una serie de herramientas para facilitarnos el trabajo a los desarrolladores. He seleccionado tres de ellas, dos oficiales (Build & Developer App) y otra de código abierto (Weinre).
 
 ### Build
 
@@ -94,7 +94,7 @@ Puedes encontrar más información en [Compilando una App en la nube con Phonega
 
 ### Developer App
 
-[Phonegap Developer App](http://app.phonegap.com/) es otra herramienta oficial de Phonegap que te permite **arrancar un servidor local** con tu aplicación web y poder acceder a dicho servidor desde cualquier dispositivo móvil. 
+[Phonegap Developer App](http://app.phonegap.com/) es otra herramienta oficial de Phonegap que te permite **arrancar un servidor local con tu aplicación web** y acceder a dicho servicio desde cualquier dispositivo móvil. 
 
 La opción más útil es que cualquier cambio en local se podrá visualizar **instantáneamente** en tu móvil. Esto mejora el flujo de trabajo ya que permite realizar pruebas sin la necesidad de compilar la aplicación.
 
@@ -102,13 +102,14 @@ Para arrancar el servidor local, es necesario lanzar este comando desde la ubica
 
 	$ phonegap serve
 
-Seguidamente deberás instalar la app móvil creada expresamente para conectarse a este tipo de servicio. En el caso de un dispositivo Android, sería [Google Play - Phonegap Developer](https://play.google.com/store/apps/details?id=com.adobe.phonegap.app). Ya solo basta con escribir la IP de tu maquina, seguida del puerto asignado y darle al botón de conectar.
+Seguidamente deberás instalar la app mobile creada expresamente para conectarse a este servicio. En el caso de un dispositivo Android, sería [Google Play - Phonegap Developer](https://play.google.com/store/apps/details?id=com.adobe.phonegap.app). Ya solo queda escribir la IP de tu maquina, seguido del puerto asignado y darle al botón de conectar.
 
 Uno de los defectos de esta herramienta es no poder acceder a la consola de desarrollo. Esto es un problema porque muchas veces no sabrás por donde vienen los tiros y el tiempo de debugear se alarga. Felizmente existe otra herramienta que soluciona este problema.
 
 ### Weinre
 
-[Weinre](http://people.apache.org/~pmuellr/weinre-docs/latest/) son la siglas de Web Inspector Remote. Básicamente es un **debugger remoto**, especialmente diseñado para trabajar con dispositivos móviles. Si aún no lo tenéis claro, aquí podéis ver un [video de 5 minutos](https://www.youtube.com/watch?v=4nL6xey13fE) explicando el funcionamiento paso a paso.
+[Weinre](http://people.apache.org/~pmuellr/weinre-docs/latest/) son la siglas de Web Inspector Remote. Básicamente es un **debugger remoto**, especialmente diseñado para trabajar con dispositivos móviles. 
+Si aún no lo tenéis claro, aquí puedes ver un [video de 5 minutos](https://www.youtube.com/watch?v=4nL6xey13fE) explicando el funcionamiento paso a paso.
 
 Para instalar Weinre es necesario lanzar el siguiente comando:
 
@@ -124,4 +125,4 @@ Y el último paso consiste en añadir un enlace al script de Weiner en tu aplica
 
 	<script src=”http://your_IP:8082/target/target-script-min.js#anonymous”></script>
 
-Si todo ha salido bien, podrás acceder a la consola de desarrollo para visualizar los posibles errores Javascript o incluso echarle un ojo al código fuente de tu aplicación web.
+Si todo ha salido bien, podrás acceder a la consola de desarrollo para visualizar los posibles errores o incluso echarle un ojo al código fuente de tu aplicación web.
