@@ -12,7 +12,7 @@ En todo caso, me gustaría comenzar este artículo con la siguiente viñeta, que
 
 ![The dilemna of mobile apps development](https://pbs.twimg.com/media/BvWeD2yCAAArJXb.jpg:large)
 
-<small>Vía [@spietrek](https://twitter.com/spietrek/status/501531865879412738)</small>
+<small>Viñeta original en [Commit Strip](http://www.commitstrip.com/en/2014/08/18/the-dilemna-of-mobile-apps-development/)</small>
 
 ## Un poco de historia
 
