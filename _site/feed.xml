@@ -20,7 +20,7 @@
 
 &lt;p&gt;La empresa canadiense Nitobi Software fue la creadora original de Phonegap. En el 2009 ganó el &lt;a href=&quot;http://readwrite.com/2009/04/02/phone_gap_todays_peoples_choice_winner_at_launch_p&quot;&gt;People&amp;#39;s Choice Award&lt;/a&gt; en la conferencia &lt;a href=&quot;http://www.web2expo.com/webexsf2009&quot;&gt;Web 2.0 Expo&lt;/a&gt;. Desde entonces se hizo muy popular en la comunidad web y se comenzó a utilizar rápidamente. &lt;/p&gt;
 
-&lt;p&gt;Recuerdo que &lt;a href=&quot;https://twitter.com/ojoven&quot;&gt;Mikel&lt;/a&gt; me lo comentó con mucho entusiasmo (él siempre se excita con cositas como esta) allá por el 2010, pensando que sería una buena opción para la app mobile de &lt;a href=&quot;http://gzaas.com&quot;&gt;Gzaas&lt;/a&gt;. Eramos el target perfecto, aunque teníamos mucha experiencia en el desarrollo web, pero ninguno de los dos conocía nada de Android o iOS. Phonegap era un regalo del cielo. Podriamos crear una app mobile con tecnología que ya conocíamos: HTML, CSS y Javascript. Además ¿quién carallo quiere aprender &lt;a href=&quot;http://en.wikipedia.org/wiki/Objective-C&quot;&gt;Objective-C&lt;/a&gt;? (eso lo pensaba entonces y me reafirmo. Hola &lt;a href=&quot;https://developer.apple.com/swift/&quot;&gt;Swift&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Recuerdo que &lt;a href=&quot;https://twitter.com/ojoven&quot;&gt;Mikel&lt;/a&gt; me lo comentó con mucho entusiasmo (él siempre se excita con cositas como esta) allá por el 2010, pensando que sería una buena opción para la app mobile de &lt;a href=&quot;http://gzaas.com&quot;&gt;Gzaas&lt;/a&gt;. Eramos el target perfecto, aunque teníamos mucha experiencia en el desarrollo web, ninguno de los dos conocía nada de Android o iOS. Phonegap era un regalo del cielo. Podriamos crear una app mobile con tecnología que ya conocíamos: HTML, CSS y Javascript. Además ¿quién carallo quiere aprender &lt;a href=&quot;http://en.wikipedia.org/wiki/Objective-C&quot;&gt;Objective-C&lt;/a&gt;? (eso lo pensaba entonces y me reafirmo. Hola &lt;a href=&quot;https://developer.apple.com/swift/&quot;&gt;Swift&lt;/a&gt;).&lt;/p&gt;
 
 &lt;p&gt;Y parece que no éramos los únicos que vieron el gran potencial de esta herramienta. &lt;a href=&quot;http://www.adobe.com/aboutadobe/pressroom/pressreleases/201110/AdobeAcquiresNitobi.html&quot;&gt;Adobe compró Nitobi&lt;/a&gt;  en enero del 2011. Fue una buena jugada, por entonces Adobe estaba en horas bajas después de que &lt;a href=&quot;http://en.wikipedia.org/wiki/Apple_and_Adobe_Flash_controversy&quot;&gt;Apple &lt;em&gt;baneara&lt;/em&gt; Flash&lt;/a&gt; del iPhone/iPad. Me imagino a la plana mayor de Adobe corriendo como pollos sin cabeza, gritando &lt;em&gt;&amp;quot;¡Nos vamos a quedar fuera del negocio de internet como Microsoft!. ¡Flash ha muerto!. ¡Además ya nadie usa la mierda esa de Dreamweaver!&amp;quot;&lt;/em&gt;.&lt;/p&gt;
 
@@ -66,15 +66,15 @@
 &lt;h2&gt;Instalar Phonegap y crear una demo&lt;/h2&gt;
 
 &lt;p&gt;Antes de ponernos a trabajar con Phonegap, es necesario tener instalado &lt;a href=&quot;http://nodejs.org/download/&quot;&gt;Node&lt;/a&gt;. Seguidamente basta con lanzar la siguiente línea en tu terminal:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ sudo npm install -g phonegap
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ sudo npm install -g phonegap
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Node Package Manager o &lt;em&gt;npm&lt;/em&gt;, tal como su nombre indica es el gestor de paquetes de Node. La opción &lt;em&gt;&amp;quot;-g&amp;quot;&lt;/em&gt; instalará Phonegap de forma global.&lt;/p&gt;
 
 &lt;p&gt;Finalizado este segundo paso, ya podremos crear nuestra primera app mobile con Phonegap.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ phonegap create my_app_folder com.my_domain.app MyAppName
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ phonegap create my_app_folder com.my_domain.app MyAppName
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Si accedemos a &amp;quot;&lt;em&gt;my app folder&lt;/em&gt;&amp;quot; veremos una carpeta llamada &amp;quot;&lt;em&gt;www&lt;/em&gt;&amp;quot;. Es allí donde residirá nuestra aplicación web. Recuerda realizar las llamadas correspondientes a &lt;em&gt;cordova.js&lt;/em&gt; e &lt;em&gt;index.js&lt;/em&gt;. En esta última se encuentran los &lt;em&gt;bind event listeners&lt;/em&gt;. Por defecto viene &amp;quot;&lt;em&gt;bindiado&lt;/em&gt;&amp;quot; &lt;a href=&quot;http://docs.phonegap.com/en/3.5.0/cordova_events_events.md.html#deviceready&quot;&gt;deviceready&lt;/a&gt;.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;document.addEventListener(&amp;#39;deviceready&amp;#39;, this.onDeviceReady, false);
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;document.addEventListener(&amp;#39;deviceready&amp;#39;, this.onDeviceReady, false);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;El objetivo de este evento es informarnos de la correcta carga de la API de Cordova en el dispositivo móvil. Esto es así porque necesitamos que Cordova este debidamente cargado para que nuestra aplicación web pueda realizar las llamadas necesarias. &lt;/p&gt;
 
@@ -82,7 +82,7 @@
 
 &lt;h2&gt;Herramientas&lt;/h2&gt;
 
-&lt;p&gt;Tal como comentaba unas líneas más arriba, Phonegap dispone de una serie de herramientas para facilitarnos el trabajo a los desarrolladores. He seleccionado tres de ellas, dos oficiales (Build &amp;amp;Developer App) y otra de código abierto (Weinre).&lt;/p&gt;
+&lt;p&gt;Tal como comentaba unas líneas más arriba, Phonegap dispone de una serie de herramientas para facilitarnos el trabajo a los desarrolladores. He seleccionado tres de ellas, dos oficiales (Build &amp;amp; Developer App) y otra de código abierto (Weinre).&lt;/p&gt;
 
 &lt;h3&gt;Build&lt;/h3&gt;
 
@@ -94,37 +94,38 @@
 
 &lt;h3&gt;Developer App&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://app.phonegap.com/&quot;&gt;Phonegap Developer App&lt;/a&gt; es otra herramienta oficial de Phonegap que te permite &lt;strong&gt;arrancar un servidor local&lt;/strong&gt; con tu aplicación web y poder acceder a dicho servidor desde cualquier dispositivo móvil. &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://app.phonegap.com/&quot;&gt;Phonegap Developer App&lt;/a&gt; es otra herramienta oficial de Phonegap que te permite &lt;strong&gt;arrancar un servidor local con tu aplicación web&lt;/strong&gt; y acceder a dicho servicio desde cualquier dispositivo móvil. &lt;/p&gt;
 
 &lt;p&gt;La opción más útil es que cualquier cambio en local se podrá visualizar &lt;strong&gt;instantáneamente&lt;/strong&gt; en tu móvil. Esto mejora el flujo de trabajo ya que permite realizar pruebas sin la necesidad de compilar la aplicación.&lt;/p&gt;
 
 &lt;p&gt;Para arrancar el servidor local, es necesario lanzar este comando desde la ubicación actual de tu aplicación Phonegap:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ phonegap serve
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ phonegap serve
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Seguidamente deberás instalar la app móvil creada expresamente para conectarse a este tipo de servicio. En el caso de un dispositivo Android, sería &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.adobe.phonegap.app&quot;&gt;Google Play - Phonegap Developer&lt;/a&gt;. Ya solo basta con escribir la IP de tu maquina, seguida del puerto asignado y darle al botón de conectar.&lt;/p&gt;
+&lt;p&gt;Seguidamente deberás instalar la app mobile creada expresamente para conectarse a este servicio. En el caso de un dispositivo Android, sería &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.adobe.phonegap.app&quot;&gt;Google Play - Phonegap Developer&lt;/a&gt;. Ya solo queda escribir la IP de tu maquina, seguido del puerto asignado y darle al botón de conectar.&lt;/p&gt;
 
 &lt;p&gt;Uno de los defectos de esta herramienta es no poder acceder a la consola de desarrollo. Esto es un problema porque muchas veces no sabrás por donde vienen los tiros y el tiempo de debugear se alarga. Felizmente existe otra herramienta que soluciona este problema.&lt;/p&gt;
 
 &lt;h3&gt;Weinre&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://people.apache.org/%7Epmuellr/weinre-docs/latest/&quot;&gt;Weinre&lt;/a&gt; son la siglas de Web Inspector Remote. Básicamente es un &lt;strong&gt;debugger remoto&lt;/strong&gt;, especialmente diseñado para trabajar con dispositivos móviles. Si aún no lo tenéis claro, aquí podéis ver un &lt;a href=&quot;https://www.youtube.com/watch?v=4nL6xey13fE&quot;&gt;video de 5 minutos&lt;/a&gt; explicando el funcionamiento paso a paso.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://people.apache.org/%7Epmuellr/weinre-docs/latest/&quot;&gt;Weinre&lt;/a&gt; son la siglas de Web Inspector Remote. Básicamente es un &lt;strong&gt;debugger remoto&lt;/strong&gt;, especialmente diseñado para trabajar con dispositivos móviles. 
+Si aún no lo tenéis claro, aquí puedes ver un &lt;a href=&quot;https://www.youtube.com/watch?v=4nL6xey13fE&quot;&gt;video de 5 minutos&lt;/a&gt; explicando el funcionamiento paso a paso.&lt;/p&gt;
 
 &lt;p&gt;Para instalar Weinre es necesario lanzar el siguiente comando:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ sudo npm -g install weinre
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ sudo npm -g install weinre
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Para arrancar el servicio:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ weinre --boundHost your_IP --httpPort 8082
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ weinre --boundHost your_IP --httpPort 8082
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Dos cosas importantes: debemos usar nuestra IP para que el dispositivo móvil pueda acceder. Obviamente el dispositivo móvil no podrá acceder si lo configuras como &lt;em&gt;localhost&lt;/em&gt;. Para evitar conflictos (con un servicio WAMP por ejemplo) utiliza un puerto alternativo, por ejemplo 8082.&lt;/p&gt;
 
 &lt;p&gt;Y el último paso consiste en añadir un enlace al script de Weiner en tu aplicación web:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;script src=”http://your_IP:8082/target/target-script-min.js#anonymous”&amp;gt;&amp;lt;/script&amp;gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;script src=”http://your_IP:8082/target/target-script-min.js#anonymous”&amp;gt;&amp;lt;/script&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Si todo ha salido bien, podrás acceder a la consola de desarrollo para visualizar los posibles errores Javascript o incluso echarle un ojo al código fuente de tu aplicación web.&lt;/p&gt;
+&lt;p&gt;Si todo ha salido bien, podrás acceder a la consola de desarrollo para visualizar los posibles errores o incluso echarle un ojo al código fuente de tu aplicación web.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 18 Oct 2014 22:00:00 +0200</pubDate>
-				<link>http://blog.garciaechegaray.com//2014/10/18/2014-10-18-phonegap-workshop.html</link>
-				<guid isPermaLink="true">http://blog.garciaechegaray.com//2014/10/18/2014-10-18-phonegap-workshop.html</guid>
+				<link>http://blog.garciaechegaray.com//2014/10/18/phonegap-workshop.html</link>
+				<guid isPermaLink="true">http://blog.garciaechegaray.com//2014/10/18/phonegap-workshop.html</guid>
 			</item>
 		
 			<item>
@@ -159,7 +160,7 @@ Segundo, nos ahorra mucho tiempo de desarrollo. Y en este caso tiempo es igual a
 &lt;p&gt;Por ejemplo &lt;a href=&quot;http://www.bublinastudio.com/flattybs3/email_templates.html&quot;&gt;email templates&lt;/a&gt;, &lt;a href=&quot;http://www.bublinastudio.com/flattybs3/calendar.html&quot;&gt;calendario&lt;/a&gt;, &lt;a href=&quot;http://www.bublinastudio.com/flattybs3/buttons_and_icons.html&quot;&gt;pack de iconos vía Font Awesome&lt;/a&gt;, &lt;a href=&quot;http://www.bublinastudio.com/flattybs3/wysiwyg.html&quot;&gt;plugin de wysiwyg&lt;/a&gt;, &lt;a href=&quot;http://www.bublinastudio.com/flattybs3/chats.html&quot;&gt;chat&lt;/a&gt;, etc. La &lt;a href=&quot;https://wrapbootstrap.com/theme/flatty-flat-administration-template-WB0P6NR1N&quot;&gt;lista completa de features&lt;/a&gt; la puedes consultar en Wrap Bootstrap.&lt;/p&gt;
 
 &lt;p&gt;Otra punto fuerte de es que puedes personalizar el framework a tu gusto ya que tienes acceso a todos los ficheros &lt;a href=&quot;http://sass-lang.com/&quot;&gt;scss&lt;/a&gt; del proyecto. Por lo tanto si no necesitas un módulo en concreto, simplemente lo eliminas del fichero principal (en nuestro caso &amp;#39;admin.scss&amp;#39;). La estructura de este fichero es la siguiente:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;@import &amp;quot;compass&amp;quot;;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;@import &amp;quot;compass&amp;quot;;
 @import &amp;quot;theme/variables&amp;quot;;
 @import &amp;quot;theme/utilities&amp;quot;;
 @import &amp;quot;theme/main&amp;quot;
@@ -199,7 +200,7 @@ Segundo, nos ahorra mucho tiempo de desarrollo. Y en este caso tiempo es igual a
 
 &lt;p&gt;Algo muy útil es saber como &lt;a href=&quot;https://gist.github.com/nathansmith/1179395&quot;&gt;configurar correctamente un proyecto Compass&lt;/a&gt;.
 En este ejemplo podemos ver como establecer una serie de configuraciones para el proyecto modificando el fichero &lt;em&gt;config.rb&lt;/em&gt;&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;preferred_syntax = :sass
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;preferred_syntax = :sass
 
 http_path = &amp;#39;/&amp;#39;
 relative_assets = true
@@ -233,7 +234,7 @@ Por lo visto Phonegap está poniendo mucho empeño en facilitarnos la vida a los
 &lt;p&gt;Por suerte Phonegap ofrece este servicio (gratis para una sola app) junto con una &lt;a href=&quot;http://docs.build.phonegap.com/en_US/&quot;&gt;amplia documentación&lt;/a&gt;. Personalmente me preocupaba bastante el tema de personalizar los iconos, splash screen y plugins. Pero creando un archivo &lt;em&gt;config.xml&lt;/em&gt; dentro de tu proyecto todo funciona como la seda.&lt;/p&gt;
 
 &lt;p&gt;Por ejemplo para decirle con que iconos debe trabajar la app:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;--Android icons--&amp;gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;--Android icons--&amp;gt;
 &amp;lt;icon gap:density=&amp;quot;ldpi&amp;quot; gap:platform=&amp;quot;android&amp;quot; src=&amp;quot;res/screen/android/icon-ldpi.png&amp;quot; /&amp;gt;
 &amp;lt;icon gap:density=&amp;quot;mdpi&amp;quot; gap:platform=&amp;quot;android&amp;quot; src=&amp;quot;res/screen/android/icon-mdpi.png&amp;quot; /&amp;gt;
 &amp;lt;icon gap:density=&amp;quot;hdpi&amp;quot; gap:platform=&amp;quot;android&amp;quot; src=&amp;quot;res/screen/android/icon-hdpi.png&amp;quot; /&amp;gt;
@@ -246,7 +247,7 @@ Por lo visto Phonegap está poniendo mucho empeño en facilitarnos la vida a los
 &amp;lt;icon gap:platform=&amp;quot;ios&amp;quot; height=&amp;quot;152&amp;quot; src=&amp;quot;res/screen/ios/icon-76@2x.png&amp;quot; width=&amp;quot;152&amp;quot; /&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Y lo mismo para las splash screen:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;--Android splash--&amp;gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;--Android splash--&amp;gt;
 &amp;lt;gap:splash gap:density=&amp;quot;ldpi&amp;quot; gap:platform=&amp;quot;android&amp;quot; src=&amp;quot;res/screen/android/screen-ldpi-portrait.png&amp;quot; /&amp;gt;
 &amp;lt;gap:splash gap:density=&amp;quot;mdpi&amp;quot; gap:platform=&amp;quot;android&amp;quot; src=&amp;quot;res/screen/android/screen-mdpi-portrait.png&amp;quot; /&amp;gt;
 &amp;lt;gap:splash gap:density=&amp;quot;hdpi&amp;quot; gap:platform=&amp;quot;android&amp;quot; src=&amp;quot;res/screen/android/screen-hdpi-portrait.png&amp;quot; /&amp;gt;
@@ -259,15 +260,15 @@ Por lo visto Phonegap está poniendo mucho empeño en facilitarnos la vida a los
 &amp;lt;gap:splash gap:platform=&amp;quot;ios&amp;quot; height=&amp;quot;768&amp;quot; src=&amp;quot;res/screen/ios/screen-ipad-landscape.png&amp;quot; width=&amp;quot;1024&amp;quot; /&amp;gt;    
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Puedes incluso decidir en que tecnologías deseas realizar la compilación:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;gap:platform name=&amp;quot;ios&amp;quot; /&amp;gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;gap:platform name=&amp;quot;ios&amp;quot; /&amp;gt;
 &amp;lt;gap:platform name=&amp;quot;android&amp;quot; /&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;a href=&quot;https://build.phonegap.com/&quot;&gt;Phonegap Build&lt;/a&gt; tambien permite añadir plugins en la configuración. Por ejemplo si necesitamos el &lt;a href=&quot;https://github.com/apache/cordova-plugin-geolocation&quot;&gt;plugin de geolocalización&lt;/a&gt; tenemos que añadir la siguiente línea:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;gap:plugin name=&amp;quot;org.apache.cordova.geolocation&amp;quot; version=&amp;quot;0.3.7&amp;quot; /&amp;gt;    
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;gap:plugin name=&amp;quot;org.apache.cordova.geolocation&amp;quot; version=&amp;quot;0.3.7&amp;quot; /&amp;gt;    
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Os dejo un &lt;em&gt;gist&lt;/em&gt; con toda la configuración necesaria:&lt;/p&gt;
 
-&lt;script src=&quot;https://gist.github.com/brunogarcia/e2d7844dd2af6ff1e459.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;&lt;script src=&quot;https://gist.github.com/brunogarcia/e2d7844dd2af6ff1e459.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
 </description>
 				<pubDate>Mon, 07 Jul 2014 19:55:00 +0200</pubDate>
 				<link>http://blog.garciaechegaray.com//2014/07/07/compilando-una-app-en-la-nube-con-phonegap-build.html</link>
@@ -326,14 +327,14 @@ Jekyll es un generador de sites estáticos. Está desarrollado en Ruby, y para e
 &lt;h2&gt;Instalación&lt;/h2&gt;
 
 &lt;p&gt;En principio la instalación es la parte más sencilla. Aunque puede que tengas problemas con la versión de Ruby adecuada. Tuve que instalar la 1.9.1, con la 2.0 no funciona.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;sudo apt-get install ruby1.9.1-dev 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;sudo apt-get install ruby1.9.1-dev 
 
 sudo gem install jekyll
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;Migración&lt;/h2&gt;
 
 &lt;p&gt;Jekyll tiene una serie de &lt;a href=&quot;http://import.jekyllrb.com/docs/home/&quot;&gt;importers&lt;/a&gt; para prácticamente cualquier sistema de blog. En el caso de Tumblr la migración consiste en lanzar estas líneas de código. &lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ ruby -rubygems -e &amp;#39;require &amp;quot;jekyll-import&amp;quot;;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ ruby -rubygems -e &amp;#39;require &amp;quot;jekyll-import&amp;quot;;
 
 JekyllImport::Importers::Tumblr.run({
     &amp;quot;url&amp;quot;            =&amp;gt; &amp;quot;http://myblog.tumblr.com&amp;quot;,
@@ -350,7 +351,7 @@ JekyllImport::Importers::Tumblr.run({
 &lt;h2&gt;GitHub Pages&lt;/h2&gt;
 
 &lt;p&gt;Como he mencionado anteriormente, &lt;a href=&quot;http://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt; ya viene integrado con Jekyll. Si tienes una cuenta en GitHub, necesitas crear un repositorio del tipo &amp;quot;username.github.io&amp;quot;, donde &amp;quot;username&amp;quot; es tu nombre de usuario en GitHub. A continuación haces un clone de dicho repositorio y creas un nuevo proyecto con Jekyll. Esto traducido a código sería algo así:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ git clone https://github.com/username/username.github.io.git
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ git clone https://github.com/username/username.github.io.git
 $ cd username.github.io
 $ jekyll new myblog
 $ git add -all
@@ -362,7 +363,7 @@ $ git push
 &lt;h2&gt;Servidor en local&lt;/h2&gt;
 
 &lt;p&gt;Para arrancar un servidor Jekyll en tu maquina, basta con lanzar la siguiente línea en tu terminal:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ jekyll server -w
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ jekyll server -w
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;La opción &lt;em&gt;-w&lt;/em&gt; sirve para regenerar el site si realizas algún cambio.&lt;/p&gt;
 
@@ -381,7 +382,7 @@ $ git push
 &lt;p&gt;El primero es el super framework front-end desarrollado por &lt;a href=&quot;http://zurb.com/&quot;&gt;Zurb&lt;/a&gt;. &lt;/p&gt;
 
 &lt;p&gt;Bourbon es una librería de mixins para &lt;a href=&quot;http://sass-lang.com/&quot;&gt;Sass&lt;/a&gt; muy completa y útil. Los mixins vienen a ser lo que entenderíamos por funciones en el mundo de la programación. Aceptan parámetros y devuelven un resultado ad-hoc. Por ejemplo estas líneas en Sass y Bourbon:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;.button {
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;.button {
     @include border-top-radius(5px);
     @include border-bottom-radius(5px);
     @include border-left-radius(5px);
@@ -390,7 +391,7 @@ $ git push
 }   
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;compiladas a CSS, serían:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;.button {
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;.button {
     border-top-left-radius:5px;
     border-top-right-radius:5px;
     border-bottom-left-radius:5px;
@@ -418,7 +419,7 @@ $ git push
 &lt;p&gt;Últimamente utilizo Bower y Grunt para prácticamente cualquier proyecto. Por una parte me permiten automatizar procesos y además compartir esa misma configuración con el resto del equipo de desarrollo.&lt;/p&gt;
 
 &lt;p&gt;Existen varias formas de crear un proyecto con Foundation, en este caso opte por utilizar la opción &amp;quot;Foundation + Grunt + Libsass&amp;quot;.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ foundation new myblog_with_foundation --libsass
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ foundation new myblog_with_foundation --libsass
 $ cd myblog_with_foundation
 $ grunt build
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -428,13 +429,13 @@ que utiliza &lt;a href=&quot;http://zurb.com/&quot;&gt;Zurb&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;La última línea (&lt;em&gt;$ grunt build&lt;/em&gt;) se encarga de compilar los ficheros .sass a .css&lt;/p&gt;
 
 &lt;p&gt;Ahora sólo queda combinar ambos proyectos. Tuve que añadir Bourbon como &lt;a href=&quot;https://github.com/brunogarcia/brunogarcia.github.io/blob/master/bower.json&quot;&gt;nueva dependecia a bower.json&lt;/a&gt;:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;&amp;quot;dependencies&amp;quot;: {
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;quot;dependencies&amp;quot;: {
     &amp;quot;foundation&amp;quot;: &amp;quot;zurb/bower-foundation&amp;quot;,
     &amp;quot;bourbon&amp;quot;: &amp;quot;https://github.com/thoughtbot/bourbon.git&amp;quot;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Y actualizar la &lt;a href=&quot;https://github.com/brunogarcia/brunogarcia.github.io/blob/master/Gruntfile.js&quot;&gt;configuración de Grunt&lt;/a&gt; a mi gusto, añadiendo unicamente los módulos de Foundation que me interesan, en este caso fastclick.js y foundation.topbar.js:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;concat: {   
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;concat: {   
     dist: {
         src: [
             &amp;#39;bower_components/jquery/dist/jquery.js&amp;#39;,
@@ -448,7 +449,7 @@ que utiliza &lt;a href=&quot;http://zurb.com/&quot;&gt;Zurb&lt;/a&gt;.&lt;/p&gt;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Por otro lado en el fichero &lt;a href=&quot;https://github.com/brunogarcia/brunogarcia.github.io/blob/master/scss/app.scss&quot;&gt;app.scass&lt;/a&gt; sólo compilo los estilos que necesito:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;@import &amp;quot;foundation/components/grid&amp;quot;;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;@import &amp;quot;foundation/components/grid&amp;quot;;
 @import &amp;quot;foundation/components/tables&amp;quot;;
 @import &amp;quot;foundation/components/top-bar&amp;quot;;
 @import &amp;quot;foundation/components/visibility&amp;quot;; 
@@ -729,7 +730,7 @@ del generador.&lt;/p&gt;
 				<description>&lt;p&gt;Este el típico problema en el cual utilizaba un setTimeout(). Estaba
 obligado a esperar que se ejecutara la linea superior para poder hacer
 uso del nodo DOM (en este caso “lightbox_content_user”).&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$(“#wrap_all”).prepend(&amp;lt;?php echo json_encode($lightbox) ?\&amp;gt;));
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$(“#wrap_all”).prepend(&amp;lt;?php echo json_encode($lightbox) ?\&amp;gt;));
 
 setTimeout(function(){
     $(“.lightbox_content_user”).css(‘width’, container_width - 80);
@@ -740,7 +741,7 @@ setTimeout(function(){
 Básicamente hace lo mismo, pero de forma mas limpia. Y así evitamos la
 famosa &lt;a href=&quot;http://www.reddit.com/r/javascript/comments/1atmht/how_we_killed_the_callback_pyramid_of_doom/&quot;&gt;Callback Pyramid of
 Doom&lt;/a&gt;.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;var dfd = $.Deferred();
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;var dfd = $.Deferred();
 
 dfd.done($(“#wrap_all”).prepend(&amp;lt;?php echo json_encode($lightbox) ?\&amp;gt;);
 

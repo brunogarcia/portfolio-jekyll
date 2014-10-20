@@ -90,14 +90,14 @@ Jekyll es un generador de sites estáticos. Está desarrollado en Ruby, y para e
 <h2>Instalación</h2>
 
 <p>En principio la instalación es la parte más sencilla. Aunque puede que tengas problemas con la versión de Ruby adecuada. Tuve que instalar la 1.9.1, con la 2.0 no funciona.</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">sudo apt-get install ruby1.9.1-dev 
+<div class="highlight"><pre><code class="language-text" data-lang="text">sudo apt-get install ruby1.9.1-dev 
 
 sudo gem install jekyll
 </code></pre></div>
 <h2>Migración</h2>
 
 <p>Jekyll tiene una serie de <a href="http://import.jekyllrb.com/docs/home/">importers</a> para prácticamente cualquier sistema de blog. En el caso de Tumblr la migración consiste en lanzar estas líneas de código. </p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">$ ruby -rubygems -e &#39;require &quot;jekyll-import&quot;;
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ ruby -rubygems -e &#39;require &quot;jekyll-import&quot;;
 
 JekyllImport::Importers::Tumblr.run({
     &quot;url&quot;            =&gt; &quot;http://myblog.tumblr.com&quot;,
@@ -114,7 +114,7 @@ JekyllImport::Importers::Tumblr.run({
 <h2>GitHub Pages</h2>
 
 <p>Como he mencionado anteriormente, <a href="http://pages.github.com/">GitHub Pages</a> ya viene integrado con Jekyll. Si tienes una cuenta en GitHub, necesitas crear un repositorio del tipo &quot;username.github.io&quot;, donde &quot;username&quot; es tu nombre de usuario en GitHub. A continuación haces un clone de dicho repositorio y creas un nuevo proyecto con Jekyll. Esto traducido a código sería algo así:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">$ git clone https://github.com/username/username.github.io.git
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ git clone https://github.com/username/username.github.io.git
 $ cd username.github.io
 $ jekyll new myblog
 $ git add -all
@@ -126,7 +126,7 @@ $ git push
 <h2>Servidor en local</h2>
 
 <p>Para arrancar un servidor Jekyll en tu maquina, basta con lanzar la siguiente línea en tu terminal:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">$ jekyll server -w
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ jekyll server -w
 </code></pre></div>
 <p>La opción <em>-w</em> sirve para regenerar el site si realizas algún cambio.</p>
 
@@ -145,7 +145,7 @@ $ git push
 <p>El primero es el super framework front-end desarrollado por <a href="http://zurb.com/">Zurb</a>. </p>
 
 <p>Bourbon es una librería de mixins para <a href="http://sass-lang.com/">Sass</a> muy completa y útil. Los mixins vienen a ser lo que entenderíamos por funciones en el mundo de la programación. Aceptan parámetros y devuelven un resultado ad-hoc. Por ejemplo estas líneas en Sass y Bourbon:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">.button {
+<div class="highlight"><pre><code class="language-text" data-lang="text">.button {
     @include border-top-radius(5px);
     @include border-bottom-radius(5px);
     @include border-left-radius(5px);
@@ -154,7 +154,7 @@ $ git push
 }   
 </code></pre></div>
 <p>compiladas a CSS, serían:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">.button {
+<div class="highlight"><pre><code class="language-text" data-lang="text">.button {
     border-top-left-radius:5px;
     border-top-right-radius:5px;
     border-bottom-left-radius:5px;
@@ -182,7 +182,7 @@ $ git push
 <p>Últimamente utilizo Bower y Grunt para prácticamente cualquier proyecto. Por una parte me permiten automatizar procesos y además compartir esa misma configuración con el resto del equipo de desarrollo.</p>
 
 <p>Existen varias formas de crear un proyecto con Foundation, en este caso opte por utilizar la opción &quot;Foundation + Grunt + Libsass&quot;.</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">$ foundation new myblog_with_foundation --libsass
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ foundation new myblog_with_foundation --libsass
 $ cd myblog_with_foundation
 $ grunt build
 </code></pre></div>
@@ -192,13 +192,13 @@ que utiliza <a href="http://zurb.com/">Zurb</a>.</p>
 <p>La última línea (<em>$ grunt build</em>) se encarga de compilar los ficheros .sass a .css</p>
 
 <p>Ahora sólo queda combinar ambos proyectos. Tuve que añadir Bourbon como <a href="https://github.com/brunogarcia/brunogarcia.github.io/blob/master/bower.json">nueva dependecia a bower.json</a>:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">&quot;dependencies&quot;: {
+<div class="highlight"><pre><code class="language-text" data-lang="text">&quot;dependencies&quot;: {
     &quot;foundation&quot;: &quot;zurb/bower-foundation&quot;,
     &quot;bourbon&quot;: &quot;https://github.com/thoughtbot/bourbon.git&quot;
 }
 </code></pre></div>
 <p>Y actualizar la <a href="https://github.com/brunogarcia/brunogarcia.github.io/blob/master/Gruntfile.js">configuración de Grunt</a> a mi gusto, añadiendo unicamente los módulos de Foundation que me interesan, en este caso fastclick.js y foundation.topbar.js:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">concat: {   
+<div class="highlight"><pre><code class="language-text" data-lang="text">concat: {   
     dist: {
         src: [
             &#39;bower_components/jquery/dist/jquery.js&#39;,
@@ -212,7 +212,7 @@ que utiliza <a href="http://zurb.com/">Zurb</a>.</p>
 }
 </code></pre></div>
 <p>Por otro lado en el fichero <a href="https://github.com/brunogarcia/brunogarcia.github.io/blob/master/scss/app.scss">app.scass</a> sólo compilo los estilos que necesito:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">@import &quot;foundation/components/grid&quot;;
+<div class="highlight"><pre><code class="language-text" data-lang="text">@import &quot;foundation/components/grid&quot;;
 @import &quot;foundation/components/tables&quot;;
 @import &quot;foundation/components/top-bar&quot;;
 @import &quot;foundation/components/visibility&quot;; 

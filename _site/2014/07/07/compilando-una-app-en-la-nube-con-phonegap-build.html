@@ -85,7 +85,7 @@ Por lo visto Phonegap está poniendo mucho empeño en facilitarnos la vida a los
 <p>Por suerte Phonegap ofrece este servicio (gratis para una sola app) junto con una <a href="http://docs.build.phonegap.com/en_US/">amplia documentación</a>. Personalmente me preocupaba bastante el tema de personalizar los iconos, splash screen y plugins. Pero creando un archivo <em>config.xml</em> dentro de tu proyecto todo funciona como la seda.</p>
 
 <p>Por ejemplo para decirle con que iconos debe trabajar la app:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;--Android icons--&gt;
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;--Android icons--&gt;
 &lt;icon gap:density=&quot;ldpi&quot; gap:platform=&quot;android&quot; src=&quot;res/screen/android/icon-ldpi.png&quot; /&gt;
 &lt;icon gap:density=&quot;mdpi&quot; gap:platform=&quot;android&quot; src=&quot;res/screen/android/icon-mdpi.png&quot; /&gt;
 &lt;icon gap:density=&quot;hdpi&quot; gap:platform=&quot;android&quot; src=&quot;res/screen/android/icon-hdpi.png&quot; /&gt;
@@ -98,7 +98,7 @@ Por lo visto Phonegap está poniendo mucho empeño en facilitarnos la vida a los
 &lt;icon gap:platform=&quot;ios&quot; height=&quot;152&quot; src=&quot;res/screen/ios/icon-76@2x.png&quot; width=&quot;152&quot; /&gt;
 </code></pre></div>
 <p>Y lo mismo para las splash screen:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;--Android splash--&gt;
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;--Android splash--&gt;
 &lt;gap:splash gap:density=&quot;ldpi&quot; gap:platform=&quot;android&quot; src=&quot;res/screen/android/screen-ldpi-portrait.png&quot; /&gt;
 &lt;gap:splash gap:density=&quot;mdpi&quot; gap:platform=&quot;android&quot; src=&quot;res/screen/android/screen-mdpi-portrait.png&quot; /&gt;
 &lt;gap:splash gap:density=&quot;hdpi&quot; gap:platform=&quot;android&quot; src=&quot;res/screen/android/screen-hdpi-portrait.png&quot; /&gt;
@@ -111,15 +111,15 @@ Por lo visto Phonegap está poniendo mucho empeño en facilitarnos la vida a los
 &lt;gap:splash gap:platform=&quot;ios&quot; height=&quot;768&quot; src=&quot;res/screen/ios/screen-ipad-landscape.png&quot; width=&quot;1024&quot; /&gt;    
 </code></pre></div>
 <p>Puedes incluso decidir en que tecnologías deseas realizar la compilación:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;gap:platform name=&quot;ios&quot; /&gt;
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;gap:platform name=&quot;ios&quot; /&gt;
 &lt;gap:platform name=&quot;android&quot; /&gt;
 </code></pre></div>
 <p><a href="https://build.phonegap.com/">Phonegap Build</a> tambien permite añadir plugins en la configuración. Por ejemplo si necesitamos el <a href="https://github.com/apache/cordova-plugin-geolocation">plugin de geolocalización</a> tenemos que añadir la siguiente línea:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;gap:plugin name=&quot;org.apache.cordova.geolocation&quot; version=&quot;0.3.7&quot; /&gt;    
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;gap:plugin name=&quot;org.apache.cordova.geolocation&quot; version=&quot;0.3.7&quot; /&gt;    
 </code></pre></div>
 <p>Os dejo un <em>gist</em> con toda la configuración necesaria:</p>
 
-<script src="https://gist.github.com/brunogarcia/e2d7844dd2af6ff1e459.js"></script>
+<p><script src="https://gist.github.com/brunogarcia/e2d7844dd2af6ff1e459.js"></script></p>
 
 	</div>
 </div>

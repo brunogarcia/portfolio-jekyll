@@ -78,7 +78,7 @@
 	<p>Este el típico problema en el cual utilizaba un setTimeout(). Estaba
 obligado a esperar que se ejecutara la linea superior para poder hacer
 uso del nodo DOM (en este caso “lightbox_content_user”).</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">$(“#wrap_all”).prepend(&lt;?php echo json_encode($lightbox) ?\&gt;));
+<div class="highlight"><pre><code class="language-text" data-lang="text">$(“#wrap_all”).prepend(&lt;?php echo json_encode($lightbox) ?\&gt;));
 
 setTimeout(function(){
     $(“.lightbox_content_user”).css(‘width’, container_width - 80);
@@ -89,7 +89,7 @@ setTimeout(function(){
 Básicamente hace lo mismo, pero de forma mas limpia. Y así evitamos la
 famosa <a href="http://www.reddit.com/r/javascript/comments/1atmht/how_we_killed_the_callback_pyramid_of_doom/">Callback Pyramid of
 Doom</a>.</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">var dfd = $.Deferred();
+<div class="highlight"><pre><code class="language-text" data-lang="text">var dfd = $.Deferred();
 
 dfd.done($(“#wrap_all”).prepend(&lt;?php echo json_encode($lightbox) ?\&gt;);
 
