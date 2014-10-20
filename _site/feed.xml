@@ -7,8 +7,12 @@
 		<atom:link href="http://blog.garciaechegaray.com//feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
-				<title>Phonegap Workshop</title>
+				<title>Introducción a Phonegap: webview, plugins y herramientas</title>
 				<description>&lt;p&gt;&lt;big&gt;Desde hace unos meses es costumbre en &lt;a href=&quot;http://www.pounstudio.com&quot;&gt;Poun Studio&lt;/a&gt; realizar talleres internos con la idea de transmitir conocimiento al resto del equipo. Este es mi segundo taller, y he hablado sobre &lt;a href=&quot;http://www.phonegap.com&quot;&gt;Phonegap&lt;/a&gt;.&lt;/big&gt;&lt;/p&gt;
+
+&lt;p&gt;Se ha hablado mucho de la calidad de rendimiento de una app mobile desarrollada con Phonegap. Hasta hace poco se podían escuchar frases del tipo &amp;quot;no se siente como una app nativa&amp;quot;, &amp;quot;jamás igualará en velocidad a una app nativa&amp;quot;, etc. Creo que en las primeras versiones esto era cierto, pero recordemos que ya estamos en la versión 3.6.3. Además los dispositivos móviles van mejorando día a día en rendimiento (sí, incluso los móviles chinos).&lt;/p&gt;
+
+&lt;p&gt;En todo caso, me gustaría comenzar este artículo con la siguiente viñeta, que la verdad dice mucho del estado actual del desarrollo móvil: no es un camino de rosas. Elegir entre una u otra tecnología puede depender de otros factores, como por ejemplo el económico. Si el presupuesto no te permite un equipo de desarrollo dual (uno para Android y otro para iOS) entonces Phonegap es la mejor opción. En un primer momento puedes prototipar un mínimo producto viable en poco tiempo y continuar el desarrollo hacia una app nativa en el futuro. Pienso que la tecnología debe servir a un propósito y no al revés.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://pbs.twimg.com/media/BvWeD2yCAAArJXb.jpg:large&quot; alt=&quot;The dilemna of mobile apps development&quot;&gt;&lt;/p&gt;
 
