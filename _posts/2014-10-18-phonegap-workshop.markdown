@@ -18,7 +18,7 @@ Otro punto importante a recordar es que Phonegap no tiene una UI para móviles, 
 
 ## Un poco de historia
 
-Cuando comencé a investigar y realizar mis primeras pruebas con [Phonegap](http://www.phonegap.com), no tenía muy clara la relación con [Apache Cordova](http://cordova.apache.org). La verdad la historia es muy poco enrevesada, sobre todo porque en la propia documentación oficial se utilizan los dos nombres sin ningún tipo de distinción. Esto es algo que ellos mismos han admitido y esperan ir solucionando en el futuro. 
+Cuando comencé a investigar y realizar mis primeras pruebas con [Phonegap](http://www.phonegap.com), no tenía muy clara la relación con [Apache Cordova](http://cordova.apache.org). La verdad, la historia es muy poco enrevesada, sobre todo porque en la propia documentación oficial se utilizan los dos nombres indistintamente. Esto es algo que ellos mismos han admitido y esperan ir solucionando en el futuro. 
 
 La empresa canadiense Nitobi Software fue la creadora original de Phonegap. En el 2009 ganó el [People's Choice Award](http://readwrite.com/2009/04/02/phone_gap_todays_peoples_choice_winner_at_launch_p) en la conferencia [Web 2.0 Expo](http://www.web2expo.com/webexsf2009). Desde entonces se hizo muy popular en la comunidad web y se comenzó a utilizar rápidamente. 
 
