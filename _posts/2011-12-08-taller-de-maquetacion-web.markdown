@@ -26,9 +26,4 @@ Estas charlas y talleres nacen gracias a [The
 Mêlée](http://themelee.org/), un grupo de profesionales que llevan un
 tiempo impulsando todo lo relacionado al mundo web en Donostia.
 
-Fotos del evento gracias a [@ojoven](http://twitter.com/#!/ojoven)
-
-<img src="http://a.yfrog.com/img814/147/6j0e.jpg" alt="@garciaechegaray nos pone a trabajar en el Taller de Maquetación Web" width="500" />
-
-<img src="http://a.yfrog.com/img614/7007/ls0pp.jpg" alt="Taller de Maquetación Web" width="500" />
-
+<iframe src="//www.slideshare.net/slideshow/embed_code/9293472" width="100%" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>

@@ -5,10 +5,10 @@ date: '2012-04-21T22:05:00+02:00'
 tumblr\_url: http://blog.garciaechegaray.com/post/21518567400/bootstrap-si-pero-no
 ---
 
-El pasado 21 de abril, [Goio](http://twitter.com/#!/maxkuri) de [La
+<big>El pasado 21 de abril, [Goio](http://twitter.com/#!/maxkuri) de [La
 Personnalite](http://lapersonnalite.com/) y yo, dimos una charla sobre
 [Bootstrap](http://twitter.github.com/bootstrap/), el nuevo framework
-front-end desarrollado y liberado por Twitter.
+front-end desarrollado y liberado por Twitter.</big>
 
 La organización del evento corrió a cargo de nuestros compis de [The
 Mêlée](http://themelee.org/post/21218720637/melee-bipolar-bootstrap-si-pero-no-y-dingadanga).
@@ -35,7 +35,7 @@ cientos de recursos muy bien organizados sobre desarrollo front-end.
 
 ### Resumen
 
-Desde que descubrí [Blueprint](http://www.blueprintcss.org/)hace varios
+Desde que descubrí [Blueprint](http://www.blueprintcss.org/) hace varios
 años, no he dejado de decirle a todo el mundo que trabajar con un
 Framework CSS es el mejor camino para enfrentarse a un proyecto web.
 Independientemente del tamaño del proyecto, es una buena idea no
@@ -52,8 +52,7 @@ tiempo (por ejemplo aprender a trabajar con
 que la siguiente vez lo harás con los ojos cerrados.
 
 [Bootstrap](http://twitter.github.com/bootstrap/) tiene varios
-componentes, uno de ellos es el
-[Scaffolding](http://twitter.github.com/bootstrap/scaffolding.html), que
+componentes, uno de ellos es el [Scaffolding](http://twitter.github.com/bootstrap/scaffolding.html), que
 viene a ser básicamente un reset + grid (implementado de fábrica con un
 layout fixed, fluid y responsive). El resto de componentes (tablas,
 formularios, buttons, icons, plugins jquery, etc.) te los puedes saltar
@@ -67,15 +66,9 @@ El diseñador gráfico necesitará saber que debe trabajar con un grid.
 Podrá elegir el número de columnas y el gutter, pero deberá adaptarse al
 mismo. También deberá asumir que ya no sirve de nada diseñar una única
 pantalla en el Photoshop/Fireworks, ahora el grid es responsive. Por lo
-tanto deberá tener en cuenta los [diferentes tamaños de los
-dispositivos](http://twitter.github.com/bootstrap/scaffolding.html#responsive):
+tanto deberá tener en cuenta los [diferentes tamaños de los dispositivos](http://twitter.github.com/bootstrap/scaffolding.html#responsive):
 +1200px, +980px, +768px, -767px, -480px.
 
-Nuevas cuestiones técnicas para los programadores: [el problema de las
-imágenes en las implementaciones
-responsive](https://docs.google.com/spreadsheet/ccc?key=0Al0lI17fOl9DdDgxTFVoRzFpV3VCdHk2NTBmdVI2OXc&pli=1#gid=0).
-Todo un mundo por descubrir.
+Nuevas cuestiones técnicas para los programadores: [el problema de las imágenes en las implementaciones responsive](https://docs.google.com/spreadsheet/ccc?key=0Al0lI17fOl9DdDgxTFVoRzFpV3VCdHk2NTBmdVI2OXc&pli=1#gid=0). Todo un mundo por descubrir.
 
-Un último punto, todo esto implica aumentar el tiempo de trabajo y
-alguien deberá asumir los costes. El cliente deberá saberlo, ya que
-tendrá que pagarlo.
+Un último punto, todo esto implica aumentar el tiempo de trabajo y alguien deberá asumir los costes. El cliente deberá saberlo, ya que tendrá que pagarlo.

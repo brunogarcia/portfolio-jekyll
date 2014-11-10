@@ -1,16 +1,16 @@
 --- 
 layout: post
-title: Perfiles profesionales del sector web especialización y evolución para adaptarse a los nuevos tiempos 
+title: Perfiles profesionales del sector web. Especialización y evolución para adaptarse a los nuevos tiempos
 date: '2012-09-04T15:37:00+02:00' 
 tumblr\_url: http://blog.garciaechegaray.com/post/30868109581/perfiles-profesionales-del-sector-web-especializacion
 ---
 
-A nadie debería pillar desprevenido que los distintos perfiles del
+<big>A nadie debería pillar desprevenido que los distintos perfiles del
 sector web evolucionen a través de los años.
 
 A pesar de que somos una industria muy joven, si pensamos que fue a
 mediados de los 90 cuando todo comenzó, entonces no tenemos más de 15
-años de existencia.
+años de existencia.</big>
 
 ### Los inicios fueron duros
 
