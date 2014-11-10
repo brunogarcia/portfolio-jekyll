@@ -133,13 +133,12 @@ La segunda opción establece el límite de zoom al cual el plugin puede ser visu
 &lt;h2&gt;Instalar Phonegap y crear una demo&lt;/h2&gt;
 
 &lt;p&gt;Antes de ponernos a trabajar con Phonegap, es necesario tener instalado &lt;a href=&quot;http://nodejs.org/download/&quot;&gt;Node&lt;/a&gt;. Si ya tienes instalado Node, es buena idea &lt;a href=&quot;http://davidwalsh.name/upgrade-nodejs&quot;&gt;actualizarlo&lt;/a&gt;.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;sudo npm cache clean -f
-sudo npm install -g n
-sudo n stable
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ sudo npm cache clean -f
+$ sudo npm install -g n
+$ sudo n stable
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Seguidamente basta con lanzar la siguiente línea en tu terminal:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ sudo npm install -g phonegap
-$ sudo npm install -g cordova
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Node Package Manager o &lt;em&gt;npm&lt;/em&gt;, tal como su nombre indica es el gestor de paquetes de Node. La opción &lt;em&gt;&amp;quot;-g&amp;quot;&lt;/em&gt; instalará Phonegap de forma global.&lt;/p&gt;
 

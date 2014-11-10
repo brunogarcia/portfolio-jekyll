@@ -76,14 +76,13 @@ Podéis encontrar más información al respecto en [Plugin Development Guide](ht
 
 Antes de ponernos a trabajar con Phonegap, es necesario tener instalado [Node](http://nodejs.org/download/). Si ya tienes instalado Node, es buena idea [actualizarlo](http://davidwalsh.name/upgrade-nodejs).
 
-	sudo npm cache clean -f
-	sudo npm install -g n
-	sudo n stable
+	$ sudo npm cache clean -f
+	$ sudo npm install -g n
+	$ sudo n stable
 
 Seguidamente basta con lanzar la siguiente línea en tu terminal:
 
 	$ sudo npm install -g phonegap
-	$ sudo npm install -g cordova
 
 Node Package Manager o _npm_, tal como su nombre indica es el gestor de paquetes de Node. La opción _"-g"_ instalará Phonegap de forma global.
 
