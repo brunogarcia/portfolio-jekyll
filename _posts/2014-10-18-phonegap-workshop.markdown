@@ -16,6 +16,8 @@ Otro punto importante a recordar es que Phonegap no tiene una UI para móviles, 
 
 <small>Viñeta original en [Commit Strip](http://www.commitstrip.com/en/2014/08/18/the-dilemna-of-mobile-apps-development/)</small>
 
+* * *
+
 ## Un poco de historia
 
 Cuando comencé a investigar y realizar mis primeras pruebas con [Phonegap](http://www.phonegap.com), no tenía muy clara la relación con [Apache Cordova](http://cordova.apache.org). La verdad, la historia es muy poco enrevesada, sobre todo porque en la propia documentación oficial se utilizan los dos nombres indistintamente. Esto es algo que ellos mismos han admitido y esperan ir solucionando en el futuro. 
@@ -31,6 +33,8 @@ Pero cuidado, el dinero no lo compra todo. En sus inicios Phonegap se creó como
 Resumen: [Apache Cordova](http://cordova.apache.org) es un proyecto de software libre que sirve de core a Phonegap. Esto convierte a Phonegap es una distribución con servicios adicionales dentro del ecosistema Adobe, algo que obviamente Cordova por defecto no tiene ni tendrá.
 
 Puedes encontrar más información al respecto en [PhoneGap, Cordova, and what’s in a name?](http://phonegap.com/2012/03/19/phonegap-cordova-and-what%E2%80%99s-in-a-name/). Y si sientes curiosidad, puedes ver el código fuente en [Github](https://github.com/phonegap).
+
+* * *
 
 ## ¿Cómo funciona?
 
@@ -66,25 +70,36 @@ Si le echamos un ojo al código fuente de un plugin, por ejemplo [Splash Screen]
 
 Podéis encontrar más información al respecto en [Plugin Development Guide](http://docs.phonegap.com/en/3.5.0/guide_hybrid_plugins_index.md.html#Plugin%20Development%20Guide).
 
+* * *
+
 ## Instalar Phonegap y crear una demo
 
-Antes de ponernos a trabajar con Phonegap, es necesario tener instalado [Node](http://nodejs.org/download/). Seguidamente basta con lanzar la siguiente línea en tu terminal:
+Antes de ponernos a trabajar con Phonegap, es necesario tener instalado [Node](http://nodejs.org/download/). Si ya tienes instalado Node, es buena idea [actualizarlo](http://davidwalsh.name/upgrade-nodejs).
+
+	sudo npm cache clean -f
+	sudo npm install -g n
+	sudo n stable
+
+Seguidamente basta con lanzar la siguiente línea en tu terminal:
 
 	$ sudo npm install -g phonegap
+	$ sudo npm install -g cordova
 
 Node Package Manager o _npm_, tal como su nombre indica es el gestor de paquetes de Node. La opción _"-g"_ instalará Phonegap de forma global.
 
 Finalizado este segundo paso, ya podremos crear nuestra primera app mobile con Phonegap.
 
-	$ phonegap create my_app_folder com.my_domain.app MyAppName
+	$ phonegap create [folder-name] [namespace] [project-name]
 
-Si accedemos a "_my app folder_" veremos una carpeta llamada "_www_". Es allí donde residirá nuestra aplicación web. Recuerda realizar las llamadas correspondientes a _cordova.js_ e _index.js_. En esta última se encuentran los _bind event listeners_. Por defecto viene "_bindiado_" [deviceready](http://docs.phonegap.com/en/3.5.0/cordova_events_events.md.html#deviceready).
+Si accedemos a [folder-name] veremos una carpeta llamada "_www_". Es allí donde residirá nuestra aplicación web. Recuerda realizar las llamadas correspondientes a _cordova.js_ e _index.js_. En esta última se encuentran los _bind event listeners_. Por defecto viene "_bindiado_" [deviceready](http://docs.phonegap.com/en/3.5.0/cordova_events_events.md.html#deviceready).
 
     document.addEventListener('deviceready', this.onDeviceReady, false);
 
 El objetivo de este evento es informarnos de la correcta carga de la API de Cordova en el dispositivo móvil. Esto es así porque necesitamos que Cordova este debidamente cargado para que nuestra aplicación web pueda realizar las llamadas necesarias. 
 
 Si has llegado hasta aquí, supongo que te estarás preguntando "bueno, ¿y cómo hago para visualizar esta demo en mi movil?". La respuesta es (aún) no puedes. Pero tienes dos caminos: utilizar una herramienta de compilación en la nube o instalar y configurar el entorno de [Android](http://developer.android.com/sdk/installing/index.html?pkg=adt). Vamos por la primera.
+
+* * *
 
 ## Herramientas
 
@@ -132,3 +147,53 @@ Y el último paso consiste en añadir un enlace al script de Weiner en tu aplica
 	<script src=”http://your_IP:8082/target/target-script-min.js#anonymous”></script>
 
 Si todo ha salido bien, podrás acceder a la consola de desarrollo para visualizar los posibles errores o incluso echarle un ojo al código fuente de tu aplicación web.
+
+
+* * *
+
+## Instalar y compilar una app mobile con Android y Phonegap
+
+Si por alguna razón deseas compilar tu app en local, es necesario realizar algunos pasos previos.
+Dichos pasos están muy bien explicados en este artículo de Stackoverflow: [Android with Linux development environment](http://stackoverflow.com/a/21142421/2790889).
+
+### Paso a paso
+
+**1.- Instalar Android SDK**
+
+Actualmente existen dos opciones, [ADT Bundle](http://developer.android.com/sdk/index.html) basado en Eclipse o [Android Studio](http://developer.android.com/sdk/installing/studio.html) basado en IntelliJ IDEA. 
+
+**Instalar Open JDK**
+
+	$ sudo apt-get install openjdk-7-jre
+
+**2.- Instalar Apache Ant**
+
+Si seleccionas Android Studio, podrás saltarte este paso, ya viene configurado con [Gradle](http://www.gradle.org/).
+
+	$ sudo apt-get install ant ant-contrib ant-optional ant-gcj
+
+**3.- Editar PATH**
+
+	$ cd ~/
+	gedit .bashrc
+	export HOME="/home/tu_nombre_de_usuario"
+	export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-i386"
+	export ANDROID_HOME="$HOME/App/adt-bundle/sdk/tools"
+	export ANDROID_PLATFORM_TOOLS="$HOME/App/adt-bundle/sdk/platform-tools"
+	export PATH="$ANDROID_HOME:$ANDROID_PLATFORM_TOOLS:$PATH"
+	export ANT_HOME="$HOME/App/ant"
+	export PATH="$PATH:$ANT_HOME/bin"
+
+**4.- Actualizar Android SDK**
+
+Antes de compilar tu app es necesario que actualizes el SDK. Esto puede tardar un buen rato, así que mucha paciencia.
+
+	$ android sdk
+
+**5.- Build & Run**
+
+Finalmente ya puedes compilar y lanzar un emulador de Android. Debes ir a tu proyecto y escribir estos comandos:
+
+	$ phonegap install android
+	$ phonegap local build android
+	$ phonegap run android
