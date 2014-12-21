@@ -38,7 +38,7 @@ aplicación necesita de varios **componentes**. Los mas importantes:
     principales: V8 (Google), Rhino (Mozilla), Chakra (Microsoft).
 
 Conociendo estas diferencias, pasemos el siguiente punto básico. Existe
-algo llamado **estándares web**. Esos estándares se han ido creado poco
+algo llamado **estándares web**. Esos estándares se han ido creados poco
 a poco, a base de conseguir un consenso entre las distintas partes
 involucradas.
 
