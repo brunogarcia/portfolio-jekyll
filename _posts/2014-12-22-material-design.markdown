@@ -4,7 +4,7 @@ title: ! 'Material Design, la novedosa guía de estilo de Google'
 date: '2014-12-22T17:04:00+01:00' 
 ---
 
- Últimamente estoy leyendo mucho sobre [Material Design](http://www.google.com/design/spec/material-design/introduction.html), el nuevo concepto de interfaz de usuario que Google esta implementado en todos sus servicios (si tenéis Android, la habréis visto en la última actualización de Gmail). En sus propias palabras _"Material design is a comprehensive guide for visual, motion, and interaction design across platforms and devices"_. 
+ Últimamente estoy leyendo mucho sobre [Material Design](http://www.google.com/design/spec/material-design/introduction.html), el nuevo concepto de interfaz de usuario que Google está implementado en todos sus servicios (si tenéis Android, la habréis visto en la última actualización de Gmail). En sus propias palabras _"Material design is a comprehensive guide for visual, motion, and interaction design across platforms and devices"_. 
 
 <iframe width="100%" height="400" src="//www.youtube.com/embed/Q8TXgCzxEnw" frameborder="0" allowfullscreen></iframe>
 
