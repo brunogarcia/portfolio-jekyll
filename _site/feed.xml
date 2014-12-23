@@ -7,6 +7,25 @@
 		<atom:link href="http://blog.garciaechegaray.com//feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Material Design, la novedosa guía de estilo de Google</title>
+				<description>&lt;p&gt;Últimamente estoy leyendo mucho sobre &lt;a href=&quot;http://www.google.com/design/spec/material-design/introduction.html&quot;&gt;Material Design&lt;/a&gt;, el nuevo concepto de interfaz de usuario que Google esta implementado en todos sus servicios (si tenéis Android, la habréis visto en la última actualización de Gmail). En sus propias palabras &lt;em&gt;&amp;quot;Material design is a comprehensive guide for visual, motion, and interaction design across platforms and devices&amp;quot;&lt;/em&gt;. &lt;/p&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;400&quot; src=&quot;//www.youtube.com/embed/Q8TXgCzxEnw&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;Lo mejor de todo es que la comunidad ha comenzado a crear múltiples recursos para implementar este nuevo concepto en cualquier tipo de proyecto: &lt;a href=&quot;https://ui8.net/product/material-ui-kit?rel=material&quot;&gt;UI kits&lt;/a&gt;, &lt;a href=&quot;https://ui8.net/product/material-ui-kit?rel=material&quot;&gt;frameworks&lt;/a&gt;, &lt;a href=&quot;https://github.com/google/material-design-icons/releases/tag/1.0.0&quot;&gt;pack de iconos&lt;/a&gt;, &lt;a href=&quot;https://dribbble.com/shots/1686164-Material-Design-Free-Sketch-Template-Icons?list=searches&amp;amp;offset=5&quot;&gt;herramientas&lt;/a&gt;, etc. Incluso existe un blog llamado &lt;a href=&quot;http://www.materialup.com&quot;&gt;Material Up&lt;/a&gt; que recopila proyectos que ya lo están implementando.&lt;/p&gt;
+
+&lt;p&gt;Destacar el &lt;a href=&quot;http://googlenews.gkvasnikov.com&quot;&gt;rediseño de Google News&lt;/a&gt; desarrollado por &lt;a href=&quot;https://twitter.com/@gkvasnikov&quot;&gt;@gkvasnikov&lt;/a&gt; basado en los conceptos de Material Design.&lt;/p&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;400&quot; src=&quot;//player.vimeo.com/video/107937123?title=0&amp;amp;byline=0&amp;amp;portrait=0&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+</description>
+				<pubDate>Mon, 22 Dec 2014 17:04:00 +0100</pubDate>
+				<link>http://blog.garciaechegaray.com//2014/12/22/material-design.html</link>
+				<guid isPermaLink="true">http://blog.garciaechegaray.com//2014/12/22/material-design.html</guid>
+			</item>
+		
+			<item>
 				<title>Upload a signed APK to Google Play with Phonegap Build</title>
 				<description>&lt;p&gt;&lt;big&gt;These are the required steps for upload a signed APK to Google Play with the help of Phonegap Build&lt;/big&gt;&lt;/p&gt;
 
@@ -880,33 +899,6 @@ del generador.&lt;/p&gt;
 				<pubDate>Sat, 15 Feb 2014 07:56:00 +0100</pubDate>
 				<link>http://blog.garciaechegaray.com//2014/02/15/el-workflow-perfecto-yeoman-bower-grunt.html</link>
 				<guid isPermaLink="true">http://blog.garciaechegaray.com//2014/02/15/el-workflow-perfecto-yeoman-bower-grunt.html</guid>
-			</item>
-		
-			<item>
-				<title>setTimeout() vs $.Deferred()</title>
-				<description>&lt;p&gt;Este el típico problema en el cual utilizaba un setTimeout(). Estaba
-obligado a esperar que se ejecutara la linea superior para poder hacer
-uso del nodo DOM (en este caso “lightbox_content_user”).&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$(“#wrap_all”).prepend(&amp;lt;?php echo json_encode($lightbox) ?\&amp;gt;));
-
-setTimeout(function(){
-    $(“.lightbox_content_user”).css(‘width’, container_width - 80);
-}, 500);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Ahora estoy comenzando a utilizar un objeto jQuery llamado
-&lt;a href=&quot;https://api.jquery.com/category/deferred-object/&quot;&gt;Deferred&lt;/a&gt;.
-Básicamente hace lo mismo, pero de forma mas limpia. Y así evitamos la
-famosa &lt;a href=&quot;http://www.reddit.com/r/javascript/comments/1atmht/how_we_killed_the_callback_pyramid_of_doom/&quot;&gt;Callback Pyramid of
-Doom&lt;/a&gt;.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;var dfd = $.Deferred();
-
-dfd.done($(“#wrap_all”).prepend(&amp;lt;?php echo json_encode($lightbox) ?\&amp;gt;);
-
-dfd.resolve($(“.lightbox_content_user”).css(‘width’, container_width - 80));
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-				<pubDate>Fri, 14 Feb 2014 20:02:00 +0100</pubDate>
-				<link>http://blog.garciaechegaray.com//2014/02/14/settimeout-vs-deferred.html</link>
-				<guid isPermaLink="true">http://blog.garciaechegaray.com//2014/02/14/settimeout-vs-deferred.html</guid>
 			</item>
 		
 	</channel>
