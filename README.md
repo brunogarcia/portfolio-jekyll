@@ -1,11 +1,11 @@
 # Blog
 
-Artículos sobre desarrollo front-end y proyectos personales en marcha
+Posts about front-end development
 
  [blog.garciaechegaray.com](http://blog.garciaechegaray.com)
 
 
-## Herramientas
+## Tools
 
 * [Jekyll](jekyllrb.com): A simple, blog-aware, static site generator perfect for personal, project, or organization sites.
 
@@ -20,28 +20,28 @@ Artículos sobre desarrollo front-end y proyectos personales en marcha
 * [Grunt](http://gruntjs.com/): The javaScript task runner.
 
 
-## Instalar proyecto
+## Install project
 
-#### Instalar Jekyll
+#### Install Jekyll
 
 `$ gem install jekyll`
 
-#### Clonar proyecto 
+#### Clone project 
 
 `$ git clone https://github.com/brunogarcia/brunogarcia.github.io.git`
 
-#### Instalar las dependencias del proyecto
+#### Install basic dependencies
 
 `$ bower install`
 
-#### Instalar las dependencias de desarrollo
+#### Install development dependencies
 
 `$ npm install`
 
-#### Arrancar el servidor Jekyll
-
-`$ jekyll server -w`
-
-#### Arrancar las tareas del proyecto
+#### Run project tasks
 
 `$ grunt watch`
+
+#### Run Jekyll server in watch mode
+
+`$ jekyll server -w`
