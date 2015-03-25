@@ -227,7 +227,7 @@ Paco Roca tiene un grafismo arrollador, cada viñeta esta desarrollada a la perf
 [![Seconds](https://d.gr-assets.com/books/1399502867m/18630542.jpg)](https://www.goodreads.com/book/show/18630542-seconds)
 </span>
 
-Este libro me lo dejó [Ketodico](http://www.ketodico.com), y aunque me cuesta leer libros recomendados (nunca sabes si te tus gustos son similares), con [Seconds](https://www.goodreads.com/book/show/18630542-seconds) de Bryan Lee O'Malley acerto de lleno.
+Este libro me lo dejó [Ketodico](http://www.ketodico.com), y aunque me cuesta leer libros recomendados (nunca sabes si te tus gustos son similares), con [Seconds](https://www.goodreads.com/book/show/18630542-seconds) de Bryan Lee O'Malley acertó de lleno.
 
 Había visto la película basada en una de sus obras [Scott Pilgrim vs the World](https://www.youtube.com/watch?v=O_RrNCqCIPE) y me gusto bastante la combinación de _manga americanizado_ + videojuegos + música 8-bits.
 
@@ -249,35 +249,67 @@ En esta sección dejo los cómics que no me terminaron de convencer o abandone a
 
 * [American Vampire](https://www.goodreads.com/book/show/7619398-american-vampire-vol-1). Lectura para público juvenil.
 
-* [Walking Dead](https://www.goodreads.com/book/show/13084331-the-walking-dead-issue-1). Quizás la serie de televisión es demasiado buena y me espera que el cómic fuera mejor o al menos algo similar pero con más información sobre los personajes. Pues no. Me ha defraudado bastante. Aunque sólo he leido unos 4 o 5 capítulos que me quedo con la serie de AMC.
+* [Walking Dead](https://www.goodreads.com/book/show/13084331-the-walking-dead-issue-1). Quizás la serie de televisión es demasiado buena y me espera que el cómic fuera mejor o al menos algo similar pero con más información sobre los personajes. Pues no. Me ha defraudado bastante. Aunque sólo he leido unos 4 o 5 capítulos me quedo con la serie de AMC.
 
 * [Xed Out](https://www.goodreads.com/book/show/7814774-x-ed-out). Otra marcianada de Charles Burns. Esta novela no tiene ni pies ni cabeza. Demasiada ida de olla para mi gusto.
 
 * [Skim](https://www.goodreads.com/book/show/2418888.Skim). Lectura para público juvenil.
 
-* [Alec](https://www.goodreads.com/book/show/309963.Alec). Pense que el ilustrador de [From Hell](https://www.goodreads.com/book/show/23529.From_Hell?from_search=true) tendría una vida interior interesante. Me equivoqué.
+* [Alec](https://www.goodreads.com/book/show/309963.Alec). Pensé que el ilustrador de [From Hell](https://www.goodreads.com/book/show/23529.From_Hell) tendría una vida interior interesante. Me equivoqué.
 
 ***
 
 ## Ciencia Ficción
 
+He sido un gran aficionado a la ciencia ficción desde muy pequeño. Aún recuerdo el primer libro que me inicio en este género: [Fundación](https://www.goodreads.com/book/show/29579.Foundation?ac=1), un clásico de Isaac Asimov. Todavía conservo ese viejo ejemplar de la editorial Oveja Negra. Lo compré en un mercadillo cuando tenía 10 o 11 años.
+
+El problema de haber leido tantas novelas de este género es que me cuesta encontrar un autor que me enganche. En los últimos años solo recuerdo haber disfrutado de la saga de [Espacio Revelación](https://www.goodreads.com/series/56392-revelation-space) de Alastair Reynolds, la [trilogia marciana](https://www.goodreads.com/series/40710-mars-trilogy) de Kim Stanley Robinson, y de algunos libros de [Egan Greg](https://www.goodreads.com/author/show/32699.Greg_Egan), [Robert Sawyer](https://www.goodreads.com/author/show/25883.Robert_J_Sawyer) y [Ted Chiang](https://www.goodreads.com/author/show/130698.Ted_Chiang).
+
+Esto se refleja en los dos únicos libros que he podido leer en el 2014.
+
+***
+
+### Ready Player One
+<span class="left" style="margin: 0 20px 10px 0">
 [![Ready Player One](https://d.gr-assets.com/books/1321480431m/12885533.jpg)](https://www.goodreads.com/book/show/12885533-ready-player-one)
+</span>
 
+[Ready Player One](https://www.goodreads.com/book/show/12885533-ready-player-one) tiene el combo perfecto para cautivar a cualquier aficionado al género': videojuegos + cultura pop de los 80'. Tiene un poco de [Snow Crash](https://www.goodreads.com/book/show/830.Snow_Crash) y un poco de novela negra. Un libro escrito por un geek para geeks.
+
+Es el año 2044 y lo que conocemos hoy como Internet ha mutado a algo llamado OASIS, una realidad virtual controlada por una mega corporación dirigida por psicopatas y asesinos.
+
+La historia es tan buena que Warner Bros ha comprado los derechos para rodar una película basada en el libro. Y si el director no se la carga puede convertirse en una película de culto.
+
+Este libro lo encontré gracias a la lista [Best Science Fiction of the 21st Century](https://www.goodreads.com/list/show/4893.Best_Science_Fiction_of_the_21st_Century) que en general me ha dado muchas alegrías.
+
+***
+
+### Amanecer (Xenogénesis, #1)
+<span class="right" style="margin: 0 0 10px 20px">
 [![Amanecer (Xenogénesis, #1)](https://d.gr-assets.com/books/1388290339m/60929.jpg)](https://www.goodreads.com/book/show/60929.Dawn)
+</span>
 
-[![Singularity Sky](https://d.gr-assets.com/books/1386924988m/81992.jpg)](https://www.goodreads.com/book/show/81992.Singularity_Sky)
+La historia planteada por [Amanecer (Xenogénesis, #1)](https://www.goodreads.com/book/show/60929.Dawn) es interesante: la humanidad se aniquila gracias a su profunda estupidez.
 
+Pero los oankali -una raza alienígena- se las arregla para salvar a unos pocos. Los clona, los cría, los educa y los alimienta. Pero a cambio quiere/necesita una compensación por todo el trabajo realizado. Los oankali quieren engendrar hijos mitad humanos mitad extraterrestres.
 
-[![The Engines of God](https://d.gr-assets.com/books/1334436065m/337048.jpg)](https://www.goodreads.com/book/show/337048.The_Engines_of_God)
+Pero no a través de inseminación artificial o alguna avanzada tecnología de procreación, a ellos les mola el rollo clásico, vamos tocarse y tener orgasmos en plan luna de miel con los humanos.
+
+El problema es que los oankali se parecen más al [bicho de Alien](http://41.media.tumblr.com/tumblr_mdjq8tpSDN1rh2k21o2_1280.jpg) que a Brad Pitt.
+
+***
+
+### Descartadas
+<span class="left" style="margin: 0 20px 10px 0">
+[![Singularity Sky](https://d.gr-assets.com/books/1386924988m/81992.jpg)](https://www.goodreads.com/book/show/81992.Singularity_Sky) [![The Engines of God](https://d.gr-assets.com/books/1334436065m/337048.jpg)](https://www.goodreads.com/book/show/337048.The_Engines_of_God)
+</span>
+
+Estos libros llevaban demasiado tiempo en [The Pila](http://atalaya.blogalia.com/historias/17130) y decidí que no tenía mucho sentido que siguieran ocupando un lugar en mi lista de libros por terminar de leer. Sinceramente no recuerdo por qué se quedaron en el limbo. Ahora que sólo leo ebooks, es más facíl deshacerse de ellos.
 
 ***
 
 ## Ensayos
-[![Historia natural del canibalismo](https://d.gr-assets.com/books/1355042277m/7026670.jpg)](https://www.goodreads.com/book/show/7026670-historia-natural-del-canibalismo)
-
-[![El muelle de Ouistreham](https://d.gr-assets.com/books/1398364225m/22009121.jpg)](https://www.goodreads.com/book/show/22009121-el-muelle-de-ouistreham)
-
-[![Civilization: The Six Ways the West Beat the Rest](https://d.gr-assets.com/books/1347777341m/10475421.jpg)](https://www.goodreads.com/book/show/10475421-civilization)
+[![Historia natural del canibalismo](https://d.gr-assets.com/books/1355042277m/7026670.jpg)](https://www.goodreads.com/book/show/7026670-historia-natural-del-canibalismo) [![El muelle de Ouistreham](https://d.gr-assets.com/books/1398364225m/22009121.jpg)](https://www.goodreads.com/book/show/22009121-el-muelle-de-ouistreham) [![Civilization: The Six Ways the West Beat the Rest](https://d.gr-assets.com/books/1347777341m/10475421.jpg)](https://www.goodreads.com/book/show/10475421-civilization)
 
 ***
 
