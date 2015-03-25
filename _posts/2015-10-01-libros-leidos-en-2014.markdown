@@ -14,7 +14,7 @@ Este año he sido muy estricto y cada libro que comenzaba a leer, descartaba o f
 ## Cómics
 
 Con diferencia en el 2014 he leído más cómics que novelas o ensayos.
-Y esto es bastante extraño ya que hasta hace un par de años no había tocado un cómic desde que era un crío. Lamentablemente pegue un salto de los tebeos a novelas de autores como Garcia Marquez y Vargas Llosa.
+Y esto es bastante extraño ya que hasta hace un par de años no había tocado un cómic desde que era un crío. Lamentablemente pegue un salto de los tebeos a novelas _serias_ como "Cien años de soledad" o "Conversación en la catedral".
 
 Todo comenzó (o volvió a comenzar) gracias a [Guilhem](https://twitter.com/biji_san). Me prestó [La Liga de los hombres extraordinarios](https://www.goodreads.com/book/show/297627.The_League_of_Extraordinary_Gentlemen_Vol_1) de Alan Moore y flipe en colores. Desconocía completamente este maravilloso género de la novela gráfica. Y desde entonces, siempre que visito una biblioteca voy directamente a la zona de cómics a ver que tienen. Por suerte tanto en Donostia, Pozuelo, Madrid o Zaragoza las bibliotecas públicas suelen estar muy bien surtidas de este genero.
 
@@ -22,7 +22,7 @@ Todo comenzó (o volvió a comenzar) gracias a [Guilhem](https://twitter.com/bij
 
 ### Jiro Taniguchi
 
-La primera vez que lei algo de Taniguchi fue en el verano del 2012 cuando todavía vivía en Donostia, y comencé con buen pie, ya que lei los dos tomos de [Barrio lejano](https://www.goodreads.com/book/show/1187423.Barrio_lejano_Tomo_1) en pocas semanas. Comencé el año leyendo una de sus mejores novelas [Los años dulces](https://www.goodreads.com/book/show/12527927-los-a-os-dulces-01). La verdad, ambas novelas tienen similitudes.
+La primera vez que leí algo de [Taniguchi](http://en.wikipedia.org/wiki/Jiro_Taniguchi) fue en el verano del 2012 cuando todavía vivía en Donostia, y comencé con buen pie, ya que leí los dos tomos de [Barrio lejano](https://www.goodreads.com/book/show/1187423.Barrio_lejano_Tomo_1) en pocas semanas. Comencé el 2014 leyendo una de sus mejores novelas: [Los años dulces](https://www.goodreads.com/book/show/12527927-los-a-os-dulces-01). La verdad, ambas novelas tienen similitudes.
 
 <span class="left" style="margin: 0 20px 10px 0">
 [![Los años dulces 1](https://d.gr-assets.com/books/1318859145m/12897963.jpg)](https://www.goodreads.com/book/show/12527927-los-a-os-dulces-01)
@@ -153,19 +153,29 @@ Con un poco de suerte y si Rafa le da el último empujón, podremos tener el vol
 
 ***
 
-### Market Day
+### Día de mercado
 
 <span class="right" style="margin: 0 0 10px 20px">
-[![Market Day](https://d.gr-assets.com/books/1312065496m/7633404.jpg)](https://www.goodreads.com/book/show/7633404-market-day)
+[![Día de mercado](https://d.gr-assets.com/books/1312065496m/7633404.jpg)](https://www.goodreads.com/book/show/11106982-dia-de-mercado)
 </span>
+
+Otro descubrimiento casual, de esos que tanto me gustan. Si nada me detiene me puedo pasar horas en la biblioteca leyendo un par de hojas para decidirme cual llevarme. No conocía nada de la obra de James Sturm.
+
+[Día de mercado](https://www.goodreads.com/book/show/11106982-dia-de-mercado) es una historia enmarcada a principios del siglo XX en un pequeño pueblo de Europa del Este. El personaje principal, un artesano judío, ya no puede vender las hermosas alfombras que fabrica en su taller. Ha llegado la industrialización que abarata los precios a cambio de disminuir la calidad.
+
+Gráfica y edición impecable. Otro libro que [Astiberri](http://www.astiberri.com/) nos regala a los adictos al género.
 
 ***
 
-### Jamilti and Other Stories
+### Jamilti y otras historias de Israel
 
 <span class="left" style="margin: 0 20px 10px 0">
-[![Jamilti and Other Stories](https://d.gr-assets.com/books/1327880504m/3128795.jpg)](https://www.goodreads.com/book/show/3128795-jamilti-and-other-stories)
+[![Jamilti y otras historias de Israel](https://d.gr-assets.com/books/1327880504m/3128795.jpg)](https://www.goodreads.com/book/show/3128795-jamilti-and-other-stories)
 </span>
+
+ Anteriormente ya había leído algo de [Rutu Modan](http://en.wikipedia.org/wiki/Rutu_Modan). En [Metralla](https://www.goodreads.com/book/show/12102957-metralla) la autora israelí nos habla de cómo es el día a día en Tel Aviv. Con sus terroristas suicidas y sus bares de moda.
+
+ [Jamilti y otras historias de Israel](https://www.goodreads.com/book/show/3128795-jamilti-and-other-stories) es un poco más de lo mismo - cosa que no está mal, si te interesa conocer la vida en un país rodeado de enemigos y odiado por la totalidad de la comunidad árabe. Esta vez no es una novela, si no un compendio de cuentos cortos, algunos más acertados que otros, pero con un nivel medio bastante bueno.
 
 ***
 
@@ -175,6 +185,12 @@ Con un poco de suerte y si Rafa le da el último empujón, podremos tener el vol
 [![No cambies nunca](https://d.gr-assets.com/books/1336576834m/13640753.jpg)](https://www.goodreads.com/book/show/13640753-no-cambies-nunca)
 </span>
 
+Hace unos años cuando leí [Tu me has matado](https://www.goodreads.com/book/show/9605450-t-me-has-matado) de [David Sanchez](http://amorlangosta.tumblr.com/) quede enganchado de su universo grotesco y situaciones surrealistas. Incluso tiene una [BSO](http://open.spotify.com/user/amorlangosta/playlist/4TRnfh0A2MV4kshUgoZ2aI) digna de cualquier película de Tarantino.
+
+Si aquel libro podía retorcer todos tus sentidos, en [No cambies nunca](https://www.goodreads.com/book/show/13640753-no-cambies-nunca) la historia es tan rocambolesca que cuesta seguirle el hilo. Realmente no sabía que esperar.
+
+Bueno si sabía: yo quería leer la segunda parte de "Tu me has matado", pero me encontre con _otro cosa_ que ni fu ni fa. Eso si, se repite el mismo grafismo super cuidado y una edición digna de [Astiberri](http://www.astiberri.com/).
+
 ***
 
 ### Éxito para perdedores
@@ -182,6 +198,10 @@ Con un poco de suerte y si Rafa le da el último empujón, podremos tener el vol
 <span class="left" style="margin: 0 20px 10px 0">
 [![Éxito para perdedores](https://d.gr-assets.com/books/1353237503m/16156024.jpg)](https://www.goodreads.com/book/show/16156024-xito-para-perdedores)
 </span>
+
+[Éxito para perdedores](https://www.goodreads.com/book/show/16156024-xito-para-perdedores) es gran libro y una gran historia. Relata las aventuras empresariales de David Cantolla, fundador de Teknoland, Zinkia, Bitoon y creador de Pocoyó. [Poun Studio](http://www.pounstudio.com/) (la empresa donde trabajo) es vecino de Zinkia, y me picaba la curiosidad por conocer más sobre la debacle esta famosa empresa de animación.
+
+Recomendable si quieres conocer la vida de un emprendedor en serie. Tiene un puntito de libro de auto ayuda, pero sin llegar a serlo del todo. Pero esto último no lo tengaís en cuenta, son manías mias. Lo dicho, vale la pena leerlo y disfrutarlo.
 
 ***
 
@@ -191,6 +211,14 @@ Con un poco de suerte y si Rafa le da el último empujón, podremos tener el vol
 [![El juego lúgubre](https://d.gr-assets.com/books/1302422972m/11059315.jpg)](https://www.goodreads.com/book/show/11059315-el-juego-l-gubre)
 </span>
 
+Finalizado el libro [El juego lúgubre](https://www.goodreads.com/book/show/11059315-el-juego-l-gubre) puedo decir que he leído todo lo que [Paco Roca](http://www.pacoroca.com/works/comics) ha publicado. Hala, una estrellita para Bruno (dejadme en paz, que estas tonterias son importantes mí).
+
+Con Paco Roca tengo la misma sensación que me inspiran autores como Taniguchi o Rabagliati. Quiero leerlo todo, cada libro sea bueno, regular o mediocre. Por suerte el nivel de Roca es siempre de bueno a excelente. Personalmente nunca me ha defraudado ninguno de sus trabajos. Incluso me gusto mucho [Memorias de un hombre en pijama ](https://www.goodreads.com/book/show/12668154-memorias-de-un-hombre-en-pijama) que es una recopilación de tiras cómicas publicas en el periódico Las Provincias.
+
+Paco Roca tiene un grafismo arrollador, cada viñeta esta desarrollada a la perfección. Cada color, cada frase, cada personaje encaja siempre perfectamente.
+
+[El juego lúgubre](https://www.goodreads.com/book/show/11059315-el-juego-l-gubre) fue su primera novela gráfica, y esto se nota en el resultado final. Pero qué cojones, sigue siendo Paco Roca en estado puro. Cuenta la historia de un ayudante, asistente personal o como queráis llamarlo del famoso pintor Dalí. Irse a vivir a Cadaqués (Girona) en 1936 para estar a las ordenes de un pirado sádico como Dalí, allí si que hay una historia que contar.
+
 ***
 
 ### Seconds
@@ -199,18 +227,35 @@ Con un poco de suerte y si Rafa le da el último empujón, podremos tener el vol
 [![Seconds](https://d.gr-assets.com/books/1399502867m/18630542.jpg)](https://www.goodreads.com/book/show/18630542-seconds)
 </span>
 
+Este libro me lo dejó [Ketodico](http://www.ketodico.com), y aunque me cuesta leer libros recomendados (nunca sabes si te tus gustos son similares), con [Seconds](https://www.goodreads.com/book/show/18630542-seconds) de Bryan Lee O'Malley acerto de lleno.
+
+Había visto la película basada en una de sus obras [Scott Pilgrim vs the World](https://www.youtube.com/watch?v=O_RrNCqCIPE) y me gusto bastante la combinación de _manga americanizado_ + videojuegos + música 8-bits.
+
+[Seconds](https://www.goodreads.com/book/show/18630542-seconds) gira alrededor de decisiones mal tomadas y viajes en el tiempo para solucionar esas mismas decisiones mal tomadas. Setas mágicas, personajes con conflictos internos muy chungos y situaciones rocambolescas. Una historia muy loca que no defrauda, cosa complicada con tantos giros de guión.
+
 ***
 
 ### Descartadas
-* [El Héroe](https://www.goodreads.com/book/show/12360578-el-h-roe)
-* [La guerra de las trincheras](https://www.goodreads.com/book/show/13558799-la-guerra-de-las-trincheras)
-* [Anthologie American Splendor Volume 2](https://www.goodreads.com/book/show/11356607-anthologie-american-splendor-volume-2)
-* [El Incal](https://www.goodreads.com/book/show/10295312-el-incal)
-* [American Vampire 1-?](https://www.goodreads.com/book/show/7619398-american-vampire-vol-1)
-* [Walking Dead 1-4](https://www.goodreads.com/book/show/13084331-the-walking-dead-issue-1)
-* [Xed Out](https://www.goodreads.com/book/show/7814774-x-ed-out)
-* [Skim](https://www.goodreads.com/book/show/2418888.Skim)
-* [Alec: The King Canute Crowd](https://www.goodreads.com/book/show/309963.Alec)
+
+En esta sección dejo los cómics que no me terminaron de convencer o abandone a mitad de camino.
+
+* [El Héroe](https://www.goodreads.com/book/show/12360578-el-h-roe). La ilustración es muy buena, pero la historia es repetitiva y termina aburriendo bastante.
+
+* [La guerra de las trincheras](https://www.goodreads.com/book/show/13558799-la-guerra-de-las-trincheras). Otro libro de Jacques Tardi sobre la 1º guerra mundial.
+
+* [Anthologie American Splendor Volume 2](https://www.goodreads.com/book/show/11356607-anthologie-american-splendor-volume-2). Había leido el volumen el 1º de esta antología, pero esta 2º parte deja mucho que desear. Las historias de Harvey Pekar son buenas, pero algunas de las ilustraciones son tan malas que no sabes si reir o llorar.
+
+* [El Incal](https://www.goodreads.com/book/show/10295312-el-incal). Otro clásico que se desinfla poco a poco. En general Jodorowsky me resulta muy cansino.
+
+* [American Vampire](https://www.goodreads.com/book/show/7619398-american-vampire-vol-1). Lectura para público juvenil.
+
+* [Walking Dead](https://www.goodreads.com/book/show/13084331-the-walking-dead-issue-1). Quizás la serie de televisión es demasiado buena y me espera que el cómic fuera mejor o al menos algo similar pero con más información sobre los personajes. Pues no. Me ha defraudado bastante. Aunque sólo he leido unos 4 o 5 capítulos que me quedo con la serie de AMC.
+
+* [Xed Out](https://www.goodreads.com/book/show/7814774-x-ed-out). Otra marcianada de Charles Burns. Esta novela no tiene ni pies ni cabeza. Demasiada ida de olla para mi gusto.
+
+* [Skim](https://www.goodreads.com/book/show/2418888.Skim). Lectura para público juvenil.
+
+* [Alec](https://www.goodreads.com/book/show/309963.Alec). Pense que el ilustrador de [From Hell](https://www.goodreads.com/book/show/23529.From_Hell?from_search=true) tendría una vida interior interesante. Me equivoqué.
 
 ***
 
