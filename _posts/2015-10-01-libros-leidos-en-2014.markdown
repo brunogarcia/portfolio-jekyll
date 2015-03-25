@@ -94,61 +94,114 @@ Así que mejor leerlo poco a poco, quizas intercalando con otras lecturas para d
 
 ### Private Eye
 
-<span class="right" style="margin: 0 20px 10px 0">
+<span class="right" style="margin: 0 0 10px 20px">
 [![Private Eye 2](https://d.gr-assets.com/books/1367960506m/17900838.jpg)](https://www.goodreads.com/book/show/17900838-the-private-eye-2)
 [![Private Eye 4](https://d.gr-assets.com/books/1381329487m/18656735.jpg)](https://www.goodreads.com/book/show/18656735-the-private-eye-4)
+[![Private Eye 8](https://d.gr-assets.com/books/1411566108m/23265922.jpg)](https://www.goodreads.com/book/show/23265922-the-private-eye-8)
 </span>
 
-[Private Eye 1-9](https://www.goodreads.com/book/show/17662660-the-private-eye-1)
+Descubrí [Private Eye](https://www.goodreads.com/book/show/17662660-the-private-eye-1) a través de un twit. Era un evento descatado ya que fue uno de las primeros comics de autores reconocidos y con mucha trayectoria que se colgaba directamente en internet sin intermediarios. Puedes pagar lo que quieras, ni siquiera existe un precio mínimo. Incluso puedes no pagar si no lo ves claro.
+
+ Brian K. Vaughan es autor de [Saga](https://www.goodreads.com/series/84668-saga), [Y: The Last Man](https://www.goodreads.com/series/86528-y-the-last-man), [Ex-machina](https://www.goodreads.com/series/52498-ex-machina). Marcos Martín ha trabajado para DC Comics y Marvel. Ambos han ganado un premio Eisner en sus respectivas categorias.  Vamos, con esas credenciales Private Eye no defrauda en ninguna sola página. Es dinamita pura en tu cerebro.
+
+La historia es una distopía maravillosa en donde la humanidad ha desterrado Internet por razones muy necesarias: proteger la privacidad de los ciudadanos. Pero claro, a pesar de esto, las personas siguen teniendo sus pequeños y miserables secretos encondidos debajo de la cama. El anonimato se translada del mundo online al mundo real con todas sus consecuencias. Solo los mayores de edad pueden (y deben) utilizar máscaras al salir a la calle. Y esto cambia las relaciones entre las personas por completo.
+
+Muy recomendable, no solo esta sino el resto de obras de Brian K. Vaughan.
 
 ***
 
 ### Paul en el campo
+
+<span class="left" style="margin: 0 20px 10px 0">
 [![Paul en el campo](https://d.gr-assets.com/books/1262477458m/7478602.jpg)](https://www.goodreads.com/book/show/7478602-paul-en-el-campo)
+</span>
+
+La obra de [Michel Rabagliati](http://www.michelrabagliati.com) es una delicia de principio a fin. Me gusta su estilo gráfico, me gustan sus historias, me gustan todos los personajes. Es complicado encontrar algo de su obra en las bibliotecas públicas. Algunas veces sólo pillas un libro bastante viejo. Pero si tienes suerte y te engancha este tipo de novela gráfica te convertirás en fan incondicional.
+
+Michel Rabagliati es un franco-canadiense con un álter ego llamado Paul. Toda la obra de este autor gira alrededor de la vida de Paul. Pasando por su infancia, adolecencia y también en la edad adulta cuando Paul esta casado y tiene hijos. Cada novela es una etapa de la vida de Paul y las circunstancias que le toca vivir.
+
+Muy recomendable si te gustan las historias sencillas e intimistas de un tipo común y corriente.
 
 ***
 
 ### La pipa de Marcos
+
+<span class="right" style="margin: 0 0 10px 20px">
 [![La pipa de Marcos](https://d.gr-assets.com/books/1187549151m/1735174.jpg)](https://www.goodreads.com/book/show/1735174.La_pipa_de_Marcos)
+</span>
+
+Descubrí esta novela gráfica del bilbaino [Javier de Isusi](http://es.wikipedia.org/wiki/Javier_de_Isusi) un día curioseando en la biblioteca. La historia engancha a la primera. Cuenta la historia de Vasco, un chaval que viaja a Chiapas en busca de un amigo. Relata muy bien situaciones rocambolescas y surrealistas en pleno levantamiento zapatista en el Mexico de los 90.
+
+El guión es sólido y los personajes creibles. No defrauda. Incluso hace su aparición el subcomandante Marcos y su famosa pipa. Forma parte de la serie "Juan sin tierra" que se compone de cuatro libros por si quieres continuar la historia.
+
+En general todo lo que publica [Astiberri](http://www.astiberri.com/) es digno de ser leído.
 
 ***
 
 ### Fantasias Extraordinarias
-[![Fantasias Extraordinarias](https://d.gr-assets.com/books/1394257588m/21402310.jpg)](https://www.goodreads.com/book/show/21402310-fantasias-extraordinarias)
+
+<span class="left" style="margin: 0 20px 10px 0">
+[![Fantasias Extraordinarias](http://ultrarradio.com/wp-content/uploads/2013/04/destacada_fantasias_200x200.png)](https://www.goodreads.com/book/show/21402310-fantasias-extraordinarias)
+</span>
+
+[Fantasias Extraordinarias](http://ultrarradio.com/catalogo/fantasias-extraordinarias/) es un libro editado por [La Criatura](http://www.lacriatura.es/) y [Ultrarradio](http://ultrarradio.com). Tuve la suerte de conocer a Rafa a principios de año y me habló de este libro de micro relatos ilustrado por varios pesos pesados.
+Aunque soy más de novela gráfica, Fantasias Extraordinarias me parecio un libro muy currado tanto en las historias como en el apartado gráfico.
+
+Además era la primera vez que conocia de primera mano a un autor de libros ilustrados y pude hacerle todo tipo de preguntas sobre la edición y el desarrollo de la misma.
+
+Con un poco de suerte y si Rafa le da el último empujón, podremos tener el volumén 2 este año.
 
 ***
 
 ### Market Day
+
+<span class="right" style="margin: 0 0 10px 20px">
 [![Market Day](https://d.gr-assets.com/books/1312065496m/7633404.jpg)](https://www.goodreads.com/book/show/7633404-market-day)
+</span>
 
 ***
 
 ### Jamilti and Other Stories
+
+<span class="left" style="margin: 0 20px 10px 0">
 [![Jamilti and Other Stories](https://d.gr-assets.com/books/1327880504m/3128795.jpg)](https://www.goodreads.com/book/show/3128795-jamilti-and-other-stories)
+</span>
 
 ***
 
 ### No cambies nunca
+
+<span class="right" style="margin: 0 0 10px 20px">
 [![No cambies nunca](https://d.gr-assets.com/books/1336576834m/13640753.jpg)](https://www.goodreads.com/book/show/13640753-no-cambies-nunca)
+</span>
 
 ***
 
 ### Éxito para perdedores
+
+<span class="left" style="margin: 0 20px 10px 0">
 [![Éxito para perdedores](https://d.gr-assets.com/books/1353237503m/16156024.jpg)](https://www.goodreads.com/book/show/16156024-xito-para-perdedores)
+</span>
 
 ***
 
 ### El juego lúgubre
+
+<span class="right" style="margin: 0 0 10px 20px">
 [![El juego lúgubre](https://d.gr-assets.com/books/1302422972m/11059315.jpg)](https://www.goodreads.com/book/show/11059315-el-juego-l-gubre)
+</span>
 
 ***
 
 ### Seconds
+
+<span class="left" style="margin: 0 20px 10px 0">
 [![Seconds](https://d.gr-assets.com/books/1399502867m/18630542.jpg)](https://www.goodreads.com/book/show/18630542-seconds)
+</span>
 
 ***
 
-### Bufff...
+### Descartadas
 * [El Héroe](https://www.goodreads.com/book/show/12360578-el-h-roe)
 * [La guerra de las trincheras](https://www.goodreads.com/book/show/13558799-la-guerra-de-las-trincheras)
 * [Anthologie American Splendor Volume 2](https://www.goodreads.com/book/show/11356607-anthologie-american-splendor-volume-2)
