@@ -1,13 +1,11 @@
 ---
 layout: post
-title: Libros leídos en el 2014
+title: Resumen de libros leídos en el 2014
 date: '2015-01-10T19:54:30+02:00'
 ---
 
 <big>La red social [Goodreads](https://www.goodreads.com/user_challenges/1779312) publica cada fin de año un listado personalizado de los libros que cada usuario ha leído en el transcurso del último año.
-Es una forma divertida de motivarte a leer, ya que te puedes auto imponer un reto a cumplir, por ejemplo en mi caso han sido 53 libros y cómics para todo el 2014.
-Además te permite hacer un seguimiento de los géneros y autores más destacados en tu estantería virtual.
-Este año he sido muy estricto y cada libro que comenzaba a leer, descartaba o finalizaba iba directamente a Goodreads. Este es mi resumen del 2014.</big>
+En el último año he sido muy estricto y cada libro que comenzaba a leer, descartaba o finalizaba iba directamente a Goodreads. Esto me ha permitido realizar un seguimiento de los géneros y autores más destacados en mi estantería virtual.</big>
 
 ***
 
@@ -314,11 +312,11 @@ Estos libros llevaban demasiado tiempo en [The Pila](http://atalaya.blogalia.com
 [![Historia natural del canibalismo](https://d.gr-assets.com/books/1355042277m/7026670.jpg)](https://www.goodreads.com/book/show/7026670-historia-natural-del-canibalismo)
 </span>
 
-Parecerá un libro un poco morboso para algunos, pero la verdad [Historia natural del canibalismo](https://www.goodreads.com/book/show/7026670-historia-natural-del-canibalismo) es un ensayo bastante riguroso y científico, muy en la línea de [Marvin Harris](https://www.goodreads.com/author/show/34140.Marvin_Harris?from_search=true). El autor -Manuel Moros Peña- es un médico pediatra, así que no esperéis situaciones grotescas o fuera de tono.
+Parecerá un libro un poco morboso para algunos, pero la verdad [Historia natural del canibalismo](https://www.goodreads.com/book/show/7026670-historia-natural-del-canibalismo) es un ensayo bastante riguroso y científico, muy en la línea de [Marvin Harris](https://www.goodreads.com/author/show/34140.Marvin_Harris). El autor -Manuel Moros Peña- es un médico pediatra, así que no esperéis situaciones grotescas o fuera de tono.
 
 Aunque en la actualidad la antropofagia se considera un gran tabú, la verdad es que la humanidad la ha practicado en toda su historia. Pasando por el _canibalismo gastronómico_ (la carne humana es una gran fuente de proteínas), el _canibalismo ritual_ (comer carne humana para contentar a los dioses), el _canibalismo sádico_ (practicado por asesinos en serie en pleno siglo XX) o incluso el _canibalismo de supervivencia_.
 
-Deseaba investigar sobre esta temática a raíz de último capítulo de la 4º temporada de Walking Dead. Los personajes llegan a Terminus pensando que sería un lugar seguro, pero se equivocan. Terminus esconde a una comunidad caníbal. Algo similar sucede en [The Road](https://www.goodreads.com/book/show/6288.The_Road?from_search=true). Es curioso que distintos autores lleguen a la misma conclusión: cuando la civilización desaparezca, solo quedará la ley del más fuerte.
+Deseaba investigar sobre esta temática a raíz de último capítulo de la 4º temporada de Walking Dead. Los personajes llegan a Terminus pensando que sería un lugar seguro, pero se equivocan. Terminus esconde a una comunidad caníbal. Algo similar sucede en [The Road](https://www.goodreads.com/book/show/6288.The_Road). Es curioso que distintos autores lleguen a la misma conclusión: cuando la civilización desaparezca, solo quedará la ley del más fuerte.
 
 ***
 
@@ -352,22 +350,32 @@ Si todo esto te parecen las tonterías que un arrogante inglés se ha inventado 
 [![Backbone.Marionette.js A Gentle Introduction](https://d.gr-assets.com/books/1379175597m/18365469.jpg)](https://www.goodreads.com/book/show/18365469-backbone-marionette-js-agentle-introduction)
 </span>
 
-[Backbone.Marionette.js A Gentle Introduction](https://www.goodreads.com/book/show/18365469-backbone-marionette-js-agentle-introduction)
+Descubrí [Backbone.Marionette.js A Gentle Introduction](https://www.goodreads.com/book/show/18365469-backbone-marionette-js-agentle-introduction) gracias a [Leanpub](http://www.leanpub.com), un servicio online donde los autores pueden ir publicado libros técnicos por fascísulos. Como lector puedes apoyar la escritura del libro pagando con anterioridad a la finalización del mismo. Además cada vez que el libro se actualiza o se añade un nuevo capítulo, tienes la posibilidad de bajar nuevamente el libro sin coste adicional.
+
+La metodología que aplica [David Sulc](http://davidsulc.com/blog/) consiste en desarrollar desde cero una guía de contactos con Marionette.js. Además tienes acceso al [repositorio público](https://github.com/davidsulc/marionette-gentle-introduction) con todo el código fuente disponible para bajarlo y arrancarlo en local. Es una muy buena forma de comenzar con este framework.
+
+Este libro forma parte de un compendio llamado [Marionette.js A to Z](https://leanpub.com/b/marionettejs-a-to-z) publicado en Leanpub.
 
 ***
 <span class="right image-margin-right">
 [![Clean Code: A Handbook of Agile Software Craftsmanship](https://d.gr-assets.com/books/1390692778m/3735293.jpg)](https://www.goodreads.com/book/show/3735293-clean-code)
 </span>
 
-[Clean Code: A Handbook of Agile Software Craftsmanship](https://www.goodreads.com/book/show/3735293-clean-code)
+Por fin me animé a leer, entender y poner en práctica los consejos que [Clean Code](https://www.goodreads.com/book/show/3735293-clean-code) describe en cada uno de sus capítulos.
+
+Creo que la mejor forma de abordar un libro tan denso es ir poco a poco. Leer un capítulo, entenderlo y seguidamente ponerlo en práctica en algún proyecto real.
 
 ***
 
 <span class="left image-margin-left">
-[![CakePHP Cookbook Documentation Release 2.x](https://d.gr-assets.com/books/1402211491m/17468813.jpg)](https://www.goodreads.com/book/show/17468813-cakephp-cookbook-documentation-release-2-x)
+[![CakePHP Cookbook Documentation Release 2.x](https://d.gr-assets.com/books/1402211491m/17468813.jpg)](https://www.goodreads.com/book/show/17468813-cakephp-cookbook-documentation-release-2-x) [![PHP: The Good Parts](https://d.gr-assets.com/books/1328834999m/7767069.jpg)](https://www.goodreads.com/book/show/7767069-php)
 </span>
 
-[CakePHP Cookbook Documentation Release 2.x](https://www.goodreads.com/book/show/17468813-cakephp-cookbook-documentation-release-2-x)
+A raíz de un nuevo proyecto que teníamos que desarrollar con PHP y CakePHP surgió la necesidad de ampliar mis conocimientos en dichas tecnologías. Aunque yo me encargaría del front-end de la aplicación, pensé que sería buena idea conocer de primera mano los componentes del back-end.
+
+[PHP: The Good Parts](https://www.goodreads.com/book/show/7767069-php) tiene un planteamiento similar a [Javascript: The Good Parts](https://www.goodreads.com/book/show/2998152-javascript), resumir en menos de 200 páginas el core de PHP.
+
+[CakePHP Cookbook](https://www.goodreads.com/book/show/17468813-cakephp-cookbook-documentation-release-2-x) es la documentación oficial en formato ebook. Quizás demasiado densa para una lectura de fin de semana, pero al menos cumple el objetivo de explicar detalladamente cada componente del framework.
 
 
 ***
@@ -376,21 +384,6 @@ Si todo esto te parecen las tonterías que un arrogante inglés se ha inventado 
 [![The Complete Book on Angularjs](https://d.gr-assets.com/books/1394430929m/20458862.jpg)](https://www.goodreads.com/book/show/20458862-the-complete-book-on-angularjs)
 </span>
 
-[The Complete Book on Angularjs](https://www.goodreads.com/book/show/20458862-the-complete-book-on-angularjs)
+Hace tiempo quería conocer las entrañas de Angular y [ng-book](https://www.goodreads.com/book/show/20458862-the-complete-book-on-angularjs) cumplió su objetivo. Es un resumen muy completo de cada componente del framework, explicado con detalle y con muchos ejemplos. Incluso su lectura se hace amena, cosa que se agradece.
 
-***
-
-<span class="left image-margin-left">
-[![PHP: The Good Parts](https://d.gr-assets.com/books/1328834999m/7767069.jpg)](https://www.goodreads.com/book/show/7767069-php)
-</span>
-
-[PHP: The Good Parts](https://www.goodreads.com/book/show/7767069-php)
-
-***
-
-<span class="right image-margin-right">
-[![Developing Backbone.js Applications](https://d.gr-assets.com/books/1344713113m/13592453.jpg)](https://www.goodreads.com/book/show/13592453-developing-backbone-js-applications)
-</span>
-
-[Developing Backbone.js Applications](https://www.goodreads.com/book/show/13592453-developing-backbone-js-applications)
-
+Muy recomendable si quieres dar tus primeros pasos con Angular.
