@@ -16,7 +16,7 @@ Este año he sido muy estricto y cada libro que comenzaba a leer, descartaba o f
 Con diferencia en el 2014 he leído más cómics que novelas o ensayos.
 Y esto es bastante extraño ya que hasta hace un par de años no había tocado un cómic desde que era un crío. Lamentablemente pegue un salto de los tebeos a novelas _serias_ como "Cien años de soledad" o "Conversación en la catedral".
 
-Todo comenzó (o volvió a comenzar) gracias a [Guilhem](https://twitter.com/biji_san). Me prestó [La Liga de los hombres extraordinarios](https://www.goodreads.com/book/show/297627.The_League_of_Extraordinary_Gentlemen_Vol_1) de Alan Moore y flipe en colores. Desconocía completamente este maravilloso género de la novela gráfica. Y desde entonces, siempre que visito una biblioteca voy directamente a la zona de cómics a ver que tienen. Por suerte tanto en Donostia, Pozuelo, Madrid o Zaragoza las bibliotecas públicas suelen estar muy bien surtidas de este genero.
+Todo comenzó (o volvió a comenzar) gracias a [Guilhem](https://twitter.com/biji_san). Me prestó [La Liga de los hombres extraordinarios](https://www.goodreads.com/book/show/297627.The_League_of_Extraordinary_Gentlemen_Vol_1) de Alan Moore y flipe en colores. Desconocía completamente este maravilloso género de la novela gráfica. Y desde entonces, siempre que visito una biblioteca voy directamente a la zona de cómics a ver que tienen. Por suerte tanto en Donostia, Pozuelo, Madrid o Zaragoza las bibliotecas públicas suelen estar muy bien surtidas de este género.
 
 ***
 
@@ -30,7 +30,7 @@ La primera vez que leí algo de [Taniguchi](http://en.wikipedia.org/wiki/Jiro_Ta
 </span>
 
 En "Barrio lejano" la historia gira alrededor de dos personajes, aunque ambos adolescentes, las situaciones y la atmósfera es similar.
-Taniguchi se caracteriza por darle a sus personajes un halo de, no diré tragedia, si no un cuestionarse la esencia de la vida y el porque de la misma.
+Taniguchi se caracteriza por darle a sus personajes un halo de, no diré tragedia, si no un cuestionarse la esencia de la vida y el porqué de la misma.
 Por eso me gusta tanto sus obras. Sus personajes son personas normales, con muchas contradicciones pero con ganas de conocer y darle forma a sus propios miedos y esperanzas.
 
 En "Barrio Lejano" es el peso del pasado, la lucha interna por (re)descubrír las raíces en esa infancia ya perdida en un pueblo japones, y en "Los años dulces" es el futuro que pueden o no afrontar el profesor y su ex-alumna. "Barrio Lejano" tiene un final feliz, pero "Los años dulces" te deja una sensación agridulce. Ninguno de los personajes se decide por la mejor opción: ser felices. Pero supongo que esa indecisión será un lugar común en la sociedad japonesa actual.
@@ -106,7 +106,7 @@ Descubrí [Private Eye](https://www.goodreads.com/book/show/17662660-the-private
 
 La historia es una distopía maravillosa en donde la humanidad ha desterrado Internet por razones muy necesarias: proteger la privacidad de los ciudadanos. Pero claro, a pesar de esto, las personas siguen teniendo sus pequeños y miserables secretos encondidos debajo de la cama. El anonimato se translada del mundo online al mundo real con todas sus consecuencias. Solo los mayores de edad pueden (y deben) utilizar máscaras al salir a la calle. Y esto cambia las relaciones entre las personas por completo.
 
-Muy recomendable, no solo esta sino el resto de obras de Brian K. Vaughan.
+Muy recomendable, no solo ésta serie compuesta de 10 capítulos sino también el resto de obras de Brian K. Vaughan.
 
 ***
 
@@ -116,7 +116,7 @@ Muy recomendable, no solo esta sino el resto de obras de Brian K. Vaughan.
 [![Paul en el campo](https://d.gr-assets.com/books/1262477458m/7478602.jpg)](https://www.goodreads.com/book/show/7478602-paul-en-el-campo)
 </span>
 
-La obra de [Michel Rabagliati](http://www.michelrabagliati.com) es una delicia de principio a fin. Me gusta su estilo gráfico, me gustan sus historias, me gustan todos los personajes. Es complicado encontrar algo de su obra en las bibliotecas públicas. Algunas veces sólo pillas un libro bastante viejo. Pero si tienes suerte y te engancha este tipo de novela gráfica te convertirás en fan incondicional.
+La obra de [Michel Rabagliati](http://www.michelrabagliati.com) es una delicia de principio a fin. Me gusta su estilo gráfico, me gustan sus historias, me gustan los personajes. Es complicado encontrar algo de su obra en las bibliotecas públicas. Algunas veces sólo pillas un libro bastante viejo. Pero si tienes suerte y te engancha este tipo de novela gráfica te convertirás en fan incondicional.
 
 Michel Rabagliati es un franco-canadiense con un álter ego llamado Paul. Toda la obra de este autor gira alrededor de la vida de Paul. Pasando por su infancia, adolescencia y también en la edad adulta cuando Paul esta casado y tiene hijos. Cada novela es una etapa de la vida de Paul y las circunstancias que le toca vivir.
 
@@ -147,7 +147,7 @@ En general todo lo que publica [Astiberri](http://www.astiberri.com/) es digno d
 [Fantasias Extraordinarias](http://ultrarradio.com/catalogo/fantasias-extraordinarias/) es un libro editado por [La Criatura](http://www.lacriatura.es/) y [Ultrarradio](http://ultrarradio.com). Tuve la suerte de conocer a Rafa a principios de año y me habló de este libro de micro relatos ilustrado por varios pesos pesados.
 Aunque soy más de novela gráfica, Fantasias Extraordinarias me parecio un libro muy currado tanto en las historias como en el apartado gráfico.
 
-Además era la primera vez que conocia de primera mano a un autor de libros ilustrados y pude hacerle todo tipo de preguntas sobre la edición y el desarrollo de la misma.
+Además era la primera vez que conocía de primera mano a un autor de libros ilustrados y pude hacerle todo tipo de preguntas sobre la edición y el desarrollo de la misma.
 
 Con un poco de suerte y si Rafa le da el último empujón, podremos tener el volumén 2 este año.
 
@@ -159,7 +159,7 @@ Con un poco de suerte y si Rafa le da el último empujón, podremos tener el vol
 [![Día de mercado](https://d.gr-assets.com/books/1312065496m/7633404.jpg)](https://www.goodreads.com/book/show/11106982-dia-de-mercado)
 </span>
 
-Otro descubrimiento casual, de esos que tanto me gustan. Si nada me detiene me puedo pasar horas en la biblioteca leyendo un par de hojas para decidirme cual llevarme. No conocía nada de la obra de James Sturm.
+Otro descubrimiento casual, de esos que tanto me gustan. No conocía nada de la obra de James Sturm.
 
 [Día de mercado](https://www.goodreads.com/book/show/11106982-dia-de-mercado) es una historia enmarcada a principios del siglo XX en un pequeño pueblo de Europa del Este. El personaje principal, un artesano judío, ya no puede vender las hermosas alfombras que fabrica en su taller. Ha llegado la industrialización que abarata los precios a cambio de disminuir la calidad.
 
@@ -227,7 +227,7 @@ Paco Roca tiene un grafismo arrollador, cada viñeta esta desarrollada a la perf
 [![Seconds](https://d.gr-assets.com/books/1399502867m/18630542.jpg)](https://www.goodreads.com/book/show/18630542-seconds)
 </span>
 
-Este libro me lo dejó [Ketodico](http://www.ketodico.com), y aunque me cuesta leer libros recomendados (nunca sabes si te tus gustos son similares), con [Seconds](https://www.goodreads.com/book/show/18630542-seconds) de Bryan Lee O'Malley acertó de lleno.
+Este libro me lo dejó [Ketodico](http://www.ketodico.com), y aunque me cuesta leer libros recomendados (nunca sabes si tus gustos son similares), con [Seconds](https://www.goodreads.com/book/show/18630542-seconds) de Bryan Lee O'Malley acertó de lleno.
 
 Había visto la película basada en una de sus obras [Scott Pilgrim vs the World](https://www.youtube.com/watch?v=O_RrNCqCIPE) y me gusto bastante la combinación de _manga americanizado_ + videojuegos + música 8-bits.
 
@@ -261,9 +261,9 @@ En esta sección dejo los cómics que no me terminaron de convencer o abandone a
 
 ## Ciencia Ficción
 
-He sido un gran aficionado a la ciencia ficción desde muy pequeño. Aún recuerdo el primer libro que me inicio en este género: [Fundación](https://www.goodreads.com/book/show/29579.Foundation?ac=1), un clásico de Isaac Asimov. Todavía conservo ese viejo ejemplar de la editorial Oveja Negra. Lo compré en un mercadillo cuando tenía 10 o 11 años.
+He sido un gran aficionado a la ciencia ficción desde muy pequeño. Aún recuerdo el primer libro que me inició en este género: [Fundación](https://www.goodreads.com/book/show/29579.Foundation?ac=1), uno de los clásicos de Isaac Asimov. Todavía conservo ese viejo ejemplar de la editorial Oveja Negra, con esa portada futurista de Trantor. Lo compré en un mercadillo cuando tenía 10 o 11 años.
 
-El problema de haber leido tantas novelas de este género es que me cuesta encontrar un autor que me enganche. En los últimos años solo recuerdo haber disfrutado de la saga de [Espacio Revelación](https://www.goodreads.com/series/56392-revelation-space) de Alastair Reynolds, la [trilogia marciana](https://www.goodreads.com/series/40710-mars-trilogy) de Kim Stanley Robinson, y de algunos libros de [Egan Greg](https://www.goodreads.com/author/show/32699.Greg_Egan), [Robert Sawyer](https://www.goodreads.com/author/show/25883.Robert_J_Sawyer) y [Ted Chiang](https://www.goodreads.com/author/show/130698.Ted_Chiang).
+El problema de haber leído tantas novelas de este género es que me cuesta encontrar un autor que me enganche. En los últimos años solo recuerdo haber disfrutado de la saga de [Espacio Revelación](https://www.goodreads.com/series/56392-revelation-space) de Alastair Reynolds, la [trilogia marciana](https://www.goodreads.com/series/40710-mars-trilogy) de Kim Stanley Robinson, y de algunos libros de [Egan Greg](https://www.goodreads.com/author/show/32699.Greg_Egan), [Robert Sawyer](https://www.goodreads.com/author/show/25883.Robert_J_Sawyer) y [Ted Chiang](https://www.goodreads.com/author/show/130698.Ted_Chiang).
 
 Esto se refleja en los dos únicos libros que he podido leer en el 2014.
 
@@ -291,7 +291,7 @@ Este libro lo encontré gracias a la lista [Best Science Fiction of the 21st Cen
 
 La historia planteada por [Amanecer (Xenogénesis, #1)](https://www.goodreads.com/book/show/60929.Dawn) es interesante: la humanidad se aniquila gracias a su profunda estupidez.
 
-Pero los oankali -una raza alienígena- se las arregla para salvar a unos pocos. Los clona, los cría, los educa y los alimienta. Pero a cambio quiere/necesita una compensación por todo el trabajo realizado. Los oankali quieren engendrar hijos mitad humanos mitad extraterrestres.
+Pero los oankali -una raza alienígena- se las arregla para salvar a unos pocos. Los clona, los cría, los educa y los alimienta. Pero a cambio quieren/necesitan una compensación por todo el trabajo realizado. Los oankali quieren engendrar hijos mitad humanos mitad extraterrestres.
 
 Pero no a través de inseminación artificial o alguna avanzada tecnología de procreación, a ellos les mola el rollo clásico, vamos tocarse y tener orgasmos en plan luna de miel con los humanos.
 
