@@ -24,7 +24,7 @@ Todo comenzó (o volvió a comenzar) gracias a [Guilhem](https://twitter.com/bij
 
 La primera vez que leí algo de [Taniguchi](http://en.wikipedia.org/wiki/Jiro_Taniguchi) fue en el verano del 2012 cuando todavía vivía en Donostia, y comencé con buen pie, ya que leí los dos tomos de [Barrio lejano](https://www.goodreads.com/book/show/1187423.Barrio_lejano_Tomo_1) en pocas semanas. Comencé el 2014 leyendo una de sus mejores novelas: [Los años dulces](https://www.goodreads.com/book/show/12527927-los-a-os-dulces-01). La verdad, ambas novelas tienen similitudes.
 
-<span class="left" style="margin: 0 20px 10px 0">
+<span class="left image-margin-left">
 [![Los años dulces 1](https://d.gr-assets.com/books/1318859145m/12897963.jpg)](https://www.goodreads.com/book/show/12527927-los-a-os-dulces-01)
 [![Los años dulces 2](https://d.gr-assets.com/books/1315237031m/12527927.jpg)](https://www.goodreads.com/book/show/12897963-los-a-os-dulces-02)
 </span>
@@ -41,7 +41,7 @@ Ambas novelas son super recomendables si aún no conoces nada de este genial aut
 
 ***
 
-<span class="right" style="margin: 0 0 10px 20px">
+<span class="right image-margin-right">
 [![Tierra de sueños](https://d.gr-assets.com/books/1277477008m/7704642.jpg)]
 (https://www.goodreads.com/book/show/7704642-tierra-de-sue-os)
 </span>
@@ -54,7 +54,7 @@ Recomendable si ya eres un incondicional de Taniguchi.
 
 ***
 
-<span class="left" style="margin: 0 20px 10px 0">
+<span class="left image-margin-left">
 [![El olmo del Cáucaso](https://d.gr-assets.com/books/1328036435m/4144132.jpg)]
 (https://www.goodreads.com/book/show/4144132-el-olmo-del-caucaso)
 </span>
@@ -65,7 +65,7 @@ Recomendable si ya eres un incondicional de Taniguchi.
 
 ***
 
-<span class="right" style="margin: 0 0 10px 20px">
+<span class="right image-margin-right">
 [![El Sabueso](https://d.gr-assets.com/books/1371792469m/18107142.jpg)](https://www.goodreads.com/book/show/18107142-chien-d-aveugle) [![Viajero en la tundra](https://d.gr-assets.com/books/1251834115m/6790271.jpg)](https://www.goodreads.com/book/show/6790271-el-viajero-de-la-tundra)
 </span>
 
@@ -79,7 +79,7 @@ Sólo recomendable si quieres leer toda la obra de Taniguchi.
 
 ### Bone
 
-<span class="left" style="margin: 0 20px 10px 0">
+<span class="left image-margin-left">
 [![Bone 3](https://d.gr-assets.com/books/1389763168m/106125.jpg)](https://www.goodreads.com/book/show/106125.Bone_Vol_3) [![Bone 5](https://d.gr-assets.com/books/1327944709m/92144.jpg)](https://www.goodreads.com/book/show/92144.Bone_Vol_5)
 </span>
 
@@ -94,7 +94,7 @@ Así que mejor leerlo poco a poco, quizas intercalando con otras lecturas para d
 
 ### Private Eye
 
-<span class="right" style="margin: 0 0 10px 20px">
+<span class="right image-margin-right">
 [![Private Eye 2](https://d.gr-assets.com/books/1367960506m/17900838.jpg)](https://www.goodreads.com/book/show/17900838-the-private-eye-2)
 [![Private Eye 4](https://d.gr-assets.com/books/1381329487m/18656735.jpg)](https://www.goodreads.com/book/show/18656735-the-private-eye-4)
 [![Private Eye 8](https://d.gr-assets.com/books/1411566108m/23265922.jpg)](https://www.goodreads.com/book/show/23265922-the-private-eye-8)
@@ -112,7 +112,7 @@ Muy recomendable, no solo ésta serie compuesta de 10 capítulos sino también e
 
 ### Paul en el campo
 
-<span class="left" style="margin: 0 20px 10px 0">
+<span class="left image-margin-left">
 [![Paul en el campo](https://d.gr-assets.com/books/1262477458m/7478602.jpg)](https://www.goodreads.com/book/show/7478602-paul-en-el-campo)
 </span>
 
@@ -126,7 +126,7 @@ Muy recomendable si te gustan las historias sencillas e intimistas de un tipo co
 
 ### La pipa de Marcos
 
-<span class="right" style="margin: 0 0 10px 20px">
+<span class="right image-margin-right">
 [![La pipa de Marcos](https://d.gr-assets.com/books/1187549151m/1735174.jpg)](https://www.goodreads.com/book/show/1735174.La_pipa_de_Marcos)
 </span>
 
@@ -140,7 +140,7 @@ En general todo lo que publica [Astiberri](http://www.astiberri.com/) es digno d
 
 ### Fantasias Extraordinarias
 
-<span class="left" style="margin: 0 20px 10px 0">
+<span class="left image-margin-left">
 [![Fantasias Extraordinarias](http://ultrarradio.com/wp-content/uploads/2013/04/destacada_fantasias_200x200.png)](https://www.goodreads.com/book/show/21402310-fantasias-extraordinarias)
 </span>
 
@@ -155,7 +155,7 @@ Con un poco de suerte y si Rafa le da el último empujón, podremos tener el vol
 
 ### Día de mercado
 
-<span class="right" style="margin: 0 0 10px 20px">
+<span class="right image-margin-right">
 [![Día de mercado](https://d.gr-assets.com/books/1312065496m/7633404.jpg)](https://www.goodreads.com/book/show/11106982-dia-de-mercado)
 </span>
 
@@ -169,7 +169,7 @@ Gráfica y edición impecable. Otro libro que [Astiberri](http://www.astiberri.c
 
 ### Jamilti y otras historias de Israel
 
-<span class="left" style="margin: 0 20px 10px 0">
+<span class="left image-margin-left">
 [![Jamilti y otras historias de Israel](https://d.gr-assets.com/books/1327880504m/3128795.jpg)](https://www.goodreads.com/book/show/3128795-jamilti-and-other-stories)
 </span>
 
@@ -181,7 +181,7 @@ Gráfica y edición impecable. Otro libro que [Astiberri](http://www.astiberri.c
 
 ### No cambies nunca
 
-<span class="right" style="margin: 0 0 10px 20px">
+<span class="right image-margin-right">
 [![No cambies nunca](https://d.gr-assets.com/books/1336576834m/13640753.jpg)](https://www.goodreads.com/book/show/13640753-no-cambies-nunca)
 </span>
 
@@ -195,7 +195,7 @@ Bueno si sabía: yo quería leer la segunda parte de "Tu me has matado", pero me
 
 ### Éxito para perdedores
 
-<span class="left" style="margin: 0 20px 10px 0">
+<span class="left image-margin-left">
 [![Éxito para perdedores](https://d.gr-assets.com/books/1353237503m/16156024.jpg)](https://www.goodreads.com/book/show/16156024-xito-para-perdedores)
 </span>
 
@@ -207,7 +207,7 @@ Recomendable si quieres conocer la vida de un emprendedor en serie. Tiene un pun
 
 ### El juego lúgubre
 
-<span class="right" style="margin: 0 0 10px 20px">
+<span class="right image-margin-right">
 [![El juego lúgubre](https://d.gr-assets.com/books/1302422972m/11059315.jpg)](https://www.goodreads.com/book/show/11059315-el-juego-l-gubre)
 </span>
 
@@ -223,7 +223,7 @@ Paco Roca tiene un grafismo arrollador, cada viñeta esta desarrollada a la perf
 
 ### Seconds
 
-<span class="left" style="margin: 0 20px 10px 0">
+<span class="left image-margin-left">
 [![Seconds](https://d.gr-assets.com/books/1399502867m/18630542.jpg)](https://www.goodreads.com/book/show/18630542-seconds)
 </span>
 
@@ -270,7 +270,7 @@ Esto se refleja en los dos únicos libros que he podido leer en el 2014.
 ***
 
 ### Ready Player One
-<span class="left" style="margin: 0 20px 10px 0">
+<span class="left image-margin-left">
 [![Ready Player One](https://d.gr-assets.com/books/1321480431m/12885533.jpg)](https://www.goodreads.com/book/show/12885533-ready-player-one)
 </span>
 
@@ -285,7 +285,7 @@ Este libro lo encontré gracias a la lista [Best Science Fiction of the 21st Cen
 ***
 
 ### Amanecer (Xenogénesis, #1)
-<span class="right" style="margin: 0 0 10px 20px">
+<span class="right image-margin-right">
 [![Amanecer (Xenogénesis, #1)](https://d.gr-assets.com/books/1388290339m/60929.jpg)](https://www.goodreads.com/book/show/60929.Dawn)
 </span>
 
@@ -300,7 +300,7 @@ El problema es que los oankali se parecen más al [bicho de Alien](http://41.med
 ***
 
 ### Descartadas
-<span class="left" style="margin: 0 20px 10px 0">
+<span class="left image-margin-left">
 [![Singularity Sky](https://d.gr-assets.com/books/1386924988m/81992.jpg)](https://www.goodreads.com/book/show/81992.Singularity_Sky) [![The Engines of God](https://d.gr-assets.com/books/1334436065m/337048.jpg)](https://www.goodreads.com/book/show/337048.The_Engines_of_God)
 </span>
 
@@ -309,20 +309,79 @@ Estos libros llevaban demasiado tiempo en [The Pila](http://atalaya.blogalia.com
 ***
 
 ## Ensayos
-[![Historia natural del canibalismo](https://d.gr-assets.com/books/1355042277m/7026670.jpg)](https://www.goodreads.com/book/show/7026670-historia-natural-del-canibalismo) [![El muelle de Ouistreham](https://d.gr-assets.com/books/1398364225m/22009121.jpg)](https://www.goodreads.com/book/show/22009121-el-muelle-de-ouistreham) [![Civilization: The Six Ways the West Beat the Rest](https://d.gr-assets.com/books/1347777341m/10475421.jpg)](https://www.goodreads.com/book/show/10475421-civilization)
+
+<span class="right image-margin-right">
+[![Historia natural del canibalismo](https://d.gr-assets.com/books/1355042277m/7026670.jpg)](https://www.goodreads.com/book/show/7026670-historia-natural-del-canibalismo)
+</span>
+
+[Historia natural del canibalismo](https://www.goodreads.com/book/show/7026670-historia-natural-del-canibalismo)
+
+
+***
+
+<span class="left image-margin-left">
+[![El muelle de Ouistreham](https://d.gr-assets.com/books/1398364225m/22009121.jpg)](https://www.goodreads.com/book/show/22009121-el-muelle-de-ouistreham)
+</span>
+
+[El muelle de Ouistreham](https://www.goodreads.com/book/show/22009121-el-muelle-de-ouistreham)
+
+
+***
+
+<span class="right image-margin-right">
+[![Civilization: The Six Ways the West Beat the Rest](https://d.gr-assets.com/books/1347777341m/10475421.jpg)](https://www.goodreads.com/book/show/10475421-civilization)
+</span>
+
+[Civilization: The Six Ways the West Beat the Rest](https://www.goodreads.com/book/show/10475421-civilization)
+
 
 ***
 
 ## Tecnología
 
-* [Backbone.Marionette.js A Gentle Introduction](https://www.goodreads.com/book/show/18365469-backbone-marionette-js-a-gentle-introduction)
+<span class="left image-margin-left">
+[![Backbone.Marionette.js A Gentle Introduction](https://d.gr-assets.com/books/1379175597m/18365469.jpg)](https://www.goodreads.com/book/show/18365469-backbone-marionette-js-agentle-introduction)
+</span>
 
-* [Clean Code: A Handbook of Agile Software Craftsmanship](https://www.goodreads.com/book/show/3735293-clean-code)
+[Backbone.Marionette.js A Gentle Introduction](https://www.goodreads.com/book/show/18365469-backbone-marionette-js-agentle-introduction)
 
-* [CakePHP Cookbook Documentation Release 2.x](https://www.goodreads.com/book/show/17468813-cakephp-cookbook-documentation-release-2-x)
+***
+<span class="right image-margin-right">
+[![Clean Code: A Handbook of Agile Software Craftsmanship](https://d.gr-assets.com/books/1390692778m/3735293.jpg)](https://www.goodreads.com/book/show/3735293-clean-code)
+</span>
 
-* [The Complete Book on Angularjs](https://www.goodreads.com/book/show/20458862-the-complete-book-on-angularjs)
+[Clean Code: A Handbook of Agile Software Craftsmanship](https://www.goodreads.com/book/show/3735293-clean-code)
 
-* [PHP: The Good Parts](https://www.goodreads.com/book/show/7767069-php)
+***
 
-* [Developing Backbone.js Applications](https://www.goodreads.com/book/show/13592453-developing-backbone-js-applications)
+<span class="left image-margin-left">
+[![CakePHP Cookbook Documentation Release 2.x](https://d.gr-assets.com/books/1402211491m/17468813.jpg)](https://www.goodreads.com/book/show/17468813-cakephp-cookbook-documentation-release-2-x)
+</span>
+
+[CakePHP Cookbook Documentation Release 2.x](https://www.goodreads.com/book/show/17468813-cakephp-cookbook-documentation-release-2-x)
+
+
+***
+
+<span class="right image-margin-right">
+[![The Complete Book on Angularjs](https://d.gr-assets.com/books/1394430929m/20458862.jpg)](https://www.goodreads.com/book/show/20458862-the-complete-book-on-angularjs)
+</span>
+
+[The Complete Book on Angularjs](https://www.goodreads.com/book/show/20458862-the-complete-book-on-angularjs)
+
+***
+
+<span class="left image-margin-left">
+[![PHP: The Good Parts](https://d.gr-assets.com/books/1328834999m/7767069.jpg)](https://www.goodreads.com/book/show/7767069-php)
+</span>
+
+[PHP: The Good Parts](https://www.goodreads.com/book/show/7767069-php)
+
+***
+
+<span class="right image-margin-right">
+[![Developing Backbone.js Applications](https://d.gr-assets.com/books/1344713113m/13592453.jpg)](https://www.goodreads.com/book/show/13592453-developing-backbone-js-applications)
+</span>
+
+[Developing Backbone.js Applications](https://www.goodreads.com/book/show/13592453-developing-backbone-js-applications)
+
