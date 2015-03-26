@@ -314,8 +314,11 @@ Estos libros llevaban demasiado tiempo en [The Pila](http://atalaya.blogalia.com
 [![Historia natural del canibalismo](https://d.gr-assets.com/books/1355042277m/7026670.jpg)](https://www.goodreads.com/book/show/7026670-historia-natural-del-canibalismo)
 </span>
 
-[Historia natural del canibalismo](https://www.goodreads.com/book/show/7026670-historia-natural-del-canibalismo)
+Parecerá un libro un poco morboso para algunos, pero la verdad [Historia natural del canibalismo](https://www.goodreads.com/book/show/7026670-historia-natural-del-canibalismo) es un ensayo bastante riguroso y científico, muy en la línea de [Marvin Harris](https://www.goodreads.com/author/show/34140.Marvin_Harris?from_search=true). El autor -Manuel Moros Peña- es un médico pediatra, así que no esperéis situaciones grotescas o fuera de tono.
 
+Aunque en la actualidad la antropofagia se considera un gran tabú, la verdad es que la humanidad la ha practicado en toda su historia. Pasando por el _canibalismo gastronómico_ (la carne humana es una gran fuente de proteínas), el _canibalismo ritual_ (comer carne humana para contentar a los dioses), el _canibalismo sádico_ (practicado por asesinos en serie en pleno siglo XX) o incluso el _canibalismo de supervivencia_.
+
+Deseaba investigar sobre esta temática a raíz de último capítulo de la 4º temporada de Walking Dead. Los personajes llegan a Terminus pensando que sería un lugar seguro, pero se equivocan. Terminus esconde a una comunidad caníbal. Algo similar sucede en [The Road](https://www.goodreads.com/book/show/6288.The_Road?from_search=true). Es curioso que distintos autores lleguen a la misma conclusión: cuando la civilización desaparezca, solo quedará la ley del más fuerte.
 
 ***
 
@@ -323,17 +326,23 @@ Estos libros llevaban demasiado tiempo en [The Pila](http://atalaya.blogalia.com
 [![El muelle de Ouistreham](https://d.gr-assets.com/books/1398364225m/22009121.jpg)](https://www.goodreads.com/book/show/22009121-el-muelle-de-ouistreham)
 </span>
 
-[El muelle de Ouistreham](https://www.goodreads.com/book/show/22009121-el-muelle-de-ouistreham)
+No es la primera vez que un periodista decide vivir en carne propia la problemática que desea investigar. Ya lo hizo Günter Wallraff en [Cabeza de Turco](https://www.goodreads.com/book/show/1824162.Cabeza_de_Turco) disfrazándose de inmigrante árabe y buscando trabajo en fábricas alemanas.
 
+La belga Florence Aubenas no tuvo que llegar tan lejos para buscar trabajo como empleada de limpieza en un edificio de oficinas o en un transbordador. [El muelle de Ouistreham](https://www.goodreads.com/book/show/22009121-el-muelle-de-ouistreham) nos relata la problemática que cualquier persona con pocas o nulas posibilidades de incorporarse al mercado laboral tiene que sufrir para conseguir un trabajo digno.
+
+Te hace reflexionar sobre el papel que tiene el resto de la sociedad para con estas personas que por diferentes razones -personales o sociales- no pueden mantener un nivel de vida que les permita realizarse como personas. ¿Por qué el Estado del Bienestar no ha funcionado para ellos?. ¿Dónde quedó la igualdad social?.
 
 ***
 
 <span class="right image-margin-right">
-[![Civilization: The Six Ways the West Beat the Rest](https://d.gr-assets.com/books/1347777341m/10475421.jpg)](https://www.goodreads.com/book/show/10475421-civilization)
+[![Civilización: Occidente y el resto](https://d.gr-assets.com/books/1347777341m/10475421.jpg)](https://www.goodreads.com/book/show/17230043-civilizaci-n)
 </span>
 
-[Civilization: The Six Ways the West Beat the Rest](https://www.goodreads.com/book/show/10475421-civilization)
+La colección de ensayos de la [Editorial Debate](http://www.megustaleer.com/editoriales/debate/DB) suele ser bastante buena. Siempre que puedo reviso el listado de sus última publicaciones para ver si ha salido algún libro que me interese. Además tienen la sana costumbre de publicar en formato EPUB, que además de ser más barato me ahorra espacio en casa.
 
+En [Civilización: Occidente y el resto](https://www.goodreads.com/book/show/17230043-civilizaci-n) el historiador Niall Ferguson nos describe las posibles razones que llevaron a la civilización Occidental ha gobernar el mundo durante los últimos cinco siglos. Según su planteamiento se deben a seis principios fundamentales: la competencia, la revolución científica, el imperio de la ley, la medicina moderna, la sociedad de consumo y la ética de trabajo.
+
+Si todo esto te parecen las tonterías que un arrogante inglés se ha inventado para justificar la supremacía de la civilización occidental quizás deberías saber que Ferguson intuye que actualmente esos principios ya no existen en Europa, si no en países asiáticos. Y que por lo tanto estamos viviendo una época de cambio: la decadencia de Occidente y el resurgir de Asia.
 
 ***
 
