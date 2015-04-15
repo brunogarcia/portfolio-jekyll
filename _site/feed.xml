@@ -658,11 +658,12 @@ Si aún no lo tenéis claro, aquí puedes ver un &lt;a href=&quot;https://www.yo
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Dos cosas importantes: debemos usar nuestra IP para que el dispositivo móvil pueda acceder. Obviamente el dispositivo móvil no podrá acceder si lo configuras como &lt;em&gt;localhost&lt;/em&gt;. Para evitar conflictos (con un servicio WAMP por ejemplo) utiliza un puerto alternativo, por ejemplo 8082.&lt;/p&gt;
 
-&lt;p&gt;Y el último paso consiste en añadir un enlace al script de Weiner en tu aplicación web:&lt;/p&gt;
+&lt;p&gt;El siguiente paso consiste en añadir un enlace del script de Weinre a tu aplicación web:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;script src=”http://your_IP:8082/target/target-script-min.js#anonymous”&amp;gt;&amp;lt;/script&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Si todo ha salido bien, podrás acceder a la consola de desarrollo para visualizar los posibles errores o incluso echarle un ojo al código fuente de tu aplicación web.&lt;/p&gt;
-
+&lt;p&gt;Si todo ha salido bien, podrás acceder al servidor de Weinre. Desde aquí tendrás acceso a la consola de desarrollo para visualizar los posibles errores o incluso echarle un ojo al código fuente de tu aplicación web.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;http://your_IP:8082/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;hr&gt;
 
 &lt;h2&gt;Instalar y compilar una app mobile con Android y Phonegap&lt;/h2&gt;

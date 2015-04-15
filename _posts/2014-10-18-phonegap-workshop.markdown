@@ -141,11 +141,13 @@ Para arrancar el servicio:
 
 Dos cosas importantes: debemos usar nuestra IP para que el dispositivo móvil pueda acceder. Obviamente el dispositivo móvil no podrá acceder si lo configuras como _localhost_. Para evitar conflictos (con un servicio WAMP por ejemplo) utiliza un puerto alternativo, por ejemplo 8082.
 
-Y el último paso consiste en añadir un enlace al script de Weiner en tu aplicación web:
+El siguiente paso consiste en añadir un enlace del script de Weinre a tu aplicación web:
 
 	<script src=”http://your_IP:8082/target/target-script-min.js#anonymous”></script>
 
-Si todo ha salido bien, podrás acceder a la consola de desarrollo para visualizar los posibles errores o incluso echarle un ojo al código fuente de tu aplicación web.
+Si todo ha salido bien, podrás acceder al servidor de Weinre. Desde aquí tendrás acceso a la consola de desarrollo para visualizar los posibles errores o incluso echarle un ojo al código fuente de tu aplicación web.
+
+	http://your_IP:8082/
 
 
 * * *
