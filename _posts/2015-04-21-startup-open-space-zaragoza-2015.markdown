@@ -38,7 +38,7 @@ Después del filtro de votaciones, finalmente quedaron solo [16 charlas agrupada
 
 ## Líderar un equipo
 
-Esta charla comenzó con un par de buenas preguntas: ¿cómo motivar a los integrantes de un equipo? y ¿cómo evitar la rotación?. No son preguntas que tengan una fácil respuesta. 
+Esta charla comenzó con un par de buenas preguntas: [¿cómo motivar a los integrantes de un equipo?](https://twitter.com/virginiog/status/576069134896738305) y ¿cómo evitar la rotación?. No son preguntas que tengan una fácil respuesta. 
 Incluso pienso que muchas soluciones no son aplicables a cualquier equipo. Me he apuntado algunas ideas sueltas agrupadas por tipo:
 
 **Líder**
