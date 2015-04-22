@@ -99,13 +99,23 @@ Esta charla me sorprendió bastante por que varias personas comentaron sus respe
 **Consejos**
 
 * Pensar en resolver un problema y no en desarrollar un producto.
+
 * Buscar un problema de nicho, captarlos a través de adwords y landing pages.
+
 * Funcionan muy bien la afiliación, la generación de leads para terceros, distribución de contenidos bajo suscripción de pago.
+
 * A nivel técnico: app móviles, plugins para herramientas CMS/eCommerce (Magento, Prestashop, Wordpress).
+
 * Utilizar servicios de terceros para la captación y el desarrollo tecnológico.
+
 * Buscar un proyecto que te tome poco (o nada) de tiempo de desarrollo, vamos un [MVP](http://en.wikipedia.org/wiki/Minimum_viable_product) de toda la vida. 
+
 * Si no da dinero en poco tiempo debes dejarlo morir y buscar otro.
+
 * Una vez que el proyecto funcione: internacionalizarlo. Esto quiere decir que has encontrado un buen nicho y debes explotarlo.
+
 * Si el proyecto nace dentro de la empresa, no descartes contratar freelances para darle el impulso necesario. ¡Un side project puede equilibrar tu balanza de pagos!.
+
 * Invierte tiempo en el arranque del proyecto: una semana de brainstorming.
+
 * Debes perder la verguenza y enseñar el proyecto a otros profesionales para lograr un feedback necesario en las primeras etapas. 
