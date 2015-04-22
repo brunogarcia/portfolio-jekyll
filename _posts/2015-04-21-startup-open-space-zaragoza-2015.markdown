@@ -79,16 +79,16 @@ Incluso pienso que muchas soluciones no son aplicables a cualquier equipo. Me he
 
 * Especial importancia tienen los procesos y herramientas que faciliten una comunicación constante entre **todos los miembros del equipo**. Y sobre todo que dichos procesos y herramientas se establezcan como _corporativas_, para evitar la dispersión de la información.
 
-* Es necesario invertir tiempo en decidir/configurar aquellas herramientas que facilitaran la comunicación. Me ha sorprendido que muchas empresas utilizan [Slack](https://slack.com/) como hub de comunicación, automatizando muchas tareas a través de integraciones con terceros servicios. En Poun Studio utilizamos varias herramientas para gestionar nuestro flujo de trabajo (Wrike, Toggle, Jira, HipChat, Bitbucket, Invision), pero no las tenemos integradas aún. Tenemos una tarea pendiente al respecto.
+* Es necesario invertir tiempo en seleccionar/configurar aquellas herramientas que facilitaran la comunicación. Me ha sorprendido que muchas empresas utilizan [Slack](https://slack.com/) como hub de comunicación, automatizando muchas tareas a través de integraciones con terceros servicios. En Poun Studio utilizamos varias herramientas para gestionar nuestro flujo de trabajo (Wrike, Toggle, Jira, HipChat, Bitbucket, Invision), pero no las tenemos integradas aún. Tenemos una tarea pendiente al respecto.
 
 * Formentar las activades en común: hacktones, cenas, etc.
 
 * **Principios básicos**
 
-	* Feedback continuo
-	* Herramientas en común
-	* Cada miembro el equipo debe ser **resolutivo**
-	* Establecer horario en común
+	* Feedback continuo.
+	* Herramientas en común.
+	* Cada miembro del equipo debe ser **resolutivo**.
+	* Establecer horario en común.
 
 ***
 
