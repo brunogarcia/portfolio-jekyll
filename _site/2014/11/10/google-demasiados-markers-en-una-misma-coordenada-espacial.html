@@ -71,13 +71,16 @@
   <!--Main-->
   <div class="main">
     <div class="row post-main">
-	<h1>Google Maps: demasiados markers en una misma coordenada espacial</h1>
-	<p class="meta">10 Nov 2014</p>
+	<div class="small-12 columns">
+		<h1>Google Maps: demasiados markers en una misma coordenada espacial</h1>
+		<p class="meta">10 Nov 2014</p>
 
-	<div class="post">
-	<p><big>¿Cómo abordar el siguiente problema de interfaz de usuario?: tienes un mapa con demasiados marcadores y además muchos de ellos se encuentran en la misma coordenada espacial</big></p>
+		<div class="post">
+		<hr>
 
-<p>Existe un artículo en <a href="https://developers.google.com/maps/">Google Map API</a> con varios plugins interesantes. El artículo se llama <a href="https://developers.google.com/maps/articles/toomanymarkers">Too Many Markers!</a> y me ha servido como punto de partida para encontrar una solución. </p>
+<p><big>¿Cómo abordar el siguiente problema de interfaz de usuario?: tienes un mapa con demasiados marcadores y además muchos de ellos se encuentran en la misma coordenada espacial. Existe un artículo en <a href="https://developers.google.com/maps/">Google Map API</a> con varios plugins interesantes. El artículo se llama <a href="https://developers.google.com/maps/articles/toomanymarkers">Too Many Markers!</a> y me ha servido como punto de partida para encontrar una solución. </big></p>
+
+<hr>
 
 <h2>Marker Clusterer</h2>
 
@@ -97,6 +100,8 @@ La primera opción especifica el tamaño de la cruadrícula que servirá para ag
 Puede ser un valor entre 40 y 80. 
 La segunda opción establece el límite de zoom al cual el plugin puede ser visualizado. Recomendable un valor por encima de 15. Recordemos que Google Maps acepta un <a href="https://developers.google.com/maps/documentation/javascript/maxzoom">máximo de 18 para el nivel de zoom</a>.</p>
 
+<hr>
+
 <h2>Overlapping Marker Spiderfier</h2>
 
 <p>Este plugin de nombre tan largo y extraño nos permite agrupar aquellos markers que se encuentran en el mismo punto geográfico, o sea en la misma longitud y latitud. </p>
@@ -111,6 +116,8 @@ La segunda opción establece el límite de zoom al cual el plugin puede ser visu
 
 <p></p>
 
+<hr>
+
 <h2>Resumen</h2>
 
 <p>Finalmente utilizando ambos plugins en un mapa podemos combinar dos comportamientos bastante complejos a nivel de interfaz de usuario.</p>
@@ -123,6 +130,7 @@ La segunda opción establece el límite de zoom al cual el plugin puede ser visu
 
 <p><img src="http://bruno.garciaechegaray.com/blog/startclub-example-02.png" alt="image"></p>
 
+		</div>
 	</div>
 </div>
 

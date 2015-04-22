@@ -6,14 +6,16 @@ tags:
 tumblr\_url: http://blog.garciaechegaray.com/post/76709316302/el-workflow-perfecto-yeoman-bower-grunt
 ---
 
+***
+
 <big>Últimamente estoy trasteando con los
 [generadores](http://yeoman.io/community-generators.html) de
-[Yeoman](http://yeoman.io "Yeoman").</big>
-
-[Yeoman](http://yeoman.io "Yeoman") es una herramienta para automatizar
+[Yeoman](http://yeoman.io "Yeoman"). Yeoman es una herramienta para automatizar
 tareas en proyectos front-end. Trabaja conjuntamente con
 [Bower](http://bower.io) y [Grunt](http://gruntjs.com), otro par de
-proyectos *open source* para (adivina...) automatizar tareas.
+proyectos *open source* para (adivina...) automatizar tareas. </big>
+
+***
 
 ### Bower
 
@@ -26,6 +28,8 @@ El funcionamiento de Bower es bastante simple: creas la configuración en
 un archivo *bower.json* y después basta con lanzar una línea en la
 terminal (*$ bower install*) para tener todas las dependencias en local. Da
 igual si son 5 o 50, Bower las bajara por ti en pis pas.
+
+***
 
 ### Grunt
 
@@ -47,6 +51,8 @@ leer este artículo: [Grunt for People Who Think Things Like Grunt are
 Weird and
 Hard](http://24ways.org/2013/grunt-is-not-weird-and-hard/ "Grunt for People Who Think Things Like Grunt are Weird and Hard")
 
+***
+
 ### Resumen
 
 Un generador Yeoman instala dependencias, crea carpetas, configura
@@ -65,6 +71,8 @@ Lo que más me gusta es que se aprende mucho leyendo el código de cada
 generador. La gente intenta volcar todo su conocimiento técnico y forma
 de trabajar en cada generador. Y eso es oro puro.
 
+***
+
 ### Manos a la obra
 
 Si os apetece trastear un poco, os dejo un par de ejemplos.
@@ -74,6 +82,8 @@ Si os apetece trastear un poco, os dejo un par de ejemplos.
 [Yeoman](http://yeoman.io/community-generators.html "Yeoman: community generators"),
 [Bower](http://bower.io) y [Grunt](http://gruntjs.com) en vuestras
 máquinas.
+
+***
 
 ### Crear un proyecto Bootstrap
 
@@ -181,6 +191,8 @@ proyecto listo para subir a PRO. ¿Fascinante eh? :)
 Con el siguiente comando podréis ver las tareas disponibles:
 
 > $ grunt —help
+
+***
 
 ### Crear un proyecto Foundation
 

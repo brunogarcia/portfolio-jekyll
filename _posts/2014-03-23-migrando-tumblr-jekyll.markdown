@@ -4,10 +4,11 @@ title: ! 'Migrando de Tumblr a Jekyll'
 date: '2014-03-23T17:55:00+01:00' 
 ---
 
-<big>La semana pasada he migrado mi blog de Tumblr a [Jekyll](http://jekyllrb.com/). </big>
+*** 
 
-El cambio ha sido motivado por varias razones. El más importante la pésima interfaz de usuario de Tumblr al momento de editar y escribir un nuevo post. Básicamente es un modal mal implementado y ejecutado. Una lástima por parte de Tumblr que fallen en algo tan básico y evidente.
-En todo caso, si a Tumblr no le exiges demasiado, tener un blog en su plataforma es una de las mejores opciones. Al menos yo le pongo por delante de Wordpress o Blogger.
+<big>La semana pasada he migrado mi blog de Tumblr a [Jekyll](http://jekyllrb.com/). El cambio ha sido motivado por varias razones. El más importante la pésima interfaz de usuario de Tumblr al momento de editar y escribir un nuevo post. Básicamente es un modal mal implementado y ejecutado. Una lástima por parte de Tumblr que fallen en algo tan básico y evidente. En todo caso, si a Tumblr no le exiges demasiado, tener un blog en su plataforma es una de las mejores opciones. Al menos yo le pongo por delante de Wordpress o Blogger. </big>
+
+***
 
 El flujo de trabajo que propone [Jekyll](http://jekyllrb.com/) es completamente diferente. Simplemente escribes un post en formato [markdown](http://daringfireball.net/projects/markdown/) en tu editor de texto favorito (para mi [Sublime Text](http://www.sublimetext.com/) es la mejor opción) y cuando has finalizado, lanzas un *$ git push* y ya lo tienes online. Esto último gracias a [GitHub Pages](http://pages.github.com/) que viene de fábrica completamente integrado con Jekyll.
 

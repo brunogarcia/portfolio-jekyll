@@ -5,14 +5,16 @@ date: '2013-07-07T18:30:00+02:00'
 tumblr\_url: http://blog.garciaechegaray.com/post/54837485049/pet-project-la-mejor-forma-de-aprender
 ---
 
-<big>Desde hace algunos meses estoy desarrollando [Tutti
-Frescuni](http://www.tuttifrescuni.com/).</big>
+***
 
-Es una aplicación que constantemente echaba en falta, y ya que no
+<big>Desde hace algunos meses estoy desarrollando [Tutti
+Frescuni](http://www.tuttifrescuni.com/). Es una aplicación que constantemente echaba en falta, y ya que no
 existía en el mercado me propuse crearla desde cero. Incluso diría que
 fué una de las razones por las cuales estudié un FP de Informática.
 Quería hacer cosas pero no sabía cómo, me faltaban las bases técnicas
-para afrontar el reto.
+para afrontar el reto. </big>
+
+***
 
 Cuando leí [Getting Real](http://gettingreal.37signals.com/), allá por
 el 2010, recuerdo que me abrió los ojos con respecto a muchos aspectos

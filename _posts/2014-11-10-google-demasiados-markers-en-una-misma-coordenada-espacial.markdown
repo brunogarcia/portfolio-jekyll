@@ -4,9 +4,11 @@ title: ! 'Google Maps: demasiados markers en una misma coordenada espacial'
 date: '2014-11-10T21:00:00+01:00' 
 ---
 
-<big>¿Cómo abordar el siguiente problema de interfaz de usuario?: tienes un mapa con demasiados marcadores y además muchos de ellos se encuentran en la misma coordenada espacial</big>
+***
 
-Existe un artículo en [Google Map API](https://developers.google.com/maps/) con varios plugins interesantes. El artículo se llama [Too Many Markers!](https://developers.google.com/maps/articles/toomanymarkers) y me ha servido como punto de partida para encontrar una solución. 
+<big>¿Cómo abordar el siguiente problema de interfaz de usuario?: tienes un mapa con demasiados marcadores y además muchos de ellos se encuentran en la misma coordenada espacial. Existe un artículo en [Google Map API](https://developers.google.com/maps/) con varios plugins interesantes. El artículo se llama [Too Many Markers!](https://developers.google.com/maps/articles/toomanymarkers) y me ha servido como punto de partida para encontrar una solución. </big>
+
+***
 
 ## Marker Clusterer
 
@@ -26,6 +28,8 @@ La primera opción especifica el tamaño de la cruadrícula que servirá para ag
 Puede ser un valor entre 40 y 80. 
 La segunda opción establece el límite de zoom al cual el plugin puede ser visualizado. Recomendable un valor por encima de 15. Recordemos que Google Maps acepta un [máximo de 18 para el nivel de zoom](https://developers.google.com/maps/documentation/javascript/maxzoom).
 
+***
+
 ## Overlapping Marker Spiderfier 
 
 Este plugin de nombre tan largo y extraño nos permite agrupar aquellos markers que se encuentran en el mismo punto geográfico, o sea en la misma longitud y latitud. 
@@ -39,6 +43,8 @@ Este es un ejemplo de la implementación sacado de la documemtación del plugin.
 <iframe width="100%" height="450" src="http://jawj.github.io/OverlappingMarkerSpiderfier/demo.html"  allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 <p></p>
+
+***
 
 ## Resumen
 

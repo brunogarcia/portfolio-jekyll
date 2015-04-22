@@ -5,12 +5,14 @@ date: '2012-02-08T19:17:00+01:00'
 tumblr\_url: http://blog.garciaechegaray.com/post/17271018752/el-mundo-editorial-landing-pages
 ---
 
-Me sorprende la diferencia de calidad y contenido de las respectivas
-[landing pages](https://www.google.com/search?q=tips+landing+pages) en
-las editoriales españolas.
+***
 
-Si tu único y principal producto de venta son los libros, ¿por qué no
-presentarlo al cliente potencial de manera adecuada?.
+<big>Me sorprende la diferencia de calidad y contenido de las respectivas
+[landing pages](https://www.google.com/search?q=tips+landing+pages) en
+las editoriales españolas. Si tu único y principal producto de venta son los libros, ¿por qué no
+presentarlo al cliente potencial de manera adecuada?. </big>
+
+***
 
 ### Mercado anglosajón
 
@@ -35,6 +37,8 @@ pages](https://www.google.com/search?q=tips+landing+pages)* y
 encontrarás cientos de tutoriales y artículos al respecto.
 
 ¿Obvio verdad?, pues parece que no.
+
+***
 
 ### Mercado español
 
@@ -99,6 +103,8 @@ se copian unas a otras. O tienen contratado al mismo proveedor.
 
 [![Tú me has
 matado](http://bruno.garciaechegaray.com/landing-pages-libros/spain-03.png)](http://astiberri.com/ficha_prod.php?cod=tumehasmatado "Tú me has matado")
+
+***
 
 ### No todo el panorama en negro
 

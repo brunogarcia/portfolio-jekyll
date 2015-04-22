@@ -4,9 +4,13 @@ title: ! 'Compilando una App en la nube con Phonegap Build'
 date: '2014-07-07T18:55:00+01:00' 
 ---
 
-<big>Phonegap Build es un servicio freemium que te permite compilar una APK/IPA directamente en la nube</big>
+***
 
-Estos días he estado probando [Phonegap Build](https://build.phonegap.com/) para un cliente y me ha gustado bastante lo sencillo que es compilar una app mobile sin necesidad de bajar y configurar los entornos de desarrollo necesarios para cada tecnología. 
+<big>[Phonegap Build](https://build.phonegap.com/) es un servicio freemium que te permite compilar una APK/IPA directamente en la nube. 
+Estos días lo he estado probando para un cliente y me ha gustado bastante lo sencillo que es compilar una app mobile sin necesidad de bajar y configurar los entornos de desarrollo necesarios para cada tecnología. </big>
+
+***
+
 Por lo visto Phonegap está poniendo mucho empeño en facilitarnos la vida a los desarrolladores. Esta misma semana ha sacado una herramienta que nos permite [levantar un servidor en local y visualizar los cambios automáticamente](http://app.phonegap.com/) en cualquier dispositivo.
 
 Montar todo el entorno de Android para que funcione correctamente con Phonegap no es trivial. Al menos en Ubuntu es un proceso que toma un buen rato. Ya no solo consiste en instalar la [SDK de Android](http://developer.android.com/sdk/index.html) si no también la última [JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html?ssSourceSiteId=otnjp) junto con [ANT](http://ant.apache.org/) y configurar los [PATH](http://stackoverflow.com/questions/20323787/cordova-platform-add-android-not-working-while-listing-android-targets/21142421#21142421) correspondientes. En el caso de Apple es todavía más complejo, si no tienes una maquina corriendo _Mac OS X_ es imposible.

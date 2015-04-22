@@ -4,7 +4,11 @@ title: ! 'Introducción a Phonegap: webview, plugins y herramientas'
 date: '2014-10-18T21:00:00+01:00' 
 ---
 
+***
+
 <big>Desde hace unos meses es costumbre en [Poun Studio](http://www.pounstudio.com) realizar talleres internos con la idea de transmitir conocimiento al resto del equipo. Este es mi segundo taller, y he hablado sobre [Phonegap](http://www.phonegap.com).</big>
+
+***
 
 Se ha hablado mucho de la calidad de rendimiento de una app mobile desarrollada con Phonegap. Hasta hace poco se podían escuchar frases del tipo "no se siente como una app nativa", "jamás igualará en velocidad a una app nativa", etc. Creo que en las primeras versiones esto era cierto, pero recordemos que ya estamos en la versión 3.6.3. Además los dispositivos móviles van mejorando día a día en rendimiento (sí, incluso los móviles chinos).
 

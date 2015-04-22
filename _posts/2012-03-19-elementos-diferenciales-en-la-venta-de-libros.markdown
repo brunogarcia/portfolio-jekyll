@@ -5,12 +5,15 @@ date: '2012-03-19T22:01:00+01:00'
 tumblr\_url: http://blog.garciaechegaray.com/post/19587684063/elementos-diferenciales-en-la-venta-de-libros
 ---
 
-Hace unas semanas escribí un post sobre [el mundo editorial y las
-landing
-pages](http://blog.garciaechegaray.com/2012/02/08/el-mundo-editorial-landing-pages.html),
+***
+
+<big>Hace unas semanas escribí un post sobre [el mundo editorial y las
+landing pages](http://blog.garciaechegaray.com/2012/02/08/el-mundo-editorial-landing-pages.html),
 donde realicé una comparativa (un tanto mordaz debo admitir) entre el
 mercado anglosajón y español, y de cómo afrontaban cada una de ellas la
-venta online de sus respectivos productos.
+venta online de sus respectivos productos. </big>
+
+***
 
 La conclusión final fue que muchas editoriales españolas, a pesar de
 invertir dinero y tiempo, no se toman en serio su canal de venta online.

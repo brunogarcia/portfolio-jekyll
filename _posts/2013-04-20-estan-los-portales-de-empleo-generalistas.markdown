@@ -5,15 +5,17 @@ date: '2013-04-20T22:55:00+02:00'
 tumblr\_url: http://blog.garciaechegaray.com/post/48466395230/estan-los-portales-de-empleo-generalistas
 ---
 
-<big>Haré un repaso de mi experiencia personal buscando trabajo en estas
-últimas semanas. </big>
+***
 
-Me he encontrado con algunas sorpresas y me gustaría
+<big>Haré un repaso de mi experiencia personal buscando trabajo en estas
+últimas semanas. Me he encontrado con algunas sorpresas y me gustaría
 compartirlas, por ejemplo: todas las entrevistas se han realizado por
 teléfono, Skype, Hangout. Al menos en un primer contacto ya no
-hace falta una entrevista presencial. Pero comencemos por el principio.
+hace falta una entrevista presencial. </big>
 
-Desde hace muchos años que no realizaba una búsqueda intensa por los
+***
+
+Pero comencemos por el principio. Desde hace muchos años que no realizaba una búsqueda intensa por los
 portales de empleo. En la última ocasión el único referente era
 Infojobs. Todas las ofertas estaban allí, no existían competidores (al
 menos yo no los recuerdo). Tanto es así que mis dos últimos trabajos los

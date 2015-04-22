@@ -4,6 +4,8 @@ title: Resumen de libros leídos en el 2014
 date: '2015-01-10T19:54:30+02:00'
 ---
 
+***
+
 <big>La red social [Goodreads](https://www.goodreads.com/user_challenges/1779312) publica cada fin de año un listado personalizado de los libros que cada usuario ha leído en el transcurso del último año.
 En el último año he sido muy estricto y cada libro que comenzaba a leer, descartaba o finalizaba iba directamente a Goodreads. Esto me ha permitido realizar un seguimiento de los géneros y autores más destacados en mi estantería virtual.</big>
 
