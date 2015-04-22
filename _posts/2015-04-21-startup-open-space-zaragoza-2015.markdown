@@ -69,15 +69,15 @@ Incluso pienso que muchas soluciones no son aplicables a cualquier equipo. Me he
 
 * 100% de transparencia. Me viene a la mente la forma que tiene [Buffer](https://buffer.com/transparency) de afrontar este reto. Por suerte en Poun Studio tenemos bastante claro este punto, además fue algo solicitado desde dentro del equipo. No llegamos al nivel de transparencia de Buffer, pero vamos en buen camino.
 
-* Reuniones frecuentes. One-to-one: ¿cómo te sientes?, ¿cómo te vemos?. Importante el feedback constante con donde cada miembro del equipo.
+* Reuniones frecuentes. One-to-one: ¿cómo te sientes?, ¿cómo te vemos?. Importante el feedback constante con cada miembro del equipo.
 
 ***
 
 ## Trabajo en remoto
 
-* Es necesario diferenciar aquellas **empresas mixtas** (donde sólo algunos miembros trabajan de forma remota) de aquellas en las cuales **todos los integrantes** trabajan de forma remota. Básicamente porque los primeros requieren un trabajo extra de coordinación y comunicación.
+* Es necesario diferenciar aquellas **empresas mixtas** (donde sólo algunos miembros trabajan de forma remota) de aquellas en las cuales **todos los integrantes** trabajan de forma remota. Básicamente porque las mixtas requieren un trabajo extra de coordinación y comunicación.
 
-* Especial importancia tienen los procesos y herramientas que faciliten una comunicación constante entre **todos los miembros de equipo**. Y sobre todo que dichos procesos y herramientas se establezcan como _corporativas_, para evitar la dispersión de la información.
+* Especial importancia tienen los procesos y herramientas que faciliten una comunicación constante entre **todos los miembros del equipo**. Y sobre todo que dichos procesos y herramientas se establezcan como _corporativas_, para evitar la dispersión de la información.
 
 * Es necesario invertir tiempo en decidir/configurar aquellas herramientas que facilitaran la comunicación. Me ha sorprendido que muchas empresas utilizan [Slack](https://slack.com/) como hub de comunicación, automatizando muchas tareas a través de integraciones con terceros servicios. En Poun Studio utilizamos varias herramientas para gestionar nuestro flujo de trabajo (Wrike, Toggle, Jira, HipChat, Bitbucket, Invision), pero no las tenemos integradas aún. Tenemos una tarea pendiente al respecto.
 
