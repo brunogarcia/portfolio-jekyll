@@ -22,11 +22,11 @@ Este es el tablón con las propuestas que salieron aquel día. Cada pegatina es 
 
 <div class="row">
 	<div class="medium-6 columns">
-		<img alt="Propuestas Open Space 2015" src="http://bruno.garciaechegaray.com/blog/sosz15-01.jpg">
+		<img alt="Propuestas Open Space Zaragoza 2015" src="http://bruno.garciaechegaray.com/blog/sosz15-01.jpg">
 	</div>
 
 	<div class="medium-6 columns">
-		<img alt="Propuestas Open Space 2015" src="http://bruno.garciaechegaray.com/blog/sosz15-02.jpg">
+		<img alt="Propuestas Open Space Zaragoza 2015" src="http://bruno.garciaechegaray.com/blog/sosz15-02.jpg">
 	</div>
 </div>
 
@@ -119,3 +119,6 @@ Esta charla me sorprendió bastante por que varias personas comentaron sus respe
 * Invierte tiempo en el arranque del proyecto: una semana de brainstorming.
 
 * Debes perder la verguenza y enseñar el proyecto a otros profesionales para lograr un feedback necesario en las primeras etapas. 
+
+<img alt="Open Space Zaragoza 2015" src="http://bruno.garciaechegaray.com/blog/sosz15-03.jpg">
+<small>Foto original: [Cachirulo Valley](https://www.flickr.com/photos/cachirulovalley/17072054259/in/set-72157651743082439)</small>

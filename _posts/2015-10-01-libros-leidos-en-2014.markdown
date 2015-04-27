@@ -6,14 +6,13 @@ date: '2015-01-10T19:54:30+02:00'
 
 ***
 
-<big>La red social [Goodreads](https://www.goodreads.com/user_challenges/1779312) publica cada fin de año un listado personalizado de los libros que cada usuario ha leído en el transcurso del último año.
-En el último año he sido muy estricto y cada libro que comenzaba a leer, descartaba o finalizaba iba directamente a Goodreads. Esto me ha permitido realizar un seguimiento de los géneros y autores más destacados en mi estantería virtual.</big>
+<big>La red social [Goodreads](https://www.goodreads.com/user_challenges/1779312) publica cada fin de año un listado personalizado de los libros que cada usuario ha leído en el transcurso del último año. He sido muy estricto y cada libro que comenzaba a leer, descartaba o finalizaba iba directamente a Goodreads. Esto me ha permitido realizar un seguimiento de los géneros y autores más destacados en mi estantería virtual.</big>
 
 ***
 
 ## Cómics
 
-Con diferencia en el 2014 he leído más cómics que novelas o ensayos.
+En el 2014 he leído más cómics que novelas o ensayos.
 Y esto es bastante extraño ya que hasta hace un par de años no había tocado un cómic desde que era un crío. Lamentablemente pegue un salto de los tebeos a novelas _serias_ como "Cien años de soledad" o "Conversación en la catedral".
 
 Todo comenzó (o volvió a comenzar) gracias a [Guilhem](https://twitter.com/biji_san). Me prestó [La Liga de los hombres extraordinarios](https://www.goodreads.com/book/show/297627.The_League_of_Extraordinary_Gentlemen_Vol_1) de Alan Moore y flipe en colores. Desconocía completamente este maravilloso género de la novela gráfica. Y desde entonces, siempre que visito una biblioteca voy directamente a la zona de cómics a ver que tienen. Por suerte tanto en Donostia, Pozuelo, Madrid o Zaragoza las bibliotecas públicas suelen estar muy bien surtidas de este género.
