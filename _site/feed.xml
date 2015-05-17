@@ -24,9 +24,9 @@ A este box le hemos añadido &lt;a href=&quot;http://www.symfony.com&quot;&gt;Sy
 
 &lt;h2&gt;Instalar el entorno&lt;/h2&gt;
 
-&lt;p&gt;Para arrancar un box en local con Vagrant es necesario tener instalado &lt;a href=&quot;https://www.vagrantup.com/downloads.html&quot;&gt;Vagrant&lt;/a&gt; y &lt;a href=&quot;https://www.virtualbox.org/wiki/Downloads&quot;&gt;Virtualbox&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Para utilizar Vagrant en local es necesario tener instalado &lt;a href=&quot;https://www.vagrantup.com/downloads.html&quot;&gt;Vagrant&lt;/a&gt; y &lt;a href=&quot;https://www.virtualbox.org/wiki/Downloads&quot;&gt;Virtualbox&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2&gt;Comando basicos de Vagrant&lt;/h2&gt;
+&lt;h2&gt;Comando básicos de Vagrant&lt;/h2&gt;
 
 &lt;p&gt;Arrancar vagrant&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ vagrant up
@@ -34,12 +34,12 @@ A este box le hemos añadido &lt;a href=&quot;http://www.symfony.com&quot;&gt;Sy
 &lt;p&gt;Suspender vagrant&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ vagrant halt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Acceder por ssh&lt;/p&gt;
+&lt;p&gt;Acceder por ssh al box&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ vagrant ssh
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;Arrancar un box privado&lt;/h2&gt;
 
-&lt;p&gt;&lt;em&gt;Si quieres utilizar un box privado alojado en Atlas&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Si necesitas utilizar un box privado alojado en Atlas&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Primero debes de darte de alta en &lt;a href=&quot;https://atlas.hashicorp.com/&quot;&gt;Atlas&lt;/a&gt;. Seguidamente debes pedir permisos de View, Write o Admin al creador del box. Además el dueño del box debe publicarlo para que sea visible.&lt;/p&gt;
 
@@ -59,12 +59,12 @@ A este box le hemos añadido &lt;a href=&quot;http://www.symfony.com&quot;&gt;Sy
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;Crear un nuevo box&lt;/h2&gt;
 
-&lt;p&gt;&lt;em&gt;Solo si quieres crear un box para un nuevo proyecto&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Si necesitas crear un box para un nuevo proyecto&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Utilizar un box con una configuracion previa, por ejemplo &lt;a href=&quot;https://box.scotch.io/&quot;&gt;Scotch.io Box&lt;/a&gt; ya tiene instalado un entorno LAMP&lt;/p&gt;
+&lt;p&gt;Es buena idea utilizar un box con una configuracion previa, por ejemplo &lt;a href=&quot;https://box.scotch.io/&quot;&gt;Scotch.io Box&lt;/a&gt; ya tiene instalado un entorno LAMP&lt;/p&gt;
 
 &lt;p&gt;Clonar el box&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ git clone https://github.com/scotch-io/scotch-box.git box-base-para-nuevo-proyecto
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ git clone https://github.com/scotch-io/scotch-box.git nombre_de_tu_proyecto
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Arrancar vagrant&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ vagrant up
@@ -88,18 +88,18 @@ $ sudo rm -f /EMPTY
 
 $ cat /dev/null &amp;gt; ~/.bash_history &amp;amp;&amp;amp; history -c &amp;amp;&amp;amp; exit
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Antes de seguir con los siguientes pasos debes salir del entorno virtual y suspender Vagrant&lt;/p&gt;
+&lt;p&gt;Para seguir con los siguientes pasos antes debes salir del entorno virtual y suspender Vagrant&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ exit
-$ vagrant suspend
+$ vagrant halt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Ahora ya puedes empaquetar el nuevo box&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ vagrant package --output nuevo_proyecto.box
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ vagrant package --output mi_nuevo_proyecto.box
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Este nuevo box ya lo podemos compartir a través de &lt;a href=&quot;https://atlas.hashicorp.com/&quot;&gt;Atlas&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2&gt;Compartir un box privado&lt;/h2&gt;
 
-&lt;p&gt;&lt;em&gt;Solo si quieres compartir un box nuevo&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Si necesitas compartir un nuevo box&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Darse de alta en &lt;a href=&quot;https://atlas.hashicorp.com/&quot;&gt;Atlas&lt;/a&gt;&lt;/p&gt;
 

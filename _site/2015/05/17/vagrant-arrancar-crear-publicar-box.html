@@ -92,9 +92,9 @@ A este box le hemos añadido <a href="http://www.symfony.com">Symfony</a>, segui
 
 <h2>Instalar el entorno</h2>
 
-<p>Para arrancar un box en local con Vagrant es necesario tener instalado <a href="https://www.vagrantup.com/downloads.html">Vagrant</a> y <a href="https://www.virtualbox.org/wiki/Downloads">Virtualbox</a>.</p>
+<p>Para utilizar Vagrant en local es necesario tener instalado <a href="https://www.vagrantup.com/downloads.html">Vagrant</a> y <a href="https://www.virtualbox.org/wiki/Downloads">Virtualbox</a>.</p>
 
-<h2>Comando basicos de Vagrant</h2>
+<h2>Comando básicos de Vagrant</h2>
 
 <p>Arrancar vagrant</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ vagrant up
@@ -102,12 +102,12 @@ A este box le hemos añadido <a href="http://www.symfony.com">Symfony</a>, segui
 <p>Suspender vagrant</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ vagrant halt
 </code></pre></div>
-<p>Acceder por ssh</p>
+<p>Acceder por ssh al box</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ vagrant ssh
 </code></pre></div>
 <h2>Arrancar un box privado</h2>
 
-<p><em>Si quieres utilizar un box privado alojado en Atlas</em></p>
+<p><em>Si necesitas utilizar un box privado alojado en Atlas</em></p>
 
 <p>Primero debes de darte de alta en <a href="https://atlas.hashicorp.com/">Atlas</a>. Seguidamente debes pedir permisos de View, Write o Admin al creador del box. Además el dueño del box debe publicarlo para que sea visible.</p>
 
@@ -127,12 +127,12 @@ A este box le hemos añadido <a href="http://www.symfony.com">Symfony</a>, segui
 </code></pre></div>
 <h2>Crear un nuevo box</h2>
 
-<p><em>Solo si quieres crear un box para un nuevo proyecto</em></p>
+<p><em>Si necesitas crear un box para un nuevo proyecto</em></p>
 
-<p>Utilizar un box con una configuracion previa, por ejemplo <a href="https://box.scotch.io/">Scotch.io Box</a> ya tiene instalado un entorno LAMP</p>
+<p>Es buena idea utilizar un box con una configuracion previa, por ejemplo <a href="https://box.scotch.io/">Scotch.io Box</a> ya tiene instalado un entorno LAMP</p>
 
 <p>Clonar el box</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ git clone https://github.com/scotch-io/scotch-box.git box-base-para-nuevo-proyecto
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ git clone https://github.com/scotch-io/scotch-box.git nombre_de_tu_proyecto
 </code></pre></div>
 <p>Arrancar vagrant</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ vagrant up
@@ -156,18 +156,18 @@ $ sudo rm -f /EMPTY
 
 $ cat /dev/null &gt; ~/.bash_history &amp;&amp; history -c &amp;&amp; exit
 </code></pre></div>
-<p>Antes de seguir con los siguientes pasos debes salir del entorno virtual y suspender Vagrant</p>
+<p>Para seguir con los siguientes pasos antes debes salir del entorno virtual y suspender Vagrant</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ exit
-$ vagrant suspend
+$ vagrant halt
 </code></pre></div>
 <p>Ahora ya puedes empaquetar el nuevo box</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ vagrant package --output nuevo_proyecto.box
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ vagrant package --output mi_nuevo_proyecto.box
 </code></pre></div>
 <p>Este nuevo box ya lo podemos compartir a través de <a href="https://atlas.hashicorp.com/">Atlas</a></p>
 
 <h2>Compartir un box privado</h2>
 
-<p><em>Solo si quieres compartir un box nuevo</em></p>
+<p><em>Si necesitas compartir un nuevo box</em></p>
 
 <p>Darse de alta en <a href="https://atlas.hashicorp.com/">Atlas</a></p>
 

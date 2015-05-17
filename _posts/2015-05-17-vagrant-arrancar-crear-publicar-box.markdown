@@ -20,9 +20,9 @@ Por suerte hemos descubierto [Atlas](https://atlas.hashicorp.com/), un servicio 
 
 ## Instalar el entorno
 
-Para arrancar un box en local con Vagrant es necesario tener instalado [Vagrant](https://www.vagrantup.com/downloads.html) y [Virtualbox](https://www.virtualbox.org/wiki/Downloads).
+Para utilizar Vagrant en local es necesario tener instalado [Vagrant](https://www.vagrantup.com/downloads.html) y [Virtualbox](https://www.virtualbox.org/wiki/Downloads).
 
-## Comando basicos de Vagrant
+## Comando básicos de Vagrant
 
 Arrancar vagrant
 
@@ -32,13 +32,13 @@ Suspender vagrant
 
     $ vagrant halt
 
-Acceder por ssh
+Acceder por ssh al box
 
     $ vagrant ssh
 
 ## Arrancar un box privado
 
-_Si quieres utilizar un box privado alojado en Atlas_
+_Si necesitas utilizar un box privado alojado en Atlas_
 
 Primero debes de darte de alta en [Atlas](https://atlas.hashicorp.com/). Seguidamente debes pedir permisos de View, Write o Admin al creador del box. Además el dueño del box debe publicarlo para que sea visible.
 
@@ -62,13 +62,13 @@ Si el Admin del box realiza cambios puedes actualizarte directamente:
 
 ## Crear un nuevo box
 
-_Solo si quieres crear un box para un nuevo proyecto_
+_Si necesitas crear un box para un nuevo proyecto_
 
-Utilizar un box con una configuracion previa, por ejemplo [Scotch.io Box](https://box.scotch.io/) ya tiene instalado un entorno LAMP
+Es buena idea utilizar un box con una configuracion previa, por ejemplo [Scotch.io Box](https://box.scotch.io/) ya tiene instalado un entorno LAMP
 
 Clonar el box
 
-    $ git clone https://github.com/scotch-io/scotch-box.git box-base-para-nuevo-proyecto
+    $ git clone https://github.com/scotch-io/scotch-box.git nombre_de_tu_proyecto
 
 Arrancar vagrant
 
@@ -96,20 +96,20 @@ Estos pasos vienen documentados en el artículo [How to Create a Vagrant Base Bo
 
     $ cat /dev/null > ~/.bash_history && history -c && exit
 
-Antes de seguir con los siguientes pasos debes salir del entorno virtual y suspender Vagrant
+Para seguir con los siguientes pasos antes debes salir del entorno virtual y suspender Vagrant
 
     $ exit
-    $ vagrant suspend
+    $ vagrant halt
 
 Ahora ya puedes empaquetar el nuevo box
 
-    $ vagrant package --output nuevo_proyecto.box
+    $ vagrant package --output mi_nuevo_proyecto.box
 
 Este nuevo box ya lo podemos compartir a través de [Atlas](https://atlas.hashicorp.com/)
 
 ## Compartir un box privado
 
-_Solo si quieres compartir un box nuevo_
+_Si necesitas compartir un nuevo box_
 
 Darse de alta en [Atlas](https://atlas.hashicorp.com/)
 
