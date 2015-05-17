@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vagrant: arrancar, crear y publicar un box</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+
+  <!--RSS-->
+  <link rel="alternate" type="application/rss+xml" title="Bruno Garcia" href="http://blog.garciaechegaray.com/feed.xml">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/app.css?v=3">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="/favicon.ico" />
+
+  <!--Modernizr-->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.0/modernizr.min.js"></script>
+
+  <!--Google Analytics-->
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-18260985-4']);
+    _gaq.push(['_setDomainName', '.garciaechegaray.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+
+</head>
+<body>
+
+  <!--Nav-->
+  <div class="fixed">
+    <nav class="top-bar" data-topbar>
+
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="http://blog.garciaechegaray.com/">Bruno Garcia Echegaray</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon">
+          <a href="">
+            <span>Menu</span>
+          </a>
+        </li>
+      </ul>
+
+      <section class="top-bar-section">
+        <ul class="right">
+          <li class="divider"></li>
+          <li><a href="http://bruno.garciaechegaray.com">Sobre mi</a></li>
+          <li class="divider"></li>
+          <li class="active"><a href="http://blog.garciaechegaray.com/">Blog</a></li>
+          <li class="divider"></li>
+          <li><a href="http://www.tuttifrescuni.com" title="Tutti Frescuni: ¿qué frutas y verduras se encuentran de temporada?" target="_blank">Pet Project</a></li>
+          <li class="divider"></li>
+          <li><a href="https://github.com/brunogarcia/Front-end-Wiki/wiki" title="Front-end Development Resources" target="_blank">Wiki</a></li>
+        </ul>
+      </section>
+
+    </nav>
+  </div>
+
+  <!--Main-->
+  <div class="main">
+    <div class="row post-main">
+	<div class="small-12 columns">
+		<h1>Vagrant: arrancar, crear y publicar un box</h1>
+		<p class="meta">17 May 2015</p>
+
+		<div class="post">
+		<hr>
+
+<p><big>En <a href="http://www.pounstudio.com">Poun Studio</a> vamos a comenzar varios proyectos con <a href="http://www.symfony.com">Symfony</a>. Hemos decidido empezar con buen pie
+creando un entorno virtualizado con <a href="https://www.vagrantup.com/">Vagrant</a> que nos pueda servir para varios proyectos y nos ahorre el trabajo de configurar cada entorno en distintas maquinas. Esto nos servirá para agilizar el flujo de trabajo entre el equipo de desarrollo y los diseñadores. Queremos que todos puedan trabajar y realizar pruebas en un mismo entorno sin preocuparse de engorros procesos de configuración</big></p>
+
+<p>En nuestro caso, hemos utilizado como base el box creado por <a href="https://box.scotch.io/">Scotch.io</a>, que ya viene con un entorno <abbr title="Linux, Apache, MySQL, Linux">LAMP</abbr> instalado.
+A este box le hemos añadido <a href="http://www.symfony.com">Symfony</a>, seguidamente hemos clonado un proyecto desde nuestro repositorio privado en <a href="https://bitbucket.org/">Bitbucket</a>, hemos creado la BD y por último hemos configurado los permisos necesarios para que funcione todo correctamente.</p>
+
+<p>Una vez finalizado este proceso hemos empaquetado un nuevo box personalizado a nuestras necesidades. A partir de este punto nos hemos topado con un pequeño problema: ¿y ahora que hacemos con este box de 600 mb? ¿lo subimos al repositorio? ¿utilizamos dropbox para compartirlo con el resto del equipo?.</p>
+
+<p>Por suerte hemos descubierto <a href="https://atlas.hashicorp.com/">Atlas</a>, un servicio que te permite compartir y actualizar un box privado. Por si esto fuera poco, con Atlas puedes hacer un <a href="https://atlas.hashicorp.com/features/deploy">deploy</a> en tu servidor virtual y <a href="https://atlas.hashicorp.com/features/maintain">monitorizar</a> todo el proceso. Por ahora es completamente gratuito, pero funciona tan bien que seguramente dentro de poco tendrás que pagar por usarlo. Atlas es un servicio creado por <a href="https://www.hashicorp.com/">Hashicorp</a>, los mismo que idearon Vagrant.</p>
+
+<hr>
+
+<h2>Instalar el entorno</h2>
+
+<p>Para arrancar un box en local con Vagrant es necesario tener instalado <a href="https://www.vagrantup.com/downloads.html">Vagrant</a> y <a href="https://www.virtualbox.org/wiki/Downloads">Virtualbox</a>.</p>
+
+<h2>Comando basicos de Vagrant</h2>
+
+<p>Arrancar vagrant</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ vagrant up
+</code></pre></div>
+<p>Suspender vagrant</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ vagrant halt
+</code></pre></div>
+<p>Acceder por ssh</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ vagrant ssh
+</code></pre></div>
+<h2>Arrancar un box privado</h2>
+
+<p><em>Si quieres utilizar un box privado alojado en Atlas</em></p>
+
+<p>Primero debes de darte de alta en <a href="https://atlas.hashicorp.com/">Atlas</a>. Seguidamente debes pedir permisos de View, Write o Admin al creador del box. Además el dueño del box debe publicarlo para que sea visible.</p>
+
+<p>Crear una carpeta para el proyecto</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ mkdir mi_proyecto &amp;&amp; cd mi_proyecto
+</code></pre></div>
+<p>Hacer login en local con tu cuenta de <a href="https://atlas.hashicorp.com/">Atlas</a></p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ vagrant login
+</code></pre></div>
+<p>Instalar el box privado</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ vagrant init usuario_admin_atlas/nombre_del_box
+</code></pre></div>
+<p>A partir de aqui ya puedes arrancar vagrant y acceder por ssh</p>
+
+<p>Si el Admin del box realiza cambios puedes actualizarte directamente:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ vagrant box update
+</code></pre></div>
+<h2>Crear un nuevo box</h2>
+
+<p><em>Solo si quieres crear un box para un nuevo proyecto</em></p>
+
+<p>Utilizar un box con una configuracion previa, por ejemplo <a href="https://box.scotch.io/">Scotch.io Box</a> ya tiene instalado un entorno LAMP</p>
+
+<p>Clonar el box</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ git clone https://github.com/scotch-io/scotch-box.git box-base-para-nuevo-proyecto
+</code></pre></div>
+<p>Arrancar vagrant</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ vagrant up
+</code></pre></div>
+<p>Acceder por ssh</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ vagrant ssh
+</code></pre></div>
+<p>Realizar las configuraciones necesarias en el box base. Por ejemplo: instalar Symfony o clonar el repositorio del proyecto correspondiente, crear la BD, etc. Configurar el entorno de trabajo: permisos, enlaces simbolicos, etc.</p>
+
+<p>Testear el nuevo entorno</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">http://192.168.33.10
+</code></pre></div>
+<h3>Preparar el box</h3>
+
+<p>Estos pasos vienen documentados en el artículo <a href="https://scotch.io/tutorials/how-to-create-a-vagrant-base-box-from-an-existing-one">How to Create a Vagrant Base Box from an Existing One</a></p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ sudo apt-get clean
+
+$ sudo dd if=/dev/zero of=/EMPTY bs=1M
+
+$ sudo rm -f /EMPTY
+
+$ cat /dev/null &gt; ~/.bash_history &amp;&amp; history -c &amp;&amp; exit
+</code></pre></div>
+<p>Antes de seguir con los siguientes pasos debes salir del entorno virtual y suspender Vagrant</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ exit
+$ vagrant suspend
+</code></pre></div>
+<p>Ahora ya puedes empaquetar el nuevo box</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ vagrant package --output nuevo_proyecto.box
+</code></pre></div>
+<p>Este nuevo box ya lo podemos compartir a través de <a href="https://atlas.hashicorp.com/">Atlas</a></p>
+
+<h2>Compartir un box privado</h2>
+
+<p><em>Solo si quieres compartir un box nuevo</em></p>
+
+<p>Darse de alta en <a href="https://atlas.hashicorp.com/">Atlas</a></p>
+
+<p>Subir el nuevo box. Debes dar permisos de View, Write o Admin al resto del equipo involucrado. Además debes publicar el box.</p>
+
+<p>Si realizas cambios sobre el box, puedes publicarlos directamente en Atlas</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ vagrant box update
+</code></pre></div>
+		</div>
+	</div>
+</div>
+
+  </div>
+
+  <!--Footer-->
+  <div class="row">
+    <hr>
+    <footer>
+      <div class="small-12 columns">
+        <p>Blog desarrollado con <a href="http://jekyllrb.com">Jekyll</a> y <a href="http://foundation.zurb.com">Foundation</a>. Alojado en <a href="https://github.com/brunogarcia/brunogarcia.github.io">GitHub Pages</a>. Suscríbete al <a href="/feed.xml">RSS</a></p>
+      </div>
+
+    </footer>
+  </div>
+
+  <script src="/js/build/production.min.js"></script>
+</body>
+</html>

@@ -7,6 +7,113 @@
 		<atom:link href="http://blog.garciaechegaray.com//feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Vagrant: arrancar, crear y publicar un box</title>
+				<description>&lt;hr&gt;
+
+&lt;p&gt;&lt;big&gt;En &lt;a href=&quot;http://www.pounstudio.com&quot;&gt;Poun Studio&lt;/a&gt; vamos a comenzar varios proyectos con &lt;a href=&quot;http://www.symfony.com&quot;&gt;Symfony&lt;/a&gt;. Hemos decidido empezar con buen pie
+creando un entorno virtualizado con &lt;a href=&quot;https://www.vagrantup.com/&quot;&gt;Vagrant&lt;/a&gt; que nos pueda servir para varios proyectos y nos ahorre el trabajo de configurar cada entorno en distintas maquinas. Esto nos servirá para agilizar el flujo de trabajo entre el equipo de desarrollo y los diseñadores. Queremos que todos puedan trabajar y realizar pruebas en un mismo entorno sin preocuparse de engorros procesos de configuración&lt;/big&gt;&lt;/p&gt;
+
+&lt;p&gt;En nuestro caso, hemos utilizado como base el box creado por &lt;a href=&quot;https://box.scotch.io/&quot;&gt;Scotch.io&lt;/a&gt;, que ya viene con un entorno &lt;abbr title=&quot;Linux, Apache, MySQL, Linux&quot;&gt;LAMP&lt;/abbr&gt; instalado.
+A este box le hemos añadido &lt;a href=&quot;http://www.symfony.com&quot;&gt;Symfony&lt;/a&gt;, seguidamente hemos clonado un proyecto desde nuestro repositorio privado en &lt;a href=&quot;https://bitbucket.org/&quot;&gt;Bitbucket&lt;/a&gt;, hemos creado la BD y por último hemos configurado los permisos necesarios para que funcione todo correctamente.&lt;/p&gt;
+
+&lt;p&gt;Una vez finalizado este proceso hemos empaquetado un nuevo box personalizado a nuestras necesidades. A partir de este punto nos hemos topado con un pequeño problema: ¿y ahora que hacemos con este box de 600 mb? ¿lo subimos al repositorio? ¿utilizamos dropbox para compartirlo con el resto del equipo?.&lt;/p&gt;
+
+&lt;p&gt;Por suerte hemos descubierto &lt;a href=&quot;https://atlas.hashicorp.com/&quot;&gt;Atlas&lt;/a&gt;, un servicio que te permite compartir y actualizar un box privado. Por si esto fuera poco, con Atlas puedes hacer un &lt;a href=&quot;https://atlas.hashicorp.com/features/deploy&quot;&gt;deploy&lt;/a&gt; en tu servidor virtual y &lt;a href=&quot;https://atlas.hashicorp.com/features/maintain&quot;&gt;monitorizar&lt;/a&gt; todo el proceso. Por ahora es completamente gratuito, pero funciona tan bien que seguramente dentro de poco tendrás que pagar por usarlo. Atlas es un servicio creado por &lt;a href=&quot;https://www.hashicorp.com/&quot;&gt;Hashicorp&lt;/a&gt;, los mismo que idearon Vagrant.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2&gt;Instalar el entorno&lt;/h2&gt;
+
+&lt;p&gt;Para arrancar un box en local con Vagrant es necesario tener instalado &lt;a href=&quot;https://www.vagrantup.com/downloads.html&quot;&gt;Vagrant&lt;/a&gt; y &lt;a href=&quot;https://www.virtualbox.org/wiki/Downloads&quot;&gt;Virtualbox&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Comando basicos de Vagrant&lt;/h2&gt;
+
+&lt;p&gt;Arrancar vagrant&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ vagrant up
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Suspender vagrant&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ vagrant halt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Acceder por ssh&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ vagrant ssh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Arrancar un box privado&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Si quieres utilizar un box privado alojado en Atlas&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Primero debes de darte de alta en &lt;a href=&quot;https://atlas.hashicorp.com/&quot;&gt;Atlas&lt;/a&gt;. Seguidamente debes pedir permisos de View, Write o Admin al creador del box. Además el dueño del box debe publicarlo para que sea visible.&lt;/p&gt;
+
+&lt;p&gt;Crear una carpeta para el proyecto&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ mkdir mi_proyecto &amp;amp;&amp;amp; cd mi_proyecto
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Hacer login en local con tu cuenta de &lt;a href=&quot;https://atlas.hashicorp.com/&quot;&gt;Atlas&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ vagrant login
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Instalar el box privado&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ vagrant init usuario_admin_atlas/nombre_del_box
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;A partir de aqui ya puedes arrancar vagrant y acceder por ssh&lt;/p&gt;
+
+&lt;p&gt;Si el Admin del box realiza cambios puedes actualizarte directamente:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ vagrant box update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Crear un nuevo box&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Solo si quieres crear un box para un nuevo proyecto&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Utilizar un box con una configuracion previa, por ejemplo &lt;a href=&quot;https://box.scotch.io/&quot;&gt;Scotch.io Box&lt;/a&gt; ya tiene instalado un entorno LAMP&lt;/p&gt;
+
+&lt;p&gt;Clonar el box&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ git clone https://github.com/scotch-io/scotch-box.git box-base-para-nuevo-proyecto
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Arrancar vagrant&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ vagrant up
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Acceder por ssh&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ vagrant ssh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Realizar las configuraciones necesarias en el box base. Por ejemplo: instalar Symfony o clonar el repositorio del proyecto correspondiente, crear la BD, etc. Configurar el entorno de trabajo: permisos, enlaces simbolicos, etc.&lt;/p&gt;
+
+&lt;p&gt;Testear el nuevo entorno&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;http://192.168.33.10
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Preparar el box&lt;/h3&gt;
+
+&lt;p&gt;Estos pasos vienen documentados en el artículo &lt;a href=&quot;https://scotch.io/tutorials/how-to-create-a-vagrant-base-box-from-an-existing-one&quot;&gt;How to Create a Vagrant Base Box from an Existing One&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ sudo apt-get clean
+
+$ sudo dd if=/dev/zero of=/EMPTY bs=1M
+
+$ sudo rm -f /EMPTY
+
+$ cat /dev/null &amp;gt; ~/.bash_history &amp;amp;&amp;amp; history -c &amp;amp;&amp;amp; exit
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Antes de seguir con los siguientes pasos debes salir del entorno virtual y suspender Vagrant&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ exit
+$ vagrant suspend
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Ahora ya puedes empaquetar el nuevo box&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ vagrant package --output nuevo_proyecto.box
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Este nuevo box ya lo podemos compartir a través de &lt;a href=&quot;https://atlas.hashicorp.com/&quot;&gt;Atlas&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;Compartir un box privado&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Solo si quieres compartir un box nuevo&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Darse de alta en &lt;a href=&quot;https://atlas.hashicorp.com/&quot;&gt;Atlas&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Subir el nuevo box. Debes dar permisos de View, Write o Admin al resto del equipo involucrado. Además debes publicar el box.&lt;/p&gt;
+
+&lt;p&gt;Si realizas cambios sobre el box, puedes publicarlos directamente en Atlas&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ vagrant box update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+				<pubDate>Sun, 17 May 2015 11:47:30 +0200</pubDate>
+				<link>http://blog.garciaechegaray.com//2015/05/17/vagrant-arrancar-crear-publicar-box.html</link>
+				<guid isPermaLink="true">http://blog.garciaechegaray.com//2015/05/17/vagrant-arrancar-crear-publicar-box.html</guid>
+			</item>
+		
+			<item>
 				<title>Resumen del Startup Open Space Zaragoza 2015</title>
 				<description>&lt;hr&gt;
 
@@ -931,63 +1038,6 @@ line_comments = true
 				<pubDate>Thu, 16 Oct 2014 23:00:00 +0200</pubDate>
 				<link>http://blog.garciaechegaray.com//2014/10/16/bootstrap-theme-flatty-compass-sass.html</link>
 				<guid isPermaLink="true">http://blog.garciaechegaray.com//2014/10/16/bootstrap-theme-flatty-compass-sass.html</guid>
-			</item>
-		
-			<item>
-				<title>Compilando una App en la nube con Phonegap Build</title>
-				<description>&lt;hr&gt;
-
-&lt;p&gt;&lt;big&gt;&lt;a href=&quot;https://build.phonegap.com/&quot;&gt;Phonegap Build&lt;/a&gt; es un servicio freemium que te permite compilar una APK/IPA directamente en la nube. 
-Estos días lo he estado probando para un cliente y me ha gustado bastante lo sencillo que es compilar una app mobile sin necesidad de bajar y configurar los entornos de desarrollo necesarios para cada tecnología. &lt;/big&gt;&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;Por lo visto Phonegap está poniendo mucho empeño en facilitarnos la vida a los desarrolladores. Esta misma semana ha sacado una herramienta que nos permite &lt;a href=&quot;http://app.phonegap.com/&quot;&gt;levantar un servidor en local y visualizar los cambios automáticamente&lt;/a&gt; en cualquier dispositivo.&lt;/p&gt;
-
-&lt;p&gt;Montar todo el entorno de Android para que funcione correctamente con Phonegap no es trivial. Al menos en Ubuntu es un proceso que toma un buen rato. Ya no solo consiste en instalar la &lt;a href=&quot;http://developer.android.com/sdk/index.html&quot;&gt;SDK de Android&lt;/a&gt; si no también la última &lt;a href=&quot;http://www.oracle.com/technetwork/java/javase/downloads/index.html?ssSourceSiteId=otnjp&quot;&gt;JDK&lt;/a&gt; junto con &lt;a href=&quot;http://ant.apache.org/&quot;&gt;ANT&lt;/a&gt; y configurar los &lt;a href=&quot;http://stackoverflow.com/questions/20323787/cordova-platform-add-android-not-working-while-listing-android-targets/21142421#21142421&quot;&gt;PATH&lt;/a&gt; correspondientes. En el caso de Apple es todavía más complejo, si no tienes una maquina corriendo &lt;em&gt;Mac OS X&lt;/em&gt; es imposible.&lt;/p&gt;
-
-&lt;p&gt;Por suerte Phonegap ofrece este servicio (gratis para una sola app) junto con una &lt;a href=&quot;http://docs.build.phonegap.com/en_US/&quot;&gt;amplia documentación&lt;/a&gt;. Personalmente me preocupaba bastante el tema de personalizar los iconos, splash screen y plugins. Pero creando un archivo &lt;em&gt;config.xml&lt;/em&gt; dentro de tu proyecto todo funciona como la seda.&lt;/p&gt;
-
-&lt;p&gt;Por ejemplo para decirle con que iconos debe trabajar la app:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;--Android icons--&amp;gt;
-&amp;lt;icon gap:density=&amp;quot;ldpi&amp;quot; gap:platform=&amp;quot;android&amp;quot; src=&amp;quot;res/screen/android/icon-ldpi.png&amp;quot; /&amp;gt;
-&amp;lt;icon gap:density=&amp;quot;mdpi&amp;quot; gap:platform=&amp;quot;android&amp;quot; src=&amp;quot;res/screen/android/icon-mdpi.png&amp;quot; /&amp;gt;
-&amp;lt;icon gap:density=&amp;quot;hdpi&amp;quot; gap:platform=&amp;quot;android&amp;quot; src=&amp;quot;res/screen/android/icon-hdpi.png&amp;quot; /&amp;gt;
-&amp;lt;icon gap:density=&amp;quot;xhdpi&amp;quot; gap:platform=&amp;quot;android&amp;quot; src=&amp;quot;res/screen/android/icon-xhdpi.png&amp;quot; /&amp;gt;
-
-&amp;lt;--iOS icons--&amp;gt;
-&amp;lt;icon gap:platform=&amp;quot;ios&amp;quot; height=&amp;quot;60&amp;quot; src=&amp;quot;res/screen/ios/icon-60.png&amp;quot; width=&amp;quot;60&amp;quot; /&amp;gt;
-&amp;lt;icon gap:platform=&amp;quot;ios&amp;quot; height=&amp;quot;120&amp;quot; src=&amp;quot;res/screen/ios/icon-60@2x.png&amp;quot; width=&amp;quot;120&amp;quot; /&amp;gt;
-&amp;lt;icon gap:platform=&amp;quot;ios&amp;quot; height=&amp;quot;76&amp;quot; src=&amp;quot;res/screen/ios/icon-76.png&amp;quot; width=&amp;quot;76&amp;quot; /&amp;gt;
-&amp;lt;icon gap:platform=&amp;quot;ios&amp;quot; height=&amp;quot;152&amp;quot; src=&amp;quot;res/screen/ios/icon-76@2x.png&amp;quot; width=&amp;quot;152&amp;quot; /&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Y lo mismo para las splash screen:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;--Android splash--&amp;gt;
-&amp;lt;gap:splash gap:density=&amp;quot;ldpi&amp;quot; gap:platform=&amp;quot;android&amp;quot; src=&amp;quot;res/screen/android/screen-ldpi-portrait.png&amp;quot; /&amp;gt;
-&amp;lt;gap:splash gap:density=&amp;quot;mdpi&amp;quot; gap:platform=&amp;quot;android&amp;quot; src=&amp;quot;res/screen/android/screen-mdpi-portrait.png&amp;quot; /&amp;gt;
-&amp;lt;gap:splash gap:density=&amp;quot;hdpi&amp;quot; gap:platform=&amp;quot;android&amp;quot; src=&amp;quot;res/screen/android/screen-hdpi-portrait.png&amp;quot; /&amp;gt;
-&amp;lt;gap:splash gap:density=&amp;quot;xhdpi&amp;quot; gap:platform=&amp;quot;android&amp;quot; src=&amp;quot;res/screen/android/screen-xhdpi-portrait.png&amp;quot; /&amp;gt;
-
-&amp;lt;--iOS splash--&amp;gt;
-&amp;lt;gap:splash gap:platform=&amp;quot;ios&amp;quot; height=&amp;quot;480&amp;quot; src=&amp;quot;res/screen/ios/screen-iphone-portrait.png&amp;quot; width=&amp;quot;320&amp;quot; /&amp;gt;
-&amp;lt;gap:splash gap:platform=&amp;quot;ios&amp;quot; height=&amp;quot;960&amp;quot; src=&amp;quot;res/screen/ios/screen-iphone-portrait-2x.png&amp;quot; width=&amp;quot;640&amp;quot; /&amp;gt;
-&amp;lt;gap:splash gap:platform=&amp;quot;ios&amp;quot; height=&amp;quot;1024&amp;quot; src=&amp;quot;res/screen/ios/screen-ipad-portrait.png&amp;quot; width=&amp;quot;768&amp;quot; /&amp;gt;
-&amp;lt;gap:splash gap:platform=&amp;quot;ios&amp;quot; height=&amp;quot;768&amp;quot; src=&amp;quot;res/screen/ios/screen-ipad-landscape.png&amp;quot; width=&amp;quot;1024&amp;quot; /&amp;gt;    
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Puedes incluso decidir en que tecnologías deseas realizar la compilación:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;gap:platform name=&amp;quot;ios&amp;quot; /&amp;gt;
-&amp;lt;gap:platform name=&amp;quot;android&amp;quot; /&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;a href=&quot;https://build.phonegap.com/&quot;&gt;Phonegap Build&lt;/a&gt; tambien permite añadir plugins en la configuración. Por ejemplo si necesitamos el &lt;a href=&quot;https://github.com/apache/cordova-plugin-geolocation&quot;&gt;plugin de geolocalización&lt;/a&gt; tenemos que añadir la siguiente línea:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;gap:plugin name=&amp;quot;org.apache.cordova.geolocation&amp;quot; version=&amp;quot;0.3.7&amp;quot; /&amp;gt;    
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Os dejo un &lt;em&gt;gist&lt;/em&gt; con toda la configuración necesaria:&lt;/p&gt;
-
-&lt;p&gt;&lt;script src=&quot;https://gist.github.com/brunogarcia/e2d7844dd2af6ff1e459.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
-</description>
-				<pubDate>Mon, 07 Jul 2014 19:55:00 +0200</pubDate>
-				<link>http://blog.garciaechegaray.com//2014/07/07/compilando-una-app-en-la-nube-con-phonegap-build.html</link>
-				<guid isPermaLink="true">http://blog.garciaechegaray.com//2014/07/07/compilando-una-app-en-la-nube-con-phonegap-build.html</guid>
 			</item>
 		
 	</channel>
