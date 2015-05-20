@@ -53,7 +53,9 @@ A este box le hemos añadido &lt;a href=&quot;http://www.symfony.com&quot;&gt;Sy
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ vagrant init usuario_admin_atlas/nombre_del_box
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;A partir de aqui ya puedes arrancar vagrant y acceder por ssh&lt;/p&gt;
-
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ vagrant up
+$ vagrant ssh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Si el Admin del box realiza cambios puedes actualizarte directamente:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ vagrant box update
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -105,9 +107,8 @@ $ vagrant halt
 
 &lt;p&gt;Subir el nuevo box. Debes dar permisos de View, Write o Admin al resto del equipo involucrado. Además debes publicar el box.&lt;/p&gt;
 
-&lt;p&gt;Si realizas cambios sobre el box, puedes publicarlos directamente en Atlas&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ vagrant box update
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;p&gt;Si realizas cambios sobre el box, puedes publicarlos directamente en Atlas.&lt;/p&gt;
+</description>
 				<pubDate>Sun, 17 May 2015 11:47:30 +0200</pubDate>
 				<link>http://blog.garciaechegaray.com//2015/05/17/vagrant-arrancar-crear-publicar-box.html</link>
 				<guid isPermaLink="true">http://blog.garciaechegaray.com//2015/05/17/vagrant-arrancar-crear-publicar-box.html</guid>
@@ -675,14 +676,14 @@ Aunque soy más de novela gráfica, Fantasias Extraordinarias me parecio un libr
 		
 			<item>
 				<title>Resumen del Codemotion 2014</title>
-				<description>&lt;p&gt;&lt;big&gt;Este es mi resumen de la 3º edición del Codemotion. El volumen de información es tan grande que siempre me quedo con la sensación de &lt;em&gt;necesito una vida para aprender todo esto&lt;/em&gt;.&lt;/big&gt;&lt;/p&gt;
+				<description>&lt;p&gt;&lt;big&gt;Este es mi resumen de la 3º edición del &lt;a href=&quot;http://2014.codemotion.es&quot;&gt;Codemotion&lt;/a&gt;. El volumen de información es tan grande que siempre me quedo con la sensación de &lt;em&gt;necesito una vida para aprender todo esto&lt;/em&gt;.&lt;/big&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://webcomponents.org&quot;&gt;Web Components&lt;/a&gt;. Permite modularizar el desarrollo front-end con componentes reusables e independientes. Librerías: &lt;a href=&quot;https://www.polymer-project.org/&quot;&gt;Polymer&lt;/a&gt;, &lt;a href=&quot;http://bosonic.github.io/&quot;&gt;Bosonic&lt;/a&gt; y &lt;a href=&quot;http://x-tags.org/&quot;&gt;X-tags&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://offlinefirst.org&quot;&gt;Offline First&lt;/a&gt;. Nueva metodología para trabajar con aplicaciones móviles sin conexión. Framework: &lt;a href=&quot;http://hood.ie/&quot;&gt;Hoodie&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt;. Un buen número de tracks estaban relacionados con esta nueva tecnología de virtualización.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Guardar y sincronizar datos en la nube. Servicios: &lt;a href=&quot;https://www.firebase.com/&quot;&gt;Firebase&lt;/a&gt; (comprada por Google), &lt;a href=&quot;https://parse.com/&quot;&gt;Parse&lt;/a&gt;, &lt;a href=&quot;https://backbeam.io/&quot;&gt;Backbeam&lt;/a&gt; (startup española)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://facebook.github.io/react/&quot;&gt;React&lt;/a&gt;. &lt;em&gt;&amp;quot;Many people choose to think of React as the V in MVC.&amp;quot;&lt;/em&gt; Creada y utilizada por Facebook e Instagram. &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://facebook.github.io/react/&quot;&gt;React&lt;/a&gt;. &lt;em&gt;&amp;quot;Many people choose to think of React as the V in MVC.&amp;quot;&lt;/em&gt; Creada y utilizada por Facebook e Instagram.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://cartodb.com/&quot;&gt;CartoDB&lt;/a&gt;. Herramienta para crear mapas interactivos. Tienes tu propia instancia de PostgreSQL con PostGIS.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.babylonjs.com/&quot;&gt;Babylon JS&lt;/a&gt;. Libreria JS para crear entornos 3D con OpenGL.  Exporta a Phonegap.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://neo4j.com/&quot;&gt;NEO4J&lt;/a&gt;. Base de datos orientada a grafos&lt;/p&gt;&lt;/li&gt;

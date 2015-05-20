@@ -56,6 +56,9 @@ Instalar el box privado
 
 A partir de aqui ya puedes arrancar vagrant y acceder por ssh
 
+    $ vagrant up
+    $ vagrant ssh
+
 Si el Admin del box realiza cambios puedes actualizarte directamente:
 
     $ vagrant box update
@@ -115,7 +118,4 @@ Darse de alta en [Atlas](https://atlas.hashicorp.com/)
 
 Subir el nuevo box. Debes dar permisos de View, Write o Admin al resto del equipo involucrado. Además debes publicar el box.
 
-Si realizas cambios sobre el box, puedes publicarlos directamente en Atlas
-
-    $ vagrant box update
-
+Si realizas cambios sobre el box, puedes publicarlos directamente en Atlas.

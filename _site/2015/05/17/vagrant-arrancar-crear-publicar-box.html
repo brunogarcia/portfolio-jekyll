@@ -121,7 +121,9 @@ A este box le hemos añadido <a href="http://www.symfony.com">Symfony</a>, segui
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ vagrant init usuario_admin_atlas/nombre_del_box
 </code></pre></div>
 <p>A partir de aqui ya puedes arrancar vagrant y acceder por ssh</p>
-
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ vagrant up
+$ vagrant ssh
+</code></pre></div>
 <p>Si el Admin del box realiza cambios puedes actualizarte directamente:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ vagrant box update
 </code></pre></div>
@@ -173,9 +175,8 @@ $ vagrant halt
 
 <p>Subir el nuevo box. Debes dar permisos de View, Write o Admin al resto del equipo involucrado. Además debes publicar el box.</p>
 
-<p>Si realizas cambios sobre el box, puedes publicarlos directamente en Atlas</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ vagrant box update
-</code></pre></div>
+<p>Si realizas cambios sobre el box, puedes publicarlos directamente en Atlas.</p>
+
 		</div>
 	</div>
 </div>

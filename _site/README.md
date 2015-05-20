@@ -7,13 +7,13 @@ Posts about front-end development
 
 ## Tools
 
-* [Jekyll](jekyllrb.com): A simple, blog-aware, static site generator perfect for personal, project, or organization sites.
+* [Jekyll](http://jekyllrb.com): A simple, blog-aware, static site generator perfect for personal, project, or organization sites.
 
 * [Foundation 5](http://foundation.zurb.com/): responsive front-end framework by Zurb
 
 * [libsass](http://libsass.org/): C/C++ port of the Sass engine
 
-* [Bourbon](bourbon.io): A simple and lightweight mixin library for Sass.
+* [Bourbon](http://bourbon.io): A simple and lightweight mixin library for Sass.
 
 * [Bower](http://bower.io/): A package manager for the web.
 
@@ -38,7 +38,7 @@ Posts about front-end development
 
 `$ npm install`
 
-#### Run project tasks
+#### Run project tasks ('sass', 'concat', 'uglify', 'watch')
 
 `$ grunt watch`
 
