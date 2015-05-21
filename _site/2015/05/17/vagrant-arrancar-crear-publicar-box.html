@@ -79,9 +79,11 @@
 		<hr>
 
 <p><big>En <a href="http://www.pounstudio.com">Poun Studio</a> vamos a comenzar varios proyectos con <a href="http://www.symfony.com">Symfony</a>. Hemos decidido empezar con buen pie
-creando un entorno virtualizado con <a href="https://www.vagrantup.com/">Vagrant</a> que nos pueda servir para varios proyectos y nos ahorre el trabajo de configurar cada entorno en distintas maquinas. Esto nos servirá para agilizar el flujo de trabajo entre el equipo de desarrollo y los diseñadores. Queremos que todos puedan trabajar y realizar pruebas en un mismo entorno sin preocuparse de engorros procesos de configuración</big></p>
+creando un entorno virtualizado con <a href="https://www.vagrantup.com/">Vagrant</a> que nos pueda servir para distintos proyectos y nos ahorre el trabajo de configurar cada entorno en distintas maquinas. Esto nos servirá para agilizar el flujo de trabajo entre el equipo de desarrollo y los diseñadores. Queremos que todos puedan trabajar y realizar pruebas en un mismo entorno sin preocuparse de engorros procesos de configuración</big></p>
 
-<p>En nuestro caso, hemos utilizado como base el box creado por <a href="https://box.scotch.io/">Scotch.io</a>, que ya viene con un entorno <abbr title="Linux, Apache, MySQL, Linux">LAMP</abbr> instalado.
+<hr>
+
+<p>En nuestro caso, hemos utilizado como base el box creado por <a href="https://box.scotch.io/">Scotch.io</a>, que ya viene con un entorno <abbr title="Linux, Apache, MySQL, Linux">LAMP</abbr> preinstalado (además de Node, Ruby, Composer, cURL, Git, etc).
 A este box le hemos añadido <a href="http://www.symfony.com">Symfony</a>, seguidamente hemos clonado un proyecto desde nuestro repositorio privado en <a href="https://bitbucket.org/">Bitbucket</a>, hemos creado la BD y por último hemos configurado los permisos necesarios para que funcione todo correctamente.</p>
 
 <p>Una vez finalizado este proceso hemos empaquetado un nuevo box personalizado a nuestras necesidades. A partir de este punto nos hemos topado con un pequeño problema: ¿y ahora que hacemos con este box de 600 mb? ¿lo subimos al repositorio? ¿utilizamos dropbox para compartirlo con el resto del equipo?.</p>

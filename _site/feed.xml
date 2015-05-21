@@ -11,9 +11,11 @@
 				<description>&lt;hr&gt;
 
 &lt;p&gt;&lt;big&gt;En &lt;a href=&quot;http://www.pounstudio.com&quot;&gt;Poun Studio&lt;/a&gt; vamos a comenzar varios proyectos con &lt;a href=&quot;http://www.symfony.com&quot;&gt;Symfony&lt;/a&gt;. Hemos decidido empezar con buen pie
-creando un entorno virtualizado con &lt;a href=&quot;https://www.vagrantup.com/&quot;&gt;Vagrant&lt;/a&gt; que nos pueda servir para varios proyectos y nos ahorre el trabajo de configurar cada entorno en distintas maquinas. Esto nos servirá para agilizar el flujo de trabajo entre el equipo de desarrollo y los diseñadores. Queremos que todos puedan trabajar y realizar pruebas en un mismo entorno sin preocuparse de engorros procesos de configuración&lt;/big&gt;&lt;/p&gt;
+creando un entorno virtualizado con &lt;a href=&quot;https://www.vagrantup.com/&quot;&gt;Vagrant&lt;/a&gt; que nos pueda servir para distintos proyectos y nos ahorre el trabajo de configurar cada entorno en distintas maquinas. Esto nos servirá para agilizar el flujo de trabajo entre el equipo de desarrollo y los diseñadores. Queremos que todos puedan trabajar y realizar pruebas en un mismo entorno sin preocuparse de engorros procesos de configuración&lt;/big&gt;&lt;/p&gt;
 
-&lt;p&gt;En nuestro caso, hemos utilizado como base el box creado por &lt;a href=&quot;https://box.scotch.io/&quot;&gt;Scotch.io&lt;/a&gt;, que ya viene con un entorno &lt;abbr title=&quot;Linux, Apache, MySQL, Linux&quot;&gt;LAMP&lt;/abbr&gt; instalado.
+&lt;hr&gt;
+
+&lt;p&gt;En nuestro caso, hemos utilizado como base el box creado por &lt;a href=&quot;https://box.scotch.io/&quot;&gt;Scotch.io&lt;/a&gt;, que ya viene con un entorno &lt;abbr title=&quot;Linux, Apache, MySQL, Linux&quot;&gt;LAMP&lt;/abbr&gt; preinstalado (además de Node, Ruby, Composer, cURL, Git, etc).
 A este box le hemos añadido &lt;a href=&quot;http://www.symfony.com&quot;&gt;Symfony&lt;/a&gt;, seguidamente hemos clonado un proyecto desde nuestro repositorio privado en &lt;a href=&quot;https://bitbucket.org/&quot;&gt;Bitbucket&lt;/a&gt;, hemos creado la BD y por último hemos configurado los permisos necesarios para que funcione todo correctamente.&lt;/p&gt;
 
 &lt;p&gt;Una vez finalizado este proceso hemos empaquetado un nuevo box personalizado a nuestras necesidades. A partir de este punto nos hemos topado con un pequeño problema: ¿y ahora que hacemos con este box de 600 mb? ¿lo subimos al repositorio? ¿utilizamos dropbox para compartirlo con el resto del equipo?.&lt;/p&gt;
