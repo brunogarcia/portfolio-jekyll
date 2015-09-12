@@ -7,6 +7,146 @@
 		<atom:link href="http://blog.garciaechegaray.com//feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Symfony Front-end Workflow: Assetic, Bower &amp; Grunt</title>
+				<description>&lt;hr&gt;
+
+&lt;p&gt;&lt;big&gt;Despúes de desarrollar un par de proyectos con &lt;a href=&quot;http://www.symfony.com/&quot;&gt;Symfony&lt;/a&gt; he encontrado un flujo de trabajo que funciona bastante bien para trabajar con diferentes librerías front-end en dicho framework PHP&lt;/big&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;La idea consiste en utilizar &lt;a href=&quot;http://bower.io&quot;&gt;Bower&lt;/a&gt; para gestionar las dependecias front-end del proyecto. &lt;a href=&quot;http://gruntjs.com&quot;&gt;Grunt&lt;/a&gt; para seleccionar y copiar dichas dependencias a nuestro bundle principal. Y finalmente dejamos que &lt;a href=&quot;http://symfony.com/doc/current/cookbook/assetic/index.html&quot;&gt;Assetic&lt;/a&gt; realice el resto de tareas: aplicar los filtros (sass, rewrite, uglify, etc.) y gestionar el flujo dentro de Symfony.&lt;/p&gt;
+
+&lt;p&gt;Implementar todo esto por primera vez requiere una importante carga de configuración, sobre todo si eres completamente nuevo en el mundo Symfony (como era mi caso hasta hace 6 meses), pero una vez le pillas el truco todo va como la seda. &lt;/p&gt;
+
+&lt;p&gt;Lo mejor de usar conjuntamente Bower y Grunt, es que toda esta configuración la podemos copiar a otro proyecto y en 5 minutos ya tendremos todos los assets bajados y copiados a sus rutas correspondientes.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2&gt;Bower&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://bower.io&quot;&gt;Bower&lt;/a&gt; es una herramienta &lt;em&gt;open source&lt;/em&gt; liberada por Twitter que sirve para gestionar
+todas las dependencias de tu proyecto front-end. La idea es similar a &lt;a href=&quot;https://getcomposer.org/&quot;&gt;Composer&lt;/a&gt; en PHP o &lt;a href=&quot;http://bundler.io/&quot;&gt;Bundler&lt;/a&gt; para Ruby.&lt;/p&gt;
+
+&lt;p&gt;El funcionamiento de Bower es bastante simple. Primero creas la configuración necesaria en un archivo &lt;em&gt;bower.json&lt;/em&gt;. Esto lo puedo hacer a mano o  lanzando el comando &lt;em&gt;bower init&lt;/em&gt; en tu consola. El atributo mas importante es &lt;em&gt;dependencies&lt;/em&gt;, el cual será un objeto (key: value) con el nombre y la versión de la dependencia.&lt;/p&gt;
+
+&lt;p&gt;Para añadir una nueva librería lo primero que debes hacer es buscarla en &lt;a href=&quot;http://bower.io/search/&quot;&gt;bower.io&lt;/a&gt;. Esto también lo puedes hacer por consola lanzando el comando &lt;em&gt;$ bower search NOMBRE&lt;/em&gt;DE&lt;em&gt;LA&lt;/em&gt;LIBRERIA_.&lt;/p&gt;
+
+&lt;p&gt;Si la librería se encuentra registrada como package en Bower entonces la podrás añadir directamente por consola con el flag &lt;em&gt;--save&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ bower install --save jquery
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Esto modificará automáticamente el fichero &lt;em&gt;bower.json&lt;/em&gt; añadiendo la librería con su respectiva versión. Por ejemplo la versión ~2.1.1. El primer simbolo (~) significa que las siguientes veces que solicites a Bower actualizar las dependecias, comenzará siempre con la versión 2.1.1 hasta un máximo de 2.2.0. Puedes encontrar más información sobre este tema en &lt;a href=&quot;http://stackoverflow.com/a/20412378&quot;&gt;Bower Version Syntax&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Si la librería que necesitas &lt;em&gt;no&lt;/em&gt; se encuentra registrada como package en Bower, entonces puedes modificar el &lt;em&gt;bower.json&lt;/em&gt; a mano, añadiendo la url al repositorio (público o privado) especificando la versión que deseas utilizar.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;quot;bootstrap-datepicker&amp;quot;: &amp;quot;https://github.com/eternicode/bootstrap-datepicker.git#~1.4.0&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Una vez finalizado este proceso basta con lanzar una línea en tu terminal para tener todas las dependencias disponibles en local. Da igual si son 5 o 50, Bower las bajará todas por ti en pis pas.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ bower install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Los ficheros se guardarán en una carpeta llamada &lt;em&gt;bower components&lt;/em&gt;. Dependiendo del autor de la librería encontrarás muchas carperas y ficheros que no serán necesarios para tu proyecto (por ejemplo: test, build, changelogs, licencias, readme, etc.). Pero no hay problema, esto lo resolveremos con un plugin para Grunt llamado &lt;a href=&quot;https://www.npmjs.com/package/grunt-bowercopy&quot;&gt;bower copy&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Un último punto importante: la carpeta &lt;em&gt;bower components&lt;/em&gt;  deberás añadirla a tu fichero &lt;em&gt;.gitignore&lt;/em&gt;. Ya que no hace falta subir todas las dependecias al repositorio, siempre que tengas a mano el fichero &lt;em&gt;bower.json&lt;/em&gt; puedes realizar la misma tarea todas las veces que quieras. &lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/brunogarcia/79e9d6880b3d5ab3d7f9.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Estos datos los he sacado de &lt;a href=&quot;https://www.gitignore.io/&quot;&gt;gitignore.io&lt;/a&gt;, una herramienta muy útil para saber que carpetas debes ignorar según que tecnología utilizas.&lt;/p&gt;
+
+&lt;p&gt;Así es como quedaría un archivo &lt;em&gt;bower.json&lt;/em&gt; completamente configurado:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/brunogarcia/062562fde7a65df01fb8.js&quot;&gt;&lt;/script&gt;
+
+&lt;hr&gt;
+
+&lt;h2&gt;Grunt&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://gruntjs.com&quot;&gt;Grunt&lt;/a&gt; creado y mantenido por la gente de &lt;a href=&quot;http://bocoup.com/&quot;&gt;Bocoup&lt;/a&gt;, es una herramienta para automatizar tareas en tu entorno de desarrollo.&lt;/p&gt;
+
+&lt;p&gt;Para configurar Grunt son necesarios dos ficheros: &lt;em&gt;package.json&lt;/em&gt; y &lt;em&gt;Gruntfile.js&lt;/em&gt;. &lt;/p&gt;
+
+&lt;p&gt;En &lt;em&gt;package.json&lt;/em&gt; deberás listar todas las dependencias necesarias para correr las tareas. En nuestro caso solo necesitamos &lt;a href=&quot;https://www.npmjs.com/package/grunt-bowercopy&quot;&gt;bower copy&lt;/a&gt;, ya que el resto de tareas que normalmente realizariamos con Grunt, en el entorno de Symfony será Assetic quien se encargará de ellas.&lt;/p&gt;
+
+&lt;p&gt;Para instalar las dependencias de Grunt deberás escribir en tu consola:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ npm install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;script src=&quot;https://gist.github.com/brunogarcia/9f5c2a46f981fe037886.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;En &lt;em&gt;Gruntfile.js&lt;/em&gt; creas la configuración de cada tarea o grupo de tareas. En nuestro caso solo tendremos una única tarea llamada &amp;#39;default&amp;#39;.&lt;/p&gt;
+
+&lt;p&gt;Utilizo &lt;a href=&quot;https://www.npmjs.com/package/grunt-bowercopy&quot;&gt;bower copy&lt;/a&gt; para copiar únicamente los ficheros que necesita mi proyecto. 
+En este caso, todos se copiaran a &lt;em&gt;/src/AppBundle/Resources/public/&lt;/em&gt;. Como podéis ver he dividido los assets en varios grupos: CSS, JS, sass, fonts e imágenes. Dependiendo del grupo al cual pertenezcan, cada asset se copiará a una carpeta distinta. Incluso si os fijaís bien, podemos cambiar el nombre al fichero antes de llevarlo a su destino final.&lt;/p&gt;
+
+&lt;p&gt;Para lanzar esta tarea simplemente escribes en tu consola:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ grunt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Si existieran mas tareas, deberíamos especificar el nombre, pero en este caso no es necesario.&lt;/p&gt;
+
+&lt;p&gt;Así es como quedaría un archivo &lt;em&gt;Gruntfile.js&lt;/em&gt; completamente configurado:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/brunogarcia/000951d92e40ad219c95.js&quot;&gt;&lt;/script&gt;
+
+&lt;hr&gt;
+
+&lt;h2&gt;Assetic&lt;/h2&gt;
+
+&lt;p&gt;Un asset es cualquier componente de nuestro front-end. Por ejemplo un fichero css, js, una imagen o una webfont.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/kriswallsmith/assetic&quot;&gt;Assetic&lt;/a&gt; es el gestor de assets que utiliza Symfony. Assetic está basado en &lt;a href=&quot;http://webassets.readthedocs.org/en/latest&quot;&gt;webassets&lt;/a&gt;, una librería del mundo Python.&lt;/p&gt;
+
+&lt;p&gt;Assetic trabaja conjuntamente con el &lt;a href=&quot;http://symfony.com/doc/current/components/asset/introduction.html&quot;&gt;componente Asset&lt;/a&gt; para gestionar todo el flujo de nuestros assets dentro de los entornos de desarrollo y producción de Symfony. Gracias a Assetic podremos aplicar filtros a nuestros assets antes de dejarlos disponibles para el usuario final. Por ejemplo compilar un fichero &lt;em&gt;sass&lt;/em&gt; o minimizar y combinar ficheros &lt;em&gt;js&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;La configuración de Assetic la haremos siempre en un fichero &lt;a href=&quot;http://twig.sensiolabs.org/&quot;&gt;twig&lt;/a&gt;. &lt;/p&gt;
+
+&lt;h3&gt;CSS&lt;/h3&gt;
+
+&lt;p&gt;Comencemos con los hojas de estilo de nuestra aplicación. Trabajaremos con un fichero llamado &lt;em&gt;css.html.twig&lt;/em&gt; que se encuentra alojado en /app/Resources/views/includes/_&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/brunogarcia/612319c831fdd302d599.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Como veréis primero aplicamos el filtro &lt;em&gt;sass&lt;/em&gt; a nuestro fichero &lt;em&gt;main.scss&lt;/em&gt;. Incluso podemos decidir el nombre que tendrá el CSS final, en este caso &lt;em&gt;main.css&lt;/em&gt;. Para hacer uso de este filtro es necesario tener instalado &lt;a href=&quot;https://www.ruby-lang.org&quot;&gt;Ruby&lt;/a&gt; y &lt;a href=&quot;http://sass-lang.com/&quot;&gt;Sass&lt;/a&gt; en nuestro entorno. Mi recomendación es instalar siempre Ruby vía &lt;a href=&quot;https://rvm.io/&quot;&gt;RVM&lt;/a&gt; para evitar problemas con las versiones de las gemas.&lt;/p&gt;
+
+&lt;p&gt;A continuación aplicamos a un grupo de ficheros CSS (plugins) un par de filtros. El filtro &lt;em&gt;cssrewrite&lt;/em&gt; se encarga de sobreescribir las rutas relativas que se encuentren en nuestros estilos. El filtro &lt;em&gt;uglyfycss&lt;/em&gt; minifica y concatena nuestros ficheros CSS. Este último filtro necesita &lt;a href=&quot;https://nodejs.org&quot;&gt;Node&lt;/a&gt; y el package &lt;a href=&quot;https://github.com/fmarcia/UglifyCSS&quot;&gt;UglifyCSS&lt;/a&gt; para funcionar.&lt;/p&gt;
+
+&lt;p&gt;Si añadimos a cualquier filtro el signo de interrogación &lt;em&gt;?&lt;/em&gt; significa que solo debe ejecutar dicha tarea en el entorno de producción. La razón es que no nos interesa trabajar con archivos minificados en el entorno de desarrollo, básicamente porque sería un infierno debugear.&lt;/p&gt;
+
+&lt;p&gt;El lector avispado se preguntará por qué no he aplicado el filtro &lt;em&gt;uglifycss&lt;/em&gt; a los ficheros &lt;em&gt;sass&lt;/em&gt;. La respuesta es sencilla: no hace falta. Sass ya se encarga de minificar y concatenar los ficheros que compila. Solo es necesario especificar este comportamiento en la configuración del entorno de producción de Symfony. &lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/brunogarcia/1e40e9123c4892b0e281.js&quot;&gt;&lt;/script&gt;
+
+&lt;h3&gt;Javascript&lt;/h3&gt;
+
+&lt;p&gt;Ahora es el turno de los ficheros Javascript. Trabajaremos con un fichero llamado &lt;em&gt;js.html.twig&lt;/em&gt; que se encuentra alojado en /app/Resources/views/includes/_&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/brunogarcia/416503dd5e2599d43499.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;En este caso aplicamos un único filtro llamado &lt;em&gt;uglyfyjs&lt;/em&gt;, cuya tarea es minificar y concatenar nuestros ficheros js. Este filtro necesita &lt;a href=&quot;https://nodejs.org&quot;&gt;Node&lt;/a&gt; y el package &lt;a href=&quot;https://github.com/mishoo/UglifyJS2&quot;&gt;UglifyJS&lt;/a&gt; para funcionar. Aqui también aplicamos la opción de realizar esta tarea únicamente en el entorno de producción.&lt;/p&gt;
+
+&lt;h3&gt;Entornos de Symfony&lt;/h3&gt;
+
+&lt;p&gt;Como he mencionado anteriormente, Symfony tiene dos entornos de ejecución diferenciados: desarrollo y producción. 
+Dichos entornos de ejecución afectan directamente a la forma de trabajar con nuestros assets. Necesitaremos conocer algunos comandos extras. &lt;/p&gt;
+
+&lt;p&gt;El primero es &lt;em&gt;assets install web&lt;/em&gt; que buscará dentro de todos nuestros bundles la ruta &lt;em&gt;/Resources/public/&lt;/em&gt;. Si encuentra algún fichero los copiará a la ruta pública &lt;em&gt;/web/bunles/[nombre&lt;/em&gt;del_bundle].&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ php app/console assets:install web
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;El segundo es &lt;em&gt;assetic dump&lt;/em&gt;. Este comando aplicará los filtros a los assets correspondientes y a continuación los copiará a la ruta &lt;em&gt;/web/&lt;/em&gt;. Dependiendo del entorno en el cual quieras realizar el dump, deberas utilizar el flag &lt;em&gt;--env&lt;/em&gt;.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ php app/console assetic:dump --env=dev
+
+$ php app/console assetic:dump --env=prod
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Nosotros tenemos deshabilitado por defecto que Symfony realice esta tarea por nosotros. Esto agiliza la carga en el entorno de desarrollo. En todo caso, existe un comando &lt;em&gt;watch&lt;/em&gt; que se encarga de observar si hemos realizado alguna modificación en nuestros assets, y es entonces cuando aplica el &lt;em&gt;assetic dump&lt;/em&gt;.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ php app/console assetic:watch
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;h2&gt;Bundles externos&lt;/h2&gt;
+
+&lt;p&gt;Este workflow funciona bastante bien si la librería front-end requerida se adapta a la forma de trabaja de Symfony. En algunos casos es mejor optar por algún bundle externo. Por ejemplo &lt;a href=&quot;https://github.com/egeloen/IvoryCKEditorBundle&quot;&gt;IvoryCKEditorBundle&lt;/a&gt; y &lt;a href=&quot;https://github.com/marcaube/ObHighchartsBundle&quot;&gt;ObHighchartsBundle&lt;/a&gt; son dos bundles que nos simplifican la forma de trabajar con &lt;a href=&quot;http://ckeditor.com/&quot;&gt;CKEditor&lt;/a&gt; y &lt;a href=&quot;http://www.highcharts.com/&quot;&gt;Highchart&lt;/a&gt;.&lt;/p&gt;
+</description>
+				<pubDate>Sat, 05 Sep 2015 18:40:30 +0200</pubDate>
+				<link>http://blog.garciaechegaray.com//2015/09/05/symfony-front-end-workflow.html</link>
+				<guid isPermaLink="true">http://blog.garciaechegaray.com//2015/09/05/symfony-front-end-workflow.html</guid>
+			</item>
+		
+			<item>
 				<title>Vagrant: arrancar, crear y publicar un box</title>
 				<description>&lt;hr&gt;
 
@@ -947,100 +1087,6 @@ $ phonegap run android
 				<pubDate>Sat, 18 Oct 2014 22:00:00 +0200</pubDate>
 				<link>http://blog.garciaechegaray.com//2014/10/18/phonegap-workshop.html</link>
 				<guid isPermaLink="true">http://blog.garciaechegaray.com//2014/10/18/phonegap-workshop.html</guid>
-			</item>
-		
-			<item>
-				<title>Flatty, un theme Bootstrap desarrollado con Compass &amp; Sass</title>
-				<description>&lt;p&gt;&lt;big&gt;Flatty es un theme para Bootstrap desarrollado con Compass &amp;amp; Sass. Añade decenas de nuevos modulos 
-HTML/CSS y pre selecciona un buen número de plugins jQuery para abordar cualquier proyecto front-end.&lt;/big&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://d85wutc1n854v.cloudfront.net/live/products/600x375/WB0P6NR1N.png?v=2.2&quot; alt=&quot;Flatty&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;Estoy trabajando en un proyecto a medida, donde gran parte del desarrollo consiste en crear varios back office para los diferentes roles que tiene la aplicación. Y aunque Bootstrap viene de serie con un bueno número de módulos para crear diferentes layouts, en este caso se nos quedaba corto a nivel de funcionalidades predefinidas.&lt;/p&gt;
-
-&lt;p&gt;Investigando las posibilidades que existian en el mercado, dimos con &lt;a href=&quot;https://wrapbootstrap.com&quot;&gt;Wrap Bootstrap&lt;/a&gt; un servicio similar a &lt;a href=&quot;http://themeforest.net/&quot;&gt;Theme Forest&lt;/a&gt; si lo tuyo con los themes para Wordpress o Prestashop. &lt;/p&gt;
-
-&lt;p&gt;Wrap Bootstrap es un market con cientos de themes y templates, organizado por varias categorías, una de ellas
-&lt;a href=&quot;https://wrapbootstrap.com/themes/admin&quot;&gt;Admin &amp;amp; Dashboards&lt;/a&gt;. ¡Bingo!.&lt;/p&gt;
-
-&lt;p&gt;Y aqui me permito hace un pequeño inciso querido lector. Te estarás preguntando por qué carallo nos hemos gastado dinero en comprar un theme si lo podemos hacer nosotros mismos, ¿para eso nos pagan, no?.&lt;/p&gt;
-
-&lt;p&gt;Lo primero, Flatty cuesta sólo 18$, que al cambio son unos 13€. Vamos, un precio ridículo para un proyecto web a medida de varios miles de euros. 
-Segundo, nos ahorra mucho tiempo de desarrollo. Y en este caso tiempo es igual a dinero. Mucho dinero si calculamos el coste por hora que facturamos. &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Al cliente, no le interesa con qué herramientas hagamos nuestro trabajo&lt;/strong&gt; (escribe aquí tu framework, librería o IDE favorito). Lo único que le interesa es el time-to-market y que las características desarrolladas funcionen correctamente y cumplan su objetivo. Si uso Sass, Bootstrap o CakePHP es por que me permite trabajar más rápido y ser el doble de eficiente. Punto. El resto son pajas mentales que nos montamos nosotros mismos.&lt;/p&gt;
-
-&lt;h2&gt;¿Qué más me puedes contar sobre Flatty?&lt;/h2&gt;
-
-&lt;p&gt;Flatty como herramienta tiene cosas buenas y malas. &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Primero las malas&lt;/strong&gt;. No es de código abierto, por lo tanto la comunidad no puede evolucionar y mejorar la herramienta. Esto influye en el número de actualizaciones y resolución de bugs (la última actualización es de agosto del 2013). También crea una capa de diseño por encima de Bootstrap que puede no encajar con la imagen de marca de tu proyecto.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Ahora las buenas&lt;/strong&gt;. Implementa la última versión de Bootstrap, en concreto la &lt;a href=&quot;https://github.com/twbs/bootstrap-sass&quot;&gt;v3 con Sass&lt;/a&gt;. Utiliza toda la potencia de &lt;a href=&quot;http://compass-style.org/&quot;&gt;Compass&lt;/a&gt; para gestionar el theme. Y añade varias decenas nuevos modulos HTML/CSS. &lt;/p&gt;
-
-&lt;p&gt;Por ejemplo &lt;a href=&quot;http://www.bublinastudio.com/flattybs3/email_templates.html&quot;&gt;email templates&lt;/a&gt;, &lt;a href=&quot;http://www.bublinastudio.com/flattybs3/calendar.html&quot;&gt;calendario&lt;/a&gt;, &lt;a href=&quot;http://www.bublinastudio.com/flattybs3/buttons_and_icons.html&quot;&gt;pack de iconos vía Font Awesome&lt;/a&gt;, &lt;a href=&quot;http://www.bublinastudio.com/flattybs3/wysiwyg.html&quot;&gt;plugin de wysiwyg&lt;/a&gt;, &lt;a href=&quot;http://www.bublinastudio.com/flattybs3/chats.html&quot;&gt;chat&lt;/a&gt;, etc. La &lt;a href=&quot;https://wrapbootstrap.com/theme/flatty-flat-administration-template-WB0P6NR1N&quot;&gt;lista completa de features&lt;/a&gt; la puedes consultar en Wrap Bootstrap.&lt;/p&gt;
-
-&lt;p&gt;Otra punto fuerte de es que puedes personalizar el framework a tu gusto ya que tienes acceso a todos los ficheros &lt;a href=&quot;http://sass-lang.com/&quot;&gt;scss&lt;/a&gt; del proyecto. Por lo tanto si no necesitas un módulo en concreto, simplemente lo eliminas del fichero principal (en nuestro caso &amp;#39;admin.scss&amp;#39;). La estructura de este fichero es la siguiente:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;@import &amp;quot;compass&amp;quot;;
-@import &amp;quot;theme/variables&amp;quot;;
-@import &amp;quot;theme/utilities&amp;quot;;
-@import &amp;quot;theme/main&amp;quot;
-@import &amp;quot;theme/font-awesome&amp;quot;;
-@import &amp;quot;theme/type&amp;quot;;
-@import &amp;quot;theme/header&amp;quot;;
-@import &amp;quot;theme/navigation&amp;quot;;
-@import &amp;quot;theme/content&amp;quot;;
-@import &amp;quot;theme/boxes&amp;quot;;
-@import &amp;quot;theme/boxes-quick-links&amp;quot;;
-@import &amp;quot;theme/boxes-statistics&amp;quot;;
-@import &amp;quot;theme/tables&amp;quot;;
-@import &amp;quot;theme/todo-list&amp;quot;;
-@import &amp;quot;theme/recent-activity&amp;quot;;
-@import &amp;quot;theme/calendar&amp;quot;;
-@import &amp;quot;theme/chat&amp;quot;;
-@import &amp;quot;theme/tasks&amp;quot;;
-@import &amp;quot;theme/nestable-list&amp;quot;;
-@import &amp;quot;theme/accordions&amp;quot;;
-@import &amp;quot;theme/tabs&amp;quot;;
-@import &amp;quot;theme/wizard&amp;quot;;
-@import &amp;quot;theme/forms&amp;quot;;
-@import &amp;quot;theme/pages/gallery&amp;quot;;
-@import &amp;quot;theme/pages/timeline&amp;quot;;
-@import &amp;quot;theme/pages/invoice&amp;quot;;
-@import &amp;quot;theme/pages/pricing_tables&amp;quot;;
-@import &amp;quot;theme/pages/orders&amp;quot;;
-@import &amp;quot;theme/pages/faq&amp;quot;;
-@import &amp;quot;theme/pages/errors&amp;quot;;
-@import &amp;quot;theme/pages/login&amp;quot;;
-@import &amp;quot;theme/overrides-bootstrap&amp;quot;;
-@import &amp;quot;theme/overrides-plugins&amp;quot;;
-@import &amp;quot;theme/common&amp;quot;;
-@import &amp;quot;theme/pull&amp;quot;; 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Configurar Compass&lt;/h2&gt;
-
-&lt;p&gt;Algo muy útil es saber como &lt;a href=&quot;https://gist.github.com/nathansmith/1179395&quot;&gt;configurar correctamente un proyecto Compass&lt;/a&gt;.
-En este ejemplo podemos ver como establecer una serie de configuraciones para el proyecto modificando el fichero &lt;em&gt;config.rb&lt;/em&gt;&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;preferred_syntax = :sass
-
-http_path = &amp;#39;/&amp;#39;
-relative_assets = true
-sass_dir = &amp;#39;flatty&amp;#39; 
-
-images_dir = &amp;#39;assets/img&amp;#39;
-fonts_dir = &amp;#39;assets/fonts&amp;#39;
-css_dir = &amp;#39;assets/stylesheets&amp;#39;
-javascripts_dir = &amp;#39;assets/js&amp;#39;
-
-# Dev
-line_comments = true
-
-# Production
-# output_style = :compressed
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-				<pubDate>Thu, 16 Oct 2014 23:00:00 +0200</pubDate>
-				<link>http://blog.garciaechegaray.com//2014/10/16/bootstrap-theme-flatty-compass-sass.html</link>
-				<guid isPermaLink="true">http://blog.garciaechegaray.com//2014/10/16/bootstrap-theme-flatty-compass-sass.html</guid>
 			</item>
 		
 	</channel>

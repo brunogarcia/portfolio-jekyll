@@ -19,7 +19,7 @@ proyectos *open source* para (adivina...) automatizar tareas. </big>
 
 ### Bower
 
-[Bower](http://bower.io) fue liberado por Twitter y sirve para gestionar
+[Bower](http://bower.io) es una herramienta _open source_ liberada por Twitter y sirve para gestionar
 todas las dependencias de tu proyecto front-end. La idea es similar a
 [Composer](https://getcomposer.org/) en PHP o
 [Bundler](http://bundler.io/) para Ruby.
@@ -44,7 +44,7 @@ marcha, etc. En fin, Grunt tiene un gran repositorio de
 tarea que te puedas imaginar.
 
 Para configurar Grunt son necesarios dos archivos: *package.json* y
-*Gruntfile.js.*En el primero debes listar todas las dependencias
+*Gruntfile.js.* En el primero debes listar todas las dependencias
 necesarias para correr las tareas. En el segundo creas la configuración
 de cada tarea o grupo de tareas. Si sientes curiosidad, te recomiendo
 leer este artículo: [Grunt for People Who Think Things Like Grunt are

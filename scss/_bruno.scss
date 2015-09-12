@@ -281,16 +281,18 @@ h1 {
 }
 
 .highlight {
-    border: dotted 2px #CCC;
-    padding: 20px;
+    border: solid 1px #ccc;
+    padding: 20px;   
     margin-bottom: 20px;
-    font-size: 11px;
-    background: #EEE;
-    @include border-top-radius (12px);
-    @include border-bottom-radius (12px);
-    @include border-left-radius (12px);
-    @include border-right-radius (12px);
+    font-size: 13px; 
+    background-color: #fff;
+    @include border-top-radius (3px);
+    @include border-bottom-radius (3px);
+    @include border-left-radius (3px);
+    @include border-right-radius (3px);
     code {
+        background-color: #fff;
+        border-color: #fff;
         font-weight: normal !important;
         color: #333 !important;
     }
