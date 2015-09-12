@@ -10,11 +10,11 @@
 				<title>Symfony Front-end Workflow: Assetic, Bower &amp; Grunt</title>
 				<description>&lt;hr&gt;
 
-&lt;p&gt;&lt;big&gt;Despúes de desarrollar un par de proyectos con &lt;a href=&quot;http://www.symfony.com/&quot;&gt;Symfony&lt;/a&gt; he encontrado un flujo de trabajo que funciona bastante bien para trabajar con diferentes librerías front-end en dicho framework PHP&lt;/big&gt;&lt;/p&gt;
+&lt;p&gt;&lt;big&gt;Después de desarrollar un par de proyectos con &lt;a href=&quot;http://www.symfony.com/&quot;&gt;Symfony&lt;/a&gt; he encontrado un flujo de trabajo que funciona bastante bien para trabajar con diferentes librerías front-end en dicho framework PHP&lt;/big&gt;&lt;/p&gt;
 
 &lt;hr&gt;
 
-&lt;p&gt;La idea consiste en utilizar &lt;a href=&quot;http://bower.io&quot;&gt;Bower&lt;/a&gt; para gestionar las dependecias front-end del proyecto. &lt;a href=&quot;http://gruntjs.com&quot;&gt;Grunt&lt;/a&gt; para seleccionar y copiar dichas dependencias a nuestro bundle principal. Y finalmente dejamos que &lt;a href=&quot;http://symfony.com/doc/current/cookbook/assetic/index.html&quot;&gt;Assetic&lt;/a&gt; realice el resto de tareas: aplicar los filtros (sass, rewrite, uglify, etc.) y gestionar el flujo dentro de Symfony.&lt;/p&gt;
+&lt;p&gt;La idea consiste en utilizar &lt;a href=&quot;http://bower.io&quot;&gt;Bower&lt;/a&gt; para gestionar las dependencias front-end del proyecto. &lt;a href=&quot;http://gruntjs.com&quot;&gt;Grunt&lt;/a&gt; para seleccionar y copiar dichas dependencias a nuestro bundle principal. Y finalmente dejamos que &lt;a href=&quot;http://symfony.com/doc/current/cookbook/assetic/index.html&quot;&gt;Assetic&lt;/a&gt; realice el resto de tareas: aplicar los filtros (sass, rewrite, uglify, etc.) y gestionar el flujo dentro de Symfony.&lt;/p&gt;
 
 &lt;p&gt;Implementar todo esto por primera vez requiere una importante carga de configuración, sobre todo si eres completamente nuevo en el mundo Symfony (como era mi caso hasta hace 6 meses), pero una vez le pillas el truco todo va como la seda. &lt;/p&gt;
 
@@ -27,14 +27,14 @@
 &lt;p&gt;&lt;a href=&quot;http://bower.io&quot;&gt;Bower&lt;/a&gt; es una herramienta &lt;em&gt;open source&lt;/em&gt; liberada por Twitter que sirve para gestionar
 todas las dependencias de tu proyecto front-end. La idea es similar a &lt;a href=&quot;https://getcomposer.org/&quot;&gt;Composer&lt;/a&gt; en PHP o &lt;a href=&quot;http://bundler.io/&quot;&gt;Bundler&lt;/a&gt; para Ruby.&lt;/p&gt;
 
-&lt;p&gt;El funcionamiento de Bower es bastante simple. Primero creas la configuración necesaria en un archivo &lt;em&gt;bower.json&lt;/em&gt;. Esto lo puedo hacer a mano o  lanzando el comando &lt;em&gt;bower init&lt;/em&gt; en tu consola. El atributo mas importante es &lt;em&gt;dependencies&lt;/em&gt;, el cual será un objeto (key: value) con el nombre y la versión de la dependencia.&lt;/p&gt;
+&lt;p&gt;El funcionamiento de Bower es bastante simple. Primero creas la configuración necesaria en un archivo &lt;em&gt;bower.json&lt;/em&gt;. Esto lo puedo hacer a mano o  lanzando el comando &lt;em&gt;bower init&lt;/em&gt; en tu consola. El atributo más importante es &lt;em&gt;dependencies&lt;/em&gt;, el cual será un objeto (key: value) con el nombre y la versión de la dependencia.&lt;/p&gt;
 
 &lt;p&gt;Para añadir una nueva librería lo primero que debes hacer es buscarla en &lt;a href=&quot;http://bower.io/search/&quot;&gt;bower.io&lt;/a&gt;. Esto también lo puedes hacer por consola lanzando el comando &lt;em&gt;$ bower search NOMBRE&lt;/em&gt;DE&lt;em&gt;LA&lt;/em&gt;LIBRERIA_.&lt;/p&gt;
 
 &lt;p&gt;Si la librería se encuentra registrada como package en Bower entonces la podrás añadir directamente por consola con el flag &lt;em&gt;--save&lt;/em&gt;&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ bower install --save jquery
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Esto modificará automáticamente el fichero &lt;em&gt;bower.json&lt;/em&gt; añadiendo la librería con su respectiva versión. Por ejemplo la versión ~2.1.1. El primer simbolo (~) significa que las siguientes veces que solicites a Bower actualizar las dependecias, comenzará siempre con la versión 2.1.1 hasta un máximo de 2.2.0. Puedes encontrar más información sobre este tema en &lt;a href=&quot;http://stackoverflow.com/a/20412378&quot;&gt;Bower Version Syntax&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Esto modificará automáticamente el fichero &lt;em&gt;bower.json&lt;/em&gt; añadiendo la librería con su respectiva versión. Por ejemplo la versión ~2.1.1. El primer simbolo (~) significa que las siguientes veces que solicites a Bower actualizar las dependencias, comenzará siempre con la versión 2.1.1 hasta un máximo de 2.2.0. Puedes encontrar más información sobre este tema en &lt;a href=&quot;http://stackoverflow.com/a/20412378&quot;&gt;Bower Version Syntax&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Si la librería que necesitas &lt;em&gt;no&lt;/em&gt; se encuentra registrada como package en Bower, entonces puedes modificar el &lt;em&gt;bower.json&lt;/em&gt; a mano, añadiendo la url al repositorio (público o privado) especificando la versión que deseas utilizar.&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;quot;bootstrap-datepicker&amp;quot;: &amp;quot;https://github.com/eternicode/bootstrap-datepicker.git#~1.4.0&amp;quot;
@@ -44,11 +44,11 @@ todas las dependencias de tu proyecto front-end. La idea es similar a &lt;a href
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Los ficheros se guardarán en una carpeta llamada &lt;em&gt;bower components&lt;/em&gt;. Dependiendo del autor de la librería encontrarás muchas carperas y ficheros que no serán necesarios para tu proyecto (por ejemplo: test, build, changelogs, licencias, readme, etc.). Pero no hay problema, esto lo resolveremos con un plugin para Grunt llamado &lt;a href=&quot;https://www.npmjs.com/package/grunt-bowercopy&quot;&gt;bower copy&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Un último punto importante: la carpeta &lt;em&gt;bower components&lt;/em&gt;  deberás añadirla a tu fichero &lt;em&gt;.gitignore&lt;/em&gt;. Ya que no hace falta subir todas las dependecias al repositorio, siempre que tengas a mano el fichero &lt;em&gt;bower.json&lt;/em&gt; puedes realizar la misma tarea todas las veces que quieras. &lt;/p&gt;
+&lt;p&gt;Un último punto importante: la carpeta &lt;em&gt;bower components&lt;/em&gt;  deberás añadirla a tu fichero &lt;em&gt;.gitignore&lt;/em&gt;. Ya que no hace falta subir todas las dependencias al repositorio, siempre que tengas a mano el fichero &lt;em&gt;bower.json&lt;/em&gt; puedes realizar la misma tarea todas las veces que quieras. &lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/brunogarcia/79e9d6880b3d5ab3d7f9.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;Estos datos los he sacado de &lt;a href=&quot;https://www.gitignore.io/&quot;&gt;gitignore.io&lt;/a&gt;, una herramienta muy útil para saber que carpetas debes ignorar según que tecnología utilizas.&lt;/p&gt;
+&lt;p&gt;Estos datos los he sacado de &lt;a href=&quot;https://www.gitignore.io/&quot;&gt;gitignore.io&lt;/a&gt;, una herramienta muy útil para saber que carpetas debes ignorar según qué tecnología utilizas.&lt;/p&gt;
 
 &lt;p&gt;Así es como quedaría un archivo &lt;em&gt;bower.json&lt;/em&gt; completamente configurado:&lt;/p&gt;
 
@@ -62,7 +62,7 @@ todas las dependencias de tu proyecto front-end. La idea es similar a &lt;a href
 
 &lt;p&gt;Para configurar Grunt son necesarios dos ficheros: &lt;em&gt;package.json&lt;/em&gt; y &lt;em&gt;Gruntfile.js&lt;/em&gt;. &lt;/p&gt;
 
-&lt;p&gt;En &lt;em&gt;package.json&lt;/em&gt; deberás listar todas las dependencias necesarias para correr las tareas. En nuestro caso solo necesitamos &lt;a href=&quot;https://www.npmjs.com/package/grunt-bowercopy&quot;&gt;bower copy&lt;/a&gt;, ya que el resto de tareas que normalmente realizariamos con Grunt, en el entorno de Symfony será Assetic quien se encargará de ellas.&lt;/p&gt;
+&lt;p&gt;En &lt;em&gt;package.json&lt;/em&gt; deberás listar todas las dependencias necesarias para correr las tareas. En nuestro caso solo necesitamos &lt;a href=&quot;https://www.npmjs.com/package/grunt-bowercopy&quot;&gt;bower copy&lt;/a&gt;, ya que el resto de tareas que normalmente realizamos con Grunt, en el entorno de Symfony será Assetic quien se encargará de ellas.&lt;/p&gt;
 
 &lt;p&gt;Para instalar las dependencias de Grunt deberás escribir en tu consola:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ npm install
@@ -71,13 +71,13 @@ todas las dependencias de tu proyecto front-end. La idea es similar a &lt;a href
 
 &lt;p&gt;En &lt;em&gt;Gruntfile.js&lt;/em&gt; creas la configuración de cada tarea o grupo de tareas. En nuestro caso solo tendremos una única tarea llamada &amp;#39;default&amp;#39;.&lt;/p&gt;
 
-&lt;p&gt;Utilizo &lt;a href=&quot;https://www.npmjs.com/package/grunt-bowercopy&quot;&gt;bower copy&lt;/a&gt; para copiar únicamente los ficheros que necesita mi proyecto. 
-En este caso, todos se copiaran a &lt;em&gt;/src/AppBundle/Resources/public/&lt;/em&gt;. Como podéis ver he dividido los assets en varios grupos: CSS, JS, sass, fonts e imágenes. Dependiendo del grupo al cual pertenezcan, cada asset se copiará a una carpeta distinta. Incluso si os fijaís bien, podemos cambiar el nombre al fichero antes de llevarlo a su destino final.&lt;/p&gt;
+&lt;p&gt;Hago uso de &lt;a href=&quot;https://www.npmjs.com/package/grunt-bowercopy&quot;&gt;bower copy&lt;/a&gt; para copiar únicamente los ficheros que necesita mi proyecto. 
+En este caso, todos se copiaran a &lt;em&gt;/src/AppBundle/Resources/public/&lt;/em&gt;. Como podéis ver he dividido los assets en varios grupos: CSS, JS, sass, fonts e imágenes. Dependiendo del grupo al cual pertenezcan, cada asset se copiará a una carpeta distinta. Incluso si os fijáis bien, podemos cambiar el nombre al fichero antes de llevarlo a su destino final.&lt;/p&gt;
 
 &lt;p&gt;Para lanzar esta tarea simplemente escribes en tu consola:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ grunt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Si existieran mas tareas, deberíamos especificar el nombre, pero en este caso no es necesario.&lt;/p&gt;
+&lt;p&gt;Si existieran más tareas, deberíamos especificar el nombre, pero en este caso no es necesario.&lt;/p&gt;
 
 &lt;p&gt;Así es como quedaría un archivo &lt;em&gt;Gruntfile.js&lt;/em&gt; completamente configurado:&lt;/p&gt;
 
@@ -103,7 +103,8 @@ En este caso, todos se copiaran a &lt;em&gt;/src/AppBundle/Resources/public/&lt;
 
 &lt;p&gt;Como veréis primero aplicamos el filtro &lt;em&gt;sass&lt;/em&gt; a nuestro fichero &lt;em&gt;main.scss&lt;/em&gt;. Incluso podemos decidir el nombre que tendrá el CSS final, en este caso &lt;em&gt;main.css&lt;/em&gt;. Para hacer uso de este filtro es necesario tener instalado &lt;a href=&quot;https://www.ruby-lang.org&quot;&gt;Ruby&lt;/a&gt; y &lt;a href=&quot;http://sass-lang.com/&quot;&gt;Sass&lt;/a&gt; en nuestro entorno. Mi recomendación es instalar siempre Ruby vía &lt;a href=&quot;https://rvm.io/&quot;&gt;RVM&lt;/a&gt; para evitar problemas con las versiones de las gemas.&lt;/p&gt;
 
-&lt;p&gt;A continuación aplicamos a un grupo de ficheros CSS (plugins) un par de filtros. El filtro &lt;em&gt;cssrewrite&lt;/em&gt; se encarga de sobreescribir las rutas relativas que se encuentren en nuestros estilos. El filtro &lt;em&gt;uglyfycss&lt;/em&gt; minifica y concatena nuestros ficheros CSS. Este último filtro necesita &lt;a href=&quot;https://nodejs.org&quot;&gt;Node&lt;/a&gt; y el package &lt;a href=&quot;https://github.com/fmarcia/UglifyCSS&quot;&gt;UglifyCSS&lt;/a&gt; para funcionar.&lt;/p&gt;
+&lt;p&gt;A continuación aplicamos a un grupo de ficheros CSS (plugins) un par de filtros. El filtro &lt;em&gt;cssrewrite&lt;/em&gt; se encarga de sobreescribir las rutas relativas que se encuentren en nuestros estilos. El filtro &lt;em&gt;uglyfycss&lt;/em&gt; minifica y concatena nuestros ficheros CSS. 
+Este último filtro necesita &lt;a href=&quot;https://nodejs.org&quot;&gt;Node&lt;/a&gt; y el package &lt;a href=&quot;https://github.com/fmarcia/UglifyCSS&quot;&gt;UglifyCSS&lt;/a&gt; para funcionar.&lt;/p&gt;
 
 &lt;p&gt;Si añadimos a cualquier filtro el signo de interrogación &lt;em&gt;?&lt;/em&gt; significa que solo debe ejecutar dicha tarea en el entorno de producción. La razón es que no nos interesa trabajar con archivos minificados en el entorno de desarrollo, básicamente porque sería un infierno debugear.&lt;/p&gt;
 
@@ -117,7 +118,7 @@ En este caso, todos se copiaran a &lt;em&gt;/src/AppBundle/Resources/public/&lt;
 
 &lt;script src=&quot;https://gist.github.com/brunogarcia/416503dd5e2599d43499.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;En este caso aplicamos un único filtro llamado &lt;em&gt;uglyfyjs&lt;/em&gt;, cuya tarea es minificar y concatenar nuestros ficheros js. Este filtro necesita &lt;a href=&quot;https://nodejs.org&quot;&gt;Node&lt;/a&gt; y el package &lt;a href=&quot;https://github.com/mishoo/UglifyJS2&quot;&gt;UglifyJS&lt;/a&gt; para funcionar. Aqui también aplicamos la opción de realizar esta tarea únicamente en el entorno de producción.&lt;/p&gt;
+&lt;p&gt;En este caso aplicamos un único filtro llamado &lt;em&gt;uglyfyjs&lt;/em&gt;, cuya tarea es minificar y concatenar nuestros ficheros js. Este filtro necesita &lt;a href=&quot;https://nodejs.org&quot;&gt;Node&lt;/a&gt; y el package &lt;a href=&quot;https://github.com/mishoo/UglifyJS2&quot;&gt;UglifyJS&lt;/a&gt; para funcionar. También aplicamos la opción de realizar esta tarea únicamente en el entorno de producción.&lt;/p&gt;
 
 &lt;h3&gt;Entornos de Symfony&lt;/h3&gt;
 
@@ -127,7 +128,7 @@ Dichos entornos de ejecución afectan directamente a la forma de trabajar con nu
 &lt;p&gt;El primero es &lt;em&gt;assets install web&lt;/em&gt; que buscará dentro de todos nuestros bundles la ruta &lt;em&gt;/Resources/public/&lt;/em&gt;. Si encuentra algún fichero los copiará a la ruta pública &lt;em&gt;/web/bunles/[nombre&lt;/em&gt;del_bundle].&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ php app/console assets:install web
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;El segundo es &lt;em&gt;assetic dump&lt;/em&gt;. Este comando aplicará los filtros a los assets correspondientes y a continuación los copiará a la ruta &lt;em&gt;/web/&lt;/em&gt;. Dependiendo del entorno en el cual quieras realizar el dump, deberas utilizar el flag &lt;em&gt;--env&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;El segundo es &lt;em&gt;assetic dump&lt;/em&gt;. Este comando aplicará los filtros a los assets correspondientes y a continuación los copiará a la ruta &lt;em&gt;/web/&lt;/em&gt;. Dependiendo del entorno en el cual quieras realizar el dump, deberás utilizar el flag &lt;em&gt;--env&lt;/em&gt;.&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ php app/console assetic:dump --env=dev
 
 $ php app/console assetic:dump --env=prod
@@ -139,7 +140,7 @@ $ php app/console assetic:dump --env=prod
 
 &lt;h2&gt;Bundles externos&lt;/h2&gt;
 
-&lt;p&gt;Este workflow funciona bastante bien si la librería front-end requerida se adapta a la forma de trabaja de Symfony. En algunos casos es mejor optar por algún bundle externo. Por ejemplo &lt;a href=&quot;https://github.com/egeloen/IvoryCKEditorBundle&quot;&gt;IvoryCKEditorBundle&lt;/a&gt; y &lt;a href=&quot;https://github.com/marcaube/ObHighchartsBundle&quot;&gt;ObHighchartsBundle&lt;/a&gt; son dos bundles que nos simplifican la forma de trabajar con &lt;a href=&quot;http://ckeditor.com/&quot;&gt;CKEditor&lt;/a&gt; y &lt;a href=&quot;http://www.highcharts.com/&quot;&gt;Highchart&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Este workflow funciona bastante bien si la librería front-end requerida se adapta a la forma de trabajar de Symfony. En algunos casos es mejor optar por algún bundle externo. Por ejemplo &lt;a href=&quot;https://github.com/egeloen/IvoryCKEditorBundle&quot;&gt;IvoryCKEditorBundle&lt;/a&gt; y &lt;a href=&quot;https://github.com/marcaube/ObHighchartsBundle&quot;&gt;ObHighchartsBundle&lt;/a&gt; son dos bundles que nos simplifican la forma de trabajar con &lt;a href=&quot;http://ckeditor.com/&quot;&gt;CKEditor&lt;/a&gt; y &lt;a href=&quot;http://www.highcharts.com/&quot;&gt;Highchart&lt;/a&gt;.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 05 Sep 2015 18:40:30 +0200</pubDate>
 				<link>http://blog.garciaechegaray.com//2015/09/05/symfony-front-end-workflow.html</link>
