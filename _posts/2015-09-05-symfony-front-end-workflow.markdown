@@ -6,7 +6,7 @@ date: '2015-09-05T18:40:30+02:00'
 
 ***
 
-<big>Después de desarrollar un par de proyectos con [Symfony](http://www.symfony.com/) he encontrado un flujo de trabajo que funciona bastante bien para trabajar con diferentes librerías front-end en dicho framework PHP</big>
+<big>Después de desarrollar un par de proyectos con [Symfony](http://www.symfony.com/) he encontrado un flujo de trabajo que funciona bastante bien para implementar diferentes librerías front-end en dicho framework PHP</big>
 
 ***
 
@@ -23,7 +23,7 @@ Lo mejor de usar conjuntamente Bower y Grunt, es que toda esta configuración la
 [Bower](http://bower.io) es una herramienta _open source_ liberada por Twitter que sirve para gestionar
 todas las dependencias de tu proyecto front-end. La idea es similar a [Composer](https://getcomposer.org/) en PHP o [Bundler](http://bundler.io/) para Ruby.
 
-El funcionamiento de Bower es bastante simple. Primero creas la configuración necesaria en un archivo _bower.json_. Esto lo puedo hacer a mano o  lanzando el comando _bower init_ en tu consola. El atributo más importante es _dependencies_, el cual será un objeto (key: value) con el nombre y la versión de la dependencia.
+El funcionamiento de Bower es bastante simple. Primero creas la configuración necesaria en un archivo _bower.json_. Esto lo puedes hacer   lanzando el comando _bower init_ en tu consola. El atributo más importante es _dependencies_, el cual será un objeto (key: value) con el nombre y la versión de la dependencia.
 
 Para añadir una nueva librería lo primero que debes hacer es buscarla en [bower.io](http://bower.io/search/). Esto también lo puedes hacer por consola lanzando el comando _$ bower search NOMBRE_DE_LA_LIBRERIA_.
 
@@ -92,7 +92,7 @@ Un asset es cualquier componente de nuestro front-end. Por ejemplo un fichero cs
 
 [Assetic](https://github.com/kriswallsmith/assetic) es el gestor de assets que utiliza Symfony. Assetic está basado en [webassets](http://webassets.readthedocs.org/en/latest), una librería del mundo Python.
 
-Assetic trabaja conjuntamente con el [componente Asset](http://symfony.com/doc/current/components/asset/introduction.html) para gestionar todo el flujo de nuestros assets dentro de los entornos de desarrollo y producción de Symfony. Gracias a Assetic podremos aplicar filtros a nuestros assets antes de dejarlos disponibles para el usuario final. Por ejemplo compilar un fichero _sass_ o minimizar y combinar ficheros _js_.
+Assetic trabaja conjuntamente con el [componente Asset](http://symfony.com/doc/current/components/asset/introduction.html) para gestionar todo el flujo de nuestros assets dentro de los entornos de desarrollo y producción de Symfony. Gracias a Assetic podremos aplicar filtros a nuestros assets antes de dejarlos disponibles para el usuario final. Por ejemplo compilar un fichero _sass_ o comprimir y combinar ficheros _js_.
 
 La configuración de Assetic la haremos siempre en un fichero [twig](http://twig.sensiolabs.org/). 
 
@@ -104,12 +104,12 @@ Comencemos con los hojas de estilo de nuestra aplicación. Trabajaremos con un f
 
 Como veréis primero aplicamos el filtro _sass_ a nuestro fichero _main.scss_. Incluso podemos decidir el nombre que tendrá el CSS final, en este caso _main.css_. Para hacer uso de este filtro es necesario tener instalado [Ruby](https://www.ruby-lang.org) y [Sass](http://sass-lang.com/) en nuestro entorno. Mi recomendación es instalar siempre Ruby vía [RVM](https://rvm.io/) para evitar problemas con las versiones de las gemas.
 
-A continuación aplicamos a un grupo de ficheros CSS (plugins) un par de filtros. El filtro _cssrewrite_ se encarga de sobreescribir las rutas relativas que se encuentren en nuestros estilos. El filtro _uglyfycss_ minifica y concatena nuestros ficheros CSS. 
+A continuación aplicamos a un grupo de ficheros CSS (plugins) un par de filtros. El filtro _cssrewrite_ se encarga de sobreescribir las rutas relativas que se encuentren en nuestros estilos. El filtro _uglyfycss_ comprime y concatena nuestros ficheros CSS. 
 Este último filtro necesita [Node](https://nodejs.org) y el package [UglifyCSS](https://github.com/fmarcia/UglifyCSS) para funcionar.
 
-Si añadimos a cualquier filtro el signo de interrogación _?_ significa que solo debe ejecutar dicha tarea en el entorno de producción. La razón es que no nos interesa trabajar con archivos minificados en el entorno de desarrollo, básicamente porque sería un infierno debugear.
+Si añadimos a cualquier filtro el signo de interrogación _?_ significa que solo debe ejecutar dicha tarea en el entorno de producción. La razón es que no nos interesa trabajar con archivos comprimidos en el entorno de desarrollo, básicamente porque sería un infierno debugear.
 
-El lector avispado se preguntará por qué no he aplicado el filtro _uglifycss_ a los ficheros _sass_. La respuesta es sencilla: no hace falta. Sass ya se encarga de minificar y concatenar los ficheros que compila. Solo es necesario especificar este comportamiento en la configuración del entorno de producción de Symfony. 
+El lector avispado se preguntará por qué no he aplicado el filtro _uglifycss_ a los ficheros _sass_. La respuesta es sencilla: no hace falta. Sass ya se encarga de comprimir y concatenar los ficheros que compila. Solo es necesario especificar este comportamiento en la configuración del entorno de producción de Symfony. 
 
 <script src="https://gist.github.com/brunogarcia/1e40e9123c4892b0e281.js"></script>
 
@@ -119,7 +119,7 @@ Ahora es el turno de los ficheros Javascript. Trabajaremos con un fichero llamad
 
 <script src="https://gist.github.com/brunogarcia/416503dd5e2599d43499.js"></script>
 
-En este caso aplicamos un único filtro llamado _uglyfyjs_, cuya tarea es minificar y concatenar nuestros ficheros js. Este filtro necesita [Node](https://nodejs.org) y el package [UglifyJS](https://github.com/mishoo/UglifyJS2) para funcionar. También aplicamos la opción de realizar esta tarea únicamente en el entorno de producción.
+En este caso aplicamos un único filtro llamado _uglyfyjs_, cuya tarea es comprimir y concatenar nuestros ficheros js. Este filtro necesita [Node](https://nodejs.org) y el package [UglifyJS](https://github.com/mishoo/UglifyJS2) para funcionar. También aplicamos la opción de realizar esta tarea únicamente en el entorno de producción.
 
 ### Entornos de Symfony
 
