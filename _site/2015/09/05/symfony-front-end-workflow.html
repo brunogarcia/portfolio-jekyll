@@ -88,6 +88,12 @@
 
 <p>Lo mejor de usar conjuntamente Bower y Grunt, es que toda esta configuración la podemos copiar a otro proyecto y en 5 minutos ya tendremos todos los assets bajados y copiados a sus rutas correspondientes.</p>
 
+<p>¿Tienes alguna duda o pregunta?. Me encantaría saber como trabajaís vosotros en proyectos similares.</p>
+
+<p><a href="https://twitter.com/intent/tweet?screen_name=garciaechegaray" class="twitter-mention-button" data-size="large" data-related="garciaechegaray">Tweet to @garciaechegaray</a></p>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
 <hr>
 
 <h2>Bower</h2>
@@ -97,9 +103,10 @@ todas las dependencias de tu proyecto front-end. La idea es similar a <a href="h
 
 <p>El funcionamiento de Bower es bastante simple. Primero creas la configuración necesaria en un archivo <em>bower.json</em>. Esto lo puedes hacer   lanzando el comando <em>bower init</em> en tu consola. El atributo más importante es <em>dependencies</em>, el cual será un objeto (key: value) con el nombre y la versión de la dependencia.</p>
 
-<p>Para añadir una nueva librería lo primero que debes hacer es buscarla en <a href="http://bower.io/search/">bower.io</a>. Esto también lo puedes hacer por consola lanzando el comando <em>$ bower search NOMBRE</em>DE<em>LA</em>LIBRERIA_.</p>
-
-<p>Si la librería se encuentra registrada como package en Bower entonces la podrás añadir directamente por consola con el flag <em>--save</em></p>
+<p>Para añadir una nueva librería lo primero que debes hacer es buscarla en <a href="http://bower.io/search/">bower.io</a>. Esto también lo puedes hacer por consola lanzando el siguiente comando:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ bower search NOMBRE_DE_LA_LIBRERIA
+</code></pre></div>
+<p>Si la librería se encuentra registrada como package en Bower entonces la podrás añadir directamente por consola con el flag <code>--save</code></p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ bower install --save jquery
 </code></pre></div>
 <p>Esto modificará automáticamente el fichero <em>bower.json</em> añadiendo la librería con su respectiva versión. Por ejemplo la versión ~2.1.1. El primer simbolo (~) significa que las siguientes veces que solicites a Bower actualizar las dependencias, comenzará siempre con la versión 2.1.1 hasta un máximo de 2.2.0. Puedes encontrar más información sobre este tema en <a href="http://stackoverflow.com/a/20412378">Bower Version Syntax</a>.</p>
@@ -107,16 +114,10 @@ todas las dependencias de tu proyecto front-end. La idea es similar a <a href="h
 <p>Si la librería que necesitas <em>no</em> se encuentra registrada como package en Bower, entonces puedes modificar el <em>bower.json</em> a mano, añadiendo la url al repositorio (público o privado) especificando la versión que deseas utilizar.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">&quot;bootstrap-datepicker&quot;: &quot;https://github.com/eternicode/bootstrap-datepicker.git#~1.4.0&quot;
 </code></pre></div>
-<p>Una vez finalizado este proceso basta con lanzar una línea en tu terminal para tener todas las dependencias disponibles en local. Da igual si son 5 o 50, Bower las bajará todas por ti en pis pas.</p>
+<p>Una vez finalizado este proceso basta con lanzar una línea en tu terminal para tener todas las dependencias disponibles en local. Da igual si son 5 o 50, Bower las bajará todas por ti en un pis pas.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ bower install
 </code></pre></div>
 <p>Los ficheros se guardarán en una carpeta llamada <em>bower components</em>. Dependiendo del autor de la librería encontrarás muchas carperas y ficheros que no serán necesarios para tu proyecto (por ejemplo: test, build, changelogs, licencias, readme, etc.). Pero no hay problema, esto lo resolveremos con un plugin para Grunt llamado <a href="https://www.npmjs.com/package/grunt-bowercopy">bower copy</a>.</p>
-
-<p>Un último punto importante: la carpeta <em>bower components</em>  deberás añadirla a tu fichero <em>.gitignore</em>. Ya que no hace falta subir todas las dependencias al repositorio, siempre que tengas a mano el fichero <em>bower.json</em> puedes realizar la misma tarea todas las veces que quieras. </p>
-
-<script src="https://gist.github.com/brunogarcia/79e9d6880b3d5ab3d7f9.js"></script>
-
-<p>Estos datos los he sacado de <a href="https://www.gitignore.io/">gitignore.io</a>, una herramienta muy útil para saber que carpetas debes ignorar según qué tecnología utilizas.</p>
 
 <p>Así es como quedaría un archivo <em>bower.json</em> completamente configurado:</p>
 
@@ -130,17 +131,18 @@ todas las dependencias de tu proyecto front-end. La idea es similar a <a href="h
 
 <p>Para configurar Grunt son necesarios dos ficheros: <em>package.json</em> y <em>Gruntfile.js</em>. </p>
 
-<p>En <em>package.json</em> deberás listar todas las dependencias necesarias para correr las tareas. En nuestro caso solo necesitamos <a href="https://www.npmjs.com/package/grunt-bowercopy">bower copy</a>, ya que el resto de tareas que normalmente realizamos con Grunt, en el entorno de Symfony será Assetic quien se encargará de ellas.</p>
+<p>En <em>package.json</em> deberás listar todas las dependencias necesarias para correr las tareas. En nuestro caso solo necesitamos <a href="https://www.npmjs.com/package/grunt-bowercopy">bower copy</a>, ya que el resto de tareas que normalmente realizaríamos con Grunt, en el entorno de Symfony será Assetic quien se encargará de ellas.</p>
+
+<script src="https://gist.github.com/brunogarcia/9f5c2a46f981fe037886.js"></script>
 
 <p>Para instalar las dependencias de Grunt deberás escribir en tu consola:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ npm install
 </code></pre></div>
-<script src="https://gist.github.com/brunogarcia/9f5c2a46f981fe037886.js"></script>
-
 <p>En <em>Gruntfile.js</em> creas la configuración de cada tarea o grupo de tareas. En nuestro caso solo tendremos una única tarea llamada &#39;default&#39;.</p>
 
-<p>Hago uso de <a href="https://www.npmjs.com/package/grunt-bowercopy">bower copy</a> para copiar únicamente los ficheros que necesita mi proyecto. 
-En este caso, todos se copiaran a <em>/src/AppBundle/Resources/public/</em>. Como podéis ver he dividido los assets en varios grupos: CSS, JS, sass, fonts e imágenes. Dependiendo del grupo al cual pertenezcan, cada asset se copiará a una carpeta distinta. Incluso si os fijáis bien, podemos cambiar el nombre al fichero antes de llevarlo a su destino final.</p>
+<p>Hago uso de <a href="https://www.npmjs.com/package/grunt-bowercopy">bower copy</a> para copiar únicamente los ficheros que necesita mi proyecto. </p>
+
+<p>En este caso, todos se copiaran a la ruta <code>/src/AppBundle/Resources/public</code>. He dividido los assets en varios grupos: CSS, JS, sass, fonts e imágenes. Dependiendo del grupo al cual pertenezcan, cada asset se copiará a una carpeta distinta. Incluso podemos cambiar el nombre al fichero antes de llevarlo a su destino final.</p>
 
 <p>Para lanzar esta tarea simplemente escribes en tu consola:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ grunt
@@ -153,28 +155,40 @@ En este caso, todos se copiaran a <em>/src/AppBundle/Resources/public/</em>. Com
 
 <hr>
 
+<h2>Git Ignore</h2>
+
+<p>Un último punto importante: la carpeta <em>bower components</em> y <em>node modules</em>  deberás añadirla a tu fichero <em>.gitignore</em>. Ya que no hace falta subir todas las dependencias de desarrollo a tu repositorio, siempre que tengas a mano los ficheros de configuración de Bower y Grunt podrás realizar la misma tarea todas las veces que quieras. </p>
+
+<script src="https://gist.github.com/brunogarcia/79e9d6880b3d5ab3d7f9.js"></script>
+
+<script src="https://gist.github.com/brunogarcia/b6aac16fad9d22ef0784.js"></script>
+
+<p>Estos datos los he sacado de <a href="https://www.gitignore.io/">gitignore.io</a>, una herramienta muy útil para saber que carpetas debes ignorar según qué tecnología utilizas.</p>
+
+<hr>
+
 <h2>Assetic</h2>
 
-<p>Un asset es cualquier componente de nuestro front-end. Por ejemplo un fichero css, js, una imagen o una webfont.</p>
+<p>Un asset es cualquier componente de nuestro front-end. Por ejemplo un fichero CSS o Javascript, una imagen o una webfont.</p>
 
 <p><a href="https://github.com/kriswallsmith/assetic">Assetic</a> es el gestor de assets que utiliza Symfony. Assetic está basado en <a href="http://webassets.readthedocs.org/en/latest">webassets</a>, una librería del mundo Python.</p>
 
-<p>Assetic trabaja conjuntamente con el <a href="http://symfony.com/doc/current/components/asset/introduction.html">componente Asset</a> para gestionar todo el flujo de nuestros assets dentro de los entornos de desarrollo y producción de Symfony. Gracias a Assetic podremos aplicar filtros a nuestros assets antes de dejarlos disponibles para el usuario final. Por ejemplo compilar un fichero <em>sass</em> o comprimir y combinar ficheros <em>js</em>.</p>
+<p>Assetic trabaja conjuntamente con el <a href="http://symfony.com/doc/current/components/asset/introduction.html">componente Asset</a> para gestionar todo el flujo de nuestros assets dentro de los entornos de desarrollo y producción de Symfony. Gracias a Assetic podremos aplicar filtros a nuestros assets antes de dejarlos disponibles para el usuario final. Por ejemplo una tarea de un filtro sería compilar un fichero <em>sass</em> o comprimir y combinar ficheros <em>js</em>.</p>
 
 <p>La configuración de Assetic la haremos siempre en un fichero <a href="http://twig.sensiolabs.org/">twig</a>. </p>
 
 <h3>CSS</h3>
 
-<p>Comencemos con los hojas de estilo de nuestra aplicación. Trabajaremos con un fichero llamado <em>css.html.twig</em> que se encuentra alojado en /app/Resources/views/includes/_</p>
+<p>Comencemos con los hojas de estilo de nuestra aplicación. Trabajaremos con un fichero llamado <code>css.html.twig</code> que se encuentra alojado en <code>/app/Resources/views/includes/</code></p>
 
 <script src="https://gist.github.com/brunogarcia/612319c831fdd302d599.js"></script>
 
-<p>Como veréis primero aplicamos el filtro <em>sass</em> a nuestro fichero <em>main.scss</em>. Incluso podemos decidir el nombre que tendrá el CSS final, en este caso <em>main.css</em>. Para hacer uso de este filtro es necesario tener instalado <a href="https://www.ruby-lang.org">Ruby</a> y <a href="http://sass-lang.com/">Sass</a> en nuestro entorno. Mi recomendación es instalar siempre Ruby vía <a href="https://rvm.io/">RVM</a> para evitar problemas con las versiones de las gemas.</p>
+<p>Como veréis primero aplicamos el filtro <em>sass</em> a nuestro fichero <em>main.scss</em>. Incluso podemos decidir el nombre que tendrá el fichero CSS final, en este caso <em>main.css</em>. Para hacer uso de este filtro es necesario tener instalado <a href="https://www.ruby-lang.org">Ruby</a> y <a href="http://sass-lang.com/">Sass</a> en nuestro entorno. Mi recomendación es instalar siempre Ruby vía <a href="https://rvm.io/">RVM</a> para evitar problemas con las versiones de las gemas.</p>
 
 <p>A continuación aplicamos a un grupo de ficheros CSS (plugins) un par de filtros. El filtro <em>cssrewrite</em> se encarga de sobreescribir las rutas relativas que se encuentren en nuestros estilos. El filtro <em>uglyfycss</em> comprime y concatena nuestros ficheros CSS. 
 Este último filtro necesita <a href="https://nodejs.org">Node</a> y el package <a href="https://github.com/fmarcia/UglifyCSS">UglifyCSS</a> para funcionar.</p>
 
-<p>Si añadimos a cualquier filtro el signo de interrogación <em>?</em> significa que solo debe ejecutar dicha tarea en el entorno de producción. La razón es que no nos interesa trabajar con archivos comprimidos en el entorno de desarrollo, básicamente porque sería un infierno debugear.</p>
+<p>Si añadimos a cualquier filtro el signo de interrogación <code>?</code> significa que solo debe ejecutar dicha tarea en el entorno de producción. La razón es que no nos interesa trabajar con archivos comprimidos en el entorno de desarrollo, básicamente porque sería un infierno debugear.</p>
 
 <p>El lector avispado se preguntará por qué no he aplicado el filtro <em>uglifycss</em> a los ficheros <em>sass</em>. La respuesta es sencilla: no hace falta. Sass ya se encarga de comprimir y concatenar los ficheros que compila. Solo es necesario especificar este comportamiento en la configuración del entorno de producción de Symfony. </p>
 
@@ -182,26 +196,26 @@ Este último filtro necesita <a href="https://nodejs.org">Node</a> y el package 
 
 <h3>Javascript</h3>
 
-<p>Ahora es el turno de los ficheros Javascript. Trabajaremos con un fichero llamado <em>js.html.twig</em> que se encuentra alojado en /app/Resources/views/includes/_</p>
+<p>Ahora es el turno de los ficheros Javascript. Trabajaremos con un fichero llamado <code>js.html.twig</code> que se encuentra alojado en <code>/app/Resources/views/includes/</code></p>
 
 <script src="https://gist.github.com/brunogarcia/416503dd5e2599d43499.js"></script>
 
-<p>En este caso aplicamos un único filtro llamado <em>uglyfyjs</em>, cuya tarea es comprimir y concatenar nuestros ficheros js. Este filtro necesita <a href="https://nodejs.org">Node</a> y el package <a href="https://github.com/mishoo/UglifyJS2">UglifyJS</a> para funcionar. También aplicamos la opción de realizar esta tarea únicamente en el entorno de producción.</p>
+<p>En este caso aplicamos un único filtro llamado <em>uglyfyjs</em>, cuya tarea es comprimir y concatenar nuestros ficheros Javascript. Este filtro necesita <a href="https://nodejs.org">Node</a> y el package <a href="https://github.com/mishoo/UglifyJS2">UglifyJS</a> para funcionar. También aplicamos la opción de realizar esta tarea únicamente en el entorno de producción.</p>
 
 <h3>Entornos de Symfony</h3>
 
 <p>Como he mencionado anteriormente, Symfony tiene dos entornos de ejecución diferenciados: desarrollo y producción. 
 Dichos entornos de ejecución afectan directamente a la forma de trabajar con nuestros assets. Necesitaremos conocer algunos comandos extras. </p>
 
-<p>El primero es <em>assets install web</em> que buscará dentro de todos nuestros bundles la ruta <em>/Resources/public/</em>. Si encuentra algún fichero los copiará a la ruta pública <em>/web/bunles/[nombre</em>del_bundle].</p>
+<p>El primero es <code>assets install web</code> que buscará dentro de todos nuestros bundles la ruta <code>/Resources/public/</code>. Si encuentra algún fichero los copiará a la ruta pública <code>/web/bunles/[nombre del bundle]</code>.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ php app/console assets:install web
 </code></pre></div>
-<p>El segundo es <em>assetic dump</em>. Este comando aplicará los filtros a los assets correspondientes y a continuación los copiará a la ruta <em>/web/</em>. Dependiendo del entorno en el cual quieras realizar el dump, deberás utilizar el flag <em>--env</em>.</p>
+<p>El segundo es <code>assetic dump</code>. Este comando aplicará los filtros a los assets correspondientes y a continuación los copiará a la ruta <code>/web</code>. Dependiendo del entorno en el cual quieras realizar el dump, deberás utilizar el flag <code>--env</code>.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ php app/console assetic:dump --env=dev
 
 $ php app/console assetic:dump --env=prod
 </code></pre></div>
-<p>Nosotros tenemos deshabilitado por defecto que Symfony realice esta tarea por nosotros. Esto agiliza la carga en el entorno de desarrollo. En todo caso, existe un comando <em>watch</em> que se encarga de observar si hemos realizado alguna modificación en nuestros assets, y es entonces cuando aplica el <em>assetic dump</em>.</p>
+<p>Nosotros tenemos deshabilitado por defecto que Symfony realice esta tarea por nosotros. Esto agiliza la carga en el entorno de desarrollo. En todo caso, existe un comando <code>watch</code> que se encarga de observar si hemos realizado alguna modificación en nuestros assets, y es entonces cuando aplica el <code>assetic dump</code>.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ php app/console assetic:watch
 </code></pre></div>
 <hr>
