@@ -109,12 +109,12 @@ todas las dependencias de tu proyecto front-end. La idea es similar a <a href="h
 <p>Si la librería se encuentra registrada como package en Bower entonces la podrás añadir directamente por consola con el flag <code>--save</code></p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ bower install --save jquery
 </code></pre></div>
-<p>Esto modificará automáticamente el fichero <em>bower.json</em> añadiendo la librería con su respectiva versión. Por ejemplo la versión ~2.1.1. El primer simbolo (~) significa que las siguientes veces que solicites a Bower actualizar las dependencias, comenzará siempre con la versión 2.1.1 hasta un máximo de 2.2.0. Puedes encontrar más información sobre este tema en <a href="http://stackoverflow.com/a/20412378">Bower Version Syntax</a>.</p>
+<p>Esto además de bajar la librería, modifica automáticamente el fichero <em>bower.json</em> añadiendola como dependencia y también especificará la versión. Por ejemplo la versión ~2.1.1. El simbolo <code>~</code> significa que las siguientes veces que solicites a Bower actualizar las dependencias del proyecto, comenzará siempre con la versión 2.1.1 hasta un máximo de 2.2.0. Puedes encontrar más información sobre este tema en <a href="http://stackoverflow.com/a/20412378">Bower Version Syntax</a>.</p>
 
-<p>Si la librería que necesitas <em>no</em> se encuentra registrada como package en Bower, entonces puedes modificar el <em>bower.json</em> a mano, añadiendo la url al repositorio (público o privado) especificando la versión que deseas utilizar.</p>
+<p>Si la librería que necesitas <em>no</em> se encuentra registrada como package en Bower, entonces puedes modificar el <em>bower.json</em> a mano, añadiendo la url del repositorio (público o privado). Es buena práctica especificar la versión que deseas utilizar.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">&quot;bootstrap-datepicker&quot;: &quot;https://github.com/eternicode/bootstrap-datepicker.git#~1.4.0&quot;
 </code></pre></div>
-<p>Una vez finalizado este proceso basta con lanzar una línea en tu terminal para tener todas las dependencias disponibles en local. Da igual si son 5 o 50, Bower las bajará todas por ti en un pis pas.</p>
+<p>Una vez finalizado este proceso basta con lanzar una línea en la terminal para tener todas las dependencias disponibles en local. Da igual si son 5 o 50, Bower las bajará todas por ti en un pis pas.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ bower install
 </code></pre></div>
 <p>Los ficheros se guardarán en una carpeta llamada <em>bower components</em>. Dependiendo del autor de la librería encontrarás muchas carperas y ficheros que no serán necesarios para tu proyecto (por ejemplo: test, build, changelogs, licencias, readme, etc.). Pero no hay problema, esto lo resolveremos con un plugin para Grunt llamado <a href="https://www.npmjs.com/package/grunt-bowercopy">bower copy</a>.</p>
@@ -133,14 +133,14 @@ todas las dependencias de tu proyecto front-end. La idea es similar a <a href="h
 
 <p>En <em>package.json</em> deberás listar todas las dependencias necesarias para correr las tareas. En nuestro caso solo necesitamos <a href="https://www.npmjs.com/package/grunt-bowercopy">bower copy</a>, ya que el resto de tareas que normalmente realizaríamos con Grunt, en el entorno de Symfony será Assetic quien se encargará de ellas.</p>
 
+<p>Como he comentado anteriormente dependiendo del autor de la librería encontrarás muchas carperas y ficheros que no serán necesarios para tu proyecto. Hago uso de <a href="https://www.npmjs.com/package/grunt-bowercopy">bower copy</a> para <em>copiar únicamente los ficheros que necesita mi proyecto</em>. </p>
+
 <script src="https://gist.github.com/brunogarcia/9f5c2a46f981fe037886.js"></script>
 
 <p>Para instalar las dependencias de Grunt deberás escribir en tu consola:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ npm install
 </code></pre></div>
 <p>En <em>Gruntfile.js</em> creas la configuración de cada tarea o grupo de tareas. En nuestro caso solo tendremos una única tarea llamada &#39;default&#39;.</p>
-
-<p>Hago uso de <a href="https://www.npmjs.com/package/grunt-bowercopy">bower copy</a> para copiar únicamente los ficheros que necesita mi proyecto. </p>
 
 <p>En este caso, todos se copiaran a la ruta <code>/src/AppBundle/Resources/public</code>. He dividido los assets en varios grupos: CSS, JS, sass, fonts e imágenes. Dependiendo del grupo al cual pertenezcan, cada asset se copiará a una carpeta distinta. Incluso podemos cambiar el nombre al fichero antes de llevarlo a su destino final.</p>
 
@@ -157,7 +157,7 @@ todas las dependencias de tu proyecto front-end. La idea es similar a <a href="h
 
 <h2>Git Ignore</h2>
 
-<p>Un último punto importante: la carpeta <em>bower components</em> y <em>node modules</em>  deberás añadirla a tu fichero <em>.gitignore</em>. Ya que no hace falta subir todas las dependencias de desarrollo a tu repositorio, siempre que tengas a mano los ficheros de configuración de Bower y Grunt podrás realizar la misma tarea todas las veces que quieras. </p>
+<p>Un punto importante: las carpetas <em>bower components</em> y <em>node modules</em>  deberás añadirlas a <em>.gitignore</em>. Ya que no hace falta subir todas las dependencias de desarrollo a tu repositorio, siempre que tengas a mano los ficheros de configuración de Bower y Grunt podrás realizar la misma tarea todas las veces que quieras. </p>
 
 <script src="https://gist.github.com/brunogarcia/79e9d6880b3d5ab3d7f9.js"></script>
 
@@ -183,7 +183,7 @@ todas las dependencias de tu proyecto front-end. La idea es similar a <a href="h
 
 <script src="https://gist.github.com/brunogarcia/612319c831fdd302d599.js"></script>
 
-<p>Como veréis primero aplicamos el filtro <em>sass</em> a nuestro fichero <em>main.scss</em>. Incluso podemos decidir el nombre que tendrá el fichero CSS final, en este caso <em>main.css</em>. Para hacer uso de este filtro es necesario tener instalado <a href="https://www.ruby-lang.org">Ruby</a> y <a href="http://sass-lang.com/">Sass</a> en nuestro entorno. Mi recomendación es instalar siempre Ruby vía <a href="https://rvm.io/">RVM</a> para evitar problemas con las versiones de las gemas.</p>
+<p>Como veréis primero aplicamos el filtro <em>sass</em> a nuestro fichero <em>main.scss</em>. Incluso podemos decidir el nombre que tendrá el fichero CSS final, en este caso <em>main.css</em>. Para hacer uso de este filtro es necesario tener instalado <a href="https://www.ruby-lang.org">Ruby</a> y <a href="http://sass-lang.com/">Sass</a> en nuestro entorno. Mi recomendación es instalar Ruby vía <a href="https://rvm.io/">RVM</a> para evitar problemas con las versiones de las gemas.</p>
 
 <p>A continuación aplicamos a un grupo de ficheros CSS (plugins) un par de filtros. El filtro <em>cssrewrite</em> se encarga de sobreescribir las rutas relativas que se encuentren en nuestros estilos. El filtro <em>uglyfycss</em> comprime y concatena nuestros ficheros CSS. 
 Este último filtro necesita <a href="https://nodejs.org">Node</a> y el package <a href="https://github.com/fmarcia/UglifyCSS">UglifyCSS</a> para funcionar.</p>
@@ -215,9 +215,17 @@ Dichos entornos de ejecución afectan directamente a la forma de trabajar con nu
 
 $ php app/console assetic:dump --env=prod
 </code></pre></div>
-<p>Nosotros tenemos deshabilitado por defecto que Symfony realice esta tarea por nosotros. Esto agiliza la carga en el entorno de desarrollo. En todo caso, existe un comando <code>watch</code> que se encarga de observar si hemos realizado alguna modificación en nuestros assets, y es entonces cuando aplica el <code>assetic dump</code>.</p>
+<p>Nosotros tenemos deshabilitado por defecto que Symfony realice esta tarea por nosotros. Esto agiliza la carga en el entorno de desarrollo. En todo caso, existe el comando <code>watch</code> que se encarga de <em>observar</em> si hemos realizado alguna modificación en nuestros assets, y es entonces cuando aplica el <code>assetic dump</code>.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ php app/console assetic:watch
 </code></pre></div>
+<p>Lo genial de trabajar con Symfony es que podemos tener un entorno de desarrollo donde debugear es una tarea sencilla y cómoda:</p>
+
+<script src="https://gist.github.com/brunogarcia/8ff1a0e423fa10d7b800.js"></script>
+
+<p>Y un entorno de producción con todos los assets concatenados y comprimidos:</p>
+
+<script src="https://gist.github.com/brunogarcia/5a0d619d3de17fbbf981.js"></script>
+
 <hr>
 
 <h2>Bundles externos</h2>

@@ -39,13 +39,13 @@ Si la librería se encuentra registrada como package en Bower entonces la podrá
 
 	$ bower install --save jquery
 
-Esto modificará automáticamente el fichero _bower.json_ añadiendo la librería con su respectiva versión. Por ejemplo la versión ~2.1.1. El primer simbolo (~) significa que las siguientes veces que solicites a Bower actualizar las dependencias, comenzará siempre con la versión 2.1.1 hasta un máximo de 2.2.0. Puedes encontrar más información sobre este tema en [Bower Version Syntax](http://stackoverflow.com/a/20412378).
+Esto además de bajar la librería, modifica automáticamente el fichero _bower.json_ añadiendola como dependencia y también especificará la versión. Por ejemplo la versión ~2.1.1. El simbolo <code>~</code> significa que las siguientes veces que solicites a Bower actualizar las dependencias del proyecto, comenzará siempre con la versión 2.1.1 hasta un máximo de 2.2.0. Puedes encontrar más información sobre este tema en [Bower Version Syntax](http://stackoverflow.com/a/20412378).
 
-Si la librería que necesitas *no* se encuentra registrada como package en Bower, entonces puedes modificar el _bower.json_ a mano, añadiendo la url al repositorio (público o privado) especificando la versión que deseas utilizar.
+Si la librería que necesitas *no* se encuentra registrada como package en Bower, entonces puedes modificar el _bower.json_ a mano, añadiendo la url del repositorio (público o privado). Es buena práctica especificar la versión que deseas utilizar.
 
 	"bootstrap-datepicker": "https://github.com/eternicode/bootstrap-datepicker.git#~1.4.0"
 
-Una vez finalizado este proceso basta con lanzar una línea en tu terminal para tener todas las dependencias disponibles en local. Da igual si son 5 o 50, Bower las bajará todas por ti en un pis pas.
+Una vez finalizado este proceso basta con lanzar una línea en la terminal para tener todas las dependencias disponibles en local. Da igual si son 5 o 50, Bower las bajará todas por ti en un pis pas.
 
 	$ bower install
 
@@ -65,6 +65,8 @@ Para configurar Grunt son necesarios dos ficheros: _package.json_ y _Gruntfile.j
 
 En _package.json_ deberás listar todas las dependencias necesarias para correr las tareas. En nuestro caso solo necesitamos [bower copy](https://www.npmjs.com/package/grunt-bowercopy), ya que el resto de tareas que normalmente realizaríamos con Grunt, en el entorno de Symfony será Assetic quien se encargará de ellas.
 
+Como he comentado anteriormente dependiendo del autor de la librería encontrarás muchas carperas y ficheros que no serán necesarios para tu proyecto. Hago uso de [bower copy](https://www.npmjs.com/package/grunt-bowercopy) para *copiar únicamente los ficheros que necesita mi proyecto*. 
+
 <script src="https://gist.github.com/brunogarcia/9f5c2a46f981fe037886.js"></script>
 
 Para instalar las dependencias de Grunt deberás escribir en tu consola:
@@ -72,8 +74,6 @@ Para instalar las dependencias de Grunt deberás escribir en tu consola:
 	$ npm install
 
 En _Gruntfile.js_ creas la configuración de cada tarea o grupo de tareas. En nuestro caso solo tendremos una única tarea llamada 'default'.
-
-Hago uso de [bower copy](https://www.npmjs.com/package/grunt-bowercopy) para copiar únicamente los ficheros que necesita mi proyecto. 
 
 En este caso, todos se copiaran a la ruta <code>/src/AppBundle/Resources/public</code>. He dividido los assets en varios grupos: CSS, JS, sass, fonts e imágenes. Dependiendo del grupo al cual pertenezcan, cada asset se copiará a una carpeta distinta. Incluso podemos cambiar el nombre al fichero antes de llevarlo a su destino final.
 
@@ -91,7 +91,7 @@ Así es como quedaría un archivo _Gruntfile.js_ completamente configurado:
 
 ## Git Ignore
 
-Un último punto importante: la carpeta _bower components_ y _node modules_  deberás añadirla a tu fichero _.gitignore_. Ya que no hace falta subir todas las dependencias de desarrollo a tu repositorio, siempre que tengas a mano los ficheros de configuración de Bower y Grunt podrás realizar la misma tarea todas las veces que quieras. 
+Un punto importante: las carpetas _bower components_ y _node modules_  deberás añadirlas a _.gitignore_. Ya que no hace falta subir todas las dependencias de desarrollo a tu repositorio, siempre que tengas a mano los ficheros de configuración de Bower y Grunt podrás realizar la misma tarea todas las veces que quieras. 
 
 <script src="https://gist.github.com/brunogarcia/79e9d6880b3d5ab3d7f9.js"></script>
 
@@ -117,7 +117,7 @@ Comencemos con los hojas de estilo de nuestra aplicación. Trabajaremos con un f
 
 <script src="https://gist.github.com/brunogarcia/612319c831fdd302d599.js"></script>
 
-Como veréis primero aplicamos el filtro _sass_ a nuestro fichero _main.scss_. Incluso podemos decidir el nombre que tendrá el fichero CSS final, en este caso _main.css_. Para hacer uso de este filtro es necesario tener instalado [Ruby](https://www.ruby-lang.org) y [Sass](http://sass-lang.com/) en nuestro entorno. Mi recomendación es instalar siempre Ruby vía [RVM](https://rvm.io/) para evitar problemas con las versiones de las gemas.
+Como veréis primero aplicamos el filtro _sass_ a nuestro fichero _main.scss_. Incluso podemos decidir el nombre que tendrá el fichero CSS final, en este caso _main.css_. Para hacer uso de este filtro es necesario tener instalado [Ruby](https://www.ruby-lang.org) y [Sass](http://sass-lang.com/) en nuestro entorno. Mi recomendación es instalar Ruby vía [RVM](https://rvm.io/) para evitar problemas con las versiones de las gemas.
 
 A continuación aplicamos a un grupo de ficheros CSS (plugins) un par de filtros. El filtro _cssrewrite_ se encarga de sobreescribir las rutas relativas que se encuentren en nuestros estilos. El filtro _uglyfycss_ comprime y concatena nuestros ficheros CSS. 
 Este último filtro necesita [Node](https://nodejs.org) y el package [UglifyCSS](https://github.com/fmarcia/UglifyCSS) para funcionar.
@@ -151,9 +151,17 @@ El segundo es <code>assetic dump</code>. Este comando aplicará los filtros a lo
 
 	$ php app/console assetic:dump --env=prod
 
-Nosotros tenemos deshabilitado por defecto que Symfony realice esta tarea por nosotros. Esto agiliza la carga en el entorno de desarrollo. En todo caso, existe un comando <code>watch</code> que se encarga de observar si hemos realizado alguna modificación en nuestros assets, y es entonces cuando aplica el <code>assetic dump</code>.
+Nosotros tenemos deshabilitado por defecto que Symfony realice esta tarea por nosotros. Esto agiliza la carga en el entorno de desarrollo. En todo caso, existe el comando <code>watch</code> que se encarga de _observar_ si hemos realizado alguna modificación en nuestros assets, y es entonces cuando aplica el <code>assetic dump</code>.
 
 	$ php app/console assetic:watch
+
+Lo genial de trabajar con Symfony es que podemos tener un entorno de desarrollo donde debugear es una tarea sencilla y cómoda:
+
+<script src="https://gist.github.com/brunogarcia/8ff1a0e423fa10d7b800.js"></script>
+
+Y un entorno de producción con todos los assets concatenados y comprimidos:
+
+<script src="https://gist.github.com/brunogarcia/5a0d619d3de17fbbf981.js"></script>
 
 ***
 
