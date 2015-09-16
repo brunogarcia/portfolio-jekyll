@@ -14,6 +14,8 @@
 
 &lt;hr&gt;
 
+&lt;p&gt;&lt;img src=&quot;http://bruno.garciaechegaray.com/blog/symfony-bower-grunt.png&quot; alt=&quot;Symfony Front-end Workflow: Assetic, Bower, Grunt&quot;&gt;&lt;/p&gt;
+
 &lt;p&gt;La idea consiste en utilizar &lt;a href=&quot;http://bower.io&quot;&gt;Bower&lt;/a&gt; para gestionar las dependencias front-end del proyecto. &lt;a href=&quot;http://gruntjs.com&quot;&gt;Grunt&lt;/a&gt; para seleccionar y copiar dichas dependencias a nuestro bundle principal. Y finalmente dejamos que &lt;a href=&quot;http://symfony.com/doc/current/cookbook/assetic/index.html&quot;&gt;Assetic&lt;/a&gt; realice el resto de tareas: aplicar los filtros (sass, rewrite, uglify, etc.) y gestionar el flujo dentro de Symfony.&lt;/p&gt;
 
 &lt;p&gt;Implementar todo esto por primera vez requiere una importante carga de configuración, sobre todo si eres completamente nuevo en el mundo Symfony (como era mi caso hasta hace 6 meses), pero una vez le pillas el truco todo va como la seda. &lt;/p&gt;
