@@ -32,7 +32,9 @@ Despúes configuro [Watch](https://www.npmjs.com/package/grunt-contrib-watch) co
 
 ### Sass
 
-Utilizo el plugin [Sass](https://www.npmjs.com/package/grunt-contrib-sass) para Grunt que me permite transformar mis ficheros <code>scss</code> a <code>css</code>. En el entorno <code>dev</code>, compilo Sass en modo _expanded_ para poder debugear los ficheros <code>css</code> fácilmente. Para que este plugin funcione necesitas tener instalado Ruby y Sass.
+Utilizo el plugin [Sass](https://www.npmjs.com/package/grunt-contrib-sass) para Grunt para transformar -[transpiling](https://www.stevefenton.co.uk/2012/11/compiling-vs-transpiling/)- mis ficheros <code>scss</code> a <code>css</code>. En el entorno <code>dev</code>, compilo Sass en modo _expanded_ para poder debugear los ficheros <code>css</code> fácilmente. 
+
+Para que este plugin funcione necesitas tener instalado Ruby y Sass. Todas las [configuraciones de salida](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style) de Sass las puedes encontrar en la documentación oficial.
 
 <script src="https://gist.github.com/brunogarcia/a5632a66b7e945317a52.js"></script>
 
@@ -67,7 +69,7 @@ Este plugin se configura con un fichero llamado <code>.jshintrc</code> que en nu
 	  }
 	}
 
-Si estas opciones se te quedan cortas, existen [multiples opciones de configuración](https://github.com/jshint/jshint/blob/master/examples/.jshintrc) para JSHint.
+Si estas opciones se te quedan cortas, existen [multiples formas de configurar JSHint](https://github.com/jshint/jshint/blob/master/examples/.jshintrc).
 
 ***
 
@@ -80,7 +82,7 @@ Este grupo de tareas se llama <code>dist</code> y la registro de la siguiente fo
 	grunt.registerTask('dist', ['clean', 'copy', 'uglify', 'processhtml', 'htmlmin:dist', 'sass:dist', 'cachebreaker']);
 
 La configuración de este entorno es un poco más compleja, ya que requiere un mayor número de plugins, todos ellos debidamente coordinados. 
-El orden de las tareas es importante. Tal como funciona Grunt, necesito modificar y guardar ficheros en la carpeta <code>temp</code> para que las tareas puedan hacer su trabajo.
+El orden de las tareas es importante. Tal como funciona Grunt, necesito modificar y guardar ficheros en la carpeta <code>temp</code> para que todas las tareas puedan hacer su trabajo.
 
 ### Clean
 
@@ -90,7 +92,7 @@ Primero utilizo el plugin [Clean](https://github.com/gruntjs/grunt-contrib-clean
 
 ### Copy
 
-El plugin [Copy](https://github.com/gruntjs/grunt-contrib-copy) me permite copiar ficheros de una carpeta a otra. En este caso desde <code>dev/assets</code> a <code>dist/assets</code>. En esta carpeta guardo todos los ficheros que necesita la parte front del proyecto: css, js, imagenes, fuentes, etc.
+El plugin [Copy](https://github.com/gruntjs/grunt-contrib-copy) me permite copiar ficheros de una carpeta a otra. En este caso desde <code>dev/assets</code> a <code>dist/assets</code>. En esta carpeta guardo todos los assets que necesita mi proyecto: css, js, imagenes, fuentes, etc.
 
 <script src="https://gist.github.com/brunogarcia/e46c4fb1880f0755ceda.js"></script>
 
@@ -127,13 +129,13 @@ Y la configuración es bastante simple:
 
 ### HTML Min
 
-[HTML Min](https://github.com/gruntjs/grunt-contrib-htmlmin) hace exactamente lo que su nombre indica, comprime el fichero <code>HTML</code>. Incluso puedes espefificar que elimine los comentarios que pueda tener tu fichero.
+[HTML Min](https://github.com/gruntjs/grunt-contrib-htmlmin) hace exactamente lo que su nombre indica, comprime el fichero <code>HTML</code>. Incluso puedes especificar que elimine los comentarios que pueda tener tu fichero.
 
 <script src="https://gist.github.com/brunogarcia/50f3428f05c3868285b5.js"></script>
 
 ### Sass
 
- En el entorno <code>dist</code>, compilo Sass en modo _compressed_. Todas las [configuraciones de salida](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style) de Sass las puedes encontrar en la documentación oficial.
+ En el entorno <code>dist</code>, compilo Sass en modo _compressed_. Para que este plugin funcione necesitas tener instalado Ruby y Sass. Todas las [configuraciones de salida](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style) de Sass las puedes encontrar en la documentación oficial.
 
 <script src="https://gist.github.com/brunogarcia/3e6f1e6c797c2e882cf8.js"></script>
 

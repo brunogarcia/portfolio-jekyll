@@ -40,7 +40,7 @@ Posts about front-end development
 
 #### Run project tasks ('sass', 'concat', 'uglify', 'watch')
 
-`$ grunt watch`
+`$ grunt build`
 
 #### Run Jekyll server in watch mode
 

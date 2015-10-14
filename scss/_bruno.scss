@@ -291,7 +291,7 @@ h1 {
     @include border-left-radius (3px);
     @include border-right-radius (3px);
     pre {
-        white-space: initial;
+        overflow-x: auto;
     }
     code {
         background-color: #fff;

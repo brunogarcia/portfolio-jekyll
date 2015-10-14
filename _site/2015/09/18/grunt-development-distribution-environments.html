@@ -10,7 +10,7 @@
   <link rel="alternate" type="application/rss+xml" title="Bruno Garcia" href="http://blog.garciaechegaray.com/feed.xml">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="/css/app.css?v=5">
+  <link rel="stylesheet" href="/css/app.css?v=6">
 
   <!--Favicon-->
   <link rel="shortcut icon" href="/favicon.ico" />
@@ -103,7 +103,9 @@
 
 <h3>Sass</h3>
 
-<p>Utilizo el plugin <a href="https://www.npmjs.com/package/grunt-contrib-sass">Sass</a> para Grunt que me permite transformar mis ficheros <code>scss</code> a <code>css</code>. En el entorno <code>dev</code>, compilo Sass en modo <em>expanded</em> para poder debugear los ficheros <code>css</code> fácilmente. Para que este plugin funcione necesitas tener instalado Ruby y Sass.</p>
+<p>Utilizo el plugin <a href="https://www.npmjs.com/package/grunt-contrib-sass">Sass</a> para Grunt para transformar -<a href="https://www.stevefenton.co.uk/2012/11/compiling-vs-transpiling/">transpiling</a>- mis ficheros <code>scss</code> a <code>css</code>. En el entorno <code>dev</code>, compilo Sass en modo <em>expanded</em> para poder debugear los ficheros <code>css</code> fácilmente. </p>
+
+<p>Para que este plugin funcione necesitas tener instalado Ruby y Sass. Todas las <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style">configuraciones de salida</a> de Sass las puedes encontrar en la documentación oficial.</p>
 
 <script src="https://gist.github.com/brunogarcia/a5632a66b7e945317a52.js"></script>
 
@@ -137,7 +139,7 @@
   }
 }
 </code></pre></div>
-<p>Si estas opciones se te quedan cortas, existen <a href="https://github.com/jshint/jshint/blob/master/examples/.jshintrc">multiples opciones de configuración</a> para JSHint.</p>
+<p>Si estas opciones se te quedan cortas, existen <a href="https://github.com/jshint/jshint/blob/master/examples/.jshintrc">multiples formas de configurar JSHint</a>.</p>
 
 <hr>
 
@@ -149,7 +151,7 @@
 <div class="highlight"><pre><code class="language-text" data-lang="text">grunt.registerTask(&#39;dist&#39;, [&#39;clean&#39;, &#39;copy&#39;, &#39;uglify&#39;, &#39;processhtml&#39;, &#39;htmlmin:dist&#39;, &#39;sass:dist&#39;, &#39;cachebreaker&#39;]);
 </code></pre></div>
 <p>La configuración de este entorno es un poco más compleja, ya que requiere un mayor número de plugins, todos ellos debidamente coordinados. 
-El orden de las tareas es importante. Tal como funciona Grunt, necesito modificar y guardar ficheros en la carpeta <code>temp</code> para que las tareas puedan hacer su trabajo.</p>
+El orden de las tareas es importante. Tal como funciona Grunt, necesito modificar y guardar ficheros en la carpeta <code>temp</code> para que todas las tareas puedan hacer su trabajo.</p>
 
 <h3>Clean</h3>
 
@@ -159,7 +161,7 @@ El orden de las tareas es importante. Tal como funciona Grunt, necesito modifica
 
 <h3>Copy</h3>
 
-<p>El plugin <a href="https://github.com/gruntjs/grunt-contrib-copy">Copy</a> me permite copiar ficheros de una carpeta a otra. En este caso desde <code>dev/assets</code> a <code>dist/assets</code>. En esta carpeta guardo todos los ficheros que necesita la parte front del proyecto: css, js, imagenes, fuentes, etc.</p>
+<p>El plugin <a href="https://github.com/gruntjs/grunt-contrib-copy">Copy</a> me permite copiar ficheros de una carpeta a otra. En este caso desde <code>dev/assets</code> a <code>dist/assets</code>. En esta carpeta guardo todos los assets que necesita mi proyecto: css, js, imagenes, fuentes, etc.</p>
 
 <script src="https://gist.github.com/brunogarcia/e46c4fb1880f0755ceda.js"></script>
 
@@ -193,13 +195,13 @@ El orden de las tareas es importante. Tal como funciona Grunt, necesito modifica
 
 <h3>HTML Min</h3>
 
-<p><a href="https://github.com/gruntjs/grunt-contrib-htmlmin">HTML Min</a> hace exactamente lo que su nombre indica, comprime el fichero <code>HTML</code>. Incluso puedes espefificar que elimine los comentarios que pueda tener tu fichero.</p>
+<p><a href="https://github.com/gruntjs/grunt-contrib-htmlmin">HTML Min</a> hace exactamente lo que su nombre indica, comprime el fichero <code>HTML</code>. Incluso puedes especificar que elimine los comentarios que pueda tener tu fichero.</p>
 
 <script src="https://gist.github.com/brunogarcia/50f3428f05c3868285b5.js"></script>
 
 <h3>Sass</h3>
 
-<p>En el entorno <code>dist</code>, compilo Sass en modo <em>compressed</em>. Todas las <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style">configuraciones de salida</a> de Sass las puedes encontrar en la documentación oficial.</p>
+<p>En el entorno <code>dist</code>, compilo Sass en modo <em>compressed</em>. Para que este plugin funcione necesitas tener instalado Ruby y Sass. Todas las <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style">configuraciones de salida</a> de Sass las puedes encontrar en la documentación oficial.</p>
 
 <script src="https://gist.github.com/brunogarcia/3e6f1e6c797c2e882cf8.js"></script>
 
