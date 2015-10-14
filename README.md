@@ -30,7 +30,7 @@ Posts about front-end development
 
 `$ git clone https://github.com/brunogarcia/brunogarcia.github.io.git`
 
-#### Install basic dependencies
+#### Install project dependencies
 
 `$ bower install`
 
@@ -45,3 +45,5 @@ Posts about front-end development
 #### Run Jekyll server in watch mode
 
 `$ jekyll server -w`
+
+`$ jekyll serve -w --drafts`

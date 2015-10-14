@@ -7,6 +7,167 @@
 		<atom:link href="http://blog.garciaechegaray.com//feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Grunt: development &amp; distribution environments</title>
+				<description>&lt;hr&gt;
+
+&lt;p&gt;&lt;big&gt;Llevo trabajando con Grunt mucho tiempo, al principio solo lo utilizaba para compilar ficheros LESS/Sass o para concatenar y comprimir ficheros JS. Pero últimamente lo utilizo para crear entornos de trabajo diferenciados, por ejemplo un entorno para desarrollo y otro para distribución. &lt;/p&gt;
+
+&lt;p&gt;Si quieres ver un ejemplo real, he creado una &lt;a href=&quot;https://github.com/brunogarcia/panda/blob/master/Gruntfile.js&quot;&gt;plantilla&lt;/a&gt; para un pet project.&lt;/big&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2&gt;Entorno de desarrollo&lt;/h2&gt;
+
+&lt;p&gt;Es el entorno que utilizo para trabajar en local. Dentro del proyecto, se ubica en la carpeta &lt;code&gt;dev&lt;/code&gt;. Este grupo de tareas se llama &lt;code&gt;default&lt;/code&gt; y la registro de la siguiente forma:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;grunt.registerTask(&amp;#39;default&amp;#39;, [&amp;#39;connect:livereload&amp;#39;, &amp;#39;watch&amp;#39;]);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Connect&lt;/h3&gt;
+
+&lt;p&gt;Primero arranco un servidor Node con la ayuda del plugin &lt;a href=&quot;https://github.com/gruntjs/grunt-contrib-connect&quot;&gt;Connect&lt;/a&gt; y abro automáticamente un navegador con la IP y el puerto especificado en la configuración. Por defecto &lt;code&gt;http://localhost:9001&lt;/code&gt;.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/brunogarcia/1c2ddab2790a4adf9a7e.js&quot;&gt;&lt;/script&gt;
+
+&lt;h3&gt;Watch&lt;/h3&gt;
+
+&lt;p&gt;Despúes configuro &lt;a href=&quot;https://www.npmjs.com/package/grunt-contrib-watch&quot;&gt;Watch&lt;/a&gt; conjuntamente con &lt;em&gt;livereload&lt;/em&gt;. Esta combinación me permite &lt;em&gt;observar&lt;/em&gt; modificaciones en un listado de ficheros y actualizar el navegador automáticamente cuando sea necesario. Esto mejora mucho mi flujo de trabajo, sobre todo si dispones de dos monitores. Es una maravilla ver los cambios aplicados inmediatamente en el navegador.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/brunogarcia/f0a932a1d48d1ddc5353.js&quot;&gt;&lt;/script&gt;
+
+&lt;h3&gt;Sass&lt;/h3&gt;
+
+&lt;p&gt;Utilizo el plugin &lt;a href=&quot;https://www.npmjs.com/package/grunt-contrib-sass&quot;&gt;Sass&lt;/a&gt; para Grunt que me permite transformar mis ficheros &lt;code&gt;scss&lt;/code&gt; a &lt;code&gt;css&lt;/code&gt;. En el entorno &lt;code&gt;dev&lt;/code&gt;, compilo Sass en modo &lt;em&gt;expanded&lt;/em&gt; para poder debugear los ficheros &lt;code&gt;css&lt;/code&gt; fácilmente. Para que este plugin funcione necesitas tener instalado Ruby y Sass.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/brunogarcia/a5632a66b7e945317a52.js&quot;&gt;&lt;/script&gt;
+
+&lt;h3&gt;JSHint&lt;/h3&gt;
+
+&lt;p&gt;Por último utilizo &lt;a href=&quot;https://github.com/gruntjs/grunt-contrib-jshint&quot;&gt;JSHint&lt;/a&gt; para comprobar que mi código Javascript no contiene ningún error. &lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/brunogarcia/404def30d6708c78bc0b.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Este plugin se configura con un fichero llamado &lt;code&gt;.jshintrc&lt;/code&gt; que en nuestro caso contiene los siguientes valores:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;{
+  // Require {} for every new block or scope
+  &amp;quot;curly&amp;quot;: true, 
+
+  // Tolerate use of `== null`
+  &amp;quot;eqnull&amp;quot;: true, 
+
+  // Require triple equals (===) for comparison
+  &amp;quot;eqeqeq&amp;quot;: true,
+
+  // Require all non-global variables to be declared (prevents global leaks)
+  &amp;quot;undef&amp;quot;: true,
+
+  // Custom globals: additional predefined global variables
+  &amp;quot;globals&amp;quot;: {
+    &amp;quot;jQuery&amp;quot;: true,
+    &amp;quot;createjs&amp;quot;: true,
+    &amp;quot;document&amp;quot;: true,
+    &amp;quot;require&amp;quot;: true,
+    &amp;quot;module&amp;quot;: true
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Si estas opciones se te quedan cortas, existen &lt;a href=&quot;https://github.com/jshint/jshint/blob/master/examples/.jshintrc&quot;&gt;multiples opciones de configuración&lt;/a&gt; para JSHint.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2&gt;Entorno de distribución&lt;/h2&gt;
+
+&lt;p&gt;Es el entorno que utilizo para hacer deploy en el servidor de producción. Dentro del proyecto, se ubica en las carpetas &lt;code&gt;dist&lt;/code&gt; y &lt;code&gt;tmp&lt;/code&gt;. Ambas carpetas se encuentran añadidas al &lt;code&gt;.gitignore&lt;/code&gt;, ya que no nos interesa tenerlas en el repositorio de versiones.&lt;/p&gt;
+
+&lt;p&gt;Este grupo de tareas se llama &lt;code&gt;dist&lt;/code&gt; y la registro de la siguiente forma:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;grunt.registerTask(&amp;#39;dist&amp;#39;, [&amp;#39;clean&amp;#39;, &amp;#39;copy&amp;#39;, &amp;#39;uglify&amp;#39;, &amp;#39;processhtml&amp;#39;, &amp;#39;htmlmin:dist&amp;#39;, &amp;#39;sass:dist&amp;#39;, &amp;#39;cachebreaker&amp;#39;]);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;La configuración de este entorno es un poco más compleja, ya que requiere un mayor número de plugins, todos ellos debidamente coordinados. 
+El orden de las tareas es importante. Tal como funciona Grunt, necesito modificar y guardar ficheros en la carpeta &lt;code&gt;temp&lt;/code&gt; para que las tareas puedan hacer su trabajo.&lt;/p&gt;
+
+&lt;h3&gt;Clean&lt;/h3&gt;
+
+&lt;p&gt;Primero utilizo el plugin &lt;a href=&quot;https://github.com/gruntjs/grunt-contrib-clean&quot;&gt;Clean&lt;/a&gt; para borrar todo el contenido de las carpetas &lt;code&gt;dist&lt;/code&gt; y &lt;code&gt;tmp&lt;/code&gt;. Esto me facilita tener en todo momento un entorno de distribución actualizado, sin archivos innecesarios.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/brunogarcia/359691d6c12db5e98cfb.js&quot;&gt;&lt;/script&gt;
+
+&lt;h3&gt;Copy&lt;/h3&gt;
+
+&lt;p&gt;El plugin &lt;a href=&quot;https://github.com/gruntjs/grunt-contrib-copy&quot;&gt;Copy&lt;/a&gt; me permite copiar ficheros de una carpeta a otra. En este caso desde &lt;code&gt;dev/assets&lt;/code&gt; a &lt;code&gt;dist/assets&lt;/code&gt;. En esta carpeta guardo todos los ficheros que necesita la parte front del proyecto: css, js, imagenes, fuentes, etc.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/brunogarcia/e46c4fb1880f0755ceda.js&quot;&gt;&lt;/script&gt;
+
+&lt;h3&gt;Uglify&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/gruntjs/grunt-contrib-uglify&quot;&gt;Uglify&lt;/a&gt; me permite concatenar y comprimir los ficheros &lt;code&gt;.js&lt;/code&gt; de la aplicación. &lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/brunogarcia/e891f7886a0b62898720.js&quot;&gt;&lt;/script&gt;
+
+&lt;h3&gt;Process HTML&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.npmjs.com/package/grunt-processhtml&quot;&gt;Process html&lt;/a&gt; es un plugin muy útil para editar o eliminar partes de un fichero &lt;code&gt;HTML&lt;/code&gt;. Imaginate que tu aplicación trabaja con 5 librerías Javascript distintas. En modo desarrollo te interesa tenerlas separadas para debugear tranquilamente, pero cuando vas a hacer un deploy necesitas tenerlas todas en un solo fichero. &lt;/p&gt;
+
+&lt;p&gt;Con este plugin podrás especificar exactamente este comportamiento. Por ejemplo estas dos librerías:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;!-- build:js app.js --&amp;gt;
+&amp;lt;script src=&amp;quot;my/lib/path/lib.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&amp;quot;my/deep/development/path/script.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;!-- /build --&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Se convertirán en esta otra:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;script src=&amp;quot;app.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Incluso puedes eliminar una etiqueta o grupo de etiquetas del fichero &lt;code&gt;HTML&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;!-- build:remove --&amp;gt;
+&amp;lt;span id=&amp;quot;debug&amp;quot;&amp;gt;Soy un texto para el entorno de desarrollo&amp;lt;/span&amp;gt;
+&amp;lt;!-- /build --&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Y la configuración es bastante simple:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/brunogarcia/56e9033b82d56afd0618.js&quot;&gt;&lt;/script&gt; 
+
+&lt;h3&gt;HTML Min&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/gruntjs/grunt-contrib-htmlmin&quot;&gt;HTML Min&lt;/a&gt; hace exactamente lo que su nombre indica, comprime el fichero &lt;code&gt;HTML&lt;/code&gt;. Incluso puedes espefificar que elimine los comentarios que pueda tener tu fichero.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/brunogarcia/50f3428f05c3868285b5.js&quot;&gt;&lt;/script&gt;
+
+&lt;h3&gt;Sass&lt;/h3&gt;
+
+&lt;p&gt;En el entorno &lt;code&gt;dist&lt;/code&gt;, compilo Sass en modo &lt;em&gt;compressed&lt;/em&gt;. Todas las &lt;a href=&quot;http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style&quot;&gt;configuraciones de salida&lt;/a&gt; de Sass las puedes encontrar en la documentación oficial.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/brunogarcia/3e6f1e6c797c2e882cf8.js&quot;&gt;&lt;/script&gt;
+
+&lt;h3&gt;Cache Breaker&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.npmjs.com/package/grunt-cache-breaker&quot;&gt;Cache Breaker&lt;/a&gt; me permite &lt;em&gt;engañar&lt;/em&gt; al browser añadiendo un &lt;em&gt;timestamp&lt;/em&gt; a las urls que yo decida.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/brunogarcia/88aca2a93303ea177ac3.js&quot;&gt;&lt;/script&gt;
+
+&lt;hr&gt;
+
+&lt;h2&gt;Utilidades&lt;/h2&gt;
+
+&lt;p&gt;Además la &lt;a href=&quot;https://github.com/brunogarcia/panda/blob/master/Gruntfile.js&quot;&gt;plantilla&lt;/a&gt; dispone de un par de plugins extras.&lt;/p&gt;
+
+&lt;h3&gt;FTP Deploy&lt;/h3&gt;
+
+&lt;p&gt;Con &lt;a href=&quot;https://github.com/zonak/grunt-ftp-deploy&quot;&gt;FTP Deploy&lt;/a&gt; puedo realizar subidas por FTP automáticamente. Esta tarea la tengo registrada como &lt;code&gt;ftp&lt;/code&gt; y va unida con la tarea de distribución.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;grunt.registerTask(&amp;#39;ftp&amp;#39;, [&amp;#39;dist&amp;#39;, &amp;#39;ftp-deploy&amp;#39;]);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;En la configuración, además de los datos obvios (host, puerto, carpeta de destino, etc.), debes especificar la key del fichero &lt;code&gt;.ftppass&lt;/code&gt; que contiene tu nombre de usuario y contraseña.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/brunogarcia/a68d50b58862db6337c0.js&quot;&gt;&lt;/script&gt;
+
+&lt;h3&gt;Bowercopy&lt;/h3&gt;
+
+&lt;p&gt;Dependiendo del autor de la librería encontrarás muchas carperas y ficheros que no serán necesarios para tu proyecto. Hago uso de &lt;a href=&quot;https://www.npmjs.com/package/grunt-bowercopy&quot;&gt;Bowercopy&lt;/a&gt; para copiar únicamente los ficheros que necesita mi proyecto. &lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/brunogarcia/1d1d7da1246e5688c20d.js&quot;&gt;&lt;/script&gt;
+</description>
+				<pubDate>Fri, 18 Sep 2015 18:50:30 +0200</pubDate>
+				<link>http://blog.garciaechegaray.com//2015/09/18/grunt-development-distribution-environments.html</link>
+				<guid isPermaLink="true">http://blog.garciaechegaray.com//2015/09/18/grunt-development-distribution-environments.html</guid>
+			</item>
+		
+			<item>
 				<title>Symfony Front-end Workflow: Assetic, Bower &amp; Grunt</title>
 				<description>&lt;hr&gt;
 
@@ -778,7 +939,7 @@ Aunque soy más de novela gráfica, Fantasias Extraordinarias me parecio un libr
 
 &lt;p&gt;Muy recomendable si quieres dar tus primeros pasos con Angular.&lt;/p&gt;
 </description>
-				<pubDate>Sat, 10 Jan 2015 18:54:30 +0100</pubDate>
+				<pubDate>Sat, 10 Jan 2015 19:54:30 +0200</pubDate>
 				<link>http://blog.garciaechegaray.com//2015/01/10/libros-leidos-en-2014.html</link>
 				<guid isPermaLink="true">http://blog.garciaechegaray.com//2015/01/10/libros-leidos-en-2014.html</guid>
 			</item>
@@ -823,7 +984,7 @@ Aunque soy más de novela gráfica, Fantasias Extraordinarias me parecio un libr
 
 &lt;p&gt;&lt;a href=&quot;http://docs.build.phonegap.com/en_US/3.3.0/configuring_basics.md.html#The%20Basics&quot;&gt;More info Phonegap Build Guide&lt;/a&gt;&lt;/p&gt;
 </description>
-				<pubDate>Sun, 21 Dec 2014 17:56:30 +0100</pubDate>
+				<pubDate>Sun, 21 Dec 2014 18:56:30 +0200</pubDate>
 				<link>http://blog.garciaechegaray.com//2014/12/21/upload-a-signed-APK-to-google-play-with-phonegap-build.html</link>
 				<guid isPermaLink="true">http://blog.garciaechegaray.com//2014/12/21/upload-a-signed-APK-to-google-play-with-phonegap-build.html</guid>
 			</item>
@@ -836,7 +997,7 @@ Aunque soy más de novela gráfica, Fantasias Extraordinarias me parecio un libr
 
 &lt;p&gt;—&lt;a href=&quot;http://javascriptjabber.com/118-jsj-web-developer-skills&quot;&gt;Jamison Dance at Javascript Jabber&lt;/a&gt;&lt;/p&gt;
 </description>
-				<pubDate>Mon, 08 Dec 2014 09:27:30 +0100</pubDate>
+				<pubDate>Mon, 08 Dec 2014 10:27:30 +0200</pubDate>
 				<link>http://blog.garciaechegaray.com//2014/12/08/the-most-important-skill-is-the-ability-to-learn-new-skills.html</link>
 				<guid isPermaLink="true">http://blog.garciaechegaray.com//2014/12/08/the-most-important-skill-is-the-ability-to-learn-new-skills.html</guid>
 			</item>
@@ -922,196 +1083,6 @@ La segunda opción establece el límite de zoom al cual el plugin puede ser visu
 				<pubDate>Mon, 10 Nov 2014 21:00:00 +0100</pubDate>
 				<link>http://blog.garciaechegaray.com//2014/11/10/google-demasiados-markers-en-una-misma-coordenada-espacial.html</link>
 				<guid isPermaLink="true">http://blog.garciaechegaray.com//2014/11/10/google-demasiados-markers-en-una-misma-coordenada-espacial.html</guid>
-			</item>
-		
-			<item>
-				<title>Introducción a Phonegap: webview, plugins y herramientas</title>
-				<description>&lt;hr&gt;
-
-&lt;p&gt;&lt;big&gt;Desde hace unos meses es costumbre en &lt;a href=&quot;http://www.pounstudio.com&quot;&gt;Poun Studio&lt;/a&gt; realizar talleres internos con la idea de transmitir conocimiento al resto del equipo. Este es mi segundo taller, y he hablado sobre &lt;a href=&quot;http://www.phonegap.com&quot;&gt;Phonegap&lt;/a&gt;.&lt;/big&gt;&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;Se ha hablado mucho de la calidad de rendimiento de una app mobile desarrollada con Phonegap. Hasta hace poco se podían escuchar frases del tipo &amp;quot;no se siente como una app nativa&amp;quot;, &amp;quot;jamás igualará en velocidad a una app nativa&amp;quot;, etc. Creo que en las primeras versiones esto era cierto, pero recordemos que ya estamos en la versión 3.6.3. Además los dispositivos móviles van mejorando día a día en rendimiento (sí, incluso los móviles chinos).&lt;/p&gt;
-
-&lt;p&gt;En todo caso, me gustaría comenzar este artículo con la siguiente viñeta, que la verdad dice mucho del estado actual del desarrollo móvil: no es un camino de rosas. Elegir entre una u otra tecnología puede depender de otros factores, como por ejemplo el económico. Si el presupuesto no te permite un equipo de desarrollo dual (uno para Android y otro para iOS) entonces Phonegap es la mejor opción. En un primer momento puedes prototipar un mínimo producto viable en poco tiempo y continuar el desarrollo hacia una app nativa en el futuro. Pienso que la tecnología debe servir a un propósito y no al revés.&lt;/p&gt;
-
-&lt;p&gt;Otro punto importante a recordar es que Phonegap no tiene una UI para móviles, para esto te tienes que apoyar en librerías como jQuery Mobile, Bootstrap o Foundation. Tampoco es un framework MVC, para eso ya existe Backbone, Angular o Ionic. Phonegap sólo te proporciona un &lt;em&gt;puente&lt;/em&gt; entre el dispositivo móvil y tu aplicación web.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://pbs.twimg.com/media/BvWeD2yCAAArJXb.jpg:large&quot; alt=&quot;The dilemna of mobile apps development&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;small&gt;Viñeta original en &lt;a href=&quot;http://www.commitstrip.com/en/2014/08/18/the-dilemna-of-mobile-apps-development/&quot;&gt;Commit Strip&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2&gt;Un poco de historia&lt;/h2&gt;
-
-&lt;p&gt;Cuando comencé a investigar y realizar mis primeras pruebas con &lt;a href=&quot;http://www.phonegap.com&quot;&gt;Phonegap&lt;/a&gt;, no tenía muy clara la relación con &lt;a href=&quot;http://cordova.apache.org&quot;&gt;Apache Cordova&lt;/a&gt;. La verdad, la historia es muy poco enrevesada, sobre todo porque en la propia documentación oficial se utilizan los dos nombres indistintamente. Esto es algo que ellos mismos han admitido y esperan ir solucionando en el futuro. &lt;/p&gt;
-
-&lt;p&gt;La empresa canadiense Nitobi Software fue la creadora original de Phonegap. En el 2009 ganó el &lt;a href=&quot;http://readwrite.com/2009/04/02/phone_gap_todays_peoples_choice_winner_at_launch_p&quot;&gt;People&amp;#39;s Choice Award&lt;/a&gt; en la conferencia &lt;a href=&quot;http://www.web2expo.com/webexsf2009&quot;&gt;Web 2.0 Expo&lt;/a&gt;. Desde entonces se hizo muy popular en la comunidad web y se comenzó a utilizar rápidamente. &lt;/p&gt;
-
-&lt;p&gt;Recuerdo que &lt;a href=&quot;https://twitter.com/ojoven&quot;&gt;Mikel&lt;/a&gt; me lo comentó con mucho entusiasmo (él siempre se excita con cositas como esta) allá por el 2010, pensando que sería una buena opción para la app mobile de &lt;a href=&quot;http://gzaas.com&quot;&gt;Gzaas&lt;/a&gt;. Eramos el target perfecto, aunque teníamos mucha experiencia en el desarrollo web, ninguno de los dos conocía nada de Android o iOS. Phonegap era un regalo del cielo. Podriamos crear una app mobile con tecnología que ya conocíamos: HTML, CSS y Javascript. Además ¿quién carallo quiere aprender &lt;a href=&quot;http://en.wikipedia.org/wiki/Objective-C&quot;&gt;Objective-C&lt;/a&gt;? (eso lo pensaba entonces y me reafirmo. Hola &lt;a href=&quot;https://developer.apple.com/swift/&quot;&gt;Swift&lt;/a&gt;).&lt;/p&gt;
-
-&lt;p&gt;Y parece que no éramos los únicos que vieron el gran potencial de esta herramienta. &lt;a href=&quot;http://www.adobe.com/aboutadobe/pressroom/pressreleases/201110/AdobeAcquiresNitobi.html&quot;&gt;Adobe compró Nitobi&lt;/a&gt;  en enero del 2011. Fue una buena jugada, por entonces Adobe estaba en horas bajas después de que &lt;a href=&quot;http://en.wikipedia.org/wiki/Apple_and_Adobe_Flash_controversy&quot;&gt;Apple &lt;em&gt;baneara&lt;/em&gt; Flash&lt;/a&gt; del iPhone/iPad. Me imagino a la plana mayor de Adobe corriendo como pollos sin cabeza, gritando &lt;em&gt;&amp;quot;¡Nos vamos a quedar fuera del negocio de internet como Microsoft!. ¡Flash ha muerto!. ¡Además ya nadie usa la mierda esa de Dreamweaver!&amp;quot;&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Pero cuidado, el dinero no lo compra todo. En sus inicios Phonegap se creó como una herramienta de código abierto. Además de Nitobi, la comunidad web y otras empresas del sector (IBM, Oracle, etc.) habían colaborado en el desarrollo. Para no tener problemas legales Adobe cedió el código a la &lt;a href=&quot;http://www.apache.org/&quot;&gt;Fundación Apache&lt;/a&gt;. Y de allí el nombre Apache Cordova.&lt;/p&gt;
-
-&lt;p&gt;Resumen: &lt;a href=&quot;http://cordova.apache.org&quot;&gt;Apache Cordova&lt;/a&gt; es un proyecto de software libre que sirve de core a Phonegap. Esto convierte a Phonegap es una distribución con servicios adicionales dentro del ecosistema Adobe, algo que obviamente Cordova por defecto no tiene ni tendrá.&lt;/p&gt;
-
-&lt;p&gt;Puedes encontrar más información al respecto en &lt;a href=&quot;http://phonegap.com/2012/03/19/phonegap-cordova-and-what%E2%80%99s-in-a-name/&quot;&gt;PhoneGap, Cordova, and what’s in a name?&lt;/a&gt;. Y si sientes curiosidad, puedes ver el código fuente en &lt;a href=&quot;https://github.com/phonegap&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2&gt;¿Cómo funciona?&lt;/h2&gt;
-
-&lt;p&gt;Phonegap permite conectar un dispositivo móvil con nuestra aplicación web mediante dos componentes principales: &lt;strong&gt;Webview&lt;/strong&gt; y &lt;strong&gt;Plugins&lt;/strong&gt;. Además Phonegap dispone de una serie de &lt;a href=&quot;http://docs.phonegap.com/en/3.5.0/cordova_events_events.md.html#Events&quot;&gt;eventos&lt;/a&gt; para facilitar la comunicación entre ambas partes.&lt;/p&gt;
-
-&lt;h3&gt;Webview&lt;/h3&gt;
-
-&lt;p&gt;Un webview es básicamente una instancia del navegador del dispositivo móvil. &lt;/p&gt;
-
-&lt;p&gt;Con la particularidad de no tener interfaz de usuario. O sea, sin acceso a los favoritos, barra de navegación y demás características de cualquier navegador. Sólo nos quedamos con los motores de renderizado y Javascript. Al ser un componente 100% nativo, tendremos acceso directo al dispositivo, y por lo tanto a la cámara, GPS, batería, etc.&lt;/p&gt;
-
-&lt;p&gt;Si revisamos la documentación de Android, veremos que existe una clase llamada &lt;a href=&quot;http://developer.android.com/reference/android/webkit/WebView.html&quot;&gt;Webview&lt;/a&gt;, cuya descripción es &lt;em&gt;&amp;quot;A View that displays web pages. This class is the basis upon which you can roll your own web browser or simply display some online content within your Activity. It uses the WebKit rendering engine to display web pages and includes methods to navigate forward and backward through a history, zoom in and out, perform text searches and more.&amp;quot;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Y lo mismo con iOS, en este caso la clase se llama &lt;a href=&quot;https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWebView_Class/index.html&quot;&gt;UIWebView&lt;/a&gt;: &lt;em&gt;&amp;quot;You use the UIWebView class to embed web content in your application. To do so, you simply create a UIWebView object, attach it to a window, and send it a request to load web content. You can also use this class to move back and forward in the history of webpages, and you can even set some web content properties programmatically.&amp;quot;&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3&gt;Plugins&lt;/h3&gt;
-
-&lt;p&gt;Un plugin de Phonegap es el puente entre nuestra aplicación web (cuyo contexto de ejecución es un WebView) y el dispositivo móvil. Se compone de dos partes: la &lt;strong&gt;implementación nativa&lt;/strong&gt; (ya sea en Android, iOS, etc.) y la &lt;strong&gt;implementación Javascript&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Phonegap tiene alrededor de &lt;a href=&quot;http://docs.phonegap.com/en/3.5.0/cordova_plugins_pluginapis.md.html#Plugin%20APIs&quot;&gt;20 plugins oficiales&lt;/a&gt;. Entre los que se encuentran los más básicos: bateria, cámara, lista de contactos, acceso al sistema de archivos, geolocalización, vibración.&lt;/p&gt;
-
-&lt;p&gt;Además la comunidad web ha ido desarrollando hasta el momento alrededor de 1400 plugins para prácticamente cualquier necesidad. &lt;a href=&quot;http://plugreg.com/&quot;&gt;PlugReg&lt;/a&gt; tiene una buena lista de plugins organizado por plataformas. Aqui podemos encontrar plugins como &lt;a href=&quot;http://plugreg.com/plugin/wildabeast/BarcodeScanner&quot;&gt;barcode scanner&lt;/a&gt;, &lt;a href=&quot;http://plugreg.com/plugin/phonegap-build/PushPlugin&quot;&gt;push notifications&lt;/a&gt; o &lt;a href=&quot;http://plugreg.com/plugin/EddyVerbruggen/SocialSharing-PhoneGap-Plugin&quot;&gt;social sharing&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Si le echamos un ojo al código fuente de un plugin, por ejemplo &lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen&quot;&gt;Splash Screen&lt;/a&gt;, veremos la siguiente estructura:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;doc&lt;/strong&gt;: Documentación i18n.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;src&lt;/strong&gt;: Implementación nativa. Encontraremos tantas carpetas como soporte tenga el plugin para un sistema operativo en concreto. En el caso de Splash Screen tiene soporte para Android, Blackberry 10, iOS, Tizen, Ubuntu Touch y Window Phone. Si abrimos la clase &lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/blob/master/src/android/SplashScreen.java&quot;&gt;SplashScreen.java&lt;/a&gt;, veremos un único método llamado &lt;em&gt;execute&lt;/em&gt; que se encargará de realizar la tarea asignada, en este caso mostrar u ocultar el splash screen.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;tests&lt;/strong&gt;: Tests unitarios para confirmar que todo funciona como debe funcionar.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;www&lt;/strong&gt;: Implementación Javascript. Estas funciones son las que usará nuestra aplicación web para comunicarse con el dispositivo móvil. Si abrimos &lt;a href=&quot;https://github.com/apache/cordova-plugin-splashscreen/blob/master/www/splashscreen.js&quot;&gt;splashscreen.js&lt;/a&gt; veremos las funciones show() y hide().&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Podéis encontrar más información al respecto en &lt;a href=&quot;http://docs.phonegap.com/en/3.5.0/guide_hybrid_plugins_index.md.html#Plugin%20Development%20Guide&quot;&gt;Plugin Development Guide&lt;/a&gt;.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2&gt;Instalar Phonegap y crear una demo&lt;/h2&gt;
-
-&lt;p&gt;Antes de ponernos a trabajar con Phonegap, es necesario tener instalado &lt;a href=&quot;http://nodejs.org/download/&quot;&gt;Node&lt;/a&gt;. Si ya tienes instalado Node, es buena idea &lt;a href=&quot;http://davidwalsh.name/upgrade-nodejs&quot;&gt;actualizarlo&lt;/a&gt;.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ sudo npm cache clean -f
-$ sudo npm install -g n
-$ sudo n stable
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Seguidamente basta con lanzar la siguiente línea en tu terminal:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ sudo npm install -g phonegap
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Node Package Manager o &lt;em&gt;npm&lt;/em&gt;, tal como su nombre indica es el gestor de paquetes de Node. La opción &lt;em&gt;&amp;quot;-g&amp;quot;&lt;/em&gt; instalará Phonegap de forma global.&lt;/p&gt;
-
-&lt;p&gt;Finalizado este segundo paso, ya podremos crear nuestra primera app mobile con Phonegap.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ phonegap create [folder-name] [namespace] [project-name]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Si accedemos a [folder-name] veremos una carpeta llamada &amp;quot;&lt;em&gt;www&lt;/em&gt;&amp;quot;. Es allí donde residirá nuestra aplicación web. Recuerda realizar las llamadas correspondientes a &lt;em&gt;cordova.js&lt;/em&gt; e &lt;em&gt;index.js&lt;/em&gt;. En esta última se encuentran los &lt;em&gt;bind event listeners&lt;/em&gt;. Por defecto viene &amp;quot;&lt;em&gt;bindiado&lt;/em&gt;&amp;quot; &lt;a href=&quot;http://docs.phonegap.com/en/3.5.0/cordova_events_events.md.html#deviceready&quot;&gt;deviceready&lt;/a&gt;.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;document.addEventListener(&amp;#39;deviceready&amp;#39;, this.onDeviceReady, false);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;El objetivo de este evento es informarnos de la correcta carga de la API de Cordova en el dispositivo móvil. Esto es así porque necesitamos que Cordova este debidamente cargado para que nuestra aplicación web pueda realizar las llamadas necesarias. &lt;/p&gt;
-
-&lt;p&gt;Si has llegado hasta aquí, supongo que te estarás preguntando &amp;quot;bueno, ¿y cómo hago para visualizar esta demo en mi movil?&amp;quot;. La respuesta es (aún) no puedes. Pero tienes dos caminos: utilizar una herramienta de compilación en la nube o instalar y configurar el entorno de &lt;a href=&quot;http://developer.android.com/sdk/installing/index.html?pkg=adt&quot;&gt;Android&lt;/a&gt;. Vamos por la primera.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2&gt;Herramientas&lt;/h2&gt;
-
-&lt;p&gt;Tal como comentaba unas líneas más arriba, Phonegap dispone de una serie de herramientas para facilitarnos el trabajo a los desarrolladores. He seleccionado tres de ellas, dos oficiales (Build &amp;amp; Developer App) y otra de código abierto (Weinre).&lt;/p&gt;
-
-&lt;h3&gt;Build&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://build.phonegap.com/&quot;&gt;Phonegap Build&lt;/a&gt; es un servicio freemium que te permite &lt;strong&gt;compilar una APK/IPA directamente en la nube&lt;/strong&gt;. La opción más básica te permite compilar un máximo de una app mobile, y por 10$ al mes podrás compilar hasta 25 aplicaciones.&lt;/p&gt;
-
-&lt;p&gt;En &lt;a href=&quot;http://www.pounstudio.com&quot;&gt;Poun Studio&lt;/a&gt; tenemos una cuenta de pago y estamos bastante contentos con el servicio. Es verdad que aún le falta pulir algunos aspectos de la interfaz de usuario, pero hace lo que tiene que hacer eficiente y rápidamente. Por ejemplo compilar una app mobile Android e iOS tarda una media de 30 segundos. Y sobre todo te ahorras el problema de instalar y configurar cada SDK.&lt;/p&gt;
-
-&lt;p&gt;Puedes encontrar más información en &lt;a href=&quot;http://blog.garciaechegaray.com/2014/07/07/compilando-una-app-en-la-nube-con-phonegap-build.html&quot;&gt;Compilando una App en la nube con Phonegap Build&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3&gt;Developer App&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://app.phonegap.com/&quot;&gt;Phonegap Developer App&lt;/a&gt; es otra herramienta oficial de Phonegap que te permite &lt;strong&gt;arrancar un servidor local con tu aplicación web&lt;/strong&gt; y acceder a dicho servicio desde cualquier dispositivo móvil. &lt;/p&gt;
-
-&lt;p&gt;La opción más útil es que cualquier cambio en local se podrá visualizar &lt;strong&gt;instantáneamente&lt;/strong&gt; en tu móvil. Esto mejora el flujo de trabajo ya que permite realizar pruebas sin la necesidad de compilar la aplicación.&lt;/p&gt;
-
-&lt;p&gt;Para arrancar el servidor local, es necesario lanzar este comando desde la ubicación actual de tu aplicación Phonegap:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ phonegap serve
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Seguidamente deberás instalar la app mobile creada expresamente para conectarse a este servicio. En el caso de un dispositivo Android, sería &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.adobe.phonegap.app&quot;&gt;Google Play - Phonegap Developer&lt;/a&gt;. Ya solo queda escribir la IP de tu maquina, seguido del puerto asignado y darle al botón de conectar.&lt;/p&gt;
-
-&lt;p&gt;Uno de los defectos de esta herramienta es no poder acceder a la consola de desarrollo. Esto es un problema porque muchas veces no sabrás por donde vienen los tiros y el tiempo de debugear se alarga. Felizmente existe otra herramienta que soluciona este problema.&lt;/p&gt;
-
-&lt;h3&gt;Weinre&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://people.apache.org/%7Epmuellr/weinre-docs/latest/&quot;&gt;Weinre&lt;/a&gt; son la siglas de Web Inspector Remote. Básicamente es un &lt;strong&gt;debugger remoto&lt;/strong&gt;, especialmente diseñado para trabajar con dispositivos móviles. 
-Si aún no lo tenéis claro, aquí puedes ver un &lt;a href=&quot;https://www.youtube.com/watch?v=4nL6xey13fE&quot;&gt;video de 5 minutos&lt;/a&gt; explicando el funcionamiento paso a paso.&lt;/p&gt;
-
-&lt;p&gt;Para instalar Weinre es necesario lanzar el siguiente comando:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ sudo npm -g install weinre
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para arrancar el servicio:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ weinre --boundHost your_IP --httpPort 8082
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Dos cosas importantes: debemos usar nuestra IP para que el dispositivo móvil pueda acceder. Obviamente el dispositivo móvil no podrá acceder si lo configuras como &lt;em&gt;localhost&lt;/em&gt;. Para evitar conflictos (con un servicio WAMP por ejemplo) utiliza un puerto alternativo, por ejemplo 8082.&lt;/p&gt;
-
-&lt;p&gt;El siguiente paso consiste en añadir un enlace del script de Weinre a tu aplicación web:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;script src=”http://your_IP:8082/target/target-script-min.js#anonymous”&amp;gt;&amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Si todo ha salido bien, podrás acceder al servidor de Weinre. Desde aquí tendrás acceso a la consola de desarrollo para visualizar los posibles errores o incluso echarle un ojo al código fuente de tu aplicación web.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;http://your_IP:8082/
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;hr&gt;
-
-&lt;h2&gt;Instalar y compilar una app mobile con Android y Phonegap&lt;/h2&gt;
-
-&lt;p&gt;Si por alguna razón deseas compilar tu app en local, es necesario realizar algunos pasos previos.
-Dichos pasos están muy bien explicados en este artículo de Stackoverflow: &lt;a href=&quot;http://stackoverflow.com/a/21142421/2790889&quot;&gt;Android with Linux development environment&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3&gt;Paso a paso&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;1.- Instalar Android SDK&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Actualmente existen dos opciones, &lt;a href=&quot;http://developer.android.com/sdk/index.html&quot;&gt;ADT Bundle&lt;/a&gt; basado en Eclipse o &lt;a href=&quot;http://developer.android.com/sdk/installing/studio.html&quot;&gt;Android Studio&lt;/a&gt; basado en IntelliJ IDEA. &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Instalar Open JDK&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ sudo apt-get install openjdk-7-jre
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;2.- Instalar Apache Ant&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Si seleccionas Android Studio, podrás saltarte este paso, ya viene configurado con &lt;a href=&quot;http://www.gradle.org/&quot;&gt;Gradle&lt;/a&gt;.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ sudo apt-get install ant ant-contrib ant-optional ant-gcj
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;3.- Editar PATH&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ cd ~/
-gedit .bashrc
-export HOME=&amp;quot;/home/tu_nombre_de_usuario&amp;quot;
-export JAVA_HOME=&amp;quot;/usr/lib/jvm/java-7-openjdk-i386&amp;quot;
-export ANDROID_HOME=&amp;quot;$HOME/App/adt-bundle/sdk/tools&amp;quot;
-export ANDROID_PLATFORM_TOOLS=&amp;quot;$HOME/App/adt-bundle/sdk/platform-tools&amp;quot;
-export PATH=&amp;quot;$ANDROID_HOME:$ANDROID_PLATFORM_TOOLS:$PATH&amp;quot;
-export ANT_HOME=&amp;quot;$HOME/App/ant&amp;quot;
-export PATH=&amp;quot;$PATH:$ANT_HOME/bin&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;4.- Actualizar Android SDK&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Antes de compilar tu app es necesario que actualizes el SDK. Esto puede tardar un buen rato, así que mucha paciencia.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ android sdk
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;5.- Build &amp;amp; Run&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Finalmente ya puedes compilar y lanzar un emulador de Android. Debes ir a tu proyecto y escribir estos comandos:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ phonegap install android
-$ phonegap local build android
-$ phonegap run android
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-				<pubDate>Sat, 18 Oct 2014 22:00:00 +0200</pubDate>
-				<link>http://blog.garciaechegaray.com//2014/10/18/phonegap-workshop.html</link>
-				<guid isPermaLink="true">http://blog.garciaechegaray.com//2014/10/18/phonegap-workshop.html</guid>
 			</item>
 		
 	</channel>
