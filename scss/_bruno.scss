@@ -290,6 +290,9 @@ h1 {
     @include border-bottom-radius (3px);
     @include border-left-radius (3px);
     @include border-right-radius (3px);
+    pre {
+        white-space: initial;
+    }
     code {
         background-color: #fff;
         border-color: #fff;
