@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <div class="grid-items">
+
+    {% for post in site.posts %}
+      <a href="{{ post.url | prepend: site.baseurl }}"
+         class="grid-item {{ post.color }}
+         {% if post.grid == 'big' %}grid-item-big{% endif %}
+         {% if forloop.first %}grid-item-image{% endif %}
+      ">
+        <h1>{{ post.title }}</h1>
+        <p><small>{{ post.date | date: "%b %-d, %Y" }}</small></p>
+      </a>
+    {% endfor %}
+
+  </div>
+
+</div>

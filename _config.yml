@@ -1,0 +1,14 @@
+# Site settings
+title: Bruno Garcia
+email: bruno@garciaechegaray.com
+description: Artículos sobre desarrollo front-end
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://blog.garciaechegaray.com" # the base hostname & protocol for your site
+twitter_username: garciaechegaray
+github_username:  brunogarcia
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+sass:
+    style: compressed

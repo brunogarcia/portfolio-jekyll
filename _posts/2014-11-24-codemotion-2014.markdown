@@ -1,0 +1,29 @@
+---
+layout: post
+title: ! 'Resumen del Codemotion 2014'
+date: '2014-11-24T17:04:00+01:00'
+grid: normal
+color: color-6
+---
+
+## Este es mi resumen de la 3º edición del [Codemotion](http://2014.codemotion.es). El volumen de información es tan grande que siempre me quedo con la sensación de _necesito una vida para aprender todo esto_.
+
+* [Web Components](http://webcomponents.org). Permite modularizar el desarrollo front-end con componentes reusables e independientes. Librerías: [Polymer](https://www.polymer-project.org/), [Bosonic](http://bosonic.github.io/) y [X-tags](http://x-tags.org/)
+
+* [Offline First](http://offlinefirst.org). Nueva metodología para trabajar con aplicaciones móviles sin conexión. Framework: [Hoodie](http://hood.ie/)
+
+* [Docker](https://www.docker.com/). Un buen número de tracks estaban relacionados con esta nueva tecnología de virtualización.
+
+* Guardar y sincronizar datos en la nube. Servicios: [Firebase](https://www.firebase.com/) (comprada por Google), [Parse](https://parse.com/), [Backbeam](https://backbeam.io/) (startup española)
+
+* [React](http://facebook.github.io/react/). _"Many people choose to think of React as the V in MVC."_ Creada y utilizada por Facebook e Instagram.
+
+* [CartoDB](http://cartodb.com/). Herramienta para crear mapas interactivos. Tienes tu propia instancia de PostgreSQL con PostGIS.
+
+* [Babylon JS](http://www.babylonjs.com/). Libreria JS para crear entornos 3D con OpenGL.  Exporta a Phonegap.
+
+* [NEO4J](http://neo4j.com/). Base de datos orientada a grafos
+
+* [Modern.ie](https://www.modern.ie). Maquinas virtuales para testear IE
+
+* [Scrapy](http://scrapy.org/). Herramienta open-source para hacer web scraping

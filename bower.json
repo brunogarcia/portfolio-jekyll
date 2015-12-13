@@ -1,0 +1,22 @@
+{
+  "name": "blog",
+  "authors": [
+    "Bruno <bruno@garciaechegaray.com>"
+  ],
+  "description": "front-end development",
+  "license": "MIT",
+  "homepage": "http://blog.garciaechegaray.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "~4.2.6",
+    "neat": "~1.7.2",
+    "jquery": "~2.1.4"
+  }
+}

@@ -1,2 +1,7 @@
 node_modules/
 bower_components/
+_site
+.sass-cache
+_sass/bourbon
+_sass/neat
+js/jquery
