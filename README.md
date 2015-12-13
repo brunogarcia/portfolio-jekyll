@@ -26,7 +26,7 @@ Posts about front-end development
 
 `$ gem install jekyll`
 
-#### Clone project 
+#### Clone project
 
 `$ git clone https://github.com/brunogarcia/brunogarcia.github.io.git`
 
@@ -45,5 +45,7 @@ Posts about front-end development
 #### Run Jekyll server in watch mode
 
 `$ jekyll server -w`
+
+## Run Jekyll server in watch mode and show drafts
 
 `$ jekyll serve -w --drafts`
