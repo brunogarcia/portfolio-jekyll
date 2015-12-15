@@ -3,3 +3,6 @@ bower_components/
 _site
 .sass-cache
 js/jquery
+images/dist
+Gemfile
+Gemfile.lock

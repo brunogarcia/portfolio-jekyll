@@ -22,6 +22,48 @@ module.exports = function(grunt) {
         },
 
         /*
+          Image Min
+          Minify PNG and JPEG images
+          https://github.com/gruntjs/grunt-contrib-imagemin
+        */
+        imagemin: {
+          png: {
+            options: {
+              optimizationLevel: 7
+            },
+            files: [
+              {
+                // Set to true to enable the following options…
+                expand: true,
+                // cwd is 'current working directory'
+                cwd: 'images',
+                src: ['**/*.png'],
+                // Could also match cwd line above. i.e. project-directory/img/
+                dest: 'images/dist',
+                ext: '.png'
+              }
+            ]
+          },
+          jpg: {
+            options: {
+              progressive: true
+            },
+            files: [
+              {
+                // Set to true to enable the following options…
+                expand: true,
+                // cwd is 'current working directory'
+                cwd: 'images',
+                src: ['**/*.jpg'],
+                // Could also match cwd. i.e. project-directory/img/
+                dest: 'images/dist',
+                ext: '.jpg'
+              }
+            ]
+          }
+        },
+
+        /*
           Download Google Fonts in Grunt jobs
           https://github.com/Mika-/grunt-google-fonts
         */
@@ -68,7 +110,7 @@ module.exports = function(grunt) {
                     destPrefix: 'js'
                 },
                 files: {
-                    'jquery.js': 'jquery/dist/jquery.js',
+                    'zepto.js': 'zepto/zepto.js',
                 }
             },
             // Sass assets

@@ -9,6 +9,8 @@ github_username:  brunogarcia
 
 # Build settings
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 sass:
     style: compressed
+gems:
+  - jekyll-sitemap
