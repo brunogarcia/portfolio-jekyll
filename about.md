@@ -13,7 +13,7 @@ permalink: /about-me/
 
 <div class="about">
 
-  <img src="/images/avatar.jpg" class="avatar">
+  <img src="http://bruno.garciaechegaray.com/img/avatar.jpg" class="avatar">
 
   <p>I've worked for huge clients like Brand Union, Grupo Albenture, Emgrisa, ICS, Banco Popular, Grupo Lo Monaco, Capio Sanidad, NH Hoteles.
   And also with some amazing startups like Start Club, Horeca.jobs, Appgree, MeTheOne, El Armario de la Tele and Shiito.com.</p>
