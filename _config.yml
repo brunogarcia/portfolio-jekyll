@@ -14,3 +14,6 @@ sass:
     style: compressed
 gems:
   - jekyll-sitemap
+exclude:
+    - node_modules
+    - bower_components

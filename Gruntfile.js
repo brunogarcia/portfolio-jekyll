@@ -22,6 +22,47 @@ module.exports = function(grunt) {
         },
 
         /*
+          Minify SVG
+          https://github.com/sindresorhus/grunt-svgmin
+        */
+        'svgmin': {
+          options: {
+              plugins: [
+                  {
+                      removeViewBox: false
+                  }, {
+                      removeUselessStrokeAndFill: false
+                  }
+              ]
+          },
+          dist: {
+              files: {
+                  'images/dist/astronauta.svg': 'images/astronauta.svg',
+                  'images/dist/estrella.svg': 'images/estrella.svg',
+                  'images/dist/estrella2.svg': 'images/estrella2.svg',
+                  'images/dist/estrella3.svg': 'images/estrella3.svg',
+                  'images/dist/estrella4.svg': 'images/estrella4.svg',
+              }
+          }
+        },
+
+        /*
+          Minify CSS
+          https://github.com/gruntjs/grunt-contrib-cssmin
+        */
+        'cssmin': {
+            options: {
+              shorthandCompacting: false,
+              roundingPrecision: -1
+            },
+            target: {
+              files: {
+                'css/astronauta.min.css': ['css/astronauta.css']
+              }
+            }
+          },
+
+        /*
           Image Min
           Minify PNG and JPEG images
           https://github.com/gruntjs/grunt-contrib-imagemin

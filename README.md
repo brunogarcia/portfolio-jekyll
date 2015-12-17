@@ -15,19 +15,26 @@ Posts about front-end development
 
 * [Bower](http://bower.io/): A package manager for the web.
 
-* [Grunt](http://gruntjs.com/): The JavaScript task runner.
-
 * [Bower Copy](https://github.com/timmywil/grunt-bowercopy): Scrupulously manage file locations for bower dependencies.
+
+* [Grunt](http://gruntjs.com/): The JavaScript task runner.
 
 * [Grunt Goggle Fonts](https://github.com/Mika-/grunt-google-fonts): Download Google Fonts in Grunt jobs.
 
-* [JSHint](https://github.com/gruntjs/grunt-contrib-jshint): Validate JavaScript files.
-
 * [Uglify](https://github.com/gruntjs/grunt-contrib-uglify): Minify JavaScript files.
+
+* [Minify SVG](https://github.com/sindresorhus/grunt-svgmin): Minify SVG using SVGO.
+
+* [Minify CSS](https://github.com/gruntjs/grunt-contrib-cssmin): Compress CSS files.
+
+* [Image Min](https://github.com/gruntjs/grunt-contrib-imagemin): Minify PNG and JPEG images.
+
+* [JSHint](https://github.com/gruntjs/grunt-contrib-jshint): Validate JavaScript files.
 
 ## Install Jekyll & Sass
 
 `$ gem install jekyll`
+
 `$ gem update sass`
 
 ## Clone project
@@ -37,6 +44,7 @@ Posts about front-end development
 ## Install project dependencies
 
 `$ bower install`
+
 `$ npm install`
 
 ## Run project tasks ('bowercopy', 'googlefonts', 'jshint', 'uglify')

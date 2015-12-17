@@ -1,0 +1,250 @@
+#contenedor{
+    background: black;
+    height: 330px;
+    width: 330px;
+    border-radius: 170px;
+    -webkit-border-radius: 170px;
+    -moz-border-radius: 170px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    border: 5px #81BEF7 solid;
+    float: left;
+    position: relative;
+}
+
+#astronauta {
+    background-image: url('http://bruno.garciaechegaray.com/img/astronauta.svg');
+       background-repeat: no-repeat;
+        height: 190px;
+        width: 139px;
+        position: absolute;
+        margin-left: 55px;
+        margin-top: 50px;
+        -webkit-animation: mover_astronauta 60s ease-in-out infinite;
+    }
+
+    @-webkit-keyframes mover_astronauta{
+        0%{
+             -webkit-transform: translate(80px,-13px);
+        }
+        15%{
+            -webkit-transform: rotate(30deg);
+
+        }
+        30%{
+            -webkit-transform: translate(95px,47px);
+        }
+
+        50%{
+            -webkit-transform: translate(25px,-24px);
+        }
+
+        60%{
+            -webkit-transform: translate(15px,34px);
+        }
+         80%{
+            -webkit-transform: rotate(-40deg);
+        }
+
+        100%{
+            -webkit-transform: translate(80px,-13px);
+
+        }
+    }
+
+#estrella3{
+background-image: url('http://bruno.garciaechegaray.com/img/estrella2.svg');
+width: 70px;
+height: 68px;
+position: absolute;
+background-repeat: no-repeat;
+top: 30px;
+left: 20px;
+z-index: 0;
+
+-webkit-animation: mover_estrella1 4s infinite;
+    }
+
+#estrella4{
+background-image: url('http://bruno.garciaechegaray.com/img/estrella2.svg');
+width: 73px;
+height: 68px;
+position: absolute;
+background-repeat: no-repeat;
+top: 10px;
+left: 70px;
+z-index: 0;
+
+-webkit-animation: mover_estrella1 2s infinite;
+    }
+
+#estrella5{
+background-image: url('http://bruno.garciaechegaray.com/img/estrella3.svg');
+width: 73px;
+height: 68px;
+position: absolute;
+background-repeat: no-repeat;
+top: 195px;
+left: 170px;
+z-index: 0;
+
+-webkit-animation: mover_estrella1 4s infinite;
+    }
+
+
+#estrella6{
+background-image: url('http://bruno.garciaechegaray.com/img/estrella3.svg');
+width: 73px;
+height: 68px;
+position: absolute;
+background-repeat: no-repeat;
+top: 130px;
+left: 145px;
+z-index: 0;
+
+-webkit-animation: mover_estrella1 2s infinite;
+    }
+
+#estrella7{
+background-image: url('http://bruno.garciaechegaray.com/img/estrella4.svg');
+width: 73px;
+height: 68px;
+position: absolute;
+background-repeat: no-repeat;
+top: 174px;
+left: 120px;
+z-index: 0;
+
+-webkit-animation: mover_estrella1 3s infinite;
+    }
+
+
+#estrella8{
+background-image: url('http://bruno.garciaechegaray.com/img/estrella3.svg');
+width: 273px;
+height: 268px;
+position: absolute;
+background-repeat: no-repeat;
+top: 98px;
+left: 65px;
+z-index: 0;
+
+-webkit-animation: mover_estrella1 3s infinite;
+    }
+
+#estrella9{
+background-image: url('http://bruno.garciaechegaray.com/img/estrella3.svg');
+width: 73px;
+height: 68px;
+position: absolute;
+background-repeat: no-repeat;
+top: 130px;
+left: 110px;
+z-index: 0;
+
+-webkit-animation: mover_estrella1 5s infinite;
+    }
+
+#estrella10{
+background-image: url('http://bruno.garciaechegaray.com/img/estrella3.svg');
+width: 73px;
+height: 68px;
+position: absolute;
+background-repeat: no-repeat;
+top: 144px;
+left: 165px;
+z-index: 0;
+
+-webkit-animation: mover_estrella2 5s infinite;
+    }
+
+#estrella11{
+background-image: url('http://bruno.garciaechegaray.com/img/estrella3.svg');
+width: 73px;
+height: 68px;
+position: absolute;
+background-repeat: no-repeat;
+top: 79px;
+left: 55px;
+z-index: 0;
+
+-webkit-animation: mover_estrella2 2s infinite;
+    }
+
+#estrella12{
+background-image: url('http://bruno.garciaechegaray.com/img/estrella2.svg');
+width: 73px;
+height: 68px;
+position: absolute;
+background-repeat: no-repeat;
+top: 140px;
+left: 180px;
+z-index: 0;
+
+-webkit-animation: mover_estrella2 5s infinite;
+    }
+
+#estrella13{
+background-image: url('http://bruno.garciaechegaray.com/img/estrella4.svg');
+width: 73px;
+height: 68px;
+position: absolute;
+background-repeat: no-repeat;
+top: 233px;
+left: 25px;
+z-index: 0;
+
+-webkit-animation: mover_estrella2 5s infinite;
+    }
+
+#estrella14{
+background-image: url('http://bruno.garciaechegaray.com/img/estrella3.svg');
+width: 73px;
+height: 68px;
+position: absolute;
+background-repeat: no-repeat;
+top: 219px;
+left: 265px;
+z-index: 0;
+
+-webkit-animation: mover_estrella2 5s infinite;
+    }
+
+#estrella15{
+background-image: url('http://bruno.garciaechegaray.com/img/estrella4.svg');
+width: 73px;
+height: 68px;
+position: absolute;
+background-repeat: no-repeat;
+top: 260px;
+left: 215px;
+z-index: 0;
+
+-webkit-animation: mover_estrella2 6s infinite;
+    }
+  @-webkit-keyframes mover_estrella2{
+
+  0%{
+       opacity: 0.8;
+   }
+  65%{
+      opacity: 0.4;
+  }
+  100%{
+
+      opacity: 0.8;
+  }
+}
+@-webkit-keyframes mover_estrella1{
+
+  0%{
+       opacity: 0.6;
+   }
+  75%{
+      opacity: 0.5;
+  }
+  100%{
+
+      opacity: 0.6;
+  }
+}
