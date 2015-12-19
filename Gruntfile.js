@@ -10,12 +10,21 @@ module.exports = function(grunt) {
             https://github.com/gruntjs/grunt-contrib-uglify
         */
         'uglify': {
-            my_target: {
+            main: {
                 files: {
                     'js/main.min.js':
                     [
                         'js/jquery.js',
                         'js/main.js'
+                    ]
+                }
+            },
+            about: {
+                files: {
+                    'js/about.min.js':
+                    [
+                        'js/astronauta.js',
+                        'js/soundjs-0.6.1.min.js'
                     ]
                 }
             }

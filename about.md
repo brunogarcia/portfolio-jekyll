@@ -54,7 +54,7 @@ I'm able to apply the latest technologies, methodologies of development and good
 
 <p class="author">
   <small>
-    Ilustración y animación:
+    Animation and illustration of astronaut by 
     <a href="https://twitter.com/psicobicho" target="_blank">Eva Santos</a>
   </small>
 </p>

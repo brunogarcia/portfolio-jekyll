@@ -32,7 +32,7 @@ header.navigation {
 
   .navigation-wrapper {
     @include clearfix;
-    @include outer-container;
+    @include outer-container(58em);
     position: relative;
     z-index: 9999;
   }
