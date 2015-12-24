@@ -13,13 +13,14 @@
   $grid-items-background: $base-background-color;
   $grid-item-background: desaturate($action-color, 30%);
   $grid-item-colors:
-    desaturate($action-color, 30%),
-    #3581A5,
-    #5FBEBE,
-    #98C79A,
-    #A7A891,
-    #BDCC97,
-    #979EA0;
+    //desaturate($action-color, 30%),
+    #ECD078,
+    #D95B43,
+    #C02942,
+    #542437,
+    #53777A,
+    #333333,
+    #028E7B;
   $grid-item-border-size: 9px;
   $grid-item-columns: 4;
   $grid-item-big-columns: 8;
@@ -101,7 +102,7 @@
   }
 
   .grid-item-image {
-    background: url("http://bruno.garciaechegaray.com/img/mountains.png");
+    //background: url("http://www.nasa.gov/centers/goddard/images/content/209608main_keckart_HI.jpg");
     background-color: $grid-item-background;
     background-position: top;
     background-repeat: no-repeat;
