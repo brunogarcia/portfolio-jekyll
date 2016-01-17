@@ -273,7 +273,7 @@ Esto se refleja en los dos únicos libros que he podido leer en el 2014.
 [![Ready Player One](https://d.gr-assets.com/books/1321480431m/12885533.jpg)](https://www.goodreads.com/book/show/12885533-ready-player-one)
 </span>
 
-[Ready Player One](https://www.goodreads.com/book/show/12885533-ready-player-one) tiene el combo perfecto para cautivar a cualquier aficionado al género': videojuegos + cultura pop de los 80'. Tiene un poco de [Snow Crash](https://www.goodreads.com/book/show/830.Snow_Crash) y un poco de novela negra. Un libro escrito por un geek para geeks.
+[Ready Player One](https://www.goodreads.com/book/show/12885533-ready-player-one) tiene el combo perfecto para cautivar a cualquier aficionado al género: 'videojuegos + cultura pop de los 80'. Tiene un poco de [Snow Crash](https://www.goodreads.com/book/show/830.Snow_Crash) y un poco de novela negra. Un libro escrito por un geek para geeks.
 
 Es el año 2044 y lo que conocemos hoy como Internet ha mutado a algo llamado OASIS, una realidad virtual controlada por una mega corporación dirigida por psicopatas y asesinos.
 
@@ -290,7 +290,7 @@ Este libro lo encontré gracias a la lista [Best Science Fiction of the 21st Cen
 
 La historia planteada por [Amanecer (Xenogénesis, #1)](https://www.goodreads.com/book/show/60929.Dawn) es interesante: la humanidad se aniquila gracias a su profunda estupidez.
 
-Pero los oankali -una raza alienígena- se las arregla para salvar a unos pocos. Los clona, los cría, los educa y los alimienta. Pero a cambio quieren/necesitan una compensación por todo el trabajo realizado. Los oankali quieren engendrar hijos mitad humanos mitad extraterrestres.
+Pero los oankali -una raza alienígena- se las arregla para salvar a unos pocos. Los clona, cría, educa y alimienta. Pero a cambio quieren/necesitan una compensación por todo el trabajo realizado. Los oankali desean engendrar hijos mitad humanos mitad extraterrestres.
 
 Pero no a través de inseminación artificial o alguna avanzada tecnología de procreación, a ellos les mola el rollo clásico, vamos tocarse y tener orgasmos en plan luna de miel con los humanos.
 
