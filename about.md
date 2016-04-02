@@ -47,20 +47,21 @@ I'm able to apply the latest technologies, methodologies of development and good
 
 * I have work experience with Agile methodology, mainly in Scrum
 * HTML5, CSS3.
-* Javascript: jQuery, Backbone, Require.js, Underscore.js, Handlebars.js, Highcharts, Jasmine
+* Javascript: React, Backbone, jQuery, Require.js, Underscore.js, Handlebars.js, Highcharts.
+* Unit testing: Mocha, Chai, Enzyme, Karma, PhantomJS, Jasmine.
 * Back-end: PHP (Symfony and CakePHP), MySQL, ORM and MVC pattern.
-* Automation tools: Yeoman, Grunt, Bower
-* Mobile: Phonegap, Android and Responsive Web Design
-* CSS Preprocessors: LESS &amp; Sass
-* CSS Frameworks: Bootstrap &amp; Foundation
-* Version Control: Git &amp; Subversion
-* I like working with W3C standards, caring for the semantics of the code and using on-page SEO techniques
+* Automation tools: Webpack, Yeoman, Grunt, Bower.
+* Mobile: Phonegap, Android and Responsive Web Design.
+* CSS Preprocessors: Sass &amp; LESS.
+* CSS Frameworks: Bootstrap, Foundation, Refills.
+* Version Control: Git &amp; Subversion.
+* I like working with W3C standards, caring for the semantics of the code and using on-page SEO techniques.
 
 ***
 
 <p class="author">
   <small>
-    Animation and illustration of astronaut by
+    Astronaut's illustration and animation by 
     <a href="https://twitter.com/psicobicho" target="_blank">Eva Santos</a>
   </small>
 </p>
