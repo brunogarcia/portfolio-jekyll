@@ -37,8 +37,6 @@ Posts about front-end development
 
 ## Install Node with NVM
 
-You'll need Node for install packages with NPM
-
 `$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.1/install.sh | bash`
 
 `$ nvm install node`
