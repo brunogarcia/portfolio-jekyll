@@ -17,6 +17,7 @@
   "dependencies": {
     "bourbon": "~4.2.6",
     "neat": "~1.7.2",
-    "jquery": "~2.1.4"
+    "jquery": "~2.1.4",
+    "zepto": "^1.1.6"
   }
 }

@@ -31,15 +31,49 @@ Posts about front-end development
 
 * [JSHint](https://github.com/gruntjs/grunt-contrib-jshint): Validate JavaScript files.
 
-## Install Jekyll & Sass
+## Clone project
+
+`$ git clone https://github.com/brunogarcia/brunogarcia.github.io.git`
+
+## Install Node with NVM
+
+You'll need Node for install packages with NPM
+
+`$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.1/install.sh | bash`
+
+`$ nvm install node`
+
+`$ nvm ls`
+
+`$ nvm alias default [NODE_VERSION]`
+
+## Install Ruby with RVM
+
+Before install RVM your terminal must [run command as a login shell](https://rvm.io/integration/gnome-terminal)
+
+`$ command curl -sSL https://rvm.io/mpapis.asc | gpg --import -`
+
+`$ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3`
+
+`$ curl -L https://get.rvm.io | bash -s stable --autolibs=enabled --ruby`
+
+`$ rvm list`
+
+`$ rvm use --default [RUBY_VERSION]`
+
+## Install Jekyll, sitemap and update Sass
 
 `$ gem install jekyll`
 
 `$ gem update sass`
 
-## Clone project
+`$ gem install jekyll-sitemap`
 
-`$ git clone https://github.com/brunogarcia/brunogarcia.github.io.git`
+## Install Bower and Grunt CLI
+
+`$ npm install -g bower`
+
+`$ npm install -g grunt-cli`
 
 ## Install project dependencies
 

@@ -190,7 +190,7 @@ module.exports = function(grunt) {
     });
 
     // Distribution
-    grunt.registerTask('default', ['bowercopy', 'googlefonts', 'jshint', 'uglify']);
+    grunt.registerTask('default', ['bowercopy', 'jshint', 'uglify']);
 
 
 };
