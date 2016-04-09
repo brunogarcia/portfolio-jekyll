@@ -9,7 +9,7 @@ isaboutme: true
 
 # Bruno Garcia
 
-## I have more than 15 years of experience in the Internet Industry. First like web designer, then writing the markup with HTML &amp; CSS and finally programming in Javascript and PHP.
+## I have worked in the Internet Industry since 1996. First like web designer, then writing markup with HTML &amp; CSS and finally programming in Javascript and PHP.
 
 <div class="about">
 
@@ -34,7 +34,7 @@ isaboutme: true
 
   <div class="description">
 
-    <p>I've worked for huge clients like Brand Union, Grupo Albenture, Emgrisa, ICS, Banco Popular, Grupo Lo Monaco, Capio Sanidad, NH Hoteles.
+    <p>I have worked for huge clients like Ventura24, Brand Union, Grupo Albenture, Emgrisa, ICS, Banco Popular, Grupo Lo Monaco, Capio Sanidad, NH Hoteles.
     And also with some amazing startups like Start Club, Horeca.jobs, Appgree, MeTheOne, El Armario de la Tele and Shiito.com.</p>
 
     <p>I have an official degree in <a href="http://todofp.es/todofp/que-como-y-donde-estudiar/que-estudiar/familias/informatica-comunicaciones/desarrollo-aplicaciones-multiplataforma.html">Computer Science</a>. I've studied these technologies and programming paradigms: .NET (Visual Basic, C++, C#), Android, SQL Server, Transact-SQL, Object-Oriented Programming (OOP), Event-driven and Concurrent Computing.</p>
