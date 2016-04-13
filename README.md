@@ -4,6 +4,7 @@ Posts about front-end development
 
  [blog.garciaechegaray.com](http://blog.garciaechegaray.com)
 
+***
 
 ## Tools
 
@@ -31,11 +32,11 @@ Posts about front-end development
 
 * [JSHint](https://github.com/gruntjs/grunt-contrib-jshint): Validate JavaScript files.
 
-## Clone project
+***
 
-`$ git clone https://github.com/brunogarcia/brunogarcia.github.io.git`
+## Project dependencies
 
-## Install Node with NVM
+### Node with NVM
 
 `$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.1/install.sh | bash`
 
@@ -45,7 +46,7 @@ Posts about front-end development
 
 `$ nvm alias default [NODE_VERSION]`
 
-## Install Ruby with RVM
+### Ruby with RVM
 
 Before install RVM your terminal must [run command as a login shell](https://rvm.io/integration/gnome-terminal)
 
@@ -59,7 +60,7 @@ Before install RVM your terminal must [run command as a login shell](https://rvm
 
 `$ rvm use --default [RUBY_VERSION]`
 
-## Install Jekyll, sitemap and update Sass
+### Jekyll, sitemap and update Sass
 
 `$ gem install jekyll`
 
@@ -67,26 +68,30 @@ Before install RVM your terminal must [run command as a login shell](https://rvm
 
 `$ gem install jekyll-sitemap`
 
-## Install Bower and Grunt CLI
+### Bower and Grunt CLI
 
 `$ npm install -g bower`
 
 `$ npm install -g grunt-cli`
 
-## Install project dependencies
+### Install packages
 
 `$ bower install`
 
 `$ npm install`
 
-## Run project tasks ('bowercopy', 'googlefonts', 'jshint', 'uglify')
+### Init tasks ('bowercopy', 'googlefonts', 'jshint', 'uglify')
 
 `$ grunt default`
 
-## Run Jekyll server in watch mode
+***
+
+## Launch project
+
+Run Jekyll server in watch mode
 
 `$ jekyll s -w`
 
-## Run Jekyll server in watch mode and show drafts
+Run Jekyll server in watch mode and show drafts
 
 `$ jekyll s -w --drafts`
