@@ -33,13 +33,13 @@ Pero este flujo de trabajo se puede mejorar aún más gracias a un trio de packa
 
 ## ESLint
 
-ESLint es un proyecto open source cuyo principal objectivo es detectar
+[ESLint](http://eslint.org/) es un proyecto open source cuyo principal objectivo es detectar
 errores de sintaxis y de estilo en nuestro código JavaScript.
 Asi dicho no se diferencia mucho de JSHint o JSLint.
 
 Lo bueno de ESLint es su enorme ecosistema de [plugins](https://www.npmjs.com/browse/keyword/eslintplugin), [configuraciones
 compartidas](https://www.npmjs.com/browse/keyword/eslintconfig) y [reglas hiper configurables](http://eslint.org/docs/rules/). Incluso tienes la posibilidad utilizar
-un _parser_ distinto al oficial. Pero expliquemos cada una de las ventajas mas detalladamente.
+un _parser_ distinto al oficial. Explicare cada una de las ventajas mas detalladamente.
 
 ### Configuraciones compartidas
 
