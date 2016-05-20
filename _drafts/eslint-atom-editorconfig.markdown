@@ -6,7 +6,7 @@ Con la llegada de [ECMAScript6](es6-features.org) o ES6 para los amigos, contamo
 con features que otros lenguajes _mas serios_ ya tenian desde hace años. Ademas la comunidad
 ha ido madurando y creando a su vez nuevas formas de entender el desarrollo web.
 Si leemos las comparativas entre los distintos frameworks como Backbone,
-Ember, Angular o React-Redux, veremos que comparten ciertas similitudes en aspectos
+Ember, Angular o React-Flux, veremos que comparten ciertas similitudes en aspectos
 básicos y otras veces las diferencias duran poco tiempo, ya que entre ellas mismas
 se retroalimentan constantemente.
 
@@ -27,7 +27,7 @@ Pero lo que mas atención me llamo fue un pequeño fichero llamado [.eslintrc](h
  Todo esto orquestado por un job en Jenkins.
 
 Pero este flujo de trabajo se puede mejorar aún más gracias a un trio de packages para Atom:
-linter, linter-eslint y editorconfig. Y de eso voy a hablar en los siguientes parrafos.
+[linter](https://atom.io/packages/linter), [linter-eslint](https://github.com/AtomLinter/linter-eslint) y [editorconfig](https://github.com/sindresorhus/atom-editorconfig). Y de eso voy a hablar en los siguientes parrafos.
 
 ***
 
