@@ -171,7 +171,6 @@ CMS y frameworks de desarrollo. Para muestra un botón:
 -   [Compilador PHP](http://leafo.net/lessphp/)
 -   [Drupal](http://drupal.org/project/less)
 -   [Wordpress](http://wordpress.org/extend/plugins/wp-less)
--   [Codeigniter](http://codeigniter.com/forums/viewthread/164741)
 -   [Symfony](http://www.symfony-project.org/plugins/sfLESSPlugin)
 -   [Yii](http://www.yiiframework.com/extension/less)
 -   [CakePHP](https://github.com/Phally/less)
