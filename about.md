@@ -52,8 +52,8 @@ I'm able to apply the latest technologies, methodologies of development and good
 * Back-end: PHP (Symfony and CakePHP), MySQL, ORM and MVC pattern.
 * Automation tools: Webpack, Yeoman, Grunt, Bower.
 * Mobile: Phonegap, Android and Responsive Web Design.
-* CSS Preprocessors: Sass &amp; LESS.
-* CSS Frameworks: Bootstrap, Foundation, Refills.
+* Stylesheets: PostCSS, Sass &amp; LESS.
+* UI Frameworks: Bootstrap, Foundation, Refills.
 * Version Control: Git &amp; Subversion.
 * I like working with W3C standards, caring for the semantics of the code and using on-page SEO techniques.
 
