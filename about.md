@@ -36,8 +36,10 @@ isaboutme: true
 
     <p>I have worked for huge clients like Ventura24, Brand Union, Grupo Albenture, Emgrisa, ICS, Banco Popular, Grupo Lo Monaco, Capio Sanidad, NH Hoteles.
     And also with some amazing startups like Start Club, Horeca.jobs, Appgree, MeTheOne, El Armario de la Tele and Shiito.com.</p>
-
-    <p>I have an official degree in <a href="http://todofp.es/todofp/que-como-y-donde-estudiar/que-estudiar/familias/informatica-comunicaciones/desarrollo-aplicaciones-multiplataforma.html">Computer Science</a>. I've studied these technologies and programming paradigms: .NET (Visual Basic, C++, C#), Android, SQL Server, Transact-SQL, Object-Oriented Programming (OOP), Event-driven and Concurrent Computing.</p>
+    
+    <p>Currently I'm studying <a href="http://estudios.uoc.edu/es/grados/ingenieria-informatica/presentacion">Computer Engineering</a> on Universitat Oberta de Catalunya (UOC).</p>
+    
+    <p>Also, I studied a two year degree in <a href="http://todofp.es/todofp/que-como-y-donde-estudiar/que-estudiar/familias/informatica-comunicaciones/desarrollo-aplicaciones-multiplataforma.html">Computer Science</a>. I've studied these technologies and programming paradigms: .NET (Visual Basic, C++, C#), Android, SQL Server, Transact-SQL, Object-Oriented Programming (OOP), Event-driven and Concurrent Computing.</p>
 
   </div>
 
