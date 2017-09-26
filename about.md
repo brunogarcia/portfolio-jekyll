@@ -39,7 +39,7 @@ isaboutme: true
     
     <p>Currently I'm studying <a href="http://estudios.uoc.edu/es/grados/ingenieria-informatica/presentacion">Computer Engineering</a> on Universitat Oberta de Catalunya (UOC).</p>
     
-    <p>Also, I studied a two year degree in <a href="http://todofp.es/todofp/que-como-y-donde-estudiar/que-estudiar/familias/informatica-comunicaciones/desarrollo-aplicaciones-multiplataforma.html">Computer Science</a>. I've studied these technologies and programming paradigms: .NET (Visual Basic, C++, C#), Android, SQL Server, Transact-SQL, Object-Oriented Programming (OOP), Event-driven and Concurrent Computing.</p>
+    <p>Also, I studied a two year degree in <a href="http://www.todofp.es/que-como-y-donde-estudiar/que-estudiar/familia/loe/informatica-comunicaciones/des-aplicaciones-multiplataforma.html" title="CFGS Desarrollo de aplicaciones multiplataforma">Computer Science</a>. I've studied these technologies and programming paradigms: .NET (Visual Basic, C++, C#), Android, SQL Server, Transact-SQL, Object-Oriented Programming (OOP), Event-driven and Concurrent Computing.</p>
 
   </div>
 
