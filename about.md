@@ -9,7 +9,7 @@ isaboutme: true
 
 # Bruno Garcia
 
-## I have worked in the Internet Industry since 1996. First like web designer, then writing markup with HTML &amp; CSS and finally programming in Javascript and PHP.
+## I have worked in the Internet Industry since 1996. First as a web designer. Then I wrote markup languages with HTML & CSS. And finally, since 2013 I'm a software developer, mainly with Javascript and PHP.
 
 <div class="about">
 
@@ -32,32 +32,29 @@ isaboutme: true
     
   </div>
 
-  <div class="description">
+  <div class="description">   
+    <p>Currently I'm studying <a href="http://estudios.uoc.edu/es/grados/ingenieria-informatica/presentacion">Computer Engineering</a> on Universitat Oberta de Catalunya (UOC).</p>
+    
+    <p>Also, I have a two-year degree in <a href="http://www.todofp.es/que-como-y-donde-estudiar/que-estudiar/familia/loe/informatica-comunicaciones/des-aplicaciones-multiplataforma.html" title="CFGS Desarrollo de aplicaciones multiplataforma">Computer Science</a> and a three-year degree in Media and Communications.</p>
 
     <p>I have worked for huge clients like Ventura24, Brand Union, Grupo Albenture, Emgrisa, ICS, Banco Popular, Grupo Lo Monaco, Capio Sanidad, NH Hoteles.
     And also with some amazing startups like Start Club, Horeca.jobs, Appgree, MeTheOne, El Armario de la Tele and Shiito.com.</p>
-    
-    <p>Currently I'm studying <a href="http://estudios.uoc.edu/es/grados/ingenieria-informatica/presentacion">Computer Engineering</a> on Universitat Oberta de Catalunya (UOC).</p>
-    
-    <p>Also, I studied a two year degree in <a href="http://www.todofp.es/que-como-y-donde-estudiar/que-estudiar/familia/loe/informatica-comunicaciones/des-aplicaciones-multiplataforma.html" title="CFGS Desarrollo de aplicaciones multiplataforma">Computer Science</a>. I've studied these technologies and programming paradigms: .NET (Visual Basic, C++, C#), Android, SQL Server, Transact-SQL, Object-Oriented Programming (OOP), Event-driven and Concurrent Computing.</p>
-
   </div>
 
 </div>
 
-I'm able to apply the latest technologies, methodologies of development and good practices:
-
-* I have work experience with Agile methodology, mainly in Scrum
-* HTML5, CSS3.
-* Javascript: React, Backbone, jQuery, Require.js, Underscore.js, Handlebars.js, Highcharts.
+* I prefer to work with Agile methodology.
+* Javascript: ES5 & ES6, React, Backbone, jQuery, RequireJS.
 * Unit testing: Mocha, Chai, Enzyme, Karma, PhantomJS, Jasmine.
-* Back-end: PHP (Symfony and CakePHP), MySQL, ORM and MVC pattern.
 * Automation tools: Webpack, Yeoman, Grunt, Bower.
-* Mobile: Phonegap, Android and Responsive Web Design.
-* Stylesheets: PostCSS, Sass &amp; LESS.
+* Stylesheets: CSS, LESS, Sass, PostCSS
 * UI Frameworks: Bootstrap, Foundation, Refills.
-* Version Control: Git &amp; Subversion.
+* Back-end: PHP (Symfony and CakePHP), Twig, MySQL, ORM and MVC pattern.
+* Mobile: PhoneGap, Android, and Responsive Web Design.
+* Version Control: Git & Subversion.
+* Accessibility Guidelines: WAI-AA and WAI-ARIA
 * I like working with W3C standards, caring for the semantics of the code and using on-page SEO techniques.
+* Also, I've worked with different CMS like a Wordpress and Prestashop.
 
 ***
 
