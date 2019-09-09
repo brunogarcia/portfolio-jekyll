@@ -9,7 +9,7 @@ isaboutme: true
 
 # Bruno Garcia
 
-## I have worked in the Internet Industry since 1996. First as a web designer. Then I wrote markup languages with HTML & CSS. And finally, since 2013 I'm a software developer, mainly with Javascript and PHP.
+## I have worked in the Internet Industry since 1996. First as a web designer. Then I wrote markup languages with HTML & CSS. And finally, since 2013 I'm a software developer, mainly with Javascript.
 
 <div class="about">
 
@@ -32,29 +32,29 @@ isaboutme: true
     
   </div>
 
-  <div class="description">   
-    <p>Currently I'm studying <a href="http://estudios.uoc.edu/es/grados/ingenieria-informatica/presentacion">Computer Engineering</a> on Universitat Oberta de Catalunya (UOC).</p>
-    
-    <p>Also, I have a two-year degree in <a href="http://www.todofp.es/que-como-y-donde-estudiar/que-estudiar/familia/loe/informatica-comunicaciones/des-aplicaciones-multiplataforma.html" title="CFGS Desarrollo de aplicaciones multiplataforma">Computer Science</a> and a three-year degree in Media and Communications.</p>
+  <div class="description">     
+    <p>I have a two-year degree in <a href="http://www.todofp.es/que-como-y-donde-estudiar/que-estudiar/familia/loe/informatica-comunicaciones/des-aplicaciones-multiplataforma.html" title="CFGS Desarrollo de aplicaciones multiplataforma">Computer Science</a> and a three-year degree in Media and Communications.</p>
 
     <p>I have worked for huge clients like Ventura24, Brand Union, Grupo Albenture, Emgrisa, ICS, Banco Popular, Grupo Lo Monaco, Capio Sanidad, NH Hoteles.
-    And also with some amazing startups like Start Club, Horeca.jobs, Appgree, MeTheOne, El Armario de la Tele and Shiito.com.</p>
+    And also with some amazing startups like Caravelo, Start Club, Horeca.jobs, Appgree, MeTheOne, El Armario de la Tele and Shiito.com.</p>
   </div>
 
 </div>
 
-* I prefer to work with Agile methodology.
-* Javascript: ES5 & ES6, React, Backbone, jQuery, RequireJS.
-* Unit testing: Mocha, Chai, Enzyme, Karma, PhantomJS, Jasmine.
-* Automation tools: Webpack, Yeoman, Grunt, Bower.
-* Stylesheets: CSS, LESS, Sass, PostCSS
-* UI Frameworks: Bootstrap, Foundation, Refills.
-* Back-end: PHP (Symfony and CakePHP), Twig, MySQL, ORM and MVC pattern.
-* Mobile: PhoneGap, Android, and Responsive Web Design.
-* Version Control: Git & Subversion.
-* Accessibility Guidelines: WAI-AA and WAI-ARIA
-* I like working with W3C standards, caring for the semantics of the code and using on-page SEO techniques.
-* Also, I've worked with different CMS like a Wordpress and Prestashop.
+Currently, I'm working with ES6, Vue ecosystem (Vuex, Vue CLI, Vue Router, Vuetify), Sass, Jest, Sinon, Cypress, Git.
+
+In the past I've worked with:
+
+* React ecosystem, RequireJS, jQuery, Backbone.
+* Unit testing: Mocha, Chai, Enzyme, Karma, PhantomJS.
+* UI Frameworks: Material UI, Bootstrap, Foundation, Refills.
+* Stylesheets: JSS, PostCSS, LESS, CSS. 
+* Automation tools: Grunt, Bower.
+* Backend: PHP (Symfony and CakePHP), MySQL.
+* Mobile: PhoneGap and Android.
+* CMS: Wordpress and Prestashop.
+* Version Control: Subversion, CVS.
+* Accessibility Guidelines: WAI-AA and WAI-ARIA.
 
 ***
 
