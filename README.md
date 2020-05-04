@@ -2,10 +2,6 @@
 
 Posts about front-end development
 
- [blog.garciaechegaray.com](http://blog.garciaechegaray.com)
-
-***
-
 ## Tools
 
 * [Jekyll](http://jekyllrb.com): A simple, blog-aware, static site generator perfect for personal, project, or organization sites.
