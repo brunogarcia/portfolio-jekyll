@@ -1,6 +1,8 @@
-# Blog
+# DEPRECATED
 
-Posts about front-end development
+This is the old repository of my blog.
+
+I moved to GatsbyJS. Check out this new one https://github.com/brunogarcia/portfolio
 
 ## Tools
 
